@@ -1,6 +1,6 @@
 # Wasp
 
-This app is built with Next.js 13, Tailwind, Prisma, shadcn/ui, Zustand, Tailwind, Clerk, Prisma and PlanetScale.
+This app is built with Next.js 13, Tailwind, shadcn/ui, Zustand, Tailwind and Go.
 
 ## ⚠️ Under development
 
