@@ -1,9 +1,8 @@
 package inmemorydatabases
 
 import (
-	"errors"
-
 	"github.com/charmingruby/wisp/internal/domain/entity"
+	"github.com/charmingruby/wisp/internal/domain/exceptions"
 )
 
 type DevelopersInMemoryDatabase struct {
@@ -26,7 +25,7 @@ func (r *DevelopersInMemoryDatabase) GetByEmail(email string) (*entity.Developer
 	var devToFind entity.Developer
 
 	for _, dev := range r.Devs {
-		if devToFind.Email == dev.Email {
+		if email == dev.Email {
 			devToFind.Name = dev.Name
 			devToFind.LastName = dev.LastName
 			devToFind.Email = dev.Email
@@ -41,5 +40,49 @@ func (r *DevelopersInMemoryDatabase) GetByEmail(email string) (*entity.Developer
 		}
 	}
 
-	return nil, errors.New("developer not found")
+	return nil, exceptions.NotFoundError("email")
+}
+
+func (r *DevelopersInMemoryDatabase) GetByGithubUser(githubUser string) (*entity.Developer, error) {
+	var devToFind entity.Developer
+
+	for _, dev := range r.Devs {
+		if githubUser == dev.GithubUser {
+			devToFind.Name = dev.Name
+			devToFind.LastName = dev.LastName
+			devToFind.Email = dev.Email
+			devToFind.Password = dev.Password
+			devToFind.AvatarUrl = dev.AvatarUrl
+			devToFind.Role = dev.Role
+			devToFind.GithubUser = dev.GithubUser
+			devToFind.OccupationArea = dev.OccupationArea
+			devToFind.CreatedAt = dev.CreatedAt
+
+			return &devToFind, nil
+		}
+	}
+
+	return nil, exceptions.NotFoundError("github user")
+}
+
+func (r *DevelopersInMemoryDatabase) GetById(id string) (*entity.Developer, error) {
+	var devToFind entity.Developer
+
+	for _, dev := range r.Devs {
+		if id == dev.ID {
+			devToFind.Name = dev.Name
+			devToFind.LastName = dev.LastName
+			devToFind.Email = dev.Email
+			devToFind.Password = dev.Password
+			devToFind.AvatarUrl = dev.AvatarUrl
+			devToFind.Role = dev.Role
+			devToFind.GithubUser = dev.GithubUser
+			devToFind.OccupationArea = dev.OccupationArea
+			devToFind.CreatedAt = dev.CreatedAt
+
+			return &devToFind, nil
+		}
+	}
+
+	return nil, exceptions.NotFoundError("id")
 }
