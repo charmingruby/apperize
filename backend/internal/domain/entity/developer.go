@@ -13,7 +13,7 @@ type Developer struct {
 	Email          string
 	Password       string
 	Role           string
-	GithubUrl      string
+	GithubUser     string
 	AvatarUrl      string
 	OccupationArea string
 	CreatedAt      time.Time
@@ -25,7 +25,7 @@ type CreateDeveloperParams struct {
 	Email          string
 	Password       string
 	Role           string
-	GithubUrl      string
+	GithubUser     string
 	AvatarUrl      string
 	OccupationArea string
 }
@@ -40,7 +40,7 @@ func NewDeveloper(
 		Email:          params.Email,
 		Password:       params.Password,
 		Role:           params.Role,
-		GithubUrl:      params.GithubUrl,
+		GithubUser:     params.GithubUser,
 		AvatarUrl:      params.AvatarUrl,
 		OccupationArea: params.OccupationArea,
 		CreatedAt:      time.Now(),
