@@ -1,18 +1,28 @@
-import Link from 'next/link';
-import { links } from '@/constants/links';
+import Link from 'next/link'
+import { links } from '@/constants/links'
 
 export function Footer() {
   return (
-    <footer>
-      <span>
-        Built by
-        {' '}
-        <Link href={links.linkedin} prefetch={false}>Gustavo Dias</Link>
-        . The source code in on
-        {' '}
-        <Link href={links.repo} prefetch={false}>Github</Link>
+    <footer className="container py-4 ">
+      <span className="text-muted-foreground text-sm">
+        Criado por{' '}
+        <Link
+          href={links.linkedin}
+          prefetch={false}
+          className="underline underline-offset-4"
+        >
+          Gustavo Dias
+        </Link>
+        . O código fonte está no{' '}
+        <Link
+          href={links.repo}
+          prefetch={false}
+          className="underline underline-offset-4"
+        >
+          Github
+        </Link>
         .
       </span>
     </footer>
-  );
+  )
 }

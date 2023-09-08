@@ -1,7 +1,9 @@
-import Image from 'next/image'
-
 export default function Home() {
   return (
-    <>setup</>
+    <div className="pt-28 min-h-screen">
+      <div>
+        <h1></h1>
+      </div>
+    </div>
   )
 }

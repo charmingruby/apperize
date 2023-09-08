@@ -1,16 +1,12 @@
-import { Footer } from './components/footer';
-import { Header } from './components/header';
+import { Footer } from './components/footer'
+import { Header } from './components/header'
 
-export default function AppLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      {children}
+      <div className="container">{children}</div>
       <Footer />
     </>
-  );
+  )
 }
