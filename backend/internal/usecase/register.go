@@ -2,9 +2,9 @@ package usecases
 
 import (
 	"github.com/charmingruby/wisp/internal/domain/entity"
-	"github.com/charmingruby/wisp/internal/domain/exceptions"
-	"github.com/charmingruby/wisp/internal/domain/interfaces"
-	"github.com/charmingruby/wisp/internal/utils"
+	"github.com/charmingruby/wisp/internal/domain/exception"
+	interfaces "github.com/charmingruby/wisp/internal/domain/interface"
+	"github.com/charmingruby/wisp/pkg/bcrypt"
 )
 
 type RegisterUserInput struct {
@@ -26,15 +26,15 @@ func (c *RegisterUser) Execute(input RegisterUserInput) (*entity.Developer, erro
 	_, err := c.DevelopersRepository.GetByEmail(input.Email)
 
 	if err == nil {
-		return nil, exceptions.AlreadyInUseError("email")
+		return nil, exception.AlreadyInUseError("email")
 	}
 
 	_, err = c.DevelopersRepository.GetByGithubUser(input.GithubUser)
 	if err == nil {
-		return nil, exceptions.AlreadyInUseError("github user")
+		return nil, exception.AlreadyInUseError("github user")
 	}
 
-	hashedPassword := utils.GenerateValueHash(input.Password)
+	hashedPassword := bcrypt.GenerateValueHash(input.Password)
 
 	developer := entity.NewDeveloper(entity.CreateDeveloperParams{
 		Name:           input.Name,

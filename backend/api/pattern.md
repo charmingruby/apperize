@@ -1,0 +1,1 @@
+# Files generate for api documentation, example: Swagger

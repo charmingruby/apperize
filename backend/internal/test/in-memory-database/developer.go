@@ -2,7 +2,7 @@ package inmemorydatabases
 
 import (
 	"github.com/charmingruby/wisp/internal/domain/entity"
-	"github.com/charmingruby/wisp/internal/domain/exceptions"
+	exceptions "github.com/charmingruby/wisp/internal/domain/exception"
 )
 
 type DevelopersInMemoryDatabase struct {

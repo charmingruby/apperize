@@ -4,14 +4,14 @@ import (
 	"testing"
 
 	"github.com/charmingruby/wisp/internal/domain/entity"
-	"github.com/charmingruby/wisp/internal/domain/exceptions"
-	inmemorydatabases "github.com/charmingruby/wisp/internal/test/in-memory-databases"
-	"github.com/charmingruby/wisp/internal/utils"
+	"github.com/charmingruby/wisp/internal/domain/exception"
+	inmemorydatabase "github.com/charmingruby/wisp/internal/test/in-memory-database"
+	"github.com/charmingruby/wisp/internal/util"
 	"github.com/stretchr/testify/require"
 )
 
 func TestShouldBeAbleToRegisterAnUser(t *testing.T) {
-	imb := inmemorydatabases.NewDevelopersInMemoryDatabase()
+	imb := inmemorydatabase.NewDevelopersInMemoryDatabase()
 
 	uc := RegisterUser{
 		DevelopersRepository: imb,
@@ -20,14 +20,14 @@ func TestShouldBeAbleToRegisterAnUser(t *testing.T) {
 	password := "random_password"
 
 	newDeveloperArgs := entity.CreateDeveloperParams{
-		Name:           utils.RandomName(),
-		LastName:       utils.RandomLastName(),
-		Email:          utils.RandomEmail(),
+		Name:           util.RandomName(),
+		LastName:       util.RandomLastName(),
+		Email:          util.RandomEmail(),
 		Password:       password,
-		Role:           utils.RandomRole(),
-		GithubUser:     utils.RandomGithubUser(),
-		AvatarUrl:      utils.RandomAvatarUrl(),
-		OccupationArea: utils.RandomOccupationArea(),
+		Role:           util.RandomRole(),
+		GithubUser:     util.RandomGithubUser(),
+		AvatarUrl:      util.RandomAvatarUrl(),
+		OccupationArea: util.RandomOccupationArea(),
 	}
 
 	developer, err := uc.Execute(RegisterUserInput{
@@ -50,17 +50,17 @@ func TestShouldBeAbleToRegisterAnUser(t *testing.T) {
 }
 
 func TestShouldNotBeAbleToRegisterAUserWithSameEmail(t *testing.T) {
-	imb := inmemorydatabases.NewDevelopersInMemoryDatabase()
+	imb := inmemorydatabase.NewDevelopersInMemoryDatabase()
 
 	args1 := entity.CreateDeveloperParams{
-		Name:           utils.RandomName(),
-		LastName:       utils.RandomLastName(),
+		Name:           util.RandomName(),
+		LastName:       util.RandomLastName(),
 		Email:          "john@example.com",
-		Password:       utils.RandomEmail(),
-		Role:           utils.RandomRole(),
-		GithubUser:     utils.RandomGithubUser(),
-		AvatarUrl:      utils.RandomAvatarUrl(),
-		OccupationArea: utils.RandomOccupationArea(),
+		Password:       util.RandomEmail(),
+		Role:           util.RandomRole(),
+		GithubUser:     util.RandomGithubUser(),
+		AvatarUrl:      util.RandomAvatarUrl(),
+		OccupationArea: util.RandomOccupationArea(),
 	}
 
 	developer1 := *entity.NewDeveloper(args1)
@@ -72,19 +72,19 @@ func TestShouldNotBeAbleToRegisterAUserWithSameEmail(t *testing.T) {
 	}
 
 	result, err := uc.Execute(RegisterUserInput{
-		Name:           utils.RandomName(),
-		LastName:       utils.RandomLastName(),
+		Name:           util.RandomName(),
+		LastName:       util.RandomLastName(),
 		Email:          "john@example.com",
 		Password:       "random_password",
-		Role:           utils.RandomRole(),
-		GithubUser:     utils.RandomGithubUser(),
-		AvatarUrl:      utils.RandomAvatarUrl(),
-		OccupationArea: utils.RandomOccupationArea(),
+		Role:           util.RandomRole(),
+		GithubUser:     util.RandomGithubUser(),
+		AvatarUrl:      util.RandomAvatarUrl(),
+		OccupationArea: util.RandomOccupationArea(),
 	})
 
 	println(result)
 
-	expectedErr := exceptions.AlreadyInUseError("email")
+	expectedErr := exception.AlreadyInUseError("email")
 
 	require.Error(t, err)
 	require.EqualError(t, err, expectedErr.Error())
@@ -93,17 +93,17 @@ func TestShouldNotBeAbleToRegisterAUserWithSameEmail(t *testing.T) {
 }
 
 func TestShouldNotBeAbleToRegisterAUserWithSameGithubUser(t *testing.T) {
-	imb := inmemorydatabases.NewDevelopersInMemoryDatabase()
+	imb := inmemorydatabase.NewDevelopersInMemoryDatabase()
 
 	args1 := entity.CreateDeveloperParams{
-		Name:           utils.RandomName(),
-		LastName:       utils.RandomLastName(),
-		Email:          utils.RandomEmail(),
-		Password:       utils.RandomEmail(),
-		Role:           utils.RandomRole(),
+		Name:           util.RandomName(),
+		LastName:       util.RandomLastName(),
+		Email:          util.RandomEmail(),
+		Password:       util.RandomEmail(),
+		Role:           util.RandomRole(),
 		GithubUser:     "charmingruby",
-		AvatarUrl:      utils.RandomAvatarUrl(),
-		OccupationArea: utils.RandomOccupationArea(),
+		AvatarUrl:      util.RandomAvatarUrl(),
+		OccupationArea: util.RandomOccupationArea(),
 	}
 
 	developer1 := *entity.NewDeveloper(args1)
@@ -115,17 +115,17 @@ func TestShouldNotBeAbleToRegisterAUserWithSameGithubUser(t *testing.T) {
 	}
 
 	result, err := uc.Execute(RegisterUserInput{
-		Name:           utils.RandomName(),
-		LastName:       utils.RandomLastName(),
-		Email:          utils.RandomEmail(),
-		Password:       utils.RandomEmail(),
-		Role:           utils.RandomRole(),
+		Name:           util.RandomName(),
+		LastName:       util.RandomLastName(),
+		Email:          util.RandomEmail(),
+		Password:       util.RandomEmail(),
+		Role:           util.RandomRole(),
 		GithubUser:     "charmingruby",
-		AvatarUrl:      utils.RandomAvatarUrl(),
-		OccupationArea: utils.RandomOccupationArea(),
+		AvatarUrl:      util.RandomAvatarUrl(),
+		OccupationArea: util.RandomOccupationArea(),
 	})
 
-	expectedErr := exceptions.AlreadyInUseError("github user")
+	expectedErr := exception.AlreadyInUseError("github user")
 
 	require.Error(t, err)
 	require.EqualError(t, err, expectedErr.Error())

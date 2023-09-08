@@ -3,7 +3,7 @@ package entity
 import (
 	"time"
 
-	"github.com/charmingruby/wisp/internal/utils"
+	"github.com/charmingruby/wisp/pkg/uuid"
 )
 
 type Developer struct {
@@ -34,7 +34,7 @@ func NewDeveloper(
 	params CreateDeveloperParams,
 ) *Developer {
 	return &Developer{
-		ID:             utils.GenerateUUID(),
+		ID:             uuid.GenerateUUID(),
 		Name:           params.Name,
 		LastName:       params.LastName,
 		Email:          params.Email,
