@@ -7,7 +7,7 @@ import (
 	"github.com/charmingruby/wisp/pkg/bcrypt"
 )
 
-type RegisterUserInput struct {
+type RegisterDeveloperInput struct {
 	Name           string
 	LastName       string
 	Email          string
@@ -18,13 +18,12 @@ type RegisterUserInput struct {
 	OccupationArea string
 }
 
-type RegisterUser struct {
+type RegisterDeveloper struct {
 	DevelopersRepository interfaces.DeveloperRepositoryInterface
 }
 
-func (c *RegisterUser) Execute(input RegisterUserInput) (*entity.Developer, error) {
+func (c *RegisterDeveloper) Execute(input RegisterDeveloperInput) (*entity.Developer, error) {
 	_, err := c.DevelopersRepository.GetByEmail(input.Email)
-
 	if err == nil {
 		return nil, exception.AlreadyInUseError("email")
 	}

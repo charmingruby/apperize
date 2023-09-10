@@ -10,11 +10,15 @@ func GenerateValueHash(value string) string {
 	return hashedValue
 }
 
-func CompareHashWithValue(hash, value string) bool {
+func CompareHashWithValue(hash string, value string) error {
 	hashInBytes := []byte(hash)
 	valueInBytes := []byte(value)
 
 	err := bcrypt.CompareHashAndPassword(hashInBytes, valueInBytes)
 
-	return err == nil
+	if err != nil {
+		return err
+	}
+
+	return nil
 }

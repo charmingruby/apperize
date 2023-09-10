@@ -26,6 +26,7 @@ func (r *DevelopersInMemoryDatabase) GetByEmail(email string) (*entity.Developer
 
 	for _, dev := range r.Devs {
 		if email == dev.Email {
+			devToFind.ID = dev.ID
 			devToFind.Name = dev.Name
 			devToFind.LastName = dev.LastName
 			devToFind.Email = dev.Email
@@ -40,7 +41,7 @@ func (r *DevelopersInMemoryDatabase) GetByEmail(email string) (*entity.Developer
 		}
 	}
 
-	return nil, exceptions.NotFoundError("email")
+	return nil, exceptions.NotFoundError("developer")
 }
 
 func (r *DevelopersInMemoryDatabase) GetByGithubUser(githubUser string) (*entity.Developer, error) {

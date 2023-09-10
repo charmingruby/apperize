@@ -10,27 +10,25 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestShouldBeAbleToRegisterAnUser(t *testing.T) {
+func TestShouldBeAbleToRegisterADeveloper(t *testing.T) {
 	imb := inmemorydatabase.NewDevelopersInMemoryDatabase()
 
-	uc := RegisterUser{
+	uc := RegisterDeveloper{
 		DevelopersRepository: imb,
 	}
-
-	password := "random_password"
 
 	newDeveloperArgs := entity.CreateDeveloperParams{
 		Name:           util.RandomName(),
 		LastName:       util.RandomLastName(),
 		Email:          util.RandomEmail(),
-		Password:       password,
+		Password:       util.RandomPassword(),
 		Role:           util.RandomRole(),
 		GithubUser:     util.RandomGithubUser(),
 		AvatarUrl:      util.RandomAvatarUrl(),
 		OccupationArea: util.RandomOccupationArea(),
 	}
 
-	developer, err := uc.Execute(RegisterUserInput{
+	developer, err := uc.Execute(RegisterDeveloperInput{
 		Name:           newDeveloperArgs.Name,
 		LastName:       newDeveloperArgs.LastName,
 		Email:          newDeveloperArgs.Email,
@@ -46,10 +44,10 @@ func TestShouldBeAbleToRegisterAnUser(t *testing.T) {
 	require.NoError(t, err)
 	require.Equal(t, imbLen, 1)
 	require.Equal(t, imb.Devs[0].ID, developer.ID)
-	require.NotEqual(t, &developer, password)
+	require.NotEqual(t, developer.Password, newDeveloperArgs.Password)
 }
 
-func TestShouldNotBeAbleToRegisterAUserWithSameEmail(t *testing.T) {
+func TestShouldNotBeAbleToRegisterADeveloperWithSameEmail(t *testing.T) {
 	imb := inmemorydatabase.NewDevelopersInMemoryDatabase()
 
 	args1 := entity.CreateDeveloperParams{
@@ -67,15 +65,15 @@ func TestShouldNotBeAbleToRegisterAUserWithSameEmail(t *testing.T) {
 
 	imb.Store(&developer1)
 
-	uc := RegisterUser{
+	uc := RegisterDeveloper{
 		DevelopersRepository: imb,
 	}
 
-	result, err := uc.Execute(RegisterUserInput{
+	result, err := uc.Execute(RegisterDeveloperInput{
 		Name:           util.RandomName(),
 		LastName:       util.RandomLastName(),
 		Email:          "john@example.com",
-		Password:       "random_password",
+		Password:       util.RandomPassword(),
 		Role:           util.RandomRole(),
 		GithubUser:     util.RandomGithubUser(),
 		AvatarUrl:      util.RandomAvatarUrl(),
@@ -88,11 +86,10 @@ func TestShouldNotBeAbleToRegisterAUserWithSameEmail(t *testing.T) {
 
 	require.Error(t, err)
 	require.EqualError(t, err, expectedErr.Error())
-	require.Empty(t, result)
-	require.Equal(t, result.Password, "random_password")
+	require.Empty(t, &result)
 }
 
-func TestShouldNotBeAbleToRegisterAUserWithSameGithubUser(t *testing.T) {
+func TestShouldNotBeAbleToRegisterADeveloperWithSameGithubUser(t *testing.T) {
 	imb := inmemorydatabase.NewDevelopersInMemoryDatabase()
 
 	args1 := entity.CreateDeveloperParams{
@@ -110,11 +107,11 @@ func TestShouldNotBeAbleToRegisterAUserWithSameGithubUser(t *testing.T) {
 
 	imb.Store(&developer1)
 
-	uc := RegisterUser{
+	uc := RegisterDeveloper{
 		DevelopersRepository: imb,
 	}
 
-	result, err := uc.Execute(RegisterUserInput{
+	result, err := uc.Execute(RegisterDeveloperInput{
 		Name:           util.RandomName(),
 		LastName:       util.RandomLastName(),
 		Email:          util.RandomEmail(),
@@ -129,5 +126,5 @@ func TestShouldNotBeAbleToRegisterAUserWithSameGithubUser(t *testing.T) {
 
 	require.Error(t, err)
 	require.EqualError(t, err, expectedErr.Error())
-	require.Empty(t, result)
+	require.Empty(t, &result)
 }
