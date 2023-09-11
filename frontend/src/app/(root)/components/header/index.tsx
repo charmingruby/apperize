@@ -1,4 +1,4 @@
-import { Logo } from '@/app/(app)/components/header/logo'
+import { Logo } from '@/app/(root)/components/header/logo'
 import { NavItem } from './nav-item'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
@@ -11,7 +11,10 @@ export function Header() {
 
         <div className="flex gap-6">
           <NavItem label="Início" url="/" />
-          <NavItem label="Serviços" url="/servicos" />
+          <NavItem label="Sobre" url="/sobre" />
+          <NavItem label="Produtos" url="/produtos" />
+          <NavItem label="Serviços" url="/sobre" />
+          <NavItem label="Contato" url="/sobre" />
         </div>
 
         <div className="flex gap-4 items-center">
