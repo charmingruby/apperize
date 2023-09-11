@@ -3,7 +3,7 @@ import { links } from '@/constants/links'
 
 export function Footer() {
   return (
-    <footer className="container py-4 ">
+    <footer className="container pt-16 pb-10 ">
       <span className="text-muted-foreground text-sm">
         Criado por{' '}
         <Link

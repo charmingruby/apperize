@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
-import { Card, CardHeader } from '@/components/ui/card'
 import { ArrowRight, Lightbulb } from 'lucide-react'
+import { ValueCard } from './components/value-card'
 
 export default function Home() {
   return (
@@ -32,51 +32,59 @@ export default function Home() {
 
       {/* Value proposition */}
       <section className="container">
-        <div className="mb-12">
-          <span className="text-primary uppercase tracking-widest font-semibold mb-6 block">
-            Plataforma do cliente
-          </span>
-          <p className="leading-relaxed text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-            illum aliquam deserunt quas ut fuga praesentium quia sapiente, ad
-            aliquid perferendis, voluptatibus dolores modi repellat adipisci
-            voluptas rem harum expedita.
-          </p>
+        <div className="mb-12 grid grid-cols-4 gap-8">
+          <div className="col-span-3">
+            <div className="w-fit space-y-4 mb-6 ">
+              <span className="text-primary uppercase tracking-widest font-semibold block">
+                Plataforma para o cliente
+              </span>
+              <div className="w-1/6 h-0.5 bg-primary" />
+            </div>
+            <strong className="leading-relaxed text-4xl font-semibold">
+              Traga sua ideia e nós a tornaremos{' '}
+              <strong className="font-bold text-primary underline underline-offset-8  ">
+                realidade
+              </strong>
+              .
+            </strong>
+          </div>
+          <div className="flex justify-end items-end">
+            <Button>Fale conosco</Button>
+          </div>
         </div>
         <div className="grid grid-cols-4 gap-8">
-          <Card>
-            <CardHeader>
-              <div>
-                <Lightbulb />
-              </div>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <div>
-                <Lightbulb />
-              </div>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <div>
-                <Lightbulb />
-              </div>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <div>
-                <Lightbulb />
-              </div>
-            </CardHeader>
-          </Card>
+          <ValueCard
+            icon={Lightbulb}
+            title="Ideia"
+            description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium obcaecati quam quibusdam numquam fugit aspernatur? Saepe quod ex facilis molestias, exercitationem iure, hic quis commodi, rerum adipisci odit quasi."
+            position={0}
+          />
+          <ValueCard
+            icon={Lightbulb}
+            title="Ideia"
+            description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium obcaecati quam quibusdam numquam fugit aspernatur? Saepe quod ex facilis molestias, exercitationem iure, hic quis commodi, rerum adipisci odit quasi."
+            position={1}
+          />
+          <ValueCard
+            icon={Lightbulb}
+            title="Ideia"
+            description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium obcaecati quam quibusdam numquam fugit aspernatur? Saepe quod ex facilis molestias, exercitationem iure, hic quis commodi, rerum adipisci odit quasi."
+            position={2}
+          />
+          <ValueCard
+            icon={Lightbulb}
+            title="Ideia"
+            description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium obcaecati quam quibusdam numquam fugit aspernatur? Saepe quod ex facilis molestias, exercitationem iure, hic quis commodi, rerum adipisci odit quasi."
+            position={3}
+          />
         </div>
       </section>
 
       {/* Featured */}
-      <section></section>
+      <section>
+        <div></div>
+        <div></div>
+      </section>
 
       {/* Features */}
       <section></section>
