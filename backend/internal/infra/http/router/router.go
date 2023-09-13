@@ -3,14 +3,14 @@ package router
 import (
 	"net/http"
 
-	"github.com/charmingruby/wisp/internal/infra/handler"
+	"github.com/charmingruby/wisp/internal/infra/http/router/route"
 	"github.com/go-chi/chi"
 )
 
 func Initialize() {
 	r := chi.NewRouter()
 
-	r.Get("/health-check", handler.HealthCheckHandler)
+	route.Initialize(r)
 
 	println("Server is running at http://localhost:8888")
 
