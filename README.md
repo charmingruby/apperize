@@ -1,6 +1,6 @@
 # Wasp
 
-This app is built with Next.js 13, Tailwind, shadcn/ui, Zustand, Tailwind and Go.
+This app is built with Next.js 13, Tailwind, shadcn/ui, Zustand, Tailwind, Go and ScyllaDB.
 
 ## ⚠️ Under development
 
@@ -24,6 +24,3 @@ This application was made for purpose of creating a connection between Wasp's cu
   - It should be able to make a project report;
   - It should be able to check tasks;     
 
-#### Details
-
-#### Remember
