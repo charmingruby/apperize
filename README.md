@@ -1,10 +1,10 @@
 # Wasp
 
-This app is built with Next.js 13, Tailwind, shadcn/ui, Zustand, Tailwind, Go and ScyllaDB.
+This app is built with Next.js 13, Tailwind, shadcn/ui, Zustand, Tailwind, Go and Mongo.
 
 ## ⚠️ Under development
 
-This application was made for purpose of creating a connection between Wasp's customers and the developers.
+This application was made for purpose of creating a connection between Wisp's customers and the developers.
 
 ---
 
