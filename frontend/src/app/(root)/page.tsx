@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Lightbulb } from 'lucide-react'
+import { ArrowRight, Lightbulb, RefreshCcw } from 'lucide-react'
 import { ValueCard } from './components/value-card'
+import { FeatureItem } from './components/feature-item'
 
 export default function Home() {
   return (
@@ -31,21 +32,17 @@ export default function Home() {
       </section>
 
       {/* Value proposition */}
-      <section className="container">
+      <section className="container pt-16">
         <div className="mb-12 grid grid-cols-4 gap-8">
           <div className="col-span-3">
             <div className="w-fit space-y-4 mb-6 ">
               <span className="text-primary uppercase tracking-widest font-semibold block">
-                Plataforma para o cliente
+                Plataforma feita para o cliente
               </span>
               <div className="w-1/6 h-0.5 bg-primary" />
             </div>
             <strong className="leading-relaxed text-4xl font-semibold">
-              Traga sua ideia e nós a tornaremos{' '}
-              <strong className="font-bold text-primary underline underline-offset-8  ">
-                realidade
-              </strong>
-              .
+              Traga sua ideia e nós a tornaremos realidade.
             </strong>
           </div>
           <div className="flex justify-end items-end">
@@ -81,19 +78,74 @@ export default function Home() {
       </section>
 
       {/* Featured */}
-      <section>
-        <div></div>
-        <div></div>
+      <section className="container pt-20">
+        <div className="w-fit space-y-4 mb-6 ">
+          <span className="text-primary uppercase tracking-widest font-semibold block">
+            Visualização do progresso
+          </span>
+          <div className="w-1/6 h-0.5 bg-primary" />
+        </div>
+        <div className="grid grid-cols-2">
+          <strong className="font-semibold text-4xl">
+            Tenha acesso ao andamento do seu projeto
+          </strong>
+        </div>
       </section>
 
       {/* Features */}
-      <section></section>
+      <section className="container pt-20">
+        {/* Presentation */}
+        <div className="mx-auto text-center mb-12 flex flex-col gap-4">
+          <h2 className="text-4xl font-semibold">
+            Funcionalidades para melhorar sua{' '}
+            <strong className="text-primary">experiência</strong>
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            Algumas de nossas funcionalidades que vao ajudar te integrar na
+            criação do seu serviço.
+          </p>
+        </div>
+
+        {/* Feature list */}
+        <div className="grid grid-cols-3 gap-8">
+          <FeatureItem
+            icon={RefreshCcw}
+            title="Atualização em tempo real"
+            description="Mantenha-se atualizado com o andamento do seu serviço"
+          />
+          <FeatureItem
+            icon={RefreshCcw}
+            title="Atualização em tempo real"
+            description="Mantenha-se atualizado com o andamento do seu serviço"
+          />
+          <FeatureItem
+            icon={RefreshCcw}
+            title="Atualização em tempo real"
+            description="Mantenha-se atualizado com o andamento do seu serviço"
+          />
+          <FeatureItem
+            icon={RefreshCcw}
+            title="Atualização em tempo real"
+            description="Mantenha-se atualizado com o andamento do seu serviço"
+          />
+          <FeatureItem
+            icon={RefreshCcw}
+            title="Atualização em tempo real"
+            description="Mantenha-se atualizado com o andamento do seu serviço"
+          />
+          <FeatureItem
+            icon={RefreshCcw}
+            title="Atualização em tempo real"
+            description="Mantenha-se atualizado com o andamento do seu serviço"
+          />
+        </div>
+      </section>
 
       {/* Conclusion */}
-      <section></section>
+      <section className="container">Conclusion</section>
 
       {/* CTA */}
-      <section></section>
+      <section className="container mt-20 bg-primary rounded">CTA</section>
     </>
   )
 }

@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.variable} ${alt.variable} 
-        scroll-smooth font-sans dark bg-background text-foreground scrollbar-thin scrollbar-track-scrollbar-track scrollbar-thumb-scrollbar-thumb
+        scroll-smooth font-sans bg-background text-foreground scrollbar-thin scrollbar-track-scrollbar-track scrollbar-thumb-scrollbar-thumb
       `}
       >
         <main>{children}</main>
