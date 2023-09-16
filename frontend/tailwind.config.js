@@ -58,6 +58,20 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        status: {
+          pending: {
+            main: '#7B51B2',
+            dark: '#221C35',
+          },
+          'in-progress': {
+            main: '#3D6BAC',
+            dark: '#152035',
+          },
+          done: {
+            main: '#28844F',
+            dark: '#152827',
+          },
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
