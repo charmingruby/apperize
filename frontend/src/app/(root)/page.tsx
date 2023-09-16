@@ -1,10 +1,10 @@
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Blocks, CheckCircle2, RefreshCcw } from 'lucide-react'
+import { ArrowRight, RefreshCcw } from 'lucide-react'
 import { FeatureItem } from './components/feature-item'
-import { Text } from '@/components/ui/text'
 import { ValuesList } from './components/values-list'
 import { FeatureGuarantee } from './components/feature-guarantee'
 import { TaskStatus } from '@/components/task-status'
+import { TasksBoardDemo } from './components/demos/tasks-board-demo'
 
 export default function Home() {
   return (
@@ -63,7 +63,7 @@ export default function Home() {
           </span>
           <div className="w-1/6 h-0.5 bg-primary" />
         </div>
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 gap-12">
           {/* Content */}
           <div>
             <strong className="font-semibold text-3xl">
@@ -85,12 +85,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Demonstration */}
-          <div>
-            <TaskStatus status="Pendente" />
-            <TaskStatus status="Em progresso" />
-            <TaskStatus status="Finalizado" />
-          </div>
+          <TasksBoardDemo />
         </div>
       </section>
 
