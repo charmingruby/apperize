@@ -3,8 +3,7 @@ import { ArrowRight, RefreshCcw } from 'lucide-react'
 import { FeatureItem } from './components/feature-item'
 import { ValuesList } from './components/values-list'
 import { FeatureGuarantee } from './components/feature-guarantee'
-import { TaskStatus } from '@/components/task-status'
-import { TasksBoardDemo } from './components/demos/tasks-board-demo'
+import { TasksBoardDemo } from './components/demos/tasks/board'
 
 export default function Home() {
   return (
@@ -36,7 +35,7 @@ export default function Home() {
 
       {/* Value proposition */}
       <section className="container py-20">
-        <div className="mb-12 grid grid-cols-4 gap-8">
+        <div className="mb-12 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-3">
             <div className="w-fit space-y-4 mb-6 ">
               <span className="text-primary uppercase tracking-widest font-semibold block">
@@ -55,15 +54,18 @@ export default function Home() {
         <ValuesList />
       </section>
 
-      {/* Featured */}
+      {/* Demos */}
+      {/* Task */}
       <section className="container py-20">
+        {/* Title */}
         <div className="w-fit space-y-4 mb-6 ">
           <span className="text-primary uppercase tracking-widest font-semibold block">
             Visualização do progresso
           </span>
           <div className="w-1/6 h-0.5 bg-primary" />
         </div>
-        <div className="grid grid-cols-2 gap-12">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Content */}
           <div>
             <strong className="font-semibold text-3xl">
@@ -77,7 +79,7 @@ export default function Home() {
               est blanditiis sequi!
             </p>
 
-            <div className="mt-12 grid grid-cols-2 gap-2">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-2">
               <FeatureGuarantee text="Controle do serviço" />
               <FeatureGuarantee text="Feedbacks constantes" />
               <FeatureGuarantee text="Sugerir mudanças no serviço" />
@@ -88,6 +90,9 @@ export default function Home() {
           <TasksBoardDemo />
         </div>
       </section>
+
+      {/* Communication */}
+      {/* Demos end */}
 
       {/* Features */}
       <section className="container py-20">
@@ -104,7 +109,7 @@ export default function Home() {
         </div>
 
         {/* Feature list */}
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureItem
             icon={RefreshCcw}
             title="Atualização em tempo real"

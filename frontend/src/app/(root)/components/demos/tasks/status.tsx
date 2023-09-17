@@ -5,7 +5,7 @@ interface TaskStatusProps {
   status: StatusOptions
 }
 
-export function TaskStatus({ status }: TaskStatusProps) {
+export function TaskStatusDemo({ status }: TaskStatusProps) {
   return (
     <div
       className={clsx('w-fit px-3 py-1.5 rounded-md shadow-sm border-2', {
