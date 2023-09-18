@@ -12,7 +12,6 @@ export function Header() {
         <div className="flex gap-6">
           <NavItem label="Início" url="/" />
           <NavItem label="Sobre" url="/sobre" />
-          <NavItem label="Produtos" url="/produtos" />
           <NavItem label="Serviços" url="/sobre" />
           <NavItem label="Contato" url="/sobre" />
         </div>

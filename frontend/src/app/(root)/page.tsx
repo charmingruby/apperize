@@ -3,7 +3,9 @@ import { ArrowRight, RefreshCcw } from 'lucide-react'
 import { FeatureItem } from './components/feature-item'
 import { ValuesList } from './components/values-list'
 import { FeatureGuarantee } from './components/feature-guarantee'
-import { TasksBoardDemo } from './components/demos/tasks/board'
+import Image from 'next/image'
+import tasksFeedback from '@/assets/tasks-feedback.svg'
+import communication from '@/assets/communication.svg'
 
 export default function Home() {
   return (
@@ -54,20 +56,19 @@ export default function Home() {
         <ValuesList />
       </section>
 
-      {/* Demos */}
       {/* Task */}
       <section className="container py-20">
-        {/* Title */}
-        <div className="w-fit space-y-4 mb-6 ">
-          <span className="text-primary uppercase tracking-widest font-semibold block">
-            Visualização do progresso
-          </span>
-          <div className="w-1/6 h-0.5 bg-primary" />
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Content */}
-          <div>
+          <div className="flex justify-center flex-col">
+            {/* Title */}
+            <div className="w-fit space-y-4 mb-6 ">
+              <span className="text-primary uppercase tracking-widest font-semibold block">
+                Visualização do progresso
+              </span>
+              <div className="w-1/6 h-0.5 bg-primary" />
+            </div>
+
             <strong className="font-semibold text-3xl">
               Tenha acesso ao andamento do seu projeto
             </strong>
@@ -87,12 +88,53 @@ export default function Home() {
             </div>
           </div>
 
-          <TasksBoardDemo />
+          <div className="flex items-center justify-end">
+            <Image src={tasksFeedback} alt="Tasks illustrations" />
+          </div>
         </div>
       </section>
 
       {/* Communication */}
-      {/* Demos end */}
+      <section className="container py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="flex items-center">
+            <Image
+              src={communication}
+              alt="Customer choosing design"
+              className="w-[36rem]"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="flex flex-col justify-center">
+            {/* Title */}
+            <div className="w-fit space-y-4 mb-6 ">
+              <span className="text-primary uppercase tracking-widest font-semibold block">
+                Visualização do progresso
+              </span>
+              <div className="w-1/6 h-0.5 bg-primary" />
+            </div>
+
+            <strong className="font-semibold text-3xl">
+              Tenha acesso ao andamento do seu projeto
+            </strong>
+
+            <p className="text-lg text-muted-foreground leading-relaxed mt-8">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ipsam
+              similique dolorum. Obcaecati accusamus porro quia, ex asperiores,
+              officia pariatur magnam esse doloribus dolorum voluptates quam hic
+              est blanditiis sequi!
+            </p>
+
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-2">
+              <FeatureGuarantee text="Controle do serviço" />
+              <FeatureGuarantee text="Feedbacks constantes" />
+              <FeatureGuarantee text="Sugerir mudanças no serviço" />
+              <FeatureGuarantee text="Dashboard do serviço" />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Features */}
       <section className="container py-20">
@@ -109,7 +151,7 @@ export default function Home() {
         </div>
 
         {/* Feature list */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <FeatureItem
             icon={RefreshCcw}
             title="Atualização em tempo real"
@@ -144,6 +186,10 @@ export default function Home() {
       </section>
 
       {/* Conclusion */}
+      <section className="container py-20">conclusion</section>
+
+      {/* CTA */}
+      <section className="container py-20">cta</section>
     </>
   )
 }
