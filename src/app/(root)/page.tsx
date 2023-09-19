@@ -186,7 +186,14 @@ export default function Home() {
       </section>
 
       {/* Conclusion */}
-      <section className="container py-20">conclusion</section>
+      <section className="container py-20">
+        <div>
+          {/* Content */}
+          <div></div>
+
+          {/* Demo */}
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="container py-20">cta</section>
