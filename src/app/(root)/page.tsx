@@ -6,6 +6,10 @@ import { FeatureGuarantee } from './components/feature-guarantee'
 import Image from 'next/image'
 import tasksFeedback from '@/assets/tasks-feedback.svg'
 import communication from '@/assets/communication.svg'
+import quality from '@/assets/quality.svg'
+import { Text } from '@/components/ui/text'
+import { Card } from '@/components/ui/card'
+import { Title } from '@/components/title'
 
 export default function Home() {
   return (
@@ -61,13 +65,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Content */}
           <div className="flex justify-center flex-col">
-            {/* Title */}
-            <div className="w-fit space-y-4 mb-6 ">
-              <span className="text-primary uppercase tracking-widest font-semibold block">
-                Visualização do progresso
-              </span>
-              <div className="w-1/6 h-0.5 bg-primary" />
-            </div>
+            <Title title="Visualização do progresso" />
 
             <strong className="font-semibold text-3xl">
               Tenha acesso ao andamento do seu projeto
@@ -107,13 +105,7 @@ export default function Home() {
 
           {/* Content */}
           <div className="flex flex-col justify-center">
-            {/* Title */}
-            <div className="w-fit space-y-4 mb-6 ">
-              <span className="text-primary uppercase tracking-widest font-semibold block">
-                Visualização do progresso
-              </span>
-              <div className="w-1/6 h-0.5 bg-primary" />
-            </div>
+            <Title title="Visualização do progresso" />
 
             <strong className="font-semibold text-3xl">
               Tenha acesso ao andamento do seu projeto
@@ -139,7 +131,7 @@ export default function Home() {
       {/* Features */}
       <section className="container py-20">
         {/* Presentation */}
-        <div className="mx-auto text-center mb-12 flex flex-col gap-4">
+        <div className="mx-auto text-center mb-16 flex flex-col gap-4">
           <h2 className="text-4xl font-semibold">
             Funcionalidades para melhorar sua{' '}
             <strong className="text-primary">experiência</strong>
@@ -151,7 +143,7 @@ export default function Home() {
         </div>
 
         {/* Feature list */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureItem
             icon={RefreshCcw}
             title="Atualização em tempo real"
@@ -185,18 +177,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Conclusion */}
-      <section className="container py-20">
-        <div>
+      {/* Benefits */}
+      <section className="bg-background-highlight-main">
+        <div className="container py-8 grid grid-cols-2 gap-12">
           {/* Content */}
-          <div></div>
+          <div className="flex flex-col justify-center">
+            <span className="text-3xl  font-semibold">
+              <span className="bg-background-highlight-dark text-primary">
+                Qualidade
+              </span>{' '}
+              por padrão
+            </span>
 
-          {/* Demo */}
+            <span className="block text-muted-foreground mt-4 text-xl font-medium">
+              Acreditamos que podemos alavancar seus negocios
+            </span>
+
+            {/* How we can help */}
+            <div className="flex flex-col my-8 gap-4 text-base text-muted-foreground">
+              <Text>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Praesentium, aliquid. Incidunt, voluptate qui nulla ullam porro
+                iusto dolore id sequi laudantium ab autem odit unde mollitia.
+                Pariatur quos voluptate suscipit.
+              </Text>
+              <Text>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Praesentium, aliquid. Incidunt, voluptate qui nulla ullam porro
+                iusto dolore id sequi laudantium ab autem odit unde mollitia.
+                Pariatur quos voluptate suscipit.
+              </Text>
+            </div>
+
+            <Button className="w-fit flex items-center gap-1">
+              <span>Sobre a Wisp</span>
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </div>
+
+          {/* Image */}
+          <div className="flex items-center justify-end">
+            <Image
+              src={quality}
+              alt="Imagem de qualidade"
+              className="w-[32rem]"
+            />
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="container py-20">cta</section>
+      <section className="container py-20 flex flex-col">
+        <div className="flex flex-col items-center max-w-2xl mx-auto text-center gap-8 mb-12">
+          <span className="text-primary uppercase tracking-widest font-semibold block">
+            Venha se modernizar conosco
+          </span>
+        </div>
+
+        <div className="grid grid-cols-2 gap-8">
+          <Card>card para pedir</Card>
+          <Card>card de produtos</Card>
+        </div>
+      </section>
     </>
   )
 }
