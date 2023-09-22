@@ -1,5 +1,12 @@
 import { Button } from '@/components/ui/button'
-import { ArrowRight, RefreshCcw } from 'lucide-react'
+import {
+  ArrowRight,
+  AtSign,
+  BookMarked,
+  Computer,
+  Layout,
+  RefreshCcw,
+} from 'lucide-react'
 import { FeatureItem } from './components/feature-item'
 import { ValuesList } from './components/values-list'
 import { FeatureGuarantee } from './components/feature-guarantee'
@@ -8,8 +15,16 @@ import tasksFeedback from '@/assets/tasks-feedback.svg'
 import communication from '@/assets/communication.svg'
 import quality from '@/assets/quality.svg'
 import { Text } from '@/components/ui/text'
-import { Card } from '@/components/ui/card'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 import { Title } from '@/components/title'
+import { ProductCategory } from './components/product-category'
 
 export default function Home() {
   return (
@@ -179,7 +194,7 @@ export default function Home() {
 
       {/* Benefits */}
       <section className="bg-background-highlight-main">
-        <div className="container py-8 grid grid-cols-2 gap-12">
+        <div className="container grid grid-cols-2 gap-12">
           {/* Content */}
           <div className="flex flex-col justify-center">
             <span className="text-3xl  font-semibold">
@@ -189,12 +204,12 @@ export default function Home() {
               por padrão
             </span>
 
-            <span className="block text-muted-foreground mt-4 text-xl font-medium">
-              Acreditamos que podemos alavancar seus negocios
+            <span className="block mt-4 text-xl text-gray-500">
+              Acreditamos que podemos alavancar seus negocios.
             </span>
 
             {/* How we can help */}
-            <div className="flex flex-col my-8 gap-4 text-base text-muted-foreground">
+            <div className="flex flex-col my-8 gap-4">
               <Text>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Praesentium, aliquid. Incidunt, voluptate qui nulla ullam porro
@@ -234,9 +249,65 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
-          <Card>card para pedir</Card>
-          <Card>card de produtos</Card>
+        <div className="flex flex-row w-full gap-12">
+          <Card className="w-full">
+            <CardHeader>
+              <CardTitle>Faça seu pedido customizado</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Card className=" bg-background-highlight-main py-8">
+                <div className="max-w-sm mx-auto text-center flex flex-col items-center gap-4">
+                  <CardDescription>
+                    Nos envie uma mensagem comunicando suas necessidade
+                  </CardDescription>
+
+                  <div className="flex gap-2">
+                    <Button className="gap-1 w-fit" variant="outline">
+                      <span>Dúvidas</span>
+                    </Button>
+                    <Button className="gap-1 w-fit">
+                      <span>Fazer pedido</span>
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+            </CardContent>
+            <CardFooter>
+              <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                <span>Veja todos nossos produtos</span>
+                <ArrowRight className="h-4 w-4" />
+              </div>
+            </CardFooter>
+          </Card>
+
+          <div className="flex items-center">
+            <span className="text-muted-foreground">ou</span>
+          </div>
+
+          <Card className="w-full flex flex-col">
+            <CardHeader>
+              <CardTitle>Produtos prontos</CardTitle>
+              <CardDescription>
+                Como alternativa, use nossos produtos já prontos.
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent className="border-none flex w-full flex-1">
+              <div className="grid grid-cols-2 gap-4 w-full">
+                <ProductCategory icon={Computer} category="Sistemas" />
+                <ProductCategory icon={BookMarked} category="Blogs" />
+                <ProductCategory icon={Layout} category="Páginas Web" />
+                <ProductCategory icon={AtSign} category="Marca pessoal" />
+              </div>
+            </CardContent>
+
+            <CardFooter>
+              <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                <span>Veja todos nossos produtos</span>
+                <ArrowRight className="h-4 w-4" />
+              </div>
+            </CardFooter>
+          </Card>
         </div>
       </section>
     </>

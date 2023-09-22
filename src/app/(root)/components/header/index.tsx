@@ -5,14 +5,15 @@ import Link from 'next/link'
 
 export function Header() {
   return (
-    <header className="border-b border-border flex items-center fixed w-full z-20 bg-background">
+    <header className="border-b border-border flex items-center fixed w-full z-20 bg-background shadow-sm">
       <div className="container flex h-16 items-center justify-between">
         <Logo />
 
         <div className="flex gap-6">
           <NavItem label="Início" url="/" />
           <NavItem label="Sobre" url="/sobre" />
-          <NavItem label="Serviços" url="/sobre" />
+          <NavItem label="Pedidos" url="/sobre" />
+          <NavItem label="Produtos" url="/sobre" />
           <NavItem label="Contato" url="/sobre" />
         </div>
 
