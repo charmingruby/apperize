@@ -3,16 +3,14 @@ import {
   ArrowRight,
   AtSign,
   BookMarked,
+  Check,
   Computer,
   Layout,
-  RefreshCcw,
+  Quote,
 } from 'lucide-react'
 import { FeatureItem } from './components/feature-item'
 import { ValuesList } from './components/values-list'
-import { FeatureGuarantee } from './components/feature-guarantee'
 import Image from 'next/image'
-import tasksFeedback from '@/assets/tasks-feedback.svg'
-import communication from '@/assets/communication.svg'
 import quality from '@/assets/quality.svg'
 import { Text } from '@/components/ui/text'
 import {
@@ -25,6 +23,10 @@ import {
 } from '@/components/ui/card'
 import { Title } from '@/components/title'
 import { ProductCategory } from './components/product-category'
+import { TecList } from './components/tec-list'
+import { serviceList } from '@/constants/services'
+import { ServiceItem } from './components/service-item'
+import exampleImage from '@/assets/gustavo-dias-profile.jpeg'
 
 export default function Home() {
   return (
@@ -45,8 +47,14 @@ export default function Home() {
             </p>
           </div>
           <div className="flex gap-4">
-            <Button>Faça seu pedido</Button>
-            <Button variant="outline" className="flex items-center gap-1">
+            <Button size="lg" className="text-base">
+              Faça seu pedido
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="flex items-center gap-1 text-base"
+            >
               <span>Produtos</span>
               <ArrowRight className="h-3.5 w-3.5" />
             </Button>
@@ -65,7 +73,7 @@ export default function Home() {
               <div className="w-1/6 h-0.5 bg-primary" />
             </div>
             <strong className="leading-relaxed text-4xl font-semibold">
-              Traga sua ideia e nós a tornaremos realidade.
+              Traga sua ideia e nós a tornaremos realidade
             </strong>
           </div>
           <div className="flex justify-end items-end">
@@ -75,141 +83,190 @@ export default function Home() {
         <ValuesList />
       </section>
 
-      {/* Task */}
+      {/* Services (future) */}
       <section className="container py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Content */}
-          <div className="flex justify-center flex-col">
-            <Title title="Visualização do progresso" />
+        <div>
+          <Title title="Com o que podemos te ajudar" />
+          <strong className="text-5xl font-semibold leading-tight block">
+            Nossos{' '}
+            <span className="text-primary bg-background-highlight-dark  ">
+              serviços
+            </span>
+          </strong>
+        </div>
 
-            <strong className="font-semibold text-3xl">
-              Tenha acesso ao andamento do seu projeto
-            </strong>
-
-            <p className="text-lg text-muted-foreground leading-relaxed mt-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ipsam
-              similique dolorum. Obcaecati accusamus porro quia, ex asperiores,
-              officia pariatur magnam esse doloribus dolorum voluptates quam hic
-              est blanditiis sequi!
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-2">
-              <FeatureGuarantee text="Controle do serviço" />
-              <FeatureGuarantee text="Feedbacks constantes" />
-              <FeatureGuarantee text="Sugerir mudanças no serviço" />
-              <FeatureGuarantee text="Dashboard do serviço" />
-            </div>
-          </div>
-
-          <div className="flex items-center justify-end">
-            <Image src={tasksFeedback} alt="Tasks illustrations" />
-          </div>
+        <div className="grid grid-cols-3 gap-8 mt-12 h-fit">
+          {serviceList.map(({ name, description, image }) => (
+            <ServiceItem
+              key={name}
+              description={description}
+              name={name}
+              image={image}
+            />
+          ))}
         </div>
       </section>
 
-      {/* Communication */}
-      <section className="container py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="flex items-center">
-            <Image
-              src={communication}
-              alt="Customer choosing design"
-              className="w-[36rem]"
+      {/* Differentials */}
+      <section className="container py-20 ">
+        <div className="grid grid-cols-2 gap-16">
+          {/* Presentation */}
+          <div className="flex flex-col justify-center">
+            <Title title="Por que confiar na Wisp?" />
+            <strong className="text-5xl font-semibold leading-tight mb-8 block">
+              Diferenciais que você encontra na{' '}
+              <span className="text-primary bg-background-highlight-dark  ">
+                Wisp
+              </span>
+            </strong>
+
+            <Text className="text-xl leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cum
+              blanditiis ex quam reiciendis commodi velit quia, incidunt esse
+              enim, aliquid quisquam sequi. Obcaecati ad impedit repudiandae
+              debitis aliquam veritatis.
+            </Text>
+
+            <Button size="lg" className="flex text-lg w-fit mt-12">
+              <span> Buscar soluçao com nossa equipe</span>
+            </Button>
+          </div>
+
+          {/* Content */}
+          <div className="grid grid-cols-1 gap-8">
+            <FeatureItem
+              icon={Check}
+              title="Entregas rápidas e funcionais (MVP)"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maiores, natus sit similique pariatur quis mollitia reprehenderit molestiae vitae, quia saepe quibusdam, error rerum quisquam deserunt."
+            />
+            <FeatureItem
+              icon={Check}
+              title="Entregas rápidas e funcionais (MVP)"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maiores, natus sit similique pariatur quis mollitia reprehenderit molestiae vitae, quia saepe quibusdam, error rerum quisquam deserunt."
+            />
+            <FeatureItem
+              icon={Check}
+              title="Entregas rápidas e funcionais (MVP)"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maiores, natus sit similique pariatur quis mollitia reprehenderit molestiae vitae, quia saepe quibusdam, error rerum quisquam deserunt."
             />
           </div>
+        </div>
+      </section>
 
-          {/* Content */}
-          <div className="flex flex-col justify-center">
-            <Title title="Visualização do progresso" />
-
-            <strong className="font-semibold text-3xl">
-              Tenha acesso ao andamento do seu projeto
+      {/* Techs */}
+      <section className="container py-20">
+        <div className="mb-12 flex flex-col items-center">
+          <div className="text-primary uppercase tracking-widest font-semibold block mb-6">
+            Tecnologia que usamos
+          </div>
+          <h3 className="leading-relaxed text-4xl font-semibold block">
+            Tecnologias selecionadas para entregar a melhor{' '}
+            <strong className="bg-background-highlight-dark text-primary">
+              performance
             </strong>
+          </h3>
+        </div>
+        <TecList />
+      </section>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mt-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ipsam
-              similique dolorum. Obcaecati accusamus porro quia, ex asperiores,
-              officia pariatur magnam esse doloribus dolorum voluptates quam hic
-              est blanditiis sequi!
-            </p>
+      {/* Projects (future) */}
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-2">
-              <FeatureGuarantee text="Controle do serviço" />
-              <FeatureGuarantee text="Feedbacks constantes" />
-              <FeatureGuarantee text="Sugerir mudanças no serviço" />
-              <FeatureGuarantee text="Dashboard do serviço" />
+      {/* Depositions */}
+      <section className="bg-primary">
+        <div className="py-20 container grid grid-cols-3 gap-8 text-primary-foreground ">
+          <div className="flex flex-col gap-6">
+            <span className="uppercase tracking-widest font-semibold block">
+              Depoimentos
+            </span>
+            <strong className="text-5xl font-semibold leading-tight mb-8 block">
+              O que nossos clientes dizem sobre nós:
+            </strong>
+          </div>
+
+          {/* Deposition */}
+          <div className=" flex flex-col gap-8">
+            <Quote />
+            <div className="flex flex-col gap-4">
+              <p className="text-base max-w-sm italic">
+                {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Minus rem soluta deleniti cum, possimus doloribus iste sint
+                sequi cumque beatae molestiae corporis nam error nisi deserunt,
+                perspiciatis officia ex nobis?{`"`}
+              </p>
+
+              <div className="flex items-center gap-2">
+                <div className="p-1 border border-border rounded-full h-16 w-16">
+                  <Image
+                    src={exampleImage}
+                    alt="Example deposition image"
+                    className="rounded-full"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1">
+                  {/* Name */}
+                  <strong className="text-lg">Gustavo Dias</strong>
+
+                  {/* Role */}
+                  <span className="block">
+                    Fundador da <strong>Ymir</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Deposition */}
+          <div className=" flex flex-col gap-8">
+            <Quote />
+            <div className="flex flex-col gap-4">
+              <p className="text-base max-w-sm italic">
+                {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Minus rem soluta deleniti cum, possimus doloribus iste sint
+                sequi cumque beatae molestiae corporis nam error nisi deserunt,
+                perspiciatis officia ex nobis?{`"`}
+              </p>
+
+              <div className="flex items-center gap-2">
+                <div className="p-1 border border-border rounded-full h-16 w-16">
+                  <Image
+                    src={exampleImage}
+                    alt="Example deposition image"
+                    className="rounded-full"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1">
+                  {/* Name */}
+                  <strong className="text-lg">Gustavo Dias</strong>
+
+                  {/* Role */}
+                  <span className="block">
+                    Fundador da <strong>Ymir</strong>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features */}
-      <section className="container py-20">
-        {/* Presentation */}
-        <div className="mx-auto text-center mb-16 flex flex-col gap-4">
-          <h2 className="text-4xl font-semibold">
-            Funcionalidades para melhorar sua{' '}
-            <strong className="text-primary">experiência</strong>
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Algumas de nossas funcionalidades que vao ajudar te integrar na
-            criação do seu serviço.
-          </p>
-        </div>
-
-        {/* Feature list */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <FeatureItem
-            icon={RefreshCcw}
-            title="Atualização em tempo real"
-            description="Mantenha-se atualizado com o andamento do seu serviço"
-          />
-          <FeatureItem
-            icon={RefreshCcw}
-            title="Atualização em tempo real"
-            description="Mantenha-se atualizado com o andamento do seu serviço"
-          />
-          <FeatureItem
-            icon={RefreshCcw}
-            title="Atualização em tempo real"
-            description="Mantenha-se atualizado com o andamento do seu serviço"
-          />
-          <FeatureItem
-            icon={RefreshCcw}
-            title="Atualização em tempo real"
-            description="Mantenha-se atualizado com o andamento do seu serviço"
-          />
-          <FeatureItem
-            icon={RefreshCcw}
-            title="Atualização em tempo real"
-            description="Mantenha-se atualizado com o andamento do seu serviço"
-          />
-          <FeatureItem
-            icon={RefreshCcw}
-            title="Atualização em tempo real"
-            description="Mantenha-se atualizado com o andamento do seu serviço"
-          />
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="bg-background-highlight-main">
+      {/* Budget */}
+      <section className="py-20">
         <div className="container grid grid-cols-2 gap-12">
           {/* Content */}
           <div className="flex flex-col justify-center">
-            <span className="text-3xl  font-semibold">
+            <Title title="Solicite seu orçamento" />
+            <strong className="text-5xl font-semibold leading-tight block">
+              Preparado para melhorar seu negocio com a{' '}
               <span className="bg-background-highlight-dark text-primary">
-                Qualidade
-              </span>{' '}
-              por padrão
-            </span>
-
-            <span className="block mt-4 text-xl text-gray-500">
-              Acreditamos que podemos alavancar seus negocios.
-            </span>
+                Wisp
+              </span>
+              ?
+            </strong>
 
             {/* How we can help */}
-            <div className="flex flex-col my-8 gap-4">
+            <div className="flex flex-col gap-4 mt-8">
               <Text>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Praesentium, aliquid. Incidunt, voluptate qui nulla ullam porro
@@ -224,9 +281,8 @@ export default function Home() {
               </Text>
             </div>
 
-            <Button className="w-fit flex items-center gap-1">
-              <span>Sobre a Wisp</span>
-              <ArrowRight className="w-4 h-4" />
+            <Button size="lg" className="flex text-lg w-fit mt-12">
+              <span>Quero tirar minha ideia do papel</span>
             </Button>
           </div>
 
@@ -241,73 +297,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Cases (future) */}
+
       {/* CTA */}
-      <section className="container py-20 flex flex-col">
-        <div className="flex flex-col items-center max-w-2xl mx-auto text-center gap-8 mb-12">
-          <span className="text-primary uppercase tracking-widest font-semibold block">
-            Venha se modernizar conosco
-          </span>
-        </div>
-
-        <div className="flex flex-row w-full gap-12">
-          <Card className="w-full">
-            <CardHeader>
-              <CardTitle>Faça seu pedido customizado</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Card className=" bg-background-highlight-main py-8">
-                <div className="max-w-sm mx-auto text-center flex flex-col items-center gap-4">
-                  <CardDescription>
-                    Nos envie uma mensagem comunicando suas necessidade
-                  </CardDescription>
-
-                  <div className="flex gap-2">
-                    <Button className="gap-1 w-fit" variant="outline">
-                      <span>Dúvidas</span>
-                    </Button>
-                    <Button className="gap-1 w-fit">
-                      <span>Fazer pedido</span>
-                    </Button>
-                  </div>
-                </div>
-              </Card>
-            </CardContent>
-            <CardFooter>
-              <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                <span>Veja todos nossos produtos</span>
-                <ArrowRight className="h-4 w-4" />
-              </div>
-            </CardFooter>
-          </Card>
-
-          <div className="flex items-center">
-            <span className="text-muted-foreground">ou</span>
+      <section className="bg-background-highlight-main border-t border-border">
+        <div className="container py-20 flex flex-col">
+          <div className="flex flex-col items-center max-w-2xl mx-auto text-center gap-8 mb-12">
+            <span className="text-primary uppercase tracking-widest font-semibold block">
+              Venha se modernizar conosco
+            </span>
           </div>
 
-          <Card className="w-full flex flex-col">
-            <CardHeader>
-              <CardTitle>Produtos prontos</CardTitle>
-              <CardDescription>
-                Como alternativa, use nossos produtos já prontos.
-              </CardDescription>
-            </CardHeader>
+          <div className="flex flex-row w-full gap-12">
+            <Card className="w-full">
+              <CardHeader>
+                <CardTitle>Faça seu pedido customizado</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Card className=" bg-background-highlight-main py-8">
+                  <div className="max-w-sm mx-auto text-center flex flex-col items-center gap-4">
+                    <CardDescription>
+                      Nos envie uma mensagem comunicando suas necessidade
+                    </CardDescription>
 
-            <CardContent className="border-none flex w-full flex-1">
-              <div className="grid grid-cols-2 gap-4 w-full">
-                <ProductCategory icon={Computer} category="Sistemas" />
-                <ProductCategory icon={BookMarked} category="Blogs" />
-                <ProductCategory icon={Layout} category="Páginas Web" />
-                <ProductCategory icon={AtSign} category="Marca pessoal" />
-              </div>
-            </CardContent>
+                    <div className="flex gap-2">
+                      <Button className="gap-1 w-fit">
+                        <span>Fazer pedido</span>
+                      </Button>
+                    </div>
+                  </div>
+                </Card>
+              </CardContent>
+              <CardFooter>
+                <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                  <span>Veja todos nossos produtos</span>
+                  <ArrowRight className="h-4 w-4" />
+                </div>
+              </CardFooter>
+            </Card>
 
-            <CardFooter>
-              <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                <span>Veja todos nossos produtos</span>
-                <ArrowRight className="h-4 w-4" />
-              </div>
-            </CardFooter>
-          </Card>
+            <div className="flex items-center">
+              <span className="text-muted-foreground">ou</span>
+            </div>
+
+            <Card className="w-full flex flex-col">
+              <CardHeader>
+                <CardTitle>Produtos prontos</CardTitle>
+                <CardDescription>
+                  Como alternativa, use nossos produtos já prontos.
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="border-none flex w-full flex-1">
+                <div className="grid grid-cols-2 gap-4 w-full">
+                  <ProductCategory icon={Computer} category="Sistemas" />
+                  <ProductCategory icon={BookMarked} category="Blogs" />
+                  <ProductCategory icon={Layout} category="Sites" />
+                  <ProductCategory icon={AtSign} category="Marca" />
+                </div>
+              </CardContent>
+
+              <CardFooter>
+                <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                  <span>Veja todos nossos produtos</span>
+                  <ArrowRight className="h-4 w-4" />
+                </div>
+              </CardFooter>
+            </Card>
+          </div>
         </div>
       </section>
     </>

@@ -17,17 +17,14 @@ export function Header() {
           <NavItem label="Contato" url="/sobre" />
         </div>
 
-        <div className="flex gap-4 items-center">
-          <Link
-            href="/"
-            prefetch={false}
-            className="font-medium text-base text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Login
+        <div className="flex gap-2 items-center">
+          <Link href="/" prefetch={false}>
+            <Button variant="outline" size="sm">
+              Entrar
+            </Button>
           </Link>
-          <Button size="sm" className="font-medium text-base ">
-            Criar conta
-          </Button>
+
+          <Button size="sm">Fazer pedido</Button>
         </div>
       </div>
     </header>

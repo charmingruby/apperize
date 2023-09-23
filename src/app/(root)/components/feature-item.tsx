@@ -12,15 +12,17 @@ export function FeatureItem({
   description,
 }: FeatureItemProps) {
   return (
-    <div className="flex border border-border p-4 flex-col rounded-md shadow-md">
-      <div className="bg-background-highlight-main w-fit p-2 rounded-full">
-        <Icon className="h-7 w-7 text-primary" />
+    <div className="flex gap-2">
+      <div className="bg-background-highlight-dark h-fit -translate-y-2 w-fit p-1 rounded-full border-4 border-background-highlight-main">
+        <Icon className="h-6 w-6 text-primary" />
       </div>
 
-      <strong className="font-semibold text-primary text-lg mt-4">
-        {title}
-      </strong>
-      <span className="text-base mt-2">{description}</span>
+      <div className="flex flex-col">
+        <strong className="font-semibold text-primary text-lg">{title}</strong>
+        <span className="text-base text-muted-foreground mt-2">
+          {description}
+        </span>
+      </div>
     </div>
   )
 }

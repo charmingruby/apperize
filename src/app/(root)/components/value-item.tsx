@@ -9,23 +9,23 @@ import {
 import { ElementType } from 'react'
 import clsx from 'clsx'
 
-interface ValueCardProps {
+interface ValueItemProps {
   icon: ElementType
   title: string
   description: string
   position: number
 }
 
-export function ValueCard({
+export function ValueItem({
   icon: Icon,
   title,
   description,
   position,
-}: ValueCardProps) {
+}: ValueItemProps) {
   return (
     <Card>
       <CardHeader>
-        <div className="bg-border w-fit p-2 rounded-full mb-2">
+        <div className="bg-background-highlight-dark border-4 border-background-highlight-main w-fit p-2 rounded-full mb-2">
           <Icon className="text-primary" />
         </div>
         <CardTitle>{title}</CardTitle>
