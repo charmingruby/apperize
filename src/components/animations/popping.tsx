@@ -12,7 +12,7 @@ export function PoppingAnimation({ children, delay }: PoppingProps) {
   return (
     <mt.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay }}
     >
       {children}

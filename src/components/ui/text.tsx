@@ -4,7 +4,10 @@ import { ComponentProps } from 'react'
 
 const textVariants = cva('leading-relaxed', {
   variants: {
-    variant: {},
+    variant: {
+      default: '',
+      lowOpacity: 'text-muted-foreground',
+    },
     size: {
       default: 'text-lg',
     },

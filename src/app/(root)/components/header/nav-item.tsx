@@ -20,10 +20,10 @@ export function NavItem({ label, url }: NavItemProps) {
       prefetch={false}
       className={`
         ${isTheCurrentPath
-          ? 'text-foreground border-primary'
-          : 'text-muted-foreground border-background'
+          ? 'text-primary border-primary'
+          : 'text-muted-foreground border-background hover:text-foreground transition-colors'
         }
-        flex items-center h-16 font-medium border-b-2
+        flex items-center h-16 font-medium border-b-2 
       `}
     >
       {label}

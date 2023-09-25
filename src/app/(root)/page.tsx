@@ -35,10 +35,18 @@ export default function Home() {
       <section className="container pt-20 min-h-screen flex flex-col justify-center">
         <div className="max-w-2xl mx-auto flex flex-col items-center gap-16">
           <div className="flex flex-col items-center gap-8">
-            <h1 className="m-0 font-bold text-5xl text-center">
-              Transforme sua ideia em um{' '}
-              <span className="text-primary">Software</span>.
-            </h1>
+            <div className="flex flex-col gap-2">
+              {/* Heading */}
+              <h1 className="m-0 font-bold text-5xl text-center">
+                Transforme sua ideia em um{' '}
+              </h1>
+
+              <h2 className="text-primary m-0 font-bold text-5xl text-center">
+                Software
+              </h2>
+            </div>
+
+            {/* Text */}
             <p className="text-muted-foreground text-center leading-relaxed text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               reiciendis obcaecati quas rerum ullam quis impedit. Sapiente sequi
@@ -46,6 +54,8 @@ export default function Home() {
               nihil tempora amet!
             </p>
           </div>
+
+          {/* Button group */}
           <div className="flex gap-4">
             <Button size="lg" className="text-base">
               Faça seu pedido
@@ -83,7 +93,7 @@ export default function Home() {
         <ValuesList />
       </section>
 
-      {/* Services (future) */}
+      {/* Services */}
       <section className="container py-20">
         <div>
           <Title title="Com o que podemos te ajudar" />
@@ -95,21 +105,23 @@ export default function Home() {
           </strong>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 mt-12 h-fit">
-          {serviceList.map(({ name, description, image }) => (
-            <ServiceItem
-              key={name}
-              description={description}
-              name={name}
-              image={image}
-            />
-          ))}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 h-fit">
+          {serviceList.map(({ name, description, image }) => {
+            return (
+              <ServiceItem
+                key={name}
+                description={description}
+                name={name}
+                image={image}
+              />
+            )
+          })}
         </div>
       </section>
 
       {/* Differentials */}
       <section className="container py-20 ">
-        <div className="grid grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Presentation */}
           <div className="flex flex-col justify-center">
             <Title title="Por que confiar na Wisp?" />
@@ -195,7 +207,7 @@ export default function Home() {
               </p>
 
               <div className="flex items-center gap-2">
-                <div className="p-1 border border-border rounded-full h-16 w-16">
+                <div className="p-1 border-2 border-border rounded-full h-16 w-16">
                   <Image
                     src={exampleImage}
                     alt="Example deposition image"
@@ -228,7 +240,7 @@ export default function Home() {
               </p>
 
               <div className="flex items-center gap-2">
-                <div className="p-1 border border-border rounded-full h-16 w-16">
+                <div className="p-1 border-2 border-border rounded-full h-16 w-16">
                   <Image
                     src={exampleImage}
                     alt="Example deposition image"
@@ -308,7 +320,7 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="flex flex-row w-full gap-12">
+          <div className="flex flex-col md:flex-row w-full gap-6 md:gap-12">
             <Card className="w-full">
               <CardHeader>
                 <CardTitle>Faça seu pedido customizado</CardTitle>
@@ -336,7 +348,7 @@ export default function Home() {
               </CardFooter>
             </Card>
 
-            <div className="flex items-center">
+            <div className="flex justify-center items-center">
               <span className="text-muted-foreground">ou</span>
             </div>
 
