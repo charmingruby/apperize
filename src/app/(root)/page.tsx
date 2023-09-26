@@ -124,11 +124,11 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Presentation */}
           <div className="flex flex-col justify-center">
-            <Title title="Por que confiar na Wisp?" />
+            <Title title="Por que confiar na Apperize?" />
             <strong className="text-5xl font-semibold leading-tight mb-8 block">
               Diferenciais que você encontra na{' '}
               <span className="text-primary bg-background-highlight-dark  ">
-                Wisp
+                Apperize
               </span>
             </strong>
 
@@ -272,7 +272,7 @@ export default function Home() {
             <strong className="text-5xl font-semibold leading-tight block">
               Preparado para melhorar seu negocio com a{' '}
               <span className="bg-background-highlight-dark text-primary">
-                Wisp
+                Apperize
               </span>
               ?
             </strong>

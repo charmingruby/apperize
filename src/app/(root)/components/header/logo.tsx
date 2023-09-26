@@ -7,8 +7,8 @@ export function Logo() {
       <TabletSmartphone className="text-primary h-6 w-6" />
 
       <strong className="text-2xl font-semibold font-alt tracking-wider">
-        pede
         <span className="text-primary">App</span>
+        erize
       </strong>
     </Link>
   )

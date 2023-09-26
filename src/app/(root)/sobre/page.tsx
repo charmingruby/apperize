@@ -5,7 +5,8 @@ import Link from 'next/link'
 export default function About() {
   return (
     <>
-      <section className="container py-36 min-h-screen grid grid-cols-2">
+      {/* Hero */}
+      <section className="container py-36 min-h-screen grid grid-cols-2 gap-8">
         {/* Image */}
         <div></div>
 
@@ -25,9 +26,12 @@ export default function About() {
 
           {/* Title */}
           <div className="flex flex-col gap-1 mt-16">
-            <h1 className="m-0 text-4xl flex flex-col gap-2">
+            <h1 className="m-0 text-4xl flex flex-col gap-2 font-semibold">
               Ajudamos nossos clientes
-              <strong className="block"> atraves da programação</strong>
+              <strong className="block text-primary">
+                {' '}
+                atraves da programação
+              </strong>
             </h1>
           </div>
 
@@ -51,6 +55,20 @@ export default function About() {
           </Link>
         </div>
       </section>
+
+      {/* Banner */}
+      <section className="border-y border-border bg-background-highlight-main ">
+        <div className="py-20 container flex justify-center">bannner</div>
+      </section>
+
+      {/* How we can help */}
+      <section className="py-20 container"></section>
+
+      {/* Deposition of founder */}
+
+      {/* Depositions (future) */}
+
+      {/* CTA */}
     </>
   )
 }
