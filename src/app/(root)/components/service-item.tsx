@@ -1,10 +1,3 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
 import { Text } from '@/components/ui/text'
 import { Service } from '@/constants/services'
 import Image from 'next/image'
