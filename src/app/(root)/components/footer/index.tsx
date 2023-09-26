@@ -6,6 +6,7 @@ import {
   MapPin,
   TabletSmartphone,
 } from 'lucide-react'
+import { SocialLink } from './social-link'
 
 export function Footer() {
   return (
@@ -20,19 +21,46 @@ export function Footer() {
           </div>
 
           {/* Location */}
-          <div>
-            <MapPin />
+          <div className="flex gap-4">
+            <MapPin className="text-primary h-8 w-8" strokeWidth={1.5} />
+
+            <div className="flex flex-col gap-4">
+              <div className="flex gap-2 items-center">
+                <span className="text-lg font-medium">Nossa localidade</span>
+              </div>
+
+              <span className="text-muted-foreground">
+                Juiz de Fora - MG, Brasil
+              </span>
+            </div>
           </div>
 
           {/* Contact */}
-          <div>
-            <Mail />
+          <div className="flex gap-4">
+            <Mail className="text-primary h-8 w-8" strokeWidth={1.5} />
+
+            <div className="flex flex-col gap-4">
+              <div className="flex gap-2 items-center">
+                <span className="text-lg font-medium">
+                  Como podemos ajudar?
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <span className="text-muted-foreground">
+                  contato@apperize.com
+                </span>
+                <span className="text-muted-foreground">
+                  gustavodiasa2121@gmail.com
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom */}
-      <div className="py-10 border-t border-border">
+      <div className="py-8 border-t border-border">
         <div className="grid grid-cols-3 container">
           {/* Logo */}
           <div className="flex items-center gap-2">
@@ -43,12 +71,14 @@ export function Footer() {
             </div>
           </div>
           {/* Copyright */}
-          <div>© 2023 Apperize | Todos direitos reservados</div>
+          <div className="flex items-center">
+            © 2023 Apperize | Todos direitos reservados
+          </div>
           {/* Social medias */}
-          <div className="flex ">
-            <Instagram />
-            <Linkedin />
-            <Facebook />
+          <div className="flex items-center justify-end gap-2">
+            <SocialLink url="/" icon={Instagram} />
+            <SocialLink url="/" icon={Facebook} />
+            <SocialLink url="/" icon={Linkedin} />
           </div>
         </div>
       </div>
