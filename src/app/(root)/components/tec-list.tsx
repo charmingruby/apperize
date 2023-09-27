@@ -80,7 +80,7 @@ export function TecList() {
         {tecList.map(({ alt, url }) => (
           <div
             key={url}
-            className="bg-background min-w-[8rem] w-full h-32 border border-background-highlight-dark rounded-md flex items-center justify-center shadow-md"
+            className="bg-background min-w-[6rem] md:min-w-[8rem] w-full h-24 md:h-32 border border-background-highlight-dark rounded-md flex items-center justify-center shadow-md"
           >
             <TecImage alt={alt} url={url} />
           </div>

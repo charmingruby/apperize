@@ -8,8 +8,15 @@ interface SocialLinkProps {
 
 export function SocialLink({ url, icon: Icon }: SocialLinkProps) {
   return (
-    <Link href={url} prefetch={false} className="group ">
-      <Icon className="text-muted-foreground" strokeWidth={1.5} />
+    <Link
+      href={url}
+      prefetch={false}
+      className="group p-2 hover:bg-background-highlight-dark rounded-md transition-colors"
+    >
+      <Icon
+        className="text-muted-foreground h-6 w-6 group-hover:text-primary transition-colors"
+        strokeWidth={1.5}
+      />
     </Link>
   )
 }

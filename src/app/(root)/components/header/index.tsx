@@ -19,7 +19,7 @@ export function Header() {
         </div>
 
         <div className="hidden lg:flex gap-2 items-center">
-          <Link href="/" prefetch={false}>
+          <Link href="/login" prefetch={false}>
             <Button variant="outline" size="sm">
               Entrar
             </Button>

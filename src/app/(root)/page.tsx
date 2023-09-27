@@ -56,7 +56,7 @@ export default function Home() {
           </div>
 
           {/* Button group */}
-          <div className="flex gap-4">
+          <div className="flex flex-col lg:flex-row gap-4 w-full lg:w-fit">
             <Button size="lg" className="text-base">
               Faça seu pedido
             </Button>
@@ -74,20 +74,20 @@ export default function Home() {
 
       {/* Value proposition */}
       <section className="container py-20">
-        <div className="mb-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-3">
+        <div className="mb-12 grid grid-cols-1 lg:grid-cols-4 gap-8 w-full">
+          <div className="lg:col-span-3">
             <div className="w-fit space-y-4 mb-6 ">
               <span className="text-primary uppercase tracking-widest font-semibold block">
                 Plataforma feita para o cliente
               </span>
               <div className="w-1/6 h-0.5 bg-primary" />
             </div>
-            <strong className="leading-relaxed text-4xl font-semibold">
+            <strong className="leading-snug text-4xl font-semibold">
               Traga sua ideia e nós a tornaremos realidade
             </strong>
           </div>
-          <div className="flex justify-end items-end">
-            <Button>Fale conosco</Button>
+          <div className="flex w-full md:justify-end items-end">
+            <Button className=" w-full md:w-fit md">Fale conosco</Button>
           </div>
         </div>
         <ValuesList />
@@ -97,7 +97,7 @@ export default function Home() {
       <section className="container py-20">
         <div>
           <Title title="Com o que podemos te ajudar" />
-          <strong className="text-5xl font-semibold leading-tight block">
+          <strong className="text-5xl font-semibold leading-snug block">
             Nossos{' '}
             <span className="text-primary bg-background-highlight-dark  ">
               serviços
@@ -139,7 +139,7 @@ export default function Home() {
               debitis aliquam veritatis.
             </Text>
 
-            <Button size="lg" className="flex text-lg w-fit mt-12">
+            <Button size="lg" className="flex text-base w-fit mt-12">
               <span> Buscar soluçao com nossa equipe</span>
             </Button>
           </div>
@@ -167,11 +167,11 @@ export default function Home() {
 
       {/* Techs */}
       <section className="container py-20">
-        <div className="mb-12 flex flex-col items-center">
+        <div className="mb-12 flex flex-col md:items-center">
           <div className="text-primary uppercase tracking-widest font-semibold block mb-6">
-            Tecnologia que usamos
+            Tecnologias que usamos
           </div>
-          <h3 className="leading-relaxed text-4xl font-semibold block">
+          <h3 className="leading-snug text-4xl font-semibold block">
             Tecnologias selecionadas para entregar a melhor{' '}
             <strong className="bg-background-highlight-dark text-primary">
               performance
@@ -185,7 +185,7 @@ export default function Home() {
 
       {/* Depositions */}
       <section className="bg-primary">
-        <div className="py-20 container grid grid-cols-3 gap-8 text-primary-foreground ">
+        <div className="py-20 container grid grid-cols-1 md:grid-cols-3 gap-8 text-primary-foreground ">
           <div className="flex flex-col gap-6">
             <span className="uppercase tracking-widest font-semibold block">
               Depoimentos
@@ -265,7 +265,7 @@ export default function Home() {
 
       {/* Budget */}
       <section className="py-20">
-        <div className="container grid grid-cols-2 gap-12">
+        <div className="container grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Content */}
           <div className="flex flex-col justify-center">
             <Title title="Solicite seu orçamento" />
@@ -293,8 +293,10 @@ export default function Home() {
               </Text>
             </div>
 
-            <Button size="lg" className="flex text-lg w-fit mt-12">
-              <span>Quero tirar minha ideia do papel</span>
+            <Button size="lg" className="flex w-fit mt-12">
+              <span className="text-base">
+                Quero tirar minha ideia do papel
+              </span>
             </Button>
           </div>
 

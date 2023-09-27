@@ -13,7 +13,7 @@ export function Footer() {
     <footer className="border-t border-border">
       {/* Top */}
       <div className="container w-full flex-col ">
-        <div className="grid grid-cols-3 w-full py-16 ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 w-full py-12 md:py-16 gap-8">
           <div>
             <span className="font-medium text-2xl">
               Sinta-se a vontade para entrar em contato com a gente
@@ -60,8 +60,8 @@ export function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="py-8 border-t border-border">
-        <div className="grid grid-cols-3 container">
+      <div className="py-6 border-t border-border">
+        <div className="grid grid-cols-1 lg:grid-cols-3 container gap-4">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <TabletSmartphone className="text-primary" />
@@ -71,11 +71,11 @@ export function Footer() {
             </div>
           </div>
           {/* Copyright */}
-          <div className="flex items-center">
+          <div className="flex items-center text-muted-foreground text-sm">
             © 2023 Apperize | Todos direitos reservados
           </div>
           {/* Social medias */}
-          <div className="flex items-center justify-end gap-2">
+          <div className="flex items-center lg:justify-end gap-4">
             <SocialLink url="/" icon={Instagram} />
             <SocialLink url="/" icon={Facebook} />
             <SocialLink url="/" icon={Linkedin} />
