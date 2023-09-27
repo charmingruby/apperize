@@ -2,43 +2,52 @@ import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { TabletSmartphone } from 'lucide-react'
+import { TabletSmartphone, TrendingUp } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
+import loginImage from '@/assets/about-page-hero.jpg'
 
 export default function Login() {
   return (
     <div className="lg:h-screen grid grid-cols-2">
       <section className="max-w-md mx-auto w-full flex flex-col justify-center">
         {/* Intro */}
-        <div>
+        <div className=" mb-12">
           {/* Logo */}
-          <TabletSmartphone />
+          <TabletSmartphone className="text-primary h-8 w-8 mb-8" />
 
           {/* Title */}
-          <div>
-            <h1>Entrar na sua conta</h1>
+          <div className="flex flex-col gap-3">
+            <h1 className="font-semibold m-0">Entrar na sua conta</h1>
 
-            <span>
+            {/* Sign up */}
+            <span className="text-muted-foreground">
               Não possui conta?{' '}
-              <Link prefetch={false} href="/">
+              <Link
+                prefetch={false}
+                href="/"
+                className="text-primary font-semibold"
+              >
                 Criar uma conta
               </Link>
             </span>
           </div>
-
-          {/* Sign up */}
         </div>
 
         {/* Form */}
         <div className="w-full">
-          <div>
-            <div>
-              <Label htmlFor="emailAddress">Email</Label>
+          <div className="flex flex-col gap-6 mb-8">
+            <div className="space-y-3">
+              <Label htmlFor="emailAddress" className="text-base">
+                Email
+              </Label>
               <Input id="emailAddress" />
             </div>
 
-            <div>
-              <Label htmlFor="password">Senha</Label>
+            <div className="space-y-3">
+              <Label htmlFor="password" className="text-base">
+                Senha
+              </Label>
               <Input id="password" />
             </div>
 
@@ -51,7 +60,35 @@ export default function Login() {
           <Button className="w-full">Entrar</Button>
         </div>
       </section>
-      <section className="bg-primary">image</section>
+      <section className="p-3">
+        <div className=" relative w-full h-full">
+          <div className="absolute bg-primary w-full h-full rounded-md opacity-50" />
+          <div className="absolute w-full h-full flex flex-col items-center justify-center">
+            <div className="max-w-lg flex gap-6">
+              <div className="bg-background-highlight-dark p-2 h-fit rounded-full shadow-lg">
+                <TrendingUp className="text-primary" />
+              </div>
+
+              <div className="flex flex-col gap-6">
+                <h2 className="text-4xl font-semibold text-primary-foreground">
+                  Modernize seu negócio
+                </h2>
+                <p className="leading-relaxed text-lg text-primary-foreground">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusantium dolorum illo qui fugit dicta molestias voluptatem
+                  quae voluptates, cum animi autem necessitatibus ipsam soluta
+                  reiciendis, quasi aspernatur saepe! Voluptatibus, eligendi!
+                </p>
+              </div>
+            </div>
+          </div>
+          <Image
+            src={loginImage}
+            alt="Pessoa trabalhando em desenvolvimento"
+            className="w-full h-full object-cover rounded-md"
+          ></Image>
+        </div>
+      </section>
     </div>
   )
 }

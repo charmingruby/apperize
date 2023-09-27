@@ -12,7 +12,7 @@ export function Header() {
 
         <div className="hidden lg:flex gap-6">
           <NavItem label="Início" url="/" />
-          <NavItem label="Pedidos" url="/unknown" />
+          <NavItem label="Pedidos" url="/pedidos" />
           <NavItem label="Produtos" url="/unknown" />
           <NavItem label="Sobre" url="/sobre" />
           <NavItem label="Contato" url="/unknown" />
