@@ -1,6 +1,11 @@
 import { Text } from '@/components/ui/text'
 import { ArrowDown, Code2 } from 'lucide-react'
 import Link from 'next/link'
+import heroImage from '@/assets/about-hero-image.svg'
+import Image from 'next/image'
+import { Title } from '@/components/title'
+import { TimelineEvent } from './components/timeline-event'
+import { Button } from '@/components/ui/button'
 
 export default function About() {
   return (
@@ -8,7 +13,12 @@ export default function About() {
       {/* Hero */}
       <section className="container py-36 min-h-screen grid grid-cols-2 gap-8">
         {/* Image */}
-        <div></div>
+        <div className="flex items-center">
+          <Image
+            src={heroImage}
+            alt="Pessoas melhorando sua empresa com marketing"
+          />
+        </div>
 
         {/* Content */}
         <div className="flex flex-col justify-center">
@@ -58,17 +68,75 @@ export default function About() {
 
       {/* Banner */}
       <section className="border-y border-border bg-background-highlight-main ">
-        <div className="py-20 container flex justify-center">bannner</div>
+        <div className="py-20 container flex justify-center">
+          <div className="max-w-2xl text-center leading-relaxed">
+            <p className="text-2xl">
+              Em nossa software house, criamos um ambiente exclusivo para
+              profissionais talentosos da tecnologia,{' '}
+              <strong>
+                com o objetivo de modernizar empresas por meio de soluções
+                inovadoras
+              </strong>
+              . Promovemos uma jornada contínua de aprendizado e conexão com
+              oportunidades de mercado.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* How we can help */}
-      <section className="py-20 container"></section>
+      {/* Mission */}
+      <section className="py-20 container">
+        <div className="flex flex-col">
+          <div className="max-w-2xl w-full">
+            <Title title="Nossao missão" />
+            <h2 className="text-2xl text-primary font-semibold">
+              Levando a tecnologia cada vez mais proxima da sua empresa
+            </h2>
+          </div>
+        </div>
 
-      {/* Deposition of founder */}
+        <div className="flex flex-col items-end">
+          <div className="max-w-2xl w-full">
+            <Text>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              corporis excepturi sequi veniam dolorum eos voluptates provident
+              perferendis quod obcaecati libero labore, molestias mollitia iusto
+            </Text>
+            ad est voluptatibus aspernatur tempore!
+          </div>
+        </div>
+      </section>
+
+      {/* Story */}
+      <section className="py-20 container">
+        {/* Title */}
+        <h2>Nossa historia</h2>
+
+        {/* Timeline */}
+        <div>
+          <TimelineEvent />
+          <TimelineEvent />
+          <TimelineEvent />
+        </div>
+
+        {/* Timeline segment */}
+      </section>
+
+      {/* Pitch */}
+      <section></section>
 
       {/* Depositions (future) */}
 
       {/* CTA */}
+      <section className="py-20 bg-primary-gradient">
+        <div className="container">
+          <div></div>
+
+          <div>
+            <Button variant="outline">Serviços</Button>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

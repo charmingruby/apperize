@@ -48,3 +48,9 @@
     --ring: 263.4 70% 50.4%;
   }
 }
+
+@layer utitlities {
+  .bg-primary-gradient {
+    @apply bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-violet-300 via-purple-800 to-purple-400;
+  }
+}

@@ -7,8 +7,26 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model Account {
   id String @id @default(uuid())
 
   @@map("users")
+}
+
+model CustomerProfile {
+  id String @id @default(uuid())
+
+  @@map("customers")
+}
+
+model EnterpriseProfile {
+  id String @id @default(uuid())
+
+  @@map("enterprises")
+}
+
+model Request {
+  id String @id @default(uuid())
+
+  @@map("requests")
 }

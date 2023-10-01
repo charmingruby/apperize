@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/label'
 import { TabletSmartphone, TrendingUp } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import loginImage from '@/assets/about-page-hero.jpg'
+import loginImage from '@/assets/example-hero-image.jpg'
 
 export default function Login() {
   return (
@@ -25,7 +25,7 @@ export default function Login() {
               Não possui conta?{' '}
               <Link
                 prefetch={false}
-                href="/"
+                href="/registrar"
                 className="text-primary font-semibold"
               >
                 Criar uma conta
@@ -60,10 +60,10 @@ export default function Login() {
           <Button className="w-full">Entrar</Button>
         </div>
       </section>
-      <section className="p-3">
+      <section>
         <div className=" relative w-full h-full">
-          <div className="absolute bg-primary w-full h-full rounded-md opacity-50" />
-          <div className="absolute w-full h-full flex flex-col items-center justify-center">
+          <div className="absolute bg-primary w-full h-full opacity-50 z-20" />
+          <div className="absolute w-full h-full flex flex-col items-center justify-center z-30">
             <div className="max-w-lg flex gap-6">
               <div className="bg-background-highlight-dark p-2 h-fit rounded-full shadow-lg">
                 <TrendingUp className="text-primary" />
@@ -85,7 +85,7 @@ export default function Login() {
           <Image
             src={loginImage}
             alt="Pessoa trabalhando em desenvolvimento"
-            className="w-full h-full object-cover rounded-md"
+            className="w-full h-full object-cover blur-sm"
           ></Image>
         </div>
       </section>

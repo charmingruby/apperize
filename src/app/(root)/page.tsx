@@ -139,7 +139,7 @@ export default function Home() {
               debitis aliquam veritatis.
             </Text>
 
-            <Button size="lg" className="flex text-base w-fit mt-12">
+            <Button size="lg" className="flex text-base w-full md:w-fit mt-12">
               <span> Buscar soluçao com nossa equipe</span>
             </Button>
           </div>
@@ -184,7 +184,7 @@ export default function Home() {
       {/* Projects (future) */}
 
       {/* Depositions */}
-      <section className="bg-primary">
+      <section className="bg-primary-gradient">
         <div className="py-20 container grid grid-cols-1 md:grid-cols-3 gap-8 text-primary-foreground ">
           <div className="flex flex-col gap-6">
             <span className="uppercase tracking-widest font-semibold block">
@@ -293,7 +293,7 @@ export default function Home() {
               </Text>
             </div>
 
-            <Button size="lg" className="flex w-fit mt-12">
+            <Button size="lg" className="flex w-full md:w-fit mt-12">
               <span className="text-base">
                 Quero tirar minha ideia do papel
               </span>
