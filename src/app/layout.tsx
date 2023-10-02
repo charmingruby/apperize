@@ -1,3 +1,4 @@
+import { Providers } from '@/components/providers'
 import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Chakra_Petch as ChakraPetch, Inter } from 'next/font/google'
@@ -25,14 +26,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.variable} ${alt.variable} 
+    <Providers>
+      <html lang="en">
+        <body
+          className={`${inter.variable} ${alt.variable} 
         scroll-smooth font-sans bg-background text-foreground scrollbar-thin scrollbar-track-background-highlight-main scrollbar-thumb-background-highlight-dark
       `}
-      >
-        <main>{children}</main>
-      </body>
-    </html>
+        >
+          <main>{children}</main>
+        </body>
+      </html>
+    </Providers>
   )
 }

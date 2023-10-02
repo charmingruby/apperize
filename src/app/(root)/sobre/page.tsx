@@ -1,5 +1,5 @@
 import { Text } from '@/components/ui/text'
-import { ArrowDown, Code2 } from 'lucide-react'
+import { ArrowDown, Code2, Phone } from 'lucide-react'
 import Link from 'next/link'
 import heroImage from '@/assets/about-hero-image.svg'
 import Image from 'next/image'
@@ -129,10 +129,27 @@ export default function About() {
 
       {/* CTA */}
       <section className="py-20 bg-primary-gradient">
-        <div className="container">
-          <div></div>
+        <div className="container grid grid-cols-2">
+          <div>
+            <h2>Entre em contato com a gente</h2>
+            <Text>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et unde
+              non pariatur voluptatum porro, autem beatae. Vel eum optio
+              inventore cupiditate quia aliquam atque sint commodi, in libero
+              vitae perspiciatis!
+            </Text>
+          </div>
 
           <div>
+            <div>
+              <strong>Nos mande uma mensagem</strong>
+
+              <div>
+                <Phone />
+                <span>(32) 99110-0990</span>
+              </div>
+            </div>
+
             <Button variant="outline">Serviços</Button>
           </div>
         </div>
