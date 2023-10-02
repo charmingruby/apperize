@@ -7,14 +7,13 @@ import { Logo } from '@/app/(auth)/components/logo'
 
 export default function Page() {
   return (
-    <div className="lg:h-screen grid grid-cols-2">
+    <div className="h-screen grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div className="flex flex-col items-center justify-center gap-4">
         <Logo />
-
         <SignIn signUpUrl="/registrar" />
       </div>
 
-      <section>
+      <section className="hidden lg:flex">
         <div className=" relative w-full h-full">
           <PurpleFilter />
           <div className="absolute w-full h-full flex flex-col items-center justify-center z-30">
