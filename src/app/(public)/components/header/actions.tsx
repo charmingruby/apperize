@@ -19,7 +19,7 @@ export function Actions() {
         </>
       ) : (
         <div className="flex items-center space-x-4">
-          <Button size="sm">Dashboard</Button>
+          <Button size="sm">Ver pedidos</Button>
           <div className="w-px h-8 bg-border" />
           <UserButton />
         </div>

@@ -50,7 +50,7 @@ export function EmailForm() {
         name="senderEmail"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Seu email</FormLabel>
+            <FormLabel>Email</FormLabel>
             <FormControl>
               <Input placeholder="exemplo@email.com" {...field} />
             </FormControl>

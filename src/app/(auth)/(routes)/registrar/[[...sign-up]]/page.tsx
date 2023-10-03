@@ -1,4 +1,4 @@
-import { Logo } from '@/app/(auth)/components/logo'
+import { Logo } from '@/assets/app/(auth)/components/logo'
 import { SignUp } from '@clerk/nextjs'
 
 export default function Page() {
