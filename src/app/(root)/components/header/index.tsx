@@ -3,7 +3,6 @@ import { NavItem } from './nav-item'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
-import { UserButton } from '@clerk/nextjs'
 
 export function Header() {
   return (
@@ -15,7 +14,7 @@ export function Header() {
           <NavItem label="Início" url="/" />
           <NavItem label="Pedidos" url="/pedidos" />
           <NavItem label="Sobre" url="/sobre" />
-          <NavItem label="Contato" url="/unknown" />
+          <NavItem label="Contato" url="/contato" />
         </div>
 
         <div className="hidden lg:flex gap-2 items-center">
@@ -27,8 +26,6 @@ export function Header() {
 
           <Button size="sm">Fazer pedido</Button>
         </div>
-
-        <UserButton afterSignOutUrl="/" />
 
         <div className="flex lg:hidden">
           <Menu />
