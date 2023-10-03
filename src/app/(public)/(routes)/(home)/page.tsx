@@ -8,8 +8,8 @@ import {
   Layout,
   Quote,
 } from 'lucide-react'
-import { FeatureItem } from './components/feature-item'
-import { ValuesList } from './components/values-list'
+import { FeatureItem } from '../../components/feature-item'
+import { ValuesList } from '../../components/values-list'
 import Image from 'next/image'
 import quality from '@/assets/quality.svg'
 import { Text } from '@/components/ui/text'
@@ -22,10 +22,10 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { Title } from '@/components/title'
-import { ProductCategory } from './components/product-category'
-import { TecList } from './components/tec-list'
+import { ProductCategory } from '../../components/product-category'
+import { TecList } from '../../components/tec-list'
 import { serviceList } from '@/constants/services'
-import { ServiceItem } from './components/service-item'
+import { ServiceItem } from '../../components/service-item'
 import exampleImage from '@/assets/gustavo-dias-profile.jpeg'
 
 export default function Home() {
