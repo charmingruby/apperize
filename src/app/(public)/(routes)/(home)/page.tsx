@@ -8,8 +8,8 @@ import {
   Layout,
   Quote,
 } from 'lucide-react'
-import { FeatureItem } from '../../components/feature-item'
-import { ValuesList } from '../../components/values-list'
+import { FeatureItem } from './components/feature-item'
+import { ValuesList } from './components/values-list'
 import Image from 'next/image'
 import quality from '@/assets/quality.svg'
 import { Text } from '@/components/ui/text'
@@ -22,11 +22,10 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { Title } from '@/components/title'
-import { ProductCategory } from '../../components/product-category'
-import { TecList } from '../../components/tec-list'
-import { serviceList } from '@/constants/services'
-import { ServiceItem } from '../../components/service-item'
+import { ProductCategory } from './components/product-category'
+import { TecList } from './components/tec-list'
 import exampleImage from '@/assets/gustavo-dias-profile.jpeg'
+import { Services } from './components/services'
 
 export default function Home() {
   return (
@@ -97,7 +96,7 @@ export default function Home() {
       <section className="container py-20">
         <div>
           <Title title="Com o que podemos te ajudar" />
-          <strong className="text-5xl font-semibold leading-snug block">
+          <strong className="text-4xl font-semibold leading-snug block">
             Nossos{' '}
             <span className="text-primary bg-background-highlight-dark  ">
               serviços
@@ -105,18 +104,7 @@ export default function Home() {
           </strong>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 h-fit">
-          {serviceList.map(({ name, description, image }) => {
-            return (
-              <ServiceItem
-                key={name}
-                description={description}
-                name={name}
-                image={image}
-              />
-            )
-          })}
-        </div>
+        <Services />
       </section>
 
       {/* Differentials */}
@@ -125,7 +113,7 @@ export default function Home() {
           {/* Presentation */}
           <div className="flex flex-col justify-center">
             <Title title="Por que confiar na Apperize?" />
-            <strong className="text-5xl font-semibold leading-tight mb-8 block">
+            <strong className="text-4xl font-semibold leading-tight mb-8 block">
               Diferenciais que você encontra na{' '}
               <span className="text-primary bg-background-highlight-dark  ">
                 Apperize
@@ -269,7 +257,7 @@ export default function Home() {
           {/* Content */}
           <div className="flex flex-col justify-center">
             <Title title="Solicite seu orçamento" />
-            <strong className="text-5xl font-semibold leading-tight block">
+            <strong className="text-4xl font-semibold leading-tight block">
               Preparado para melhorar seu negocio com a{' '}
               <span className="bg-background-highlight-dark text-primary">
                 Apperize

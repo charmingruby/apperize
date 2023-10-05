@@ -19,7 +19,9 @@ export function Actions() {
         </>
       ) : (
         <div className="flex items-center space-x-4">
-          <Button size="sm">Ver pedidos</Button>
+          <Link prefetch={false} href="/dashboard">
+            <Button size="sm">Ver pedidos</Button>
+          </Link>
           <div className="w-px h-8 bg-border" />
           <UserButton />
         </div>

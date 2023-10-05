@@ -7,9 +7,11 @@ const textVariants = cva('leading-relaxed', {
     variant: {
       default: '',
       lowOpacity: 'text-muted-foreground',
+      primaryForeground: 'text-primary-foreground',
     },
     size: {
       default: 'text-lg',
+      sm: 'text-sm',
     },
   },
   defaultVariants: {

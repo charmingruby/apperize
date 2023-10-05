@@ -1,10 +1,14 @@
-import { Text } from '@/components/ui/text'
-import { ArrowDown, Code2, Phone } from 'lucide-react'
-import Link from 'next/link'
-import heroImage from '@/assets/about-hero-image.svg'
+/* External */
+import { ArrowDown, Code2 } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
+
+/* Internal */
 import { Title } from '@/components/title'
-import { TimelineEvent } from './components/timeline-event'
+import { Text } from '@/components/ui/text'
+import { Missions } from './components/missions'
+import heroImage from '@/assets/about-hero-image.svg'
+import ctaImage from '@/assets/about-cta-image.jpg'
 import { Button } from '@/components/ui/button'
 
 export default function About() {
@@ -66,92 +70,59 @@ export default function About() {
         </div>
       </section>
 
-      {/* Banner */}
-      <section className="border-y border-border bg-background-highlight-main ">
-        <div className="py-20 container flex justify-center">
-          <div className="max-w-2xl text-center leading-relaxed">
-            <p className="text-2xl">
-              Em nossa software house, criamos um ambiente exclusivo para
-              profissionais talentosos da tecnologia,{' '}
-              <strong>
-                com o objetivo de modernizar empresas por meio de soluções
-                inovadoras
-              </strong>
-              . Promovemos uma jornada contínua de aprendizado e conexão com
-              oportunidades de mercado.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission */}
-      <section className="py-20 container">
-        <div className="flex flex-col">
-          <div className="max-w-2xl w-full">
-            <Title title="Nossao missão" />
-            <h2 className="text-2xl text-primary font-semibold">
-              Levando a tecnologia cada vez mais proxima da sua empresa
-            </h2>
-          </div>
-        </div>
-
-        <div className="flex flex-col items-end">
-          <div className="max-w-2xl w-full">
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              corporis excepturi sequi veniam dolorum eos voluptates provident
-              perferendis quod obcaecati libero labore, molestias mollitia iusto
-            </Text>
-            ad est voluptatibus aspernatur tempore!
-          </div>
-        </div>
-      </section>
-
-      {/* Story */}
-      <section className="py-20 container">
-        {/* Title */}
-        <h2>Nossa historia</h2>
-
-        {/* Timeline */}
-        <div>
-          <TimelineEvent />
-          <TimelineEvent />
-          <TimelineEvent />
-        </div>
-
-        {/* Timeline segment */}
-      </section>
-
-      {/* Pitch */}
-      <section></section>
-
-      {/* Depositions (future) */}
-
-      {/* CTA */}
-      <section className="py-20 bg-primary-gradient">
-        <div className="container grid grid-cols-2">
-          <div>
-            <h2>Entre em contato com a gente</h2>
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et unde
-              non pariatur voluptatum porro, autem beatae. Vel eum optio
-              inventore cupiditate quia aliquam atque sint commodi, in libero
-              vitae perspiciatis!
+      {/* Purpose */}
+      <section className="py-20 container ">
+        <div className="grid grid-cols-2 gap-12 mb-12">
+          <div className="flex flex-col ">
+            <Title title="O que estamos construindo?" underline={false} />
+            <Text className="font-medium text-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut atque
+              placeat debitis aut accusamus quae amet aliquid. Ullam voluptatum
+              non quasi quos amet veritatis magnam? Nam consequuntur iure
+              voluptatem repellendus?s
             </Text>
           </div>
 
           <div>
             <div>
-              <strong>Nos mande uma mensagem</strong>
-
-              <div>
-                <Phone />
-                <span>(32) 99110-0990</span>
-              </div>
+              <div></div>
             </div>
-
-            <Button variant="outline">Serviços</Button>
           </div>
+        </div>
+
+        <Missions />
+      </section>
+
+      {/* Founded on what */}
+      <section className="py-20 border-y bg-background-highlight-main">
+        <div>Fundado pelo cliente</div>
+      </section>
+
+      {/* Moment */}
+
+      {/* Customer */}
+
+      {/* CTA */}
+      <section className="container py-20 grid grid-cols-2 gap-12">
+        <div>
+          <Image
+            src={ctaImage}
+            alt="Programadores em uma empresa"
+            className="rounded-md"
+          />
+        </div>
+
+        <div className="flex flex-col justify-center">
+          <Title title="Modernização" />
+          <h2 className="text-2xl">Title</h2>
+          <Text className="mt-12">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ut
+            quisquam nobis numquam natus labore est perspiciatis illum facilis
+            officia nemo illo harum veniam non magnam corrupti praesentium
+            optio? Voluptates.
+          </Text>
+
+          <Button className="mt-8 w-fit">Entre em contato</Button>
         </div>
       </section>
     </>
