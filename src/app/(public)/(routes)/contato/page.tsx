@@ -4,8 +4,8 @@ import { Text } from '@/components/ui/text'
 import { EmailForm } from './components/email-form'
 import { Title } from '@/components/title'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Building, Globe2 } from 'lucide-react'
-import { Card, CardHeader } from '@/components/ui/card'
+import { ArrowRight, ChevronRight, Globe2, Quote, Store } from 'lucide-react'
+import { ServiceModel } from './components/service-model'
 
 export default function ContactPage() {
   return (
@@ -28,7 +28,18 @@ export default function ContactPage() {
 
       <section className="container py-16 pb-8 ">
         <Title title="Respondemos rapidamente" />
-        <h2 className="text-4xl font-bold mb-8">Entrar em contato</h2>
+        <div className=" mb-8">
+          <h2 className="text-4xl font-bold mb-3  ">
+            Entrar em{' '}
+            <span className="text-primary bg-background-highlight-dark  ">
+              contato
+            </span>
+          </h2>
+          <Text size="md" variant="lowOpacity">
+            Fique a vontade para tirar qualquer duvida com nosso suporte
+          </Text>
+        </div>
+
         {/* Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 ">
           {/* Email form */}
@@ -36,35 +47,56 @@ export default function ContactPage() {
             <EmailForm />
           </div>
 
-          <div className="border-l flex pl-8">
-            <h2>Precisa de apresentaçao?</h2>
+          <div className="border-l pl-8 flex flex-col">
+            <h2 className="text-2xl">Precisa de apresentaçao?</h2>
+
+            <div>
+              <Quote />
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
+                qui consequatur sed veritatis sequi natus a, dolorum dolores
+                unde autem voluptas praesentium cupiditate molestiae enim quam
+                dignissimos quia? Magni, dignissimos?
+              </Text>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span>Link</span>
+              <ChevronRight />
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Medias */}
 
       {/* Options */}
-      <section className="border-t py-16">
-        <div className="container">
-          <Title title="Atentendimento" />
-          <h2></h2>
+      <section className="py-16 container">
+        <Title title="Atentendimento" />
+        <h2 className="text-4xl font-semibold mb-3">
+          Atendemos aonde quer que voce esteja
+        </h2>
 
-          <div className="grid grid-cols-2 gap-12">
-            {/* Local */}
-            <Card>
-              <CardHeader>
-                <Building />
-              </CardHeader>
-            </Card>
+        <div className="flex flex-row w-full gap-12 mt-12">
+          {/* Local */}
+          <ServiceModel
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi beatae repellat non tempora, eum alias provident error. Ducimus voluptates dolorum quae iure expedita, optio non doloremque. Dicta, minus fuga. Magni."
+            title="Localmente"
+            icon={Store}
+          />
 
-            {/* Remote */}
-            <Card>
-              <Globe2 />
-            </Card>
+          <div className="flex items-center justify-center text-muted-foreground font-medium text-lg">
+            ou
           </div>
+
+          {/* Remote */}
+          <ServiceModel
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi beatae repellat non tempora, eum alias provident error. Ducimus voluptates dolorum quae iure expedita, optio non doloremque. Dicta, minus fuga. Magni."
+            title="Remotamente"
+            icon={Globe2}
+          />
         </div>
       </section>
+      {/* Medias */}
+      <section></section>
 
       {/* CTA */}
       <section className="bg-primary-gradient py-20">

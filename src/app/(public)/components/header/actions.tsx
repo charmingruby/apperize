@@ -1,9 +1,21 @@
 import { Button } from '@/components/ui/button'
-import { UserButton, auth } from '@clerk/nextjs'
+import { UserButton, auth, clerkClient } from '@clerk/nextjs'
 import Link from 'next/link'
 
-export function Actions() {
+async function getUserDataById(userId: string) {
+  const user = await clerkClient.users.getOrganizationMembershipList({ userId })
+  return user
+}
+
+export async function Actions() {
   const { userId } = auth()
+  let isAdmin = false
+
+  if (userId) {
+    const orgs = await getUserDataById(userId)
+
+    isAdmin = orgs[0]?.role === 'admin'
+  }
 
   return (
     <div className="hidden lg:flex gap-2 items-center">
@@ -19,11 +31,14 @@ export function Actions() {
         </>
       ) : (
         <div className="flex items-center space-x-4">
-          <Link prefetch={false} href="/dashboard">
+          <Link
+            prefetch={false}
+            href={isAdmin ? '/dashboard/admin' : '/dashboard'}
+          >
             <Button size="sm">Ver pedidos</Button>
           </Link>
           <div className="w-px h-8 bg-border" />
-          <UserButton />
+          <UserButton afterSignOutUrl="/" />
         </div>
       )}
     </div>

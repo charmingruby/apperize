@@ -67,7 +67,7 @@ export async function Header() {
         <div className="w-px h-8 bg-border" />
 
         {/* User */}
-        <UserButton />
+        <UserButton afterSignOutUrl="/" />
       </div>
     </header>
   )

@@ -11,6 +11,7 @@ const textVariants = cva('leading-relaxed', {
     },
     size: {
       default: 'text-lg',
+      md: 'text-base',
       sm: 'text-sm',
     },
   },

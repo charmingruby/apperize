@@ -7,11 +7,11 @@ async function getUserData() {
 }
 
 export async function Navbar() {
-  const {
-    0: { role },
-  } = await getUserData()
+  const orgs = await getUserData()
 
-  if (role !== 'admin') {
+  const isAdmin = orgs[0]?.role === 'admin'
+
+  if (!isAdmin) {
     return (
       <div className="border-b h-10 px-8 flex items-center gap-6">
         <div className="h-10 flex items-center border-b-2 border-primary text-primary font-medium text-sm">
@@ -33,7 +33,16 @@ export async function Navbar() {
   return (
     <div className="border-b h-10 px-8 flex items-center gap-6">
       <div className="h-10 flex items-center border-b-2 border-primary text-primary font-medium text-sm">
-        Gerenciar
+        Visao geral
+      </div>
+      <div className="text-muted-foreground font-medium text-sm">Pedidos</div>
+      <div className="text-muted-foreground font-medium text-sm">Clientes</div>
+      <div className="text-muted-foreground font-medium text-sm">
+        Changelogs
+      </div>
+      <div className="text-muted-foreground font-medium text-sm">Finanças</div>
+      <div className="text-muted-foreground font-medium text-sm">
+        Configuraçoes
       </div>
     </div>
   )

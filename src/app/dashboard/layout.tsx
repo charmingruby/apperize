@@ -4,7 +4,7 @@ import { Navbar } from './components/navbar'
 import { auth } from '@clerk/nextjs'
 import { redirect } from 'next/navigation'
 
-export default function DashboardLayout({ children }: PropsWithChildren) {
+export default async function DashboardLayout({ children }: PropsWithChildren) {
   const { userId } = auth()
 
   if (!userId) redirect('/login')
