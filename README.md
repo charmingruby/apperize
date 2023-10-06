@@ -1,10 +1,10 @@
 # Apperize
 
-This app is built with Next.js 13, Tailwind, shadcn/ui, Zustand, Tailwind, Go and Mongo.
+This app is built with Next.js.
 
 ## ⚠️ Under development
 
-This application was made for purpose of creating a connection between pedeApp's customers and the developers.
+This application was made for purpose of creating a connection between Apperize's customers and the developers.
 
 ---
 
