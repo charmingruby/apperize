@@ -9,7 +9,7 @@ async function getUserDataById(userId: string) {
 
 export async function Actions() {
   const { userId } = auth()
-  let isAdmin = false
+  let isAdmin: boolean
 
   if (userId) {
     const orgs = await getUserDataById(userId)

@@ -6,6 +6,7 @@ import { Title } from '@/components/title'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, ChevronRight, Globe2, Quote, Store } from 'lucide-react'
 import { ServiceModel } from './components/service-model'
+import { ContainerWrapper } from '@/components/ui/container-wrapper'
 
 export default function ContactPage() {
   return (
@@ -26,7 +27,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="container py-16 pb-8 ">
+      <ContainerWrapper>
         <Title title="Respondemos rapidamente" />
         <div className=" mb-8">
           <h2 className="text-4xl font-bold mb-3  ">
@@ -48,11 +49,11 @@ export default function ContactPage() {
           </div>
 
           <div className="border-l pl-8 flex flex-col">
-            <h2 className="text-2xl">Precisa de apresentaçao?</h2>
+            <h2 className="text-xl">Precisa de apresentaçao?</h2>
 
             <div>
-              <Quote />
-              <Text>
+              <Quote className="text-primary" strokeWidth={1.5} />
+              <Text variant="lowOpacity">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
                 qui consequatur sed veritatis sequi natus a, dolorum dolores
                 unde autem voluptas praesentium cupiditate molestiae enim quam
@@ -66,10 +67,10 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+      </ContainerWrapper>
 
       {/* Options */}
-      <section className="py-16 container">
+      <ContainerWrapper>
         <Title title="Atentendimento" />
         <h2 className="text-4xl font-semibold mb-3">
           Atendemos aonde quer que voce esteja
@@ -94,13 +95,17 @@ export default function ContactPage() {
             icon={Globe2}
           />
         </div>
-      </section>
+      </ContainerWrapper>
+
       {/* Medias */}
-      <section></section>
+      <ContainerWrapper>
+        <Title title="Formas de contato" />
+        <h2 className="text-4xl font-bold mb-3  ">Entre</h2>
+      </ContainerWrapper>
 
       {/* CTA */}
-      <section className="bg-primary-gradient py-20">
-        <div className="container">
+      <section className="bg-primary-gradient">
+        <ContainerWrapper>
           <div className="max-w-2xl mx-auto flex flex-col items-center text-center">
             <h2 className="text-5xl font-semibold text-primary-foreground mb-8">
               Quer estar a frente dos concorrentes?
@@ -118,7 +123,7 @@ export default function ContactPage() {
               <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
             </Button>
           </div>
-        </div>
+        </ContainerWrapper>
       </section>
     </>
   )

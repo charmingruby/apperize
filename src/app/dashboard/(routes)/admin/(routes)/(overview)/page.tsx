@@ -1,16 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Heading } from '@/components/ui/heading'
 import { Activity, Check, DollarSign, Scroll } from 'lucide-react'
 
 export default function DashboardHome() {
   return (
     <>
       <section>
-        <Heading
-          title="Visao geral"
-          description="Veja todas as informações da sua conta"
-        />
-
         <div className="space-y-4 mt-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {/* Total received */}

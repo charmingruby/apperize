@@ -98,7 +98,7 @@ export default function Home() {
           <Title title="Com o que podemos te ajudar" />
           <strong className="text-4xl font-semibold leading-snug block">
             Nossos{' '}
-            <span className="text-primary bg-background-highlight-dark  ">
+            <span className="text-primary bg-background-highlight-dark">
               serviços
             </span>
           </strong>

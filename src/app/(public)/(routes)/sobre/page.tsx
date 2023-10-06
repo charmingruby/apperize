@@ -10,12 +10,21 @@ import { Missions } from './components/missions'
 import heroImage from '@/assets/about-hero-image.svg'
 import ctaImage from '@/assets/about-cta-image.jpg'
 import { Button } from '@/components/ui/button'
+import { ContainerWrapper } from '@/components/ui/container-wrapper'
+import {
+  HeadingAnnotation,
+  HeadingContentWrapper,
+  HeadingDescription,
+  HeadingTitle,
+  HeadingWrapper,
+} from '@/components/ui/heading'
+import { TextHighlight } from '@/components/text-highlight'
 
 export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="container py-36 min-h-screen grid grid-cols-2 gap-8">
+      <ContainerWrapper className="py-36 min-h-screen grid grid-cols-2 gap-8">
         {/* Image */}
         <div className="flex items-center">
           <Image
@@ -68,63 +77,96 @@ export default function About() {
             <span className="text-lg font-medium">Saiba mais</span>
           </Link>
         </div>
-      </section>
+      </ContainerWrapper>
 
-      {/* Purpose */}
-      <section className="py-20 container ">
+      {/* Values */}
+      <ContainerWrapper>
+        <Title title="O que estamos construindo?" underline={false} />
+
         <div className="grid grid-cols-2 gap-12 mb-12">
-          <div className="flex flex-col ">
-            <Title title="O que estamos construindo?" underline={false} />
-            <Text className="font-medium text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut atque
-              placeat debitis aut accusamus quae amet aliquid. Ullam voluptatum
-              non quasi quos amet veritatis magnam? Nam consequuntur iure
-              voluptatem repellendus?s
-            </Text>
-          </div>
+          {/* Heading */}
+          <HeadingWrapper className="mb-0">
+            <HeadingContentWrapper>
+              <HeadingTitle>
+                Software <TextHighlight> sob demanda</TextHighlight>
+              </HeadingTitle>
+              <HeadingDescription>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                itaque labore commodi suscipit, sunt nostrum dolor veniam
+                cupiditate ex libero aliquid, perspiciatis autem nulla deserunt
+                omnis minus voluptatem quod ipsa.
+              </HeadingDescription>
+            </HeadingContentWrapper>
+          </HeadingWrapper>
 
-          <div>
-            <div>
-              <div></div>
+          {/* Topics */}
+          <div className="flex justify-end w-full items-center gap-8">
+            <div className=" border-l w-full h-16 flex items-center">
+              <div className="h-px w-full bg-border" />
+            </div>
+
+            <div className="flex flex-col items-end min-w-[6rem] gap-2">
+              <small className="font-medium text-muted-foreground">
+                Landing pages
+              </small>
+              <small className="font-medium text-muted-foreground">
+                Landing pages
+              </small>
+              <small className="font-medium text-muted-foreground">
+                Landing pages
+              </small>
             </div>
           </div>
         </div>
 
         <Missions />
-      </section>
+      </ContainerWrapper>
 
       {/* Founded on what */}
-      <section className="py-20 border-y bg-background-highlight-main">
-        <div>Fundado pelo cliente</div>
+      <section className="border-y bg-background-highlight-main">
+        <ContainerWrapper className="grid grid-cols-2 gap-12">
+          <div>
+            <HeadingWrapper>
+              <HeadingAnnotation annotation="Feito para o cliente" />
+              <HeadingTitle>Pensado para o cliente</HeadingTitle>
+            </HeadingWrapper>
+          </div>
+
+          <div>image</div>
+        </ContainerWrapper>
       </section>
 
       {/* Moment */}
-
-      {/* Customer */}
+      <ContainerWrapper>moment</ContainerWrapper>
 
       {/* CTA */}
-      <section className="container py-20 grid grid-cols-2 gap-12">
-        <div>
-          <Image
-            src={ctaImage}
-            alt="Programadores em uma empresa"
-            className="rounded-md"
-          />
-        </div>
+      <ContainerWrapper>
+        <div className="grid grid-cols-2 gap-12">
+          <div>
+            <Image
+              src={ctaImage}
+              alt="Programadores em uma empresa"
+              className="rounded-md"
+            />
+          </div>
 
-        <div className="flex flex-col justify-center">
-          <Title title="Modernização" />
-          <h2 className="text-2xl">Title</h2>
-          <Text className="mt-12">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ut
-            quisquam nobis numquam natus labore est perspiciatis illum facilis
-            officia nemo illo harum veniam non magnam corrupti praesentium
-            optio? Voluptates.
-          </Text>
+          <div className="flex flex-col justify-center">
+            <HeadingWrapper>
+              <HeadingAnnotation annotation="Modernização" />
+              <HeadingTitle>Title</HeadingTitle>
+            </HeadingWrapper>
 
-          <Button className="mt-8 w-fit">Entre em contato</Button>
+            <Text>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ut
+              quisquam nobis numquam natus labore est perspiciatis illum facilis
+              officia nemo illo harum veniam non magnam corrupti praesentium
+              optio? Voluptates.
+            </Text>
+
+            <Button className="mt-8 w-fit">Entre em contato</Button>
+          </div>
         </div>
-      </section>
+      </ContainerWrapper>
     </>
   )
 }
