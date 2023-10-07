@@ -1,12 +1,19 @@
 'use client'
 
 import { Text } from '@/components/ui/text'
-import { EmailForm } from './components/email-form'
 import { Title } from '@/components/title'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, ChevronRight, Globe2, Quote, Store } from 'lucide-react'
 import { ServiceModel } from './components/service-model'
 import { ContainerWrapper } from '@/components/ui/container-wrapper'
+import {
+  HeadingAnnotation,
+  HeadingContentWrapper,
+  HeadingDescription,
+  HeadingTitle,
+  HeadingWrapper,
+} from '@/components/ui/heading'
+import { TextHighlight } from '@/components/text-highlight'
 
 export default function ContactPage() {
   return (
@@ -28,26 +35,20 @@ export default function ContactPage() {
       </section>
 
       <ContainerWrapper>
-        <Title title="Respondemos rapidamente" />
-        <div className=" mb-8">
-          <h2 className="text-4xl font-bold mb-3  ">
-            Entrar em{' '}
-            <span className="text-primary bg-background-highlight-dark  ">
-              contato
-            </span>
-          </h2>
-          <Text size="md" variant="lowOpacity">
-            Fique a vontade para tirar qualquer duvida com nosso suporte
-          </Text>
-        </div>
+        <HeadingWrapper>
+          <HeadingAnnotation annotation="Respondemos rapidamente" />
+          <HeadingContentWrapper>
+            <HeadingTitle>
+              Entrar em <TextHighlight>contato</TextHighlight>
+            </HeadingTitle>
+            <HeadingDescription>
+              Fique a vontade para tirar qualquer duvida com nosso suporte
+            </HeadingDescription>
+          </HeadingContentWrapper>
+        </HeadingWrapper>
 
         {/* Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 ">
-          {/* Email form */}
-          <div className="flex flex-col justify-center z-20 md:pr-8">
-            <EmailForm />
-          </div>
-
           <div className="border-l pl-8 flex flex-col">
             <h2 className="text-xl">Precisa de apresentaçao?</h2>
 
@@ -95,12 +96,6 @@ export default function ContactPage() {
             icon={Globe2}
           />
         </div>
-      </ContainerWrapper>
-
-      {/* Medias */}
-      <ContainerWrapper>
-        <Title title="Formas de contato" />
-        <h2 className="text-4xl font-bold mb-3  ">Entre</h2>
       </ContainerWrapper>
 
       {/* CTA */}

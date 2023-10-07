@@ -38,19 +38,17 @@ export function Missions() {
     <div className="grid grid-cols-3 gap-8">
       {missions.map(({ icon: Icon, title, description }) => (
         <Card key={title} className="flex flex-col items-center">
-          <CardHeader>
+          <CardHeader className="items-center">
             <div className="bg-background-highlight-dark w-fit p-2 border-4 border-background-highlight-main rounded-full">
               <Icon className="w-10 h-10 text-primary" />
             </div>
 
-            <CardTitle className="text-primary font-semibold text-xl block">
+            <CardTitle className="items-center justify-center text-primary text-center font-semibold text-xl block">
               {title}
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <CardDescription className="text-center">
-              {description}
-            </CardDescription>
+            <CardDescription>{description}</CardDescription>
           </CardContent>
         </Card>
       ))}
