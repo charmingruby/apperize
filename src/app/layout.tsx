@@ -2,7 +2,7 @@ import { ClerkAuthProvider } from '@/providers/clerk'
 import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Chakra_Petch as ChakraPetch, Inter } from 'next/font/google'
-import { ReactQueryProvider } from '@/providers/react-query'
+import { TrpcProvider } from '@/providers/trpc'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkAuthProvider>
-      <ReactQueryProvider>
+      <TrpcProvider>
         <html lang="en">
           <body
             className={`${inter.variable} ${alt.variable} 
@@ -38,7 +38,7 @@ export default function RootLayout({
             <main>{children}</main>
           </body>
         </html>
-      </ReactQueryProvider>
+      </TrpcProvider>
     </ClerkAuthProvider>
   )
 }

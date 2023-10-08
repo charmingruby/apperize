@@ -140,11 +140,11 @@ export default function About() {
               </Text>
 
               <div className="mt-8">
-                <div className="flex gap-2">
+                <div className="flex gap-4">
                   <div className="bg-background-highlight-dark w-6 h-6 rounded-full flex items-center justify-center">
                     <Check className="text-primary h-4 w-4" />
                   </div>
-                  <p className="w-full leading-relaxed">
+                  <p className="text-sm w-full leading-relaxed">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Dolore, accusantium porro quia beatae iste quas officiis
                     harum tenetur ipsa adipisci animi iusto quod maiores nisi
@@ -181,7 +181,7 @@ export default function About() {
               <Image
                 src={founderImg}
                 alt="Fundador da Apperize, Gustavo Dias"
-                className="w-16 h-16"
+                className="w-16 h-16 rounded-full"
               />
 
               <div className="h-16 w-px bg-border" />
