@@ -1,13 +1,22 @@
 import { auth, clerkClient } from '@clerk/nextjs'
+import { redirect } from 'next/navigation'
 
 async function getUserData() {
   const { userId } = auth()
-  const user = await clerkClient.users.getOrganizationMembershipList({ userId })
-  return user
+
+  if (!userId) {
+    return null
+  }
+  const orgs = await clerkClient.users.getOrganizationMembershipList({ userId })
+  return orgs
 }
 
 export async function Navbar() {
   const orgs = await getUserData()
+
+  if (!orgs) {
+    redirect('/')
+  }
 
   const isAdmin = orgs[0]?.role === 'admin'
 

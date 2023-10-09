@@ -3,15 +3,26 @@ import { UserButton, auth, clerkClient } from '@clerk/nextjs'
 import { Bell, PlusCircle, TabletSmartphone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 async function getUserData() {
   const { userId } = auth()
+  if (!userId) {
+    return null
+  }
+
   const user = await clerkClient.users.getUser(userId)
   return user
 }
 
 export async function Header() {
-  const { lastName, firstName, imageUrl } = await getUserData()
+  const user = await getUserData()
+
+  if (!user) {
+    redirect('/')
+  }
+
+  const { imageUrl, lastName, firstName } = user
 
   return (
     <header className="px-8 h-16 flex items-center">

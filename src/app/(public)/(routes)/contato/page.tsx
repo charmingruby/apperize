@@ -1,9 +1,8 @@
 'use client'
 
 import { Text } from '@/components/ui/text'
-import { Title } from '@/components/title'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, ChevronRight, Globe2, Quote, Store } from 'lucide-react'
+import { ArrowRight, Globe2, Store } from 'lucide-react'
 import { ServiceModel } from './components/service-model'
 import { ContainerWrapper } from '@/components/ui/container-wrapper'
 import {
@@ -14,68 +13,51 @@ import {
   HeadingWrapper,
 } from '@/components/ui/heading'
 import { TextHighlight } from '@/components/text-highlight'
+import { EmailForm } from './components/email-form'
+import heroImg from '@/assets/contact-hero.svg'
+import Image from 'next/image'
+import { MeansOfContact } from './components/means-of-contact'
 
 export default function ContactPage() {
   return (
     <>
-      <section className="w-full bg-primary-gradient pt-16">
-        <div className="py-12 container">
-          <div className="text-center max-w-2xl mx-auto flex flex-col items-center gap-4">
-            <h2 className="text-primary-foreground text-5xl font-bold">
-              Fale conosco
-            </h2>
-            <Text variant="primaryForeground" size="sm">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-              quaerat repudiandae incidunt perferendis voluptate in, est quod
-              temporibus unde libero adipisci, nesciunt asperiores non sit, amet
-              corrupti earum itaque tempore?
-            </Text>
-          </div>
+      <ContainerWrapper className="grid grid-cols-2 gap-12">
+        <div>
+          <HeadingWrapper>
+            <HeadingAnnotation annotation="Respondemos rapidamente" />
+            <HeadingContentWrapper>
+              <HeadingTitle>
+                Entrar em <TextHighlight>contato</TextHighlight>
+              </HeadingTitle>
+              <HeadingDescription>
+                Fique a vontade para tirar qualquer duvida com nosso suporte
+              </HeadingDescription>
+            </HeadingContentWrapper>
+          </HeadingWrapper>
+
+          <EmailForm />
         </div>
-      </section>
+
+        <div className="flex items-center justify-center">
+          <Image src={heroImg} alt="Pessoas entrando em contato" />
+        </div>
+      </ContainerWrapper>
 
       <ContainerWrapper>
         <HeadingWrapper>
-          <HeadingAnnotation annotation="Respondemos rapidamente" />
-          <HeadingContentWrapper>
-            <HeadingTitle>
-              Entrar em <TextHighlight>contato</TextHighlight>
-            </HeadingTitle>
-            <HeadingDescription>
-              Fique a vontade para tirar qualquer duvida com nosso suporte
-            </HeadingDescription>
-          </HeadingContentWrapper>
+          <HeadingAnnotation annotation="Outras formas" />
+          <HeadingTitle>Opções de contato</HeadingTitle>
         </HeadingWrapper>
 
-        {/* Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 ">
-          <div className="border-l pl-8 flex flex-col">
-            <h2 className="text-xl">Precisa de apresentaçao?</h2>
-
-            <div>
-              <Quote className="text-primary" strokeWidth={1.5} />
-              <Text variant="lowOpacity">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                qui consequatur sed veritatis sequi natus a, dolorum dolores
-                unde autem voluptas praesentium cupiditate molestiae enim quam
-                dignissimos quia? Magni, dignissimos?
-              </Text>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <span>Link</span>
-              <ChevronRight />
-            </div>
-          </div>
-        </div>
+        <MeansOfContact />
       </ContainerWrapper>
 
       {/* Options */}
       <ContainerWrapper>
-        <Title title="Atentendimento" />
-        <h2 className="text-4xl font-semibold mb-3">
-          Atendemos aonde quer que voce esteja
-        </h2>
+        <HeadingWrapper className="text-center items-center">
+          <HeadingAnnotation annotation="Atentendimento" />
+          <HeadingTitle>Atendemos aonde quer que voce esteja</HeadingTitle>
+        </HeadingWrapper>
 
         <div className="flex flex-row w-full gap-12 mt-12">
           {/* Local */}

@@ -55,33 +55,35 @@ export function EmailForm() {
             )}
           />
 
-          {/* Email */}
-          <FormField
-            control={form.control}
-            name="senderEmail"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl>
-                  <Input placeholder="exemplo@email.com" {...field} />
-                </FormControl>
-              </FormItem>
-            )}
-          />
+          <div className="grid grid-cols-2 gap-4">
+            {/* Email */}
+            <FormField
+              control={form.control}
+              name="senderEmail"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input placeholder="exemplo@email.com" {...field} />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
 
-          {/* Phone Number */}
-          <FormField
-            control={form.control}
-            name="phoneNumber"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Número de telefone</FormLabel>
-                <FormControl>
-                  <Input placeholder="(32) 99110-0990" {...field} />
-                </FormControl>
-              </FormItem>
-            )}
-          />
+            {/* Phone Number */}
+            <FormField
+              control={form.control}
+              name="phoneNumber"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Número de telefone</FormLabel>
+                  <FormControl>
+                    <Input placeholder="(32) 99110-0990" {...field} />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+          </div>
 
           {/* Subject */}
           <FormField

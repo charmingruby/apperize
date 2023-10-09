@@ -39,5 +39,10 @@ export function HeadingDescription({
   className,
   ...props
 }: HeadingDescriptionProps) {
-  return <div className={cn('text-muted-foreground', className)} {...props} />
+  return (
+    <div
+      className={cn('text-muted-foreground leading-relaxed', className)}
+      {...props}
+    />
+  )
 }

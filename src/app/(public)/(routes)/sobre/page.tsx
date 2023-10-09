@@ -24,62 +24,61 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <ContainerWrapper className="py-36 min-h-screen grid grid-cols-2 gap-8">
-        {/* Image */}
-        <div className="flex items-center">
-          <Image
-            src={heroImage}
-            alt="Pessoas melhorando sua empresa com marketing"
-          />
-        </div>
-
-        {/* Content */}
-        <div className="flex flex-col justify-center">
-          {/* Badge */}
-          <div className="flex items-center gap-4">
-            <div className="border border-border shadow-md rounded-md bg-background-highlight-dark text-primary w-fit p-4">
-              <Code2 className="h-10 w-10" />
-            </div>
-
-            <div className="flex flex-col text-2xl">
-              <span>Somos uma</span>
-              <strong>Software House</strong>
-            </div>
+      <section className="">
+        <ContainerWrapper className="pt-36 min-h-screen grid grid-cols-2 gap-8">
+          {/* Image */}
+          <div className="flex items-center">
+            <Image src={heroImage} alt="Pessoas melhorando sua empresa" />
           </div>
 
-          {/* Title */}
-          <div className="flex flex-col gap-1 mt-16">
-            <h1 className="m-0 text-4xl flex flex-col gap-2 font-semibold">
-              Ajudamos nossos clientes
-              <strong className="block text-primary">
-                {' '}
-                atraves da programação
-              </strong>
-            </h1>
-          </div>
+          {/* Content */}
+          <div className="flex flex-col justify-center">
+            {/* Badge */}
+            <div className="flex items-center gap-4">
+              <div className="border border-border shadow-md rounded-md bg-background-highlight-dark text-primary w-fit p-4">
+                <Code2 className="h-10 w-10" />
+              </div>
 
-          {/* Text */}
-          <div className="my-12">
-            <Text className="leading-relaxed text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto nostrum deserunt, magni, minus assumenda omnis eos odio
-              minima illo, rem possimus dignissimos laboriosam similique dicta
-              harum consequuntur fugit. Aut, distinctio!
-            </Text>
-          </div>
-
-          {/* Learn more */}
-          <Link href="/" prefetch={false} className="flex items-center gap-4">
-            <div className="bg-background-highlight-dark p-1 rounded-full border-4 border-background-highlight-main">
-              <ArrowDown className="text-primary" />
+              <div className="flex flex-col text-2xl">
+                <span className="">Somos uma</span>
+                <strong>Software House</strong>
+              </div>
             </div>
 
-            <span className="text-lg font-medium">Saiba mais</span>
-          </Link>
-        </div>
-      </ContainerWrapper>
+            {/* Title */}
+            <div className="flex flex-col gap-1 mt-16">
+              <h1 className="m-0 text-4xl flex flex-col gap-2 font-semibold">
+                Ajudamos nossos clientes
+                <strong className="block text-primary">
+                  {' '}
+                  atraves da programação
+                </strong>
+              </h1>
+            </div>
 
-      {/* Values */}
+            {/* Text */}
+            <div className="my-12">
+              <Text className="leading-relaxed text-lg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto nostrum deserunt, magni, minus assumenda omnis eos
+                odio minima illo, rem possimus dignissimos laboriosam similique
+                dicta harum consequuntur fugit. Aut, distinctio!
+              </Text>
+            </div>
+
+            {/* Learn more */}
+            <Link href="/" prefetch={false} className="flex items-center gap-4">
+              <div className="bg-background-highlight-dark p-1 rounded-full border-4 border-background-highlight-main">
+                <ArrowDown className="text-primary" />
+              </div>
+
+              <span className="text-lg font-medium">Saiba mais</span>
+            </Link>
+          </div>
+        </ContainerWrapper>
+      </section>
+
+      {/* Mission */}
       <ContainerWrapper>
         <Title title="O que estamos construindo?" underline={false} />
 
@@ -88,7 +87,7 @@ export default function About() {
           <HeadingWrapper className="mb-0">
             <HeadingContentWrapper>
               <HeadingTitle>
-                Software <TextHighlight> sob demanda</TextHighlight>
+                O que a <TextHighlight>Apperize</TextHighlight> busca?
               </HeadingTitle>
               <HeadingDescription>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
@@ -122,42 +121,64 @@ export default function About() {
         <Missions />
       </ContainerWrapper>
 
-      {/* Founded on what */}
+      {/* How */}
       <section className="border-y bg-background-highlight-main">
         <ContainerWrapper className="grid grid-cols-2 gap-12">
           <div>
             <HeadingWrapper>
-              <HeadingAnnotation annotation="Feito para o cliente" />
-              <HeadingTitle>Pensado para o cliente</HeadingTitle>
+              <HeadingAnnotation annotation="Como funcionamos" />
+              <HeadingContentWrapper>
+                <HeadingTitle>Pensado para o cliente</HeadingTitle>
+                <HeadingDescription>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto corporis possimus facere odit similique omnis
+                  repellat! Dolorum accusamus nulla aspernatur quos beatae omnis
+                  recusandae possimus quidem ipsam, laborum quisquam ut!
+                </HeadingDescription>
+              </HeadingContentWrapper>
             </HeadingWrapper>
-
-            <div>
-              <Text>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, doloremque sapiente provident labore aliquam iste
-                illum, vel aliquid nostrum expedita quisquam molestiae, maiores
-                nulla tempore eveniet. Aperiam eum animi porro?
-              </Text>
-
-              <div className="mt-8">
-                <div className="flex gap-4">
-                  <div className="bg-background-highlight-dark w-6 h-6 rounded-full flex items-center justify-center">
-                    <Check className="text-primary h-4 w-4" />
-                  </div>
-                  <p className="text-sm w-full leading-relaxed">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Dolore, accusantium porro quia beatae iste quas officiis
-                    harum tenetur ipsa adipisci animi iusto quod maiores nisi
-                    soluta et exercitationem voluptates unde.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div>image</div>
+          <div className="mt-12">
+            <div className="flex gap-4">
+              <div className="bg-background-highlight-dark w-6 h-6 rounded-full flex items-center justify-center">
+                <Check className="text-primary h-4 w-4" />
+              </div>
+              <p className="text-sm w-full leading-relaxed">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolore, accusantium porro quia beatae iste quas officiis harum
+                tenetur ipsa adipisci animi iusto quod maiores nisi soluta et
+                exercitationem voluptates unde.
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <div className="bg-background-highlight-dark w-6 h-6 rounded-full flex items-center justify-center">
+                <Check className="text-primary h-4 w-4" />
+              </div>
+              <p className="text-sm w-full leading-relaxed">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolore, accusantium porro quia beatae iste quas officiis harum
+                tenetur ipsa adipisci animi iusto quod maiores nisi soluta et
+                exercitationem voluptates unde.
+              </p>
+            </div>
+          </div>
         </ContainerWrapper>
       </section>
+
+      {/* Journey */}
+      <ContainerWrapper>
+        <div>
+          <HeadingWrapper>
+            <HeadingAnnotation annotation="Nossa jornada" />
+          </HeadingWrapper>
+
+          <div className="flex flex-col text-right w-fit">
+            <span>Jan, 2023</span>
+            <small>Primeiro freelance</small>
+          </div>
+        </div>
+      </ContainerWrapper>
 
       {/* Pitch */}
       <ContainerWrapper>
@@ -167,7 +188,7 @@ export default function About() {
             <HeadingTitle>A ideia por tras da Apperize</HeadingTitle>
           </HeadingWrapper>
 
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center gap-8">
             {/* Pitch text */}
             <Text>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
@@ -181,17 +202,16 @@ export default function About() {
               <Image
                 src={founderImg}
                 alt="Fundador da Apperize, Gustavo Dias"
-                className="w-16 h-16 rounded-full"
+                className="w-10 h-10 rounded-full"
               />
 
-              <div className="h-16 w-px bg-border" />
+              <div className="h-12 w-px bg-border" />
 
-              <div className="flex flex-col">
-                <div className="flex flex-col">
-                  <small>Gustavo Dias</small>
-                  <small>Idealizador</small>
-                </div>
-                <div className="h-px w-1/3 bg-primary" />
+              <div className="flex flex-col text-start">
+                <small className="text-sm font-medium">Gustavo Dias</small>
+                <small className="text-muted-foreground">
+                  Fundador da Apperize
+                </small>
               </div>
             </div>
           </div>
@@ -199,22 +219,22 @@ export default function About() {
       </ContainerWrapper>
 
       {/* CTA */}
-      <section className="border-t bg-background-highlight-main">
-        <ContainerWrapper className="grid grid-cols-2 gap-12">
-          <div className="flex flex-col justify-center">
-            <HeadingWrapper>
-              <HeadingAnnotation annotation="Modernização" />
-              <HeadingTitle>Title</HeadingTitle>
-            </HeadingWrapper>
+      <section className="border-t bg-primary-gradient">
+        <ContainerWrapper className="flex items-center justify-center">
+          <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
+            <HeadingTitle className="text-primary-foreground">
+              Escolha a melhor oportunidade para sua empresa
+            </HeadingTitle>
 
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ut
-              quisquam nobis numquam natus labore est perspiciatis illum facilis
-              officia nemo illo harum veniam non magnam corrupti praesentium
-              optio? Voluptates.
-            </Text>
-
-            <Button className="mt-8 w-fit">Entre em contato</Button>
+            <div className="mt-8 flex gap-4">
+              <Button variant="secondary">Fazer pedido</Button>
+              <Button
+                variant="ghost"
+                className="border border-border text-secondary"
+              >
+                Entrar em contato
+              </Button>
+            </div>
           </div>
         </ContainerWrapper>
       </section>

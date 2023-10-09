@@ -1,5 +1,7 @@
 'use client'
 
+// eslint-disable
+
 import { useEffect, useRef, useState } from 'react'
 import { TecImage, TecImageProps } from './tec-image'
 import { motion as mt } from 'framer-motion'
@@ -56,7 +58,7 @@ const tecList: TecImageProps[] = [
 ]
 
 export function TecList() {
-  const carousel = useRef(null)
+  const carousel = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState<number>(0)
 
   useEffect(() => {
