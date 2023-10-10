@@ -8,7 +8,6 @@ import { Title } from '@/components/title'
 import { Text } from '@/components/ui/text'
 import founderImg from '@/assets/gustavo-dias-profile.jpeg'
 import { Missions } from './components/missions'
-import heroImage from '@/assets/about-hero-image.svg'
 import { Button } from '@/components/ui/button'
 import { ContainerWrapper } from '@/components/ui/container-wrapper'
 import {
@@ -19,20 +18,18 @@ import {
   HeadingWrapper,
 } from '@/components/ui/heading'
 import { TextHighlight } from '@/components/text-highlight'
+import { AdvantagesAnnotation } from './components/advantages-annotations'
 
 export default function About() {
   return (
     <>
       {/* Hero */}
       <section className="">
-        <ContainerWrapper className="pt-36 min-h-screen grid grid-cols-2 gap-8">
+        <ContainerWrapper className=" min-h-screen grid grid-cols-1 gap-8">
           {/* Image */}
-          <div className="flex items-center">
-            <Image src={heroImage} alt="Pessoas melhorando sua empresa" />
-          </div>
 
           {/* Content */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center max-w-2xl mx-auto">
             {/* Badge */}
             <div className="flex items-center gap-4">
               <div className="border border-border shadow-md rounded-md bg-background-highlight-dark text-primary w-fit p-4">
@@ -68,12 +65,14 @@ export default function About() {
             </div>
 
             {/* Learn more */}
-            <Link href="/" prefetch={false} className="flex items-center gap-4">
+            <Link
+              href="/"
+              prefetch={false}
+              className="flex  justify-center items-center gap-4"
+            >
               <div className="bg-background-highlight-dark p-1 rounded-full border-4 border-background-highlight-main">
                 <ArrowDown className="text-primary" />
               </div>
-
-              <span className="text-lg font-medium">Saiba mais</span>
             </Link>
           </div>
         </ContainerWrapper>
@@ -91,31 +90,24 @@ export default function About() {
                 O que a <TextHighlight>Apperize</TextHighlight> busca?
               </HeadingTitle>
               <HeadingDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                itaque labore commodi suscipit, sunt nostrum dolor veniam
-                cupiditate ex libero aliquid, perspiciatis autem nulla deserunt
-                omnis minus voluptatem quod ipsa.
+                busca desenvolver soluções tecnológicas personalizadas para
+                atender às necessidades específicas de seus clientes, fornecendo
+                expertise em design, programação e implementação de software.
+                Ela busca colaborar de perto com os clientes para entender suas
+                metas e desafios, transformando essas informações em software de
+                alta qualidade, eficiente e seguro. Três problemas comuns que
+                uma software house pode resolver incluem:
               </HeadingDescription>
             </HeadingContentWrapper>
           </HeadingWrapper>
 
           {/* Topics */}
-          <div className="flex justify-end w-full items-center gap-8">
-            <div className=" border-l w-full h-16 flex items-center">
+          <div className="flex justify-end w-full items-center">
+            <div className=" border-l w-full h-full flex items-center">
               <div className="h-px w-full bg-border" />
             </div>
 
-            <div className="flex flex-col items-end min-w-[6rem] gap-2">
-              <small className="font-medium text-muted-foreground">
-                Landing pages
-              </small>
-              <small className="font-medium text-muted-foreground">
-                Landing pages
-              </small>
-              <small className="font-medium text-muted-foreground">
-                Landing pages
-              </small>
-            </div>
+            <AdvantagesAnnotation />
           </div>
         </div>
 

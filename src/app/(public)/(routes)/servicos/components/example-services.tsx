@@ -42,11 +42,14 @@ export function ExampleServices() {
             </div>
             <CardTitle>{title}</CardTitle>
           </CardHeader>
+
           <CardContent className="space-y-2">
             {items.map((item) => (
               <div className="flex items-center gap-1" key={item}>
                 <CheckCircle2 className="text-primary h-5 w-5" />
-                <span className="font-medium">{item}</span>
+                <span className="font-medium text-muted-foreground">
+                  {item}
+                </span>
               </div>
             ))}
           </CardContent>
