@@ -30,7 +30,7 @@ export default function ContactPage() {
                 Entrar em <TextHighlight>contato</TextHighlight>
               </HeadingTitle>
               <HeadingDescription>
-                Fique a vontade para tirar qualquer duvida com nosso suporte
+                Fique a vontade para tirar qualquer dúvida com nosso suporte
               </HeadingDescription>
             </HeadingContentWrapper>
           </HeadingWrapper>
@@ -43,15 +43,6 @@ export default function ContactPage() {
         </div>
       </ContainerWrapper>
 
-      <ContainerWrapper>
-        <HeadingWrapper>
-          <HeadingAnnotation annotation="Outras formas" />
-          <HeadingTitle>Opções de contato</HeadingTitle>
-        </HeadingWrapper>
-
-        <MeansOfContact />
-      </ContainerWrapper>
-
       {/* Options */}
       <ContainerWrapper>
         <HeadingWrapper className="text-center items-center">
@@ -62,7 +53,7 @@ export default function ContactPage() {
         <div className="flex flex-row w-full gap-12 mt-12">
           {/* Local */}
           <ServiceModel
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi beatae repellat non tempora, eum alias provident error. Ducimus voluptates dolorum quae iure expedita, optio non doloremque. Dicta, minus fuga. Magni."
+            description="Estamos aqui na sua comunidade, prontos para oferecer assistência pessoal e soluções próximas de você."
             title="Localmente"
             icon={Store}
           />
@@ -73,11 +64,20 @@ export default function ContactPage() {
 
           {/* Remote */}
           <ServiceModel
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi beatae repellat non tempora, eum alias provident error. Ducimus voluptates dolorum quae iure expedita, optio non doloremque. Dicta, minus fuga. Magni."
+            description="Nossa equipe está pronta para ajudar onde você estiver, com atendimento remoto conveniente e eficaz."
             title="Remotamente"
             icon={Globe2}
           />
         </div>
+      </ContainerWrapper>
+
+      <ContainerWrapper>
+        <HeadingWrapper>
+          <HeadingAnnotation annotation="Outras formas" />
+          <HeadingTitle>Opções de contato</HeadingTitle>
+        </HeadingWrapper>
+
+        <MeansOfContact />
       </ContainerWrapper>
 
       {/* CTA */}
@@ -89,10 +89,10 @@ export default function ContactPage() {
             </h2>
 
             <Text variant="primaryForeground">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quo,
-              quidem optio corrupti ad cum suscipit, maiores natus, doloribus
-              voluptatem vitae non fugiat laudantium perspiciatis placeat
-              consequatur. Excepturi, nulla ipsum.
+              Modernize-se agora com o nosso serviço de software de ponta. Não
+              fique para trás, abrace a inovação e leve o seu negócio para o
+              próximo nível. Descubra como podemos ajudar você a alcançar o
+              sucesso digital.
             </Text>
 
             <Button variant="secondary" className="gap-1 mt-6">

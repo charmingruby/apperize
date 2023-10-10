@@ -27,8 +27,8 @@ model EnterpriseProfile {
 }
 
 model Request {
-  id     String @id @default(uuid())
-  userId String
+  id     String  @id @default(uuid())
+  userId String?
 
   @@map("requests")
 }

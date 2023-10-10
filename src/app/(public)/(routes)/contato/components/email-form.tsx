@@ -47,9 +47,9 @@ export function EmailForm() {
             name="fullName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Nome completo</FormLabel>
+                <FormLabel>Como se chama?</FormLabel>
                 <FormControl>
-                  <Input placeholder="Nome completo" {...field} />
+                  <Input placeholder="Nome" {...field} />
                 </FormControl>
               </FormItem>
             )}
@@ -62,7 +62,7 @@ export function EmailForm() {
               name="senderEmail"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>Qual seu email?</FormLabel>
                   <FormControl>
                     <Input placeholder="exemplo@email.com" {...field} />
                   </FormControl>
@@ -76,9 +76,9 @@ export function EmailForm() {
               name="phoneNumber"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Número de telefone</FormLabel>
+                  <FormLabel>Qual seu telefone?</FormLabel>
                   <FormControl>
-                    <Input placeholder="(32) 99110-0990" {...field} />
+                    <Input placeholder="Telefone" {...field} />
                   </FormControl>
                 </FormItem>
               )}
@@ -91,7 +91,7 @@ export function EmailForm() {
             name="subject"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Assunto</FormLabel>
+                <FormLabel>Qual o assunto?</FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
@@ -115,7 +115,7 @@ export function EmailForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Mensagem</FormLabel>
+                <FormLabel>Qual a sua mensagem?</FormLabel>
                 <FormControl>
                   <Textarea placeholder="Sua mensagem..." {...field} />
                 </FormControl>

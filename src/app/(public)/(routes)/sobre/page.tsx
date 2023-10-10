@@ -51,18 +51,19 @@ export default function About() {
                 Ajudamos nossos clientes
                 <strong className="block text-primary">
                   {' '}
-                  atraves da programação
+                  através da programação
                 </strong>
               </h1>
             </div>
 
             {/* Text */}
             <div className="my-12">
-              <Text className="leading-relaxed text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto nostrum deserunt, magni, minus assumenda omnis eos
-                odio minima illo, rem possimus dignissimos laboriosam similique
-                dicta harum consequuntur fugit. Aut, distinctio!
+              <Text className="leading-relaxed text-lg text-muted-foreground">
+                Nossa equipe dedicada e experiente está pronta para transformar
+                suas visões em soluções de software sob medida que atendam às
+                suas necessidades específicas. Com foco no cliente, trabalhamos
+                em parceria para entregar produtos digitais excepcionais que
+                impulsionam o sucesso dos nossos clientes.
               </Text>
             </div>
 
@@ -139,7 +140,18 @@ export default function About() {
             </HeadingWrapper>
           </div>
 
-          <div className="mt-12">
+          <div className="mt-12 space-y-6">
+            <div className="flex gap-4">
+              <div className="bg-background-highlight-dark w-6 h-6 rounded-full flex items-center justify-center">
+                <Check className="text-primary h-4 w-4" />
+              </div>
+              <p className="text-sm w-full leading-relaxed">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolore, accusantium porro quia beatae iste quas officiis harum
+                tenetur ipsa adipisci animi iusto quod maiores nisi soluta et
+                exercitationem voluptates unde.
+              </p>
+            </div>
             <div className="flex gap-4">
               <div className="bg-background-highlight-dark w-6 h-6 rounded-full flex items-center justify-center">
                 <Check className="text-primary h-4 w-4" />
@@ -165,20 +177,6 @@ export default function About() {
           </div>
         </ContainerWrapper>
       </section>
-
-      {/* Journey */}
-      <ContainerWrapper>
-        <div>
-          <HeadingWrapper>
-            <HeadingAnnotation annotation="Nossa jornada" />
-          </HeadingWrapper>
-
-          <div className="flex flex-col text-right w-fit">
-            <span>Jan, 2023</span>
-            <small>Primeiro freelance</small>
-          </div>
-        </div>
-      </ContainerWrapper>
 
       {/* Pitch */}
       <ContainerWrapper>

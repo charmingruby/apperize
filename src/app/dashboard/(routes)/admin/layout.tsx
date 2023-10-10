@@ -1,13 +1,26 @@
 import { PropsWithChildren } from 'react'
 import { Header } from './components/header'
 import { Navbar } from './components/navbar'
-import { auth } from '@clerk/nextjs'
+import { auth, clerkClient } from '@clerk/nextjs'
 import { redirect } from 'next/navigation'
+
+async function getUserDataById(userId: string) {
+  const user = await clerkClient.users.getOrganizationMembershipList({ userId })
+  return user
+}
 
 export default async function DashboardLayout({ children }: PropsWithChildren) {
   const { userId } = auth()
 
-  if (!userId) redirect('/login')
+  let isAdmin = false
+
+  if (userId) {
+    const orgs = await getUserDataById(userId)
+
+    isAdmin = orgs[0]?.role === 'admin'
+  }
+
+  if (!isAdmin) redirect('/')
 
   return (
     <>

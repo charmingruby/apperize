@@ -47,10 +47,9 @@ export default function Home() {
 
             {/* Text */}
             <p className="text-muted-foreground text-center leading-relaxed text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              reiciendis obcaecati quas rerum ullam quis impedit. Sapiente sequi
-              adipisci temporibus velit, animi ab autem dolor, quo, similique
-              nihil tempora amet!
+              Transformamos ideias em realidade digital. Somos uma software
+              house dedicada a criar soluções personalizadas e inovadoras para
+              atender às necessidades únicas do seu negócio.
             </p>
           </div>
 
@@ -59,13 +58,8 @@ export default function Home() {
             <Button size="lg" className="text-base">
               Faça seu pedido
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="flex items-center gap-1 text-base"
-            >
-              <span>Produtos</span>
-              <ArrowRight className="h-3.5 w-3.5" />
+            <Button size="lg" variant="outline" className="text-base">
+              Entrar em contato
             </Button>
           </div>
         </div>
