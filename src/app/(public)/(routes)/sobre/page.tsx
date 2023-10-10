@@ -1,7 +1,6 @@
 /* External */
-import { ArrowDown, Check, Code2 } from 'lucide-react'
+import { ArrowRight, Check, Code2 } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 /* Internal */
 import { Title } from '@/components/title'
@@ -19,42 +18,38 @@ import {
 } from '@/components/ui/heading'
 import { TextHighlight } from '@/components/text-highlight'
 import { AdvantagesAnnotation } from './components/advantages-annotations'
+import heroImg from '@/assets/about-hero.png'
 
 export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="">
-        <ContainerWrapper className=" min-h-screen grid grid-cols-1 gap-8">
-          {/* Image */}
-
-          {/* Content */}
-          <div className="flex flex-col justify-center max-w-2xl mx-auto">
+      <ContainerWrapper className="min-h-screen flex items-center gap-8">
+        {/* Content */}
+        <div className=" grid grid-cols-2 gap-12">
+          <div className="flex flex-col gap-4">
             {/* Badge */}
-            <div className="flex items-center gap-4">
-              <div className="border border-border shadow-md rounded-md bg-background-highlight-dark text-primary w-fit p-4">
-                <Code2 className="h-10 w-10" />
+            <div className="flex items-center gap-2">
+              <div className="border border-border shadow-md rounded-md bg-background-highlight-dark text-primary w-fit p-2">
+                <Code2 className="h-8 w-8" />
               </div>
 
-              <div className="flex flex-col text-2xl">
-                <span className="">Somos uma</span>
-                <strong>Software House</strong>
+              <div className="flex flex-col text-lg">
+                <span className="leading-tight">Somos uma</span>
+                <strong className="leading-tight">Software House</strong>
               </div>
             </div>
 
             {/* Title */}
             <div className="flex flex-col gap-1 mt-16">
               <h1 className="m-0 text-4xl flex flex-col gap-2 font-semibold">
-                Ajudamos nossos clientes
-                <strong className="block text-primary">
-                  {' '}
-                  através da programação
-                </strong>
+                Transformamos necessidades em{' '}
+                <span className="text-primary">soluções tecnológicas</span>
               </h1>
             </div>
 
             {/* Text */}
-            <div className="my-12">
+            <div className="mt-8 mb-4">
               <Text className="leading-relaxed text-lg text-muted-foreground">
                 Nossa equipe dedicada e experiente está pronta para transformar
                 suas visões em soluções de software sob medida que atendam às
@@ -64,21 +59,26 @@ export default function About() {
               </Text>
             </div>
 
-            {/* Learn more */}
-            <Link
-              href="/"
-              prefetch={false}
-              className="flex  justify-center items-center gap-4"
-            >
-              <div className="bg-background-highlight-dark p-1 rounded-full border-4 border-background-highlight-main">
-                <ArrowDown className="text-primary" />
-              </div>
-            </Link>
+            {/* Button */}
+            <Button className="w-fit gap-1">
+              Fazer pedido
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Button>
           </div>
-        </ContainerWrapper>
-      </section>
 
-      {/* Mission */}
+          {/* Image */}
+          <div className="rounded-md flex items-center overflow-hidden">
+            <Image
+              src={heroImg}
+              alt=""
+              className="rounded-md w-full h-full object-cover"
+              quality={100}
+            />
+          </div>
+        </div>
+      </ContainerWrapper>
+
+      {/* What */}
       <ContainerWrapper>
         <Title title="O que estamos construindo?" underline={false} />
 

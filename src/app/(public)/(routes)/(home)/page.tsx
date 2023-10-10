@@ -26,6 +26,13 @@ import { ProductCategory } from './components/product-category'
 import { TecList } from './components/tec-list'
 import exampleImage from '@/assets/gustavo-dias-profile.jpeg'
 import { Services } from './components/services'
+import {
+  HeadingAnnotation,
+  HeadingContentWrapper,
+  HeadingDescription,
+  HeadingTitle,
+  HeadingWrapper,
+} from '@/components/ui/heading'
 
 export default function Home() {
   return (
@@ -69,18 +76,23 @@ export default function Home() {
       <section className="container py-20">
         <div className="mb-12 grid grid-cols-1 lg:grid-cols-4 gap-8 w-full">
           <div className="lg:col-span-3">
-            <div className="w-fit space-y-4 mb-6 ">
-              <span className="text-primary uppercase tracking-widest font-semibold block">
-                Plataforma feita para o cliente
-              </span>
-              <div className="w-1/6 h-0.5 bg-primary" />
-            </div>
-            <strong className="leading-snug text-4xl font-semibold">
-              Traga sua ideia e nós a tornaremos realidade
-            </strong>
+            <HeadingWrapper className="mb-0">
+              <HeadingAnnotation annotation="Plataforma feita para o cliente" />
+              <HeadingContentWrapper>
+                <HeadingTitle>
+                  Traga seu problema e nós retornamos a solução
+                </HeadingTitle>
+                <HeadingDescription>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptas unde, facere rerum dolor accusamus adipisci? Hic
+                  excepturi laborum tempore nam consectetur vitae facere, ipsam
+                  omnis, rerum, voluptatem quaerat. Deleniti, dolores.
+                </HeadingDescription>
+              </HeadingContentWrapper>
+            </HeadingWrapper>
           </div>
           <div className="flex w-full md:justify-end items-end">
-            <Button className=" w-full md:w-fit md">Fale conosco</Button>
+            <Button className=" w-full md:w-fit md">Fazer pedido</Button>
           </div>
         </div>
         <ValuesList />

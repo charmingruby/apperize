@@ -33,7 +33,7 @@ const exampleServices: ExampleService[] = [
 
 export function ExampleServices() {
   return (
-    <div className="grid grid-cols-3 gap-8">
+    <div className="grid grid-cols-3 gap-8 w-full mb-12">
       {exampleServices.map(({ icon: Icon, title, items }) => (
         <Card key={title}>
           <CardHeader>
