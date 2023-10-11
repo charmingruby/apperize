@@ -1,5 +1,5 @@
 /* External */
-import { ArrowRight, Check, Code2 } from 'lucide-react'
+import { ArrowRight, Code2, Quote } from 'lucide-react'
 import Image from 'next/image'
 
 /* Internal */
@@ -19,6 +19,7 @@ import {
 import { TextHighlight } from '@/components/text-highlight'
 import { AdvantagesAnnotation } from './components/advantages-annotations'
 import heroImg from '@/assets/about-hero.png'
+import { Differentials } from './components/differentials'
 
 export default function About() {
   return (
@@ -27,7 +28,7 @@ export default function About() {
       <ContainerWrapper className="min-h-screen flex items-center gap-8">
         {/* Content */}
         <div className=" grid grid-cols-2 gap-12">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6">
             {/* Badge */}
             <div className="flex items-center gap-2">
               <div className="border border-border shadow-md rounded-md bg-background-highlight-dark text-primary w-fit p-2">
@@ -123,50 +124,17 @@ export default function About() {
               <HeadingContentWrapper>
                 <HeadingTitle>Pensado para o cliente</HeadingTitle>
                 <HeadingDescription>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Architecto corporis possimus facere odit similique omnis
-                  repellat! Dolorum accusamus nulla aspernatur quos beatae omnis
-                  recusandae possimus quidem ipsam, laborum quisquam ut!
+                  Para garantir a satisfação do cliente, nossa equipe se
+                  compromete a compreender profundamente as necessidades e
+                  objetivos de cada cliente por meio de comunicação aberta,
+                  feedback constante e colaboração ativa, tornando o cliente
+                  parte integral do processo de criação.
                 </HeadingDescription>
               </HeadingContentWrapper>
             </HeadingWrapper>
           </div>
 
-          <div className="mt-12 space-y-6">
-            <div className="flex gap-4">
-              <div className="bg-background-highlight-dark w-6 h-6 rounded-full flex items-center justify-center">
-                <Check className="text-primary h-4 w-4" />
-              </div>
-              <p className="text-sm w-full leading-relaxed">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Dolore, accusantium porro quia beatae iste quas officiis harum
-                tenetur ipsa adipisci animi iusto quod maiores nisi soluta et
-                exercitationem voluptates unde.
-              </p>
-            </div>
-            <div className="flex gap-4">
-              <div className="bg-background-highlight-dark w-6 h-6 rounded-full flex items-center justify-center">
-                <Check className="text-primary h-4 w-4" />
-              </div>
-              <p className="text-sm w-full leading-relaxed">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Dolore, accusantium porro quia beatae iste quas officiis harum
-                tenetur ipsa adipisci animi iusto quod maiores nisi soluta et
-                exercitationem voluptates unde.
-              </p>
-            </div>
-            <div className="flex gap-4">
-              <div className="bg-background-highlight-dark w-6 h-6 rounded-full flex items-center justify-center">
-                <Check className="text-primary h-4 w-4" />
-              </div>
-              <p className="text-sm w-full leading-relaxed">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Dolore, accusantium porro quia beatae iste quas officiis harum
-                tenetur ipsa adipisci animi iusto quod maiores nisi soluta et
-                exercitationem voluptates unde.
-              </p>
-            </div>
-          </div>
+          <Differentials />
         </ContainerWrapper>
       </section>
 
@@ -175,17 +143,31 @@ export default function About() {
         <div className="max-w-2xl mx-auto flex flex-col items-center text-center">
           <HeadingWrapper className="items-center">
             <HeadingAnnotation annotation="Apresentação" />
-            <HeadingTitle>A ideia por tras da Apperize</HeadingTitle>
+            <HeadingTitle>O propósito da Apperize</HeadingTitle>
           </HeadingWrapper>
 
           <div className="flex flex-col items-center gap-8">
-            {/* Pitch text */}
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-              quidem sit. Nostrum, aliquam libero blanditiis dolores qui
-              explicabo eos, earum aliquid, tempore dolorem cumque assumenda
-              quam dolor eveniet accusamus modi.
-            </Text>
+            <div className="space-y-4">
+              {/* Openning quote */}
+              <div>
+                <Quote className="text-primary h-5 w-5" />
+              </div>
+
+              {/* Pitch text */}
+              <Text className="italic">
+                Nossa missão é desenvolver uma plataforma na qual as pessoas
+                possam compartilhar seus desafios, e nós os abordamos por meio
+                de soluções tecnológicas. Reconhecemos que esse processo demanda
+                tempo, por isso, valorizamos o fornecimento de feedback contínuo
+                aos nossos clientes, mantendo-os atualizados regularmente sobre
+                o progresso de seus projetos.
+              </Text>
+
+              {/* Closing quote */}
+              <div className="flex justify-end">
+                <Quote className="text-primary h-5 w-5" />
+              </div>
+            </div>
 
             {/* Assign */}
             <div className="flex items-center gap-2">
@@ -216,7 +198,7 @@ export default function About() {
               Escolha a melhor oportunidade para sua empresa
             </HeadingTitle>
 
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 flex gap-6">
               <Button variant="secondary">Fazer pedido</Button>
               <Button
                 variant="ghost"
