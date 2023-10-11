@@ -21,29 +21,31 @@ import { MeansOfContact } from './components/means-of-contact'
 export default function ContactPage() {
   return (
     <>
-      <ContainerWrapper className="lg:h-screen flex items-center justify-center">
-        <div className="grid grid-cols-2 gap-12 w-full">
-          <div>
-            <HeadingWrapper>
-              <HeadingAnnotation annotation="Respondemos rapidamente" />
-              <HeadingContentWrapper>
-                <HeadingTitle>
-                  Entrar em <TextHighlight>contato</TextHighlight>
-                </HeadingTitle>
-                <HeadingDescription>
-                  Fique a vontade para tirar qualquer dúvida com nosso suporte
-                </HeadingDescription>
-              </HeadingContentWrapper>
-            </HeadingWrapper>
+      <section className=" bg-background-highlight-main border-b">
+        <ContainerWrapper className="lg:h-screen flex items-center justify-center md:pt-32">
+          <div className="grid grid-cols-2 gap-12 w-full">
+            <div>
+              <HeadingWrapper>
+                <HeadingAnnotation annotation="Respondemos rapidamente" />
+                <HeadingContentWrapper>
+                  <HeadingTitle>
+                    Entrar em <TextHighlight>contato</TextHighlight>
+                  </HeadingTitle>
+                  <HeadingDescription>
+                    Fique a vontade para tirar qualquer dúvida com nosso suporte
+                  </HeadingDescription>
+                </HeadingContentWrapper>
+              </HeadingWrapper>
 
-            <EmailForm />
-          </div>
+              <EmailForm />
+            </div>
 
-          <div className="flex items-center justify-center">
-            <Image src={heroImg} alt="Pessoas entrando em contato" />
+            <div className="flex items-center justify-center">
+              <Image src={heroImg} alt="Pessoas entrando em contato" />
+            </div>
           </div>
-        </div>
-      </ContainerWrapper>
+        </ContainerWrapper>
+      </section>
 
       {/* Options */}
       <ContainerWrapper>

@@ -8,7 +8,8 @@ import {
   HeadingWrapper,
 } from '@/components/ui/heading'
 import { ArrowRight } from 'lucide-react'
-import { ExampleServices } from './components/example-services'
+import { ExampleServices } from '../components/example-services'
+import Link from 'next/link'
 
 export default function Orders() {
   return (
@@ -30,10 +31,12 @@ export default function Orders() {
 
           <ExampleServices />
 
-          <Button className="w-fit gap-1">
-            Fazer pedido
-            <ArrowRight className="h-3.5 w-3.5" />
-          </Button>
+          <Link href="/servicos/criar" prefetch={false}>
+            <Button className="w-fit gap-1">
+              Fazer pedido
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Button>
+          </Link>
         </div>
       </ContainerWrapper>
     </>
