@@ -26,7 +26,7 @@ export default async function DashboardLayout({ children }: PropsWithChildren) {
   return (
     <div className="min-h-screen grid grid-cols-dashboard">
       <Sidebar />
-      <div className="px-4 bp-12">
+      <div className="px-4 pb-12 lg:col-start-2 lg:px-4 ">
         <Header />
         <Navbar />
         <main className="mt-6">{children}</main>
