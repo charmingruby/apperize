@@ -3,6 +3,7 @@ import { Header } from './components/header'
 import { Navbar } from './components/navbar'
 import { auth, clerkClient } from '@clerk/nextjs'
 import { redirect } from 'next/navigation'
+import { Sidebar } from './components/sidebar'
 
 async function getUserDataById(userId: string) {
   const user = await clerkClient.users.getOrganizationMembershipList({ userId })
@@ -23,10 +24,13 @@ export default async function DashboardLayout({ children }: PropsWithChildren) {
   if (!isAdmin) redirect('/')
 
   return (
-    <>
-      <Header />
-      <Navbar />
-      <main className="px-8 mt-6">{children}</main>
-    </>
+    <div className="min-h-screen grid grid-cols-dashboard">
+      <Sidebar />
+      <div className="px-4 bp-12">
+        <Header />
+        <Navbar />
+        <main className="mt-6">{children}</main>
+      </div>
+    </div>
   )
 }

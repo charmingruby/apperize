@@ -25,7 +25,7 @@ export async function Header() {
   const { imageUrl, lastName, firstName } = user
 
   return (
-    <header className="px-8 h-16 flex items-center">
+    <header className="h-16 flex items-center">
       <div className="flex items-center gap-4">
         <TabletSmartphone className="text-primary w-8 h-8" />
         <div className="text-2xl text-border">/</div>

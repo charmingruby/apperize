@@ -5,9 +5,9 @@ import {
   HeadingTitle,
   HeadingWrapper,
 } from '@/components/ui/heading'
-import { Label } from '@/components/ui/label'
-import { InputAnnotation } from '../../components/input-annotation'
-import { Input } from '@/components/ui/input'
+import { FieldsProgressBar } from './components/fields-progress-bar'
+import { RequestForm } from './components/request-form'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 export default function CreateService() {
   return (
@@ -26,24 +26,18 @@ export default function CreateService() {
           </HeadingContentWrapper>
         </HeadingWrapper>
 
-        {/* Progress */}
-        <div className="border rounded-full px-4 py-2 mt-12 mb-8">
-          <div
-            className="bg-primary h-2 rounded-full"
-            style={{ width: '10%' }}
-          />
-        </div>
+        <FieldsProgressBar amountOfFields={10} fieldsFilled={6} />
 
-        {/* Form */}
-        <div className="grid grid-cols-2 gap-12">
-          <div>
-            <Label>
-              <InputAnnotation>Qual seu nome completo?</InputAnnotation>
-            </Label>
-            <Input />
-          </div>
-          <div></div>
-        </div>
+        <Tabs defaultValue="account" className="w-[400px]">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="account">Account</TabsTrigger>
+            <TabsTrigger value="password">Password</TabsTrigger>
+          </TabsList>
+          <TabsContent value="account">oi</TabsContent>
+          <TabsContent value="password">p</TabsContent>
+        </Tabs>
+
+        <RequestForm />
       </ContainerWrapper>
     </>
   )

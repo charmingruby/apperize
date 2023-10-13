@@ -4,6 +4,7 @@ import {
   AtSign,
   BookMarked,
   Check,
+  ChevronRight,
   Computer,
   Layout,
   Quote,
@@ -38,8 +39,15 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="container pt-20 min-h-screen flex flex-col justify-center">
+      <section className="container pt-20 lg:pt-0 min-h-screen flex flex-col justify-center">
         <div className="max-w-2xl mx-auto flex flex-col items-center gap-16">
+          <div className="w-fit border p-1 rounded-full px-4 py-2 flex items-center gap-2">
+            <small className="text-sm font-medium">
+              Venha estreiar a plataforma
+            </small>
+            <ChevronRight className="w-4 h-4 text-muted-foreground" />
+          </div>
+
           <div className="flex flex-col items-center gap-8">
             <div className="flex flex-col gap-2">
               {/* Heading */}
@@ -73,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* Value proposition */}
-      <section className="container py-20">
+      <section className="container pt-20">
         <div className="mb-12 grid grid-cols-1 lg:grid-cols-4 gap-8 w-full">
           <div className="lg:col-span-3">
             <HeadingWrapper className="mb-0">
@@ -99,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="container py-20">
+      <section className="container pt-20">
         <div>
           <Title title="Com o que podemos te ajudar" />
           <strong className="text-4xl font-semibold leading-snug block">
@@ -113,8 +121,8 @@ export default function Home() {
         <Services />
       </section>
 
-      {/* Differentials */}
-      <section className="container py-20 ">
+      {/* USP */}
+      <section className="container pt-20 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Presentation */}
           <div className="flex flex-col justify-center">
@@ -160,7 +168,7 @@ export default function Home() {
       </section>
 
       {/* Techs */}
-      <section className="container py-20">
+      <section className="container pt-20">
         <div className="mb-12 flex flex-col md:items-center">
           <div className="text-primary uppercase tracking-widest font-semibold block mb-6">
             Tecnologias que usamos
@@ -178,7 +186,7 @@ export default function Home() {
       {/* Projects (future) */}
 
       {/* Depositions */}
-      <section className="bg-primary-gradient">
+      <section className="bg-primary-gradient mt-20">
         <div className="py-20 container grid grid-cols-1 md:grid-cols-3 gap-8 text-primary-foreground ">
           <div className="flex flex-col gap-6">
             <span className="uppercase tracking-widest font-semibold block">
