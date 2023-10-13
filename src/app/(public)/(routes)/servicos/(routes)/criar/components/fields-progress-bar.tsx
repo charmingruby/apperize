@@ -11,7 +11,7 @@ export function FieldsProgressBar({
     ((fieldsFilled / amountOfFields) * 100).toString() + '%'
 
   return (
-    <div className="mt-12 mb-8">
+    <div className="mt-4 mb-8">
       <span className="text-muted-foreground text-xs font-medium mb-2 block">
         {fieldsFilled} de {amountOfFields} campos obrigatórios
       </span>
