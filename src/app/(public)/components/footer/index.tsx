@@ -10,7 +10,7 @@ import { SocialLink } from './social-link'
 
 export function Footer() {
   return (
-    <footer className="border-t border-border">
+    <footer className="border-t border-border bg-background">
       {/* Top */}
       <div className="container w-full flex-col ">
         <div className="grid grid-cols-1 lg:grid-cols-3 w-full py-12 md:py-16 gap-8">

@@ -1,9 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Activity, Check, DollarSign, Scroll } from 'lucide-react'
+import { TabsNavigation } from './components/tabs-navigation'
+import { DashboardHeading } from '@/components/dashboard-heading'
 
 export default function DashboardHome() {
   return (
     <>
+      <DashboardHeading
+        title="Visão geral"
+        description="Tenha acesso a todos os valores levantados"
+      />
+      <TabsNavigation />
+
       <section>
         <div className="space-y-4 mt-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -61,8 +69,8 @@ export default function DashboardHome() {
             </Card>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <Card>chart</Card>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <Card className="col-span-3">chart</Card>
             <Card>recent</Card>
           </div>
         </div>

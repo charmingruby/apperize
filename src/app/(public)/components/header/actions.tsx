@@ -35,7 +35,7 @@ export async function Actions() {
             prefetch={false}
             href={isAdmin ? '/dashboard/admin' : '/dashboard'}
           >
-            <Button size="sm">Ver pedidos</Button>
+            <Button size="sm">Dashboard</Button>
           </Link>
           <div className="w-px h-8 bg-border" />
           <UserButton afterSignOutUrl="/" />

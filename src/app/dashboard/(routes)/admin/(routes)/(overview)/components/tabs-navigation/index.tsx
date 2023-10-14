@@ -1,7 +1,7 @@
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { auth, clerkClient } from '@clerk/nextjs'
 import { redirect } from 'next/navigation'
-import { AdminNavigation } from './navigation'
+import { Navigation } from './navigation'
 
 async function getUserData() {
   const { userId } = auth()
@@ -13,7 +13,7 @@ async function getUserData() {
   return orgs
 }
 
-export async function Navbar() {
+export async function TabsNavigation() {
   const orgs = await getUserData()
 
   if (!orgs) {
@@ -27,7 +27,7 @@ export async function Navbar() {
 
   return (
     <ScrollArea className="max-w-screen h-12">
-      <AdminNavigation />
+      <Navigation />
       <ScrollBar orientation="horizontal" className="translate-y-1 absolute" />
     </ScrollArea>
   )

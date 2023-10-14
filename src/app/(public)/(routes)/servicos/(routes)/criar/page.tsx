@@ -9,7 +9,7 @@ import { OptionsTabs } from './components/options-tabs'
 
 export default function CreateService() {
   return (
-    <>
+    <section className="min-h-screen">
       <ContainerWrapper>
         <HeadingWrapper className="w-1/2 mb-0">
           <HeadingContentWrapper>
@@ -25,6 +25,6 @@ export default function CreateService() {
 
         <OptionsTabs />
       </ContainerWrapper>
-    </>
+    </section>
   )
 }

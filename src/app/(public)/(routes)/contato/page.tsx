@@ -21,7 +21,7 @@ import { MeansOfContact } from './components/means-of-contact'
 export default function ContactPage() {
   return (
     <>
-      <section className=" bg-background-highlight-main border-b">
+      <section className="">
         <ContainerWrapper className="lg:h-screen flex items-center justify-center md:pt-32">
           <div className="grid grid-cols-2 gap-12 w-full">
             <div>

@@ -69,6 +69,7 @@ module.exports = {
             dark: '#152827',
           },
         },
+        'background-default': '#fbfaf8',
       },
       borderRadius: {
         lg: 'var(--radius)',

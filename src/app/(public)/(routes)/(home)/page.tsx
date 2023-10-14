@@ -39,9 +39,10 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="container pt-20 lg:pt-0 min-h-screen flex flex-col justify-center">
-        <div className="max-w-2xl mx-auto flex flex-col items-center gap-16">
-          <div className="w-fit border p-1 rounded-full px-4 py-2 flex items-center gap-2">
+      <section className="container pt-20 lg:pt-0 min-h-screen flex flex-col lg:justify-center">
+        <div className="max-w-2xl mx-auto flex flex-col items-center lg:gap-16 gap-12">
+          {/* News */}
+          <div className="w-fit bg-background border p-1 rounded-full px-4 py-2 flex items-center gap-2">
             <small className="text-sm  text-muted-foreground font-medium">
               Venha estreiar a plataforma
             </small>

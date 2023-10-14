@@ -1,6 +1,4 @@
 import { PropsWithChildren } from 'react'
-import { Header } from './components/header'
-import { Navbar } from './components/navbar'
 import { auth, clerkClient } from '@clerk/nextjs'
 import { redirect } from 'next/navigation'
 import { Sidebar } from './components/sidebar'
@@ -24,12 +22,10 @@ export default async function DashboardLayout({ children }: PropsWithChildren) {
   if (!isAdmin) redirect('/')
 
   return (
-    <div className="min-h-screen grid grid-cols-dashboard">
+    <div className="min-h-screen lg:grid lg:grid-cols-dashboard bg-background">
       <Sidebar />
       <div className="px-4 pb-12 lg:col-start-2 lg:px-4 ">
-        <Header />
-        <Navbar />
-        <main className="mt-6">{children}</main>
+        <main className="mt-20 lg:mt-4">{children}</main>
       </div>
     </div>
   )

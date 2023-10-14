@@ -31,7 +31,7 @@ const navItems: NavItem[] = [
   },
 ]
 
-export function AdminNavigation() {
+export function Navigation() {
   const pathname = usePathname()
 
   return (
@@ -43,7 +43,11 @@ export function AdminNavigation() {
           key={label}
           className={`
             h-10 flex items-center  font-medium text-sm
-            ${pathname === url ? 'border-primary  border-b-2 text-primary' : ''}
+            ${
+              pathname === url
+                ? 'border-primary  border-b-2 text-primary'
+                : 'text-muted-foreground'
+            }
             `}
         >
           {label}
