@@ -22,7 +22,7 @@ module.exports = {
     extend: {
       colors: {
         border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
+        input: '#D1D5DC',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -69,7 +69,6 @@ module.exports = {
             dark: '#152827',
           },
         },
-        'background-default': '#fbfaf8',
       },
       borderRadius: {
         lg: 'var(--radius)',

@@ -33,7 +33,7 @@ export async function Actions() {
         <div className="flex items-center space-x-4">
           <Link
             prefetch={false}
-            href={isAdmin ? '/dashboard/admin' : '/dashboard'}
+            href={isAdmin ? '/dashboard/admin' : '/dashboard/cliente'}
           >
             <Button size="sm">Dashboard</Button>
           </Link>

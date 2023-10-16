@@ -14,21 +14,11 @@ model Account {
   @@map("users")
 }
 
-model CustomerProfile {
-  id String @id @default(uuid())
-
-  @@map("customers")
-}
-
-model EnterpriseProfile {
-  id String @id @default(uuid())
-
-  @@map("enterprises")
-}
-
-model Request {
+model PersonalRequest {
   id     String  @id @default(uuid())
   userId String?
+  cpf    String
+  reason String
 
-  @@map("requests")
+  @@map("personal_requests")
 }

@@ -34,6 +34,7 @@ import {
   HeadingTitle,
   HeadingWrapper,
 } from '@/components/ui/heading'
+import { ContainerWrapper } from '@/components/ui/container-wrapper'
 
 export default function Home() {
   return (
@@ -82,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* Value proposition */}
-      <section className="container pt-20">
+      <ContainerWrapper>
         <div className="mb-12 grid grid-cols-1 lg:grid-cols-4 gap-8 w-full">
           <div className="lg:col-span-3">
             <HeadingWrapper className="mb-0">
@@ -105,10 +106,10 @@ export default function Home() {
           </div>
         </div>
         <ValuesList />
-      </section>
+      </ContainerWrapper>
 
       {/* Services */}
-      <section className="container pt-20">
+      <ContainerWrapper>
         <div>
           <Title title="Com o que podemos te ajudar" />
           <strong className="text-4xl font-semibold leading-snug block">
@@ -120,10 +121,10 @@ export default function Home() {
         </div>
 
         <Services />
-      </section>
+      </ContainerWrapper>
 
       {/* USP */}
-      <section className="container pt-20 ">
+      <ContainerWrapper>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Presentation */}
           <div className="flex flex-col justify-center">
@@ -166,10 +167,10 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </ContainerWrapper>
 
       {/* Techs */}
-      <section className="container pt-20">
+      <ContainerWrapper>
         <div className="mb-12 flex flex-col md:items-center">
           <div className="text-primary uppercase tracking-widest font-semibold block mb-6">
             Tecnologias que usamos
@@ -182,27 +183,25 @@ export default function Home() {
           </h3>
         </div>
         <TecList />
-      </section>
+      </ContainerWrapper>
 
-      {/* Projects (future) */}
-
-      {/* Depositions */}
-      <section className="bg-primary-gradient mt-20">
-        <div className="py-20 container grid grid-cols-1 md:grid-cols-3 gap-8 text-primary-foreground ">
+      {/* Depositions, TODO: Slider */}
+      <section>
+        <div className="rounded-xl bg-background-highlight-main py-20 container grid grid-cols-1 md:grid-cols-3 gap-8 text-primary-foreground ">
           <div className="flex flex-col gap-6">
-            <span className="uppercase tracking-widest font-semibold block">
+            <span className="uppercase tracking-widest font-semibold block text-primary">
               Depoimentos
             </span>
-            <strong className="text-5xl font-semibold leading-tight mb-8 block">
+            <strong className="text-5xl font-semibold leading-tight mb-8 block text-foreground">
               O que nossos clientes dizem sobre nós:
             </strong>
           </div>
 
           {/* Deposition */}
           <div className=" flex flex-col gap-8">
-            <Quote />
+            <Quote className="text-primary" />
             <div className="flex flex-col gap-4">
-              <p className="text-base max-w-sm italic">
+              <p className="text-base max-w-sm italic text-foreground">
                 {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Minus rem soluta deleniti cum, possimus doloribus iste sint
                 sequi cumque beatae molestiae corporis nam error nisi deserunt,
@@ -218,14 +217,16 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-0.5">
                   {/* Name */}
-                  <strong className="text-lg">Gustavo Dias</strong>
+                  <strong className="text-lg text-foreground">
+                    Gustavo Dias
+                  </strong>
 
                   {/* Role */}
-                  <span className="block">
-                    Fundador da <strong>Ymir</strong>
-                  </span>
+                  <small className="block text-sm text-muted-foreground">
+                    Fundador do Ymir
+                  </small>
                 </div>
               </div>
             </div>
@@ -233,9 +234,9 @@ export default function Home() {
 
           {/* Deposition */}
           <div className=" flex flex-col gap-8">
-            <Quote />
+            <Quote className="text-primary" />
             <div className="flex flex-col gap-4">
-              <p className="text-base max-w-sm italic">
+              <p className="text-base max-w-sm italic text-foreground">
                 {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Minus rem soluta deleniti cum, possimus doloribus iste sint
                 sequi cumque beatae molestiae corporis nam error nisi deserunt,
@@ -251,14 +252,16 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-0.5">
                   {/* Name */}
-                  <strong className="text-lg">Gustavo Dias</strong>
+                  <strong className="text-lg text-foreground">
+                    Gustavo Dias
+                  </strong>
 
                   {/* Role */}
-                  <span className="block">
-                    Fundador da <strong>Ymir</strong>
-                  </span>
+                  <small className="block text-sm text-muted-foreground">
+                    Fundador do Ymir
+                  </small>
                 </div>
               </div>
             </div>
@@ -266,8 +269,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Budget */}
-      <section className="py-20">
+      {/* TODO: Frequently asked */}
+
+      {/* TODO: Still have questions */}
+
+      {/* Budget, TODO: More numbers, less texts */}
+      <ContainerWrapper>
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Content */}
           <div className="flex flex-col justify-center">
@@ -312,11 +319,9 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </ContainerWrapper>
 
-      {/* Cases (future) */}
-
-      {/* CTA */}
+      {/* CTA, TODO: Change links content */}
       <section className="bg-background-highlight-main border-t border-border">
         <div className="container py-20 flex flex-col">
           <div className="flex flex-col items-center max-w-2xl mx-auto text-center gap-8 mb-12">

@@ -33,17 +33,19 @@ const exampleServices: ExampleService[] = [
 
 export function ExampleServices() {
   return (
-    <div className="grid grid-cols-3 gap-8 w-full mb-12">
+    <div className="flex flex-col justify-center gap-8 w-full">
       {exampleServices.map(({ icon: Icon, title, items }) => (
-        <Card key={title}>
-          <CardHeader>
-            <div className="border-4 border-background-highlight-main rounded-full p-2 w-fit bg-background-highlight-dark mb-4">
+        <Card key={title} className="flex items-center">
+          <CardHeader className="flex flex-row items-center">
+            <div className="border-4 border-background-highlight-main rounded-full p-2 w-fit bg-background-highlight-dark">
               <Icon className="text-primary h-6 w-6" />
             </div>
-            <CardTitle>{title}</CardTitle>
+            <CardTitle className="block">{title}</CardTitle>
           </CardHeader>
 
-          <CardContent className="space-y-2">
+          <div className="h-full w-px bg-border" />
+
+          <CardContent className="space-y-2 p-2">
             {items.map((item) => (
               <div className="flex items-center gap-1" key={item}>
                 <CheckCircle2 className="text-primary h-5 w-5" />
