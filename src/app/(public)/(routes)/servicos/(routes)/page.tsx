@@ -19,9 +19,9 @@ export default function Orders() {
           {/* Right / Top */}
           <div className="flex flex-col justify-center">
             {/* Heading */}
-            <HeadingWrapper className="mb-8">
+            <HeadingWrapper className="mb-12">
               <HeadingAnnotation annotation="Venha fazer seu pedido" />
-              <HeadingContentWrapper>
+              <HeadingContentWrapper className=" space-y-8">
                 <HeadingTitle>Nos fale o que precisa</HeadingTitle>
                 <HeadingDescription>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe

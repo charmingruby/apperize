@@ -4,10 +4,10 @@ import {
   AtSign,
   BookMarked,
   Check,
+  CheckCircle2,
   ChevronRight,
   Computer,
   Layout,
-  MessagesSquare,
   Quote,
 } from 'lucide-react'
 import { FeatureItem } from './components/feature-item'
@@ -189,7 +189,7 @@ export default function Home() {
 
       {/* Depositions, TODO: Slider */}
       <section>
-        <div className="border border-background-highlight-dark rounded-xl bg-background-highlight-main px-10 py-20 container grid grid-cols-1 md:grid-cols-3 gap-12 text-primary-foreground">
+        <div className="rounded-xl bg-background-highlight-main px-10 py-20 container grid grid-cols-1 md:grid-cols-3 gap-12 text-primary-foreground">
           {/* Heading */}
           <div className="flex flex-col gap-6">
             <span className="uppercase tracking-widest font-semibold block text-primary">
@@ -276,39 +276,25 @@ export default function Home() {
       </section>
 
       {/* TODO: Frequently asked */}
-      <ContainerWrapper className="flex flex-col items-center text-center">
-        <HeadingWrapper>
-          <HeadingContentWrapper>
-            <HeadingTitle>Perguntas frequentes</HeadingTitle>
-            <HeadingDescription>
-              Tudo que voce precisa saber sobre o produto.
-            </HeadingDescription>
-          </HeadingContentWrapper>
-        </HeadingWrapper>
+      <ContainerWrapper className="flex flex-col items-center max-w-4xl w-full">
+        <div className="grid grid-cols-2 mb-12">
+          <HeadingWrapper className="mb-0">
+            <HeadingAnnotation annotation="Dúvidas frequentes" />
+            <HeadingContentWrapper>
+              <HeadingTitle>Ficou com dúvidas? Não se preocupe</HeadingTitle>
+            </HeadingContentWrapper>
+          </HeadingWrapper>
+
+          <div className="flex flex-col items-end justify-end">
+            <span>Ainda está com dúvidas?</span>
+            <span>Entre em contato conosco</span>
+          </div>
+        </div>
 
         <DoubtsAccordion />
       </ContainerWrapper>
 
-      {/* TODO: Still have questions */}
-      <ContainerWrapper className="border border-background-highlight-dark rounded-xl bg-background-highlight-main px-10 py-20 container">
-        <div>
-          <MessagesSquare />
-
-          <div>
-            <span>Ainda tem perguntas?</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sed
-              repellendus assumenda fugit consequatur. Fugit praesentium,
-              numquam quo mollitia accusantium repudiandae tempore sapiente
-              ducimus! Magni cumque voluptates veritatis fugiat enim?
-            </p>
-
-            <Button>Fale conosco</Button>
-          </div>
-        </div>
-      </ContainerWrapper>
-
-      {/* Budget, TODO: More numbers, less texts */}
+      {/* Budget */}
       <ContainerWrapper>
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Content */}
@@ -330,12 +316,14 @@ export default function Home() {
                 iusto dolore id sequi laudantium ab autem odit unde mollitia.
                 Pariatur quos voluptate suscipit.
               </Text>
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium, aliquid. Incidunt, voluptate qui nulla ullam porro
-                iusto dolore id sequi laudantium ab autem odit unde mollitia.
-                Pariatur quos voluptate suscipit.
-              </Text>
+
+              {/* Considerations */}
+              <div>
+                <div>
+                  <CheckCircle2 />
+                  <span>test</span>
+                </div>
+              </div>
             </div>
 
             <Button size="lg" className="flex w-full md:w-fit mt-12">
@@ -356,7 +344,7 @@ export default function Home() {
         </div>
       </ContainerWrapper>
 
-      {/* CTA, TODO: Change links content */}
+      {/* CTA */}
       <section className="bg-background-highlight-main border-t border-border">
         <div className="container py-20 flex flex-col">
           <div className="flex flex-col items-center max-w-2xl mx-auto text-center gap-8 mb-12">

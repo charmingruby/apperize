@@ -7,7 +7,7 @@ import {
 
 export function DoubtsAccordion() {
   return (
-    <Accordion type="single" collapsible className="max-w-2xl w-full">
+    <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>
