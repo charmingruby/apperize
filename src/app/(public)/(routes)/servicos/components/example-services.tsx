@@ -36,19 +36,19 @@ export function ExampleServices() {
     <div className="flex flex-col justify-center gap-8 w-full">
       {exampleServices.map(({ icon: Icon, title, items }) => (
         <Card key={title} className="flex items-center">
-          <CardHeader className="flex flex-row items-center">
+          <CardHeader className="flex flex-row items-center gap-2">
             <div className="border-4 border-background-highlight-main rounded-full p-2 w-fit bg-background-highlight-dark">
-              <Icon className="text-primary h-6 w-6" />
+              <Icon className="text-primary h-5 w-5" />
             </div>
             <CardTitle className="block">{title}</CardTitle>
           </CardHeader>
 
           <div className="h-full w-px bg-border" />
 
-          <CardContent className="space-y-2 p-2">
+          <CardContent className="space-y-2 px-4 py-2">
             {items.map((item) => (
               <div className="flex items-center gap-1" key={item}>
-                <CheckCircle2 className="text-primary h-5 w-5" />
+                <CheckCircle2 className="text-primary h-4 w-4" />
                 <span className="font-medium text-muted-foreground">
                   {item}
                 </span>

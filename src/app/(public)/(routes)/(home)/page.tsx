@@ -7,6 +7,7 @@ import {
   ChevronRight,
   Computer,
   Layout,
+  MessagesSquare,
   Quote,
 } from 'lucide-react'
 import { FeatureItem } from './components/feature-item'
@@ -35,6 +36,7 @@ import {
   HeadingWrapper,
 } from '@/components/ui/heading'
 import { ContainerWrapper } from '@/components/ui/container-wrapper'
+import { DoubtsAccordion } from './components/doubts-accordion'
 
 export default function Home() {
   return (
@@ -82,7 +84,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Value proposition */}
+      {/* USP */}
       <ContainerWrapper>
         <div className="mb-12 grid grid-cols-1 lg:grid-cols-4 gap-8 w-full">
           <div className="lg:col-span-3">
@@ -123,7 +125,7 @@ export default function Home() {
         <Services />
       </ContainerWrapper>
 
-      {/* USP */}
+      {/* Features */}
       <ContainerWrapper>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Presentation */}
@@ -187,7 +189,8 @@ export default function Home() {
 
       {/* Depositions, TODO: Slider */}
       <section>
-        <div className="rounded-xl bg-background-highlight-main py-20 container grid grid-cols-1 md:grid-cols-3 gap-8 text-primary-foreground ">
+        <div className="border border-background-highlight-dark rounded-xl bg-background-highlight-main px-10 py-20 container grid grid-cols-1 md:grid-cols-3 gap-12 text-primary-foreground">
+          {/* Heading */}
           <div className="flex flex-col gap-6">
             <span className="uppercase tracking-widest font-semibold block text-primary">
               Depoimentos
@@ -197,71 +200,74 @@ export default function Home() {
             </strong>
           </div>
 
-          {/* Deposition */}
-          <div className=" flex flex-col gap-8">
-            <Quote className="text-primary" />
-            <div className="flex flex-col gap-4">
-              <p className="text-base max-w-sm italic text-foreground">
-                {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Minus rem soluta deleniti cum, possimus doloribus iste sint
-                sequi cumque beatae molestiae corporis nam error nisi deserunt,
-                perspiciatis officia ex nobis?{`"`}
-              </p>
+          {/* Slider */}
+          <div className="col-span-2 flex items-center gap-8">
+            {/* Deposition */}
+            <div className=" flex flex-col gap-8">
+              <Quote className="text-primary" />
+              <div className="flex flex-col gap-4">
+                <p className="text-base max-w-sm italic text-foreground">
+                  {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Minus rem soluta deleniti cum, possimus doloribus iste sint
+                  sequi cumque beatae molestiae corporis nam error nisi
+                  deserunt, perspiciatis officia ex nobis?{`"`}
+                </p>
 
-              <div className="flex items-center gap-2">
-                <div className="p-1 border-2 border-border rounded-full h-16 w-16">
-                  <Image
-                    src={exampleImage}
-                    alt="Example deposition image"
-                    className="rounded-full"
-                  />
-                </div>
+                <div className="flex items-center gap-2">
+                  <div className="p-1 border-2 border-border rounded-full h-16 w-16">
+                    <Image
+                      src={exampleImage}
+                      alt="Example deposition image"
+                      className="rounded-full"
+                    />
+                  </div>
 
-                <div className="flex flex-col gap-0.5">
-                  {/* Name */}
-                  <strong className="text-lg text-foreground">
-                    Gustavo Dias
-                  </strong>
+                  <div className="flex flex-col gap-0.5">
+                    {/* Name */}
+                    <strong className="text-lg text-foreground">
+                      Gustavo Dias
+                    </strong>
 
-                  {/* Role */}
-                  <small className="block text-sm text-muted-foreground">
-                    Fundador do Ymir
-                  </small>
+                    {/* Role */}
+                    <small className="block text-sm text-muted-foreground">
+                      Fundador do Ymir
+                    </small>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Deposition */}
-          <div className=" flex flex-col gap-8">
-            <Quote className="text-primary" />
-            <div className="flex flex-col gap-4">
-              <p className="text-base max-w-sm italic text-foreground">
-                {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Minus rem soluta deleniti cum, possimus doloribus iste sint
-                sequi cumque beatae molestiae corporis nam error nisi deserunt,
-                perspiciatis officia ex nobis?{`"`}
-              </p>
+            {/* Deposition */}
+            <div className=" flex flex-col gap-8">
+              <Quote className="text-primary" />
+              <div className="flex flex-col gap-4">
+                <p className="text-base max-w-sm italic text-foreground">
+                  {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Minus rem soluta deleniti cum, possimus doloribus iste sint
+                  sequi cumque beatae molestiae corporis nam error nisi
+                  deserunt, perspiciatis officia ex nobis?{`"`}
+                </p>
 
-              <div className="flex items-center gap-2">
-                <div className="p-1 border-2 border-border rounded-full h-16 w-16">
-                  <Image
-                    src={exampleImage}
-                    alt="Example deposition image"
-                    className="rounded-full"
-                  />
-                </div>
+                <div className="flex items-center gap-2">
+                  <div className="p-1 border-2 border-border rounded-full h-16 w-16">
+                    <Image
+                      src={exampleImage}
+                      alt="Example deposition image"
+                      className="rounded-full"
+                    />
+                  </div>
 
-                <div className="flex flex-col gap-0.5">
-                  {/* Name */}
-                  <strong className="text-lg text-foreground">
-                    Gustavo Dias
-                  </strong>
+                  <div className="flex flex-col gap-0.5">
+                    {/* Name */}
+                    <strong className="text-lg text-foreground">
+                      Gustavo Dias
+                    </strong>
 
-                  {/* Role */}
-                  <small className="block text-sm text-muted-foreground">
-                    Fundador do Ymir
-                  </small>
+                    {/* Role */}
+                    <small className="block text-sm text-muted-foreground">
+                      Fundador do Ymir
+                    </small>
+                  </div>
                 </div>
               </div>
             </div>
@@ -270,8 +276,37 @@ export default function Home() {
       </section>
 
       {/* TODO: Frequently asked */}
+      <ContainerWrapper className="flex flex-col items-center text-center">
+        <HeadingWrapper>
+          <HeadingContentWrapper>
+            <HeadingTitle>Perguntas frequentes</HeadingTitle>
+            <HeadingDescription>
+              Tudo que voce precisa saber sobre o produto.
+            </HeadingDescription>
+          </HeadingContentWrapper>
+        </HeadingWrapper>
+
+        <DoubtsAccordion />
+      </ContainerWrapper>
 
       {/* TODO: Still have questions */}
+      <ContainerWrapper className="border border-background-highlight-dark rounded-xl bg-background-highlight-main px-10 py-20 container">
+        <div>
+          <MessagesSquare />
+
+          <div>
+            <span>Ainda tem perguntas?</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sed
+              repellendus assumenda fugit consequatur. Fugit praesentium,
+              numquam quo mollitia accusantium repudiandae tempore sapiente
+              ducimus! Magni cumque voluptates veritatis fugiat enim?
+            </p>
+
+            <Button>Fale conosco</Button>
+          </div>
+        </div>
+      </ContainerWrapper>
 
       {/* Budget, TODO: More numbers, less texts */}
       <ContainerWrapper>
