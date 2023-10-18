@@ -3,15 +3,11 @@ import {
   ArrowRight,
   AtSign,
   BookMarked,
-  Check,
-  CheckCircle2,
   ChevronRight,
   Computer,
   Layout,
   Quote,
 } from 'lucide-react'
-import { FeatureItem } from './components/feature-item'
-import { ValuesList } from './components/values-list'
 import Image from 'next/image'
 import quality from '@/assets/quality.svg'
 import { Text } from '@/components/ui/text'
@@ -25,7 +21,7 @@ import {
 } from '@/components/ui/card'
 import { Title } from '@/components/title'
 import { ProductCategory } from './components/product-category'
-import { TecList } from './components/tec-list'
+import { TechSlider } from './components/tech-slider'
 import exampleImage from '@/assets/gustavo-dias-profile.jpeg'
 import { Services } from './components/services'
 import {
@@ -37,6 +33,9 @@ import {
 } from '@/components/ui/heading'
 import { ContainerWrapper } from '@/components/ui/container-wrapper'
 import { DoubtsAccordion } from './components/doubts-accordion'
+import { ServiceRequestConsiderations } from './components/service-request-considerations'
+import { Features } from './components/features'
+import { USP } from './components/usp'
 
 export default function Home() {
   return (
@@ -45,7 +44,7 @@ export default function Home() {
       <section className="container pt-20 lg:pt-0 min-h-screen flex flex-col lg:justify-center">
         <div className="max-w-2xl mx-auto flex flex-col items-center lg:gap-16 gap-12">
           {/* News */}
-          <div className="w-fit bg-background border p-1 rounded-full px-4 py-2 flex items-center gap-2">
+          <div className="w-fit shadow-sm bg-background border p-1 rounded-full px-4 py-2 flex items-center gap-2">
             <small className="text-sm  text-muted-foreground font-medium">
               Venha estreiar a plataforma
             </small>
@@ -84,7 +83,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* USP */}
+      {/* 
+        USP
+        TODO: Heading Description
+        TODO: Cards Descriptions 
+      */}
       <ContainerWrapper>
         <div className="mb-12 grid grid-cols-1 lg:grid-cols-4 gap-8 w-full">
           <div className="lg:col-span-3">
@@ -107,10 +110,13 @@ export default function Home() {
             <Button className=" w-full md:w-fit md">Fazer pedido</Button>
           </div>
         </div>
-        <ValuesList />
+        <USP />
       </ContainerWrapper>
 
-      {/* Services */}
+      {/* 
+        Services
+        TODO: Cards Descriptions
+       */}
       <ContainerWrapper>
         <div>
           <Title title="Com o que podemos te ajudar" />
@@ -138,7 +144,7 @@ export default function Home() {
               </span>
             </strong>
 
-            <Text className="text-xl leading-relaxed">
+            <Text variant="lowOpacity">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cum
               blanditiis ex quam reiciendis commodi velit quia, incidunt esse
               enim, aliquid quisquam sequi. Obcaecati ad impedit repudiandae
@@ -146,32 +152,19 @@ export default function Home() {
             </Text>
 
             <Button size="lg" className="flex text-base w-full md:w-fit mt-12">
-              <span> Buscar soluçao com nossa equipe</span>
+              <span>Veja mais</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </Button>
           </div>
 
-          {/* Content */}
-          <div className="grid grid-cols-1 gap-8">
-            <FeatureItem
-              icon={Check}
-              title="Entregas rápidas e funcionais (MVP)"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maiores, natus sit similique pariatur quis mollitia reprehenderit molestiae vitae, quia saepe quibusdam, error rerum quisquam deserunt."
-            />
-            <FeatureItem
-              icon={Check}
-              title="Entregas rápidas e funcionais (MVP)"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maiores, natus sit similique pariatur quis mollitia reprehenderit molestiae vitae, quia saepe quibusdam, error rerum quisquam deserunt."
-            />
-            <FeatureItem
-              icon={Check}
-              title="Entregas rápidas e funcionais (MVP)"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maiores, natus sit similique pariatur quis mollitia reprehenderit molestiae vitae, quia saepe quibusdam, error rerum quisquam deserunt."
-            />
-          </div>
+          <Features />
         </div>
       </ContainerWrapper>
 
-      {/* Techs */}
+      {/* 
+        Techs
+        TODO: Change slider
+      */}
       <ContainerWrapper>
         <div className="mb-12 flex flex-col md:items-center">
           <div className="text-primary uppercase tracking-widest font-semibold block mb-6">
@@ -184,12 +177,15 @@ export default function Home() {
             </strong>
           </h3>
         </div>
-        <TecList />
+        <TechSlider />
       </ContainerWrapper>
 
-      {/* Depositions, TODO: Slider */}
+      {/* 
+        Depositions 
+        TODO: Slider 
+      */}
       <section>
-        <div className="rounded-xl bg-background-highlight-main px-10 py-20 container grid grid-cols-1 md:grid-cols-3 gap-12 text-primary-foreground">
+        <div className="rounded-xl border border-background-highlight-dark bg-background-highlight-main px-10 py-20 container grid grid-cols-1 md:grid-cols-3 gap-12 text-primary-foreground">
           {/* Heading */}
           <div className="flex flex-col gap-6">
             <span className="uppercase tracking-widest font-semibold block text-primary">
@@ -241,7 +237,7 @@ export default function Home() {
             <div className=" flex flex-col gap-8">
               <Quote className="text-primary" />
               <div className="flex flex-col gap-4">
-                <p className="text-base max-w-sm italic text-foreground">
+                <p className="text-base max-w-sm italic text-foreground leading-relaxed">
                   {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Minus rem soluta deleniti cum, possimus doloribus iste sint
                   sequi cumque beatae molestiae corporis nam error nisi
@@ -275,7 +271,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TODO: Frequently asked */}
+      {/* 
+        Frequently asked 
+        TODO: Content
+        TODO: UI
+      */}
       <ContainerWrapper className="flex flex-col items-center max-w-4xl w-full">
         <div className="grid grid-cols-2 mb-12">
           <HeadingWrapper className="mb-0">
@@ -294,7 +294,10 @@ export default function Home() {
         <DoubtsAccordion />
       </ContainerWrapper>
 
-      {/* Budget */}
+      {/* 
+        Budget 
+        TODO: Spacing
+      */}
       <ContainerWrapper>
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Content */}
@@ -310,7 +313,7 @@ export default function Home() {
 
             {/* How we can help */}
             <div className="flex flex-col gap-4 mt-8">
-              <Text>
+              <Text variant="lowOpacity">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Praesentium, aliquid. Incidunt, voluptate qui nulla ullam porro
                 iusto dolore id sequi laudantium ab autem odit unde mollitia.
@@ -318,18 +321,12 @@ export default function Home() {
               </Text>
 
               {/* Considerations */}
-              <div>
-                <div>
-                  <CheckCircle2 />
-                  <span>test</span>
-                </div>
-              </div>
+              <ServiceRequestConsiderations />
             </div>
 
             <Button size="lg" className="flex w-full md:w-fit mt-12">
-              <span className="text-base">
-                Quero tirar minha ideia do papel
-              </span>
+              <span className="text-base">Solicitar orçamento</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </Button>
           </div>
 

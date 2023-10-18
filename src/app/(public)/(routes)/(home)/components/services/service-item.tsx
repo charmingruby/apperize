@@ -1,6 +1,6 @@
 import { Text } from '@/components/ui/text'
 import Image from 'next/image'
-import { Service } from './services'
+import { Service } from '.'
 
 export function ServiceItem({ description, name, image }: Service) {
   return (

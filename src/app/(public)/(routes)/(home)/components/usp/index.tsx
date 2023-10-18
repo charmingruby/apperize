@@ -1,7 +1,7 @@
 import { Lightbulb, MessagesSquare, Code2, Activity } from 'lucide-react'
 import { ValueItem } from './value-item'
 
-export function ValuesList() {
+export function USP() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <ValueItem

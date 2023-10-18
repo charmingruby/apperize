@@ -3,10 +3,15 @@
 // eslint-disable
 
 import { useEffect, useRef, useState } from 'react'
-import { TecImage, TecImageProps } from './tec-image'
 import { motion as mt } from 'framer-motion'
+import Image from 'next/image'
 
-const tecList: TecImageProps[] = [
+interface Tech {
+  url: string
+  alt: string
+}
+
+const tecList: Tech[] = [
   {
     alt: 'React logo',
     url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
@@ -57,7 +62,7 @@ const tecList: TecImageProps[] = [
   },
 ]
 
-export function TecList() {
+export function TechSlider() {
   const carousel = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState<number>(0)
 
@@ -84,7 +89,15 @@ export function TecList() {
             key={url}
             className="bg-background min-w-[6rem] md:min-w-[8rem] w-full h-24 md:h-32 border border-background-highlight-dark rounded-md flex items-center justify-center shadow-md"
           >
-            <TecImage alt={alt} url={url} />
+            <Image
+              key={url}
+              src={url}
+              alt={alt}
+              width={72}
+              height={72}
+              className="md:w-16 md:h-16 w-12 h-12"
+              draggable={false}
+            />
           </div>
         ))}
       </mt.div>
