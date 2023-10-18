@@ -7,7 +7,11 @@ import {
 
 export function DoubtsAccordion() {
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion
+      type="single"
+      collapsible
+      className="w-full border rounded-lg shadow-sm divide-y-2 divider-border"
+    >
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>

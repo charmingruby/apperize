@@ -6,7 +6,6 @@ import {
   ChevronRight,
   Computer,
   Layout,
-  Quote,
 } from 'lucide-react'
 import Image from 'next/image'
 import quality from '@/assets/quality.svg'
@@ -21,8 +20,7 @@ import {
 } from '@/components/ui/card'
 import { Title } from '@/components/title'
 import { ProductCategory } from './components/product-category'
-import { TechSlider } from './components/tech-slider'
-import exampleImage from '@/assets/gustavo-dias-profile.jpeg'
+import { TechsSwiper } from './components/techs-swiper'
 import { Services } from './components/services'
 import {
   HeadingAnnotation,
@@ -36,6 +34,9 @@ import { DoubtsAccordion } from './components/doubts-accordion'
 import { ServiceRequestConsiderations } from './components/service-request-considerations'
 import { Features } from './components/features'
 import { USP } from './components/usp'
+import { TextHighlight } from '@/components/text-highlight'
+import { DepositionItem } from './components/depositions-swiper/deposition-item'
+import { Separator } from '@/components/ui/separator'
 
 export default function Home() {
   return (
@@ -160,7 +161,6 @@ export default function Home() {
           <Features />
         </div>
       </ContainerWrapper>
-
       {/* 
         Techs
         TODO: Change slider
@@ -177,99 +177,37 @@ export default function Home() {
             </strong>
           </h3>
         </div>
-        <TechSlider />
+        <TechsSwiper />
       </ContainerWrapper>
 
       {/* 
         Depositions 
-        TODO: Slider 
       */}
-      <section>
-        <div className="rounded-xl border border-background-highlight-dark bg-background-highlight-main px-10 py-20 container grid grid-cols-1 md:grid-cols-3 gap-12 text-primary-foreground">
-          {/* Heading */}
-          <div className="flex flex-col gap-6">
-            <span className="uppercase tracking-widest font-semibold block text-primary">
-              Depoimentos
-            </span>
-            <strong className="text-5xl font-semibold leading-tight mb-8 block text-foreground">
-              O que nossos clientes dizem sobre nós:
-            </strong>
+      <ContainerWrapper>
+        {/* Heading */}
+        <div className="w-1/2">
+          <span className="uppercase tracking-widest font-semibold block text-primary">
+            Depoimentos
+          </span>
+          <strong className="text-5xl font-semibold leading-tight block text-foreground">
+            O que nossos clientes dizem sobre nós:
+          </strong>
+        </div>
+
+        {/* Depositions */}
+        <div className="grid grid-cols-2 gap-16 w-full">
+          <div className="mt-12 space-y-6">
+            <DepositionItem />
+            <Separator />
+            <DepositionItem />
           </div>
-
-          {/* Slider */}
-          <div className="col-span-2 flex items-center gap-8">
-            {/* Deposition */}
-            <div className=" flex flex-col gap-8">
-              <Quote className="text-primary" />
-              <div className="flex flex-col gap-4">
-                <p className="text-base max-w-sm italic text-foreground">
-                  {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Minus rem soluta deleniti cum, possimus doloribus iste sint
-                  sequi cumque beatae molestiae corporis nam error nisi
-                  deserunt, perspiciatis officia ex nobis?{`"`}
-                </p>
-
-                <div className="flex items-center gap-2">
-                  <div className="p-1 border-2 border-border rounded-full h-16 w-16">
-                    <Image
-                      src={exampleImage}
-                      alt="Example deposition image"
-                      className="rounded-full"
-                    />
-                  </div>
-
-                  <div className="flex flex-col gap-0.5">
-                    {/* Name */}
-                    <strong className="text-lg text-foreground">
-                      Gustavo Dias
-                    </strong>
-
-                    {/* Role */}
-                    <small className="block text-sm text-muted-foreground">
-                      Fundador do Ymir
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Deposition */}
-            <div className=" flex flex-col gap-8">
-              <Quote className="text-primary" />
-              <div className="flex flex-col gap-4">
-                <p className="text-base max-w-sm italic text-foreground leading-relaxed">
-                  {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Minus rem soluta deleniti cum, possimus doloribus iste sint
-                  sequi cumque beatae molestiae corporis nam error nisi
-                  deserunt, perspiciatis officia ex nobis?{`"`}
-                </p>
-
-                <div className="flex items-center gap-2">
-                  <div className="p-1 border-2 border-border rounded-full h-16 w-16">
-                    <Image
-                      src={exampleImage}
-                      alt="Example deposition image"
-                      className="rounded-full"
-                    />
-                  </div>
-
-                  <div className="flex flex-col gap-0.5">
-                    {/* Name */}
-                    <strong className="text-lg text-foreground">
-                      Gustavo Dias
-                    </strong>
-
-                    {/* Role */}
-                    <small className="block text-sm text-muted-foreground">
-                      Fundador do Ymir
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="space-y-6">
+            <DepositionItem />
+            <Separator />
+            <DepositionItem />
           </div>
         </div>
-      </section>
+      </ContainerWrapper>
 
       {/* 
         Frequently asked 
@@ -285,9 +223,17 @@ export default function Home() {
             </HeadingContentWrapper>
           </HeadingWrapper>
 
-          <div className="flex flex-col items-end justify-end">
-            <span>Ainda está com dúvidas?</span>
-            <span>Entre em contato conosco</span>
+          <div className="flex flex-col items-end justify-end gap-0.5">
+            <span className="text-muted-foreground text-lg">
+              Ainda está com dúvidas?
+            </span>
+
+            <div className="flex items-center gap-1 text-primary ">
+              <span className="font-medium text-lg">
+                Entre em contato conosco
+              </span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </div>
           </div>
         </div>
 
@@ -296,38 +242,40 @@ export default function Home() {
 
       {/* 
         Budget 
-        TODO: Spacing
+        TODO: Colors
       */}
       <ContainerWrapper>
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Content */}
+          {/* Heading */}
           <div className="flex flex-col justify-center">
-            <Title title="Solicite seu orçamento" />
-            <strong className="text-4xl font-semibold leading-tight block">
-              Preparado para melhorar seu negocio com a{' '}
-              <span className="bg-background-highlight-dark text-primary">
-                Apperize
-              </span>
-              ?
-            </strong>
+            <HeadingWrapper className="mb-0">
+              <HeadingAnnotation annotation="Solicite seu orçamento" />
+              <HeadingTitle>
+                Preparado para melhorar seu negocio com a{' '}
+                <TextHighlight>Apperize</TextHighlight>?
+              </HeadingTitle>
+            </HeadingWrapper>
 
-            {/* How we can help */}
-            <div className="flex flex-col gap-4 mt-8">
-              <Text variant="lowOpacity">
+            {/* Description */}
+            <div className="my-8">
+              <Text>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Praesentium, aliquid. Incidunt, voluptate qui nulla ullam porro
                 iusto dolore id sequi laudantium ab autem odit unde mollitia.
                 Pariatur quos voluptate suscipit.
               </Text>
-
-              {/* Considerations */}
-              <ServiceRequestConsiderations />
             </div>
 
-            <Button size="lg" className="flex w-full md:w-fit mt-12">
-              <span className="text-base">Solicitar orçamento</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Button>
+            {/* Considerations */}
+            <ServiceRequestConsiderations />
+
+            {/* Buttons */}
+            <div className="mt-12">
+              <Button size="lg" className="flex w-full md:w-fit">
+                <span className="text-base">Solicitar orçamento</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Button>
+            </div>
           </div>
 
           {/* Image */}

@@ -21,8 +21,8 @@ export function ServiceRequestConsiderations() {
     <div className="space-y-2">
       {serviceRequestConsiderations.map(({ consideration }) => (
         <div key={consideration} className="flex items-center gap-1">
-          <CheckCircle2 className="h-5 w-5 text-primary" />
-          <span className="font-medium">{consideration}</span>
+          <CheckCircle2 className="h-6 w-6 text-primary" />
+          <span className="text-lg text-muted-foreground">{consideration}</span>
         </div>
       ))}
     </div>

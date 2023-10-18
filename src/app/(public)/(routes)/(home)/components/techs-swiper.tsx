@@ -62,7 +62,7 @@ const tecList: Tech[] = [
   },
 ]
 
-export function TechSlider() {
+export function TechsSwiper() {
   const carousel = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState<number>(0)
 
