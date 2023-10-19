@@ -12,7 +12,7 @@ export function DepositionItem() {
   return (
     <div className=" flex flex-col gap-8 w-full">
       <div className="flex flex-col gap-4">
-        <p className="text-base italic text-foreground">
+        <p className="text-base italic text-foreground/70">
           {`"`}Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
           rem soluta deleniti cum, possimus doloribus iste sint sequi cumque
           beatae molestiae corporis nam error nisi deserunt, perspiciatis
@@ -28,9 +28,9 @@ export function DepositionItem() {
             />
           </div>
 
-          <div className="flex flex-col gap-0.5">
+          <div className="flex flex-col">
             {/* Name */}
-            <strong className="text-lg text-foreground">Gustavo Dias</strong>
+            <strong className="text-lg text-foreground/90">Gustavo Dias</strong>
 
             {/* Role */}
             <small className="block text-sm text-muted-foreground">

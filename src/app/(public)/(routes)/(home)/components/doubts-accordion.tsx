@@ -5,6 +5,40 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
+interface Doubt {
+  value: string
+  title: string
+  description: string
+}
+
+const doubts: Doubt[] = [
+  {
+    value: 'Suporte',
+    title: 'O produto tem suporte?',
+    description: 'Temos sim',
+  },
+  {
+    value: 'Suporte',
+    title: 'O produto tem suporte?',
+    description: 'Temos sim',
+  },
+  {
+    value: 'Suporte',
+    title: 'O produto tem suporte?',
+    description: 'Temos sim',
+  },
+  {
+    value: 'Suporte',
+    title: 'O produto tem suporte?',
+    description: 'Temos sim',
+  },
+  {
+    value: 'Suporte',
+    title: 'O produto tem suporte?',
+    description: 'Temos sim',
+  },
+]
+
 export function DoubtsAccordion() {
   return (
     <Accordion
@@ -12,26 +46,16 @@ export function DoubtsAccordion() {
       collapsible
       className="w-full border rounded-lg shadow-sm divide-y-2 divider-border"
     >
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Is it accessible?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger>Is it styled?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger>Is it animated?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It&apos;s animated by default, but you can disable it if you
-          prefer.
-        </AccordionContent>
-      </AccordionItem>
+      {doubts.map(({ value, title, description }) => (
+        <AccordionItem value={value} key={value}>
+          <AccordionTrigger className="font-medium text-lg">
+            {title}
+          </AccordionTrigger>
+          <AccordionContent className="text-base text-muted-foreground">
+            {description}
+          </AccordionContent>
+        </AccordionItem>
+      ))}
     </Accordion>
   )
 }
