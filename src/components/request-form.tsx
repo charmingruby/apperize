@@ -1,12 +1,3 @@
-import {
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectGroup,
-  SelectLabel,
-  SelectItem,
-} from '@/components/ui/select'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { Input } from './ui/input'
 import { Label } from './ui/label'
@@ -34,35 +25,18 @@ export function RequestForm() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <Label>Qual seu nome?</Label>
+              <Label>Qual o nome da empresa?</Label>
               <Input placeholder="Nome" />
             </div>
 
             <div>
-              <Label>Qual seu email?</Label>
+              <Label>Qual seu cargo?</Label>
               <Input placeholder="E-mail" />
             </div>
           </div>
 
-          <div className="w-full">
-            <Select>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select a fruit" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectLabel>Fruits</SelectLabel>
-                  <SelectItem value="apple">Apple</SelectItem>
-                  <SelectItem value="banana">Banana</SelectItem>
-                  <SelectItem value="blueberry">Blueberry</SelectItem>
-                  <SelectItem value="grapes">Grapes</SelectItem>
-                  <SelectItem value="pineapple">Pineapple</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </div>
-
           <div>
+            <Label>Qual o seu problema?</Label>
             <Textarea placeholder="Conte os problemas que enfrenta" />
           </div>
 

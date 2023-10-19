@@ -20,7 +20,7 @@ export function DepositionItem() {
         </p>
 
         <div className="flex items-center gap-2">
-          <div className="p-1 border-2 border-border rounded-full h-16 w-16">
+          <div className="p-0.5 border-2 border-primary rounded-full h-16 w-16">
             <Image
               src={exampleImage}
               alt="Example deposition image"

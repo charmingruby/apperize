@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <ClerkAuthProvider>
       <TrpcProvider>
-        <html lang="en">
+        <html lang="en" className="scroll-smooth ">
           <body
             className={`${inter.variable} ${alt.variable} 
-        scroll-smooth font-sans bg-grainy text-foreground scrollbar-thin scrollbar-track-background-highlight-main scrollbar-thumb-background-highlight-dark
+        font-sans bg-grainy text-foreground scrollbar-thin scrollbar-track-background-highlight-main scrollbar-thumb-background-highlight-dark
       `}
           >
             <main>{children}</main>

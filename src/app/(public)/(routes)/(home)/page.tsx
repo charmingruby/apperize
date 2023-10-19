@@ -1,8 +1,9 @@
 import { Button } from '@/components/ui/button'
 import {
   ArrowRight,
-  ChevronRight,
+  ArrowUpRight,
   Headphones,
+  HelpCircle,
   TabletSmartphone,
 } from 'lucide-react'
 import Image from 'next/image'
@@ -26,52 +27,59 @@ import { Separator } from '@/components/ui/separator'
 import developersOffice from '@/assets/developers-office.jpeg'
 import { RequestForm } from '@/components/request-form'
 import { SectionsDivider } from '@/components/sections-divider'
+import heroImg from '@/assets/home-hero.png'
+import Link from 'next/link'
+import { ServicesTypewriter } from './components/services-typewriter'
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="container pt-20 lg:pt-0 min-h-screen flex flex-col lg:justify-center">
-        <div className="max-w-2xl mx-auto flex flex-col items-center lg:gap-16 gap-12">
-          {/* News */}
-          <div className="w-fit shadow-sm bg-background border p-1 rounded-full px-4 py-2 flex items-center gap-2">
-            <small className="text-sm  text-muted-foreground font-medium">
-              Venha estreiar a plataforma
-            </small>
-            <ChevronRight className="w-4 h-4 text-muted-foreground" />
-          </div>
+      <section className="container pt-20 md:pt-28 flex flex-col lg:justify-center">
+        <div className="max-w-4xl mx-auto flex flex-col items-center">
+          <div className="flex flex-col items-center mb-4">
+            {/* Heading */}
+            <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl my-8 text-center flex flex-col gap-3">
+              Desenvolvimento
+              <span className="block">sob demanda de</span>
+              <ServicesTypewriter />
+            </h1>
 
-          <div className="flex flex-col items-center gap-8">
-            <div className="flex flex-col gap-2">
-              {/* Heading */}
-              <h1 className="m-0 font-bold text-5xl text-center">
-                Transforme sua ideia em um{' '}
-              </h1>
-
-              <h2 className="text-primary m-0 font-bold text-5xl text-center">
-                Software
-              </h2>
-            </div>
-
-            {/* Text */}
-            <p className="text-muted-foreground text-center leading-relaxed text-lg">
+            {/* Description */}
+            <p className="text-muted-foreground text-center leading-relaxed text-lg mb-6 max-w-2xl">
               Transformamos ideias em realidade digital. Somos uma software
               house dedicada a criar soluções personalizadas e inovadoras para
               atender às necessidades únicas do seu negócio.
             </p>
           </div>
 
-          {/* Button group */}
-          <div className="flex flex-col lg:flex-row gap-4 w-full lg:w-fit">
-            <Button size="lg" className="text-base">
-              Faça seu pedido
-            </Button>
-            <Button size="lg" variant="outline" className="text-base">
-              Entrar em contato
-            </Button>
+          {/* Buttons group */}
+          <div className="flex flex-col items-center md:flex-row gap-4 w-full md:w-fit">
+            {/* Form link */}
+            <a href="#make-request" className="w-full md:w-fit">
+              <Button size="lg" className="text-base w-full md:w-fit">
+                Fazer pedido <ArrowRight className="w-4 h-4" />
+              </Button>
+            </a>
+
+            {/* Contact link */}
+            <Link href="/contato" prefetch={false} className="w-full md:w-fit">
+              <Button
+                variant="ghost"
+                size="lg"
+                className="text-base text-muted-foreground w-full md:w-fit"
+              >
+                Fale conosco
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
+
+      {/* Illustration */}
+      <ContainerWrapper className="flex justify-center pb-0 pt-8 md:pt-20">
+        <Image src={heroImg} alt="Página de Dashboard" className="w-[80%]" />
+      </ContainerWrapper>
 
       {/* USP */}
       <ContainerWrapper>
@@ -80,9 +88,7 @@ export default function Home() {
             <HeadingWrapper className="mb-0">
               <HeadingAnnotation annotation="Plataforma feita para o cliente" />
               <HeadingContentWrapper>
-                <HeadingTitle>
-                  Traga seu problema e nós retornamos a solução
-                </HeadingTitle>
+                <HeadingTitle>Desenvolvemos juntos de você </HeadingTitle>
                 <HeadingDescription>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Voluptas unde, facere rerum dolor accusamus adipisci? Hic
@@ -93,7 +99,9 @@ export default function Home() {
             </HeadingWrapper>
           </div>
           <div className="flex w-full md:justify-end items-end">
-            <Button className=" w-full md:w-fit md">Fazer pedido</Button>
+            <Button className=" w-full md:w-fit text-base">
+              Fazer pedido <ArrowRight className="h-4 w-4" />
+            </Button>
           </div>
         </div>
         <USP />
@@ -128,7 +136,7 @@ export default function Home() {
 
           <Button size="lg" className="flex text-base w-full md:w-fit">
             <span>Veja mais</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-4 h-4" />
           </Button>
         </div>
       </ContainerWrapper>
@@ -174,7 +182,7 @@ export default function Home() {
 
             <Button size="lg" className="flex text-base w-full md:w-fit">
               <span>Veja mais</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-4 h-4" />
             </Button>
           </div>
 
@@ -226,7 +234,7 @@ export default function Home() {
       {/* Contact */}
       <ContainerWrapper className="flex items-center justify-center mb-6 bg-background-highlight-main border border-background-highlight-dark rounded-xl py-10">
         <div className="max-w-3xl flex flex-col items-center justify-center text-center">
-          <Headphones className="text-primary h-12 w-12 mb-3" />
+          <Headphones className="text-primary h-12 w-12 mb-4" />
           <h2 className="text-2xl font-semibold mb-6">Entre em contato</h2>
           <Text className="mb-8 leading-normal text-muted-foreground">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam ex
@@ -238,9 +246,11 @@ export default function Home() {
           <div className="flex gap-4">
             <Button variant="outline" size="lg" className="text-base">
               Whatsapp
+              <ArrowUpRight className="h-4 w-4" />
             </Button>
             <Button className="text-base" size="lg">
               Fale conosco
+              <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -249,7 +259,10 @@ export default function Home() {
       <SectionsDivider />
 
       {/* Form */}
-      <ContainerWrapper className="grid grid-cols-2 gap-12 pt-6">
+      <ContainerWrapper
+        id="make-request"
+        className="grid grid-cols-2 gap-12 pt-6"
+      >
         <div className="flex flex-col justify-center">
           {/* Logo */}
           <div className="flex items-center gap-2">
@@ -262,9 +275,31 @@ export default function Home() {
           </div>
 
           {/* Slogan */}
-          <HeadingTitle>Resolva os problemas de maneira digital</HeadingTitle>
+          <HeadingTitle className="mt-12 text-4xl max-w-md">
+            Resolva os problemas de maneira digital
+          </HeadingTitle>
+
           {/* Form or phone number */}
-          <span>Preencha o formulário ou ligar para +55 32 99110-0990</span>
+          <span className="mt-2 mb-8 text-base text-muted-foreground">
+            Preencha o formulário ou ligar para +55 32 99110-0990
+          </span>
+
+          <div className="flex items-center gap-2">
+            <div className="bg-background-highlight-dark rounded-full p-1.5">
+              <HelpCircle className="w-6 h-6 text-primary" />
+            </div>
+
+            <span className="font-medium">
+              Alguma duvida?{' '}
+              <Link
+                prefetch={false}
+                href="/"
+                className="text-muted-foreground hover:text-primary hover:underline transition-all"
+              >
+                Entre em contato
+              </Link>
+            </span>
+          </div>
         </div>
         <div>
           <RequestForm />
