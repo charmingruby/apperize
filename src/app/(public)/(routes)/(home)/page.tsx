@@ -24,12 +24,20 @@ import { USP } from './components/usp'
 import { TextHighlight } from '@/components/text-highlight'
 import { DepositionItem } from './components/depositions-swiper/deposition-item'
 import { Separator } from '@/components/ui/separator'
-import developersOffice from '@/assets/developers-office.jpeg'
+import developersOffice from '@/assets/img/photos/developers-office.jpeg'
 import { RequestForm } from '@/components/request-form'
 import { SectionsDivider } from '@/components/sections-divider'
-import heroImg from '@/assets/home-hero.png'
+import heroImg from '@/assets/img/heros/home.png'
 import Link from 'next/link'
 import { ServicesTypewriter } from './components/services-typewriter'
+import { staticSEO } from '@/components/seo/static'
+import budgetIllustration from '@/assets/img/illustrations/home-budget.svg'
+
+export const metadata = staticSEO({
+  rawTitle: 'Desenvolvimento sob demanda de Software',
+  description:
+    'Transformamos ideias em realidade digital. Somos uma software house dedicada a criar soluções personalizadas e inovadoras para atender às necessidades únicas do seu negócio.',
+})
 
 export default function Home() {
   return (
@@ -52,7 +60,6 @@ export default function Home() {
               atender às necessidades únicas do seu negócio.
             </p>
           </div>
-
           {/* Buttons group */}
           <div className="flex flex-col items-center md:flex-row gap-4 w-full md:w-fit">
             {/* Form link */}
@@ -78,7 +85,13 @@ export default function Home() {
 
       {/* Illustration */}
       <ContainerWrapper className="flex justify-center pb-0 pt-8 md:pt-20">
-        <Image src={heroImg} alt="Página de Dashboard" className="w-[80%]" />
+        <Image
+          src={heroImg}
+          alt="Página de Dashboard"
+          className="w-[80%]"
+          quality={100}
+          priority
+        />
       </ContainerWrapper>
 
       {/* USP */}
@@ -88,12 +101,13 @@ export default function Home() {
             <HeadingWrapper className="mb-0">
               <HeadingAnnotation annotation="Plataforma feita para o cliente" />
               <HeadingContentWrapper>
-                <HeadingTitle>Desenvolvemos juntos de você </HeadingTitle>
+                <HeadingTitle>Desenvolvemos juntos de você</HeadingTitle>
                 <HeadingDescription>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Voluptas unde, facere rerum dolor accusamus adipisci? Hic
-                  excepturi laborum tempore nam consectetur vitae facere, ipsam
-                  omnis, rerum, voluptatem quaerat. Deleniti, dolores.
+                  Queremos que você se sinta confortável ao fazer um pedido.
+                  Para isso, mantemos você sempre atualizado sobre o
+                  desenvolvimento do seu produto. Isso garante que suas
+                  necessidades sejam atendidas de maneira personalizada,
+                  enquanto você está totalmente informado sobre o processo.{' '}
                 </HeadingDescription>
               </HeadingContentWrapper>
             </HeadingWrapper>
@@ -104,12 +118,13 @@ export default function Home() {
             </Button>
           </div>
         </div>
+
         <USP />
       </ContainerWrapper>
 
       {/* About */}
-      <ContainerWrapper className="grid grid-cols-2 gap-12">
-        <div>
+      <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="hidden lg:block">
           <Image
             src={developersOffice}
             alt="Desenvolvedores programando"
@@ -117,41 +132,55 @@ export default function Home() {
           />
         </div>
 
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center lg:justify-normal text-center lg:text-left">
           <HeadingWrapper className="mb-6">
-            <HeadingAnnotation annotation="Uma breve história" />
-            <HeadingTitle>
-              Sobre a <TextHighlight>Apperize</TextHighlight>
-            </HeadingTitle>
+            <HeadingTitle>Quem somos?</HeadingTitle>
           </HeadingWrapper>
 
           <div className="mb-8">
-            <Text variant="lowOpacity">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-              nostrum cupiditate temporibus voluptates rem quod molestiae
-              deserunt magnam molestias, facere assumenda aut ipsum recusandae
-              ipsam dolorem esse? Numquam, nemo dolores?
+            <Text variant="lowOpacity" size="md" className="leading-loose">
+              Somos uma software house em ascensão que tomou a decisão
+              estratégica de evoluir para uma empresa estabelecida devido à
+              crescente demanda por nossos serviços como freelancers. Com uma
+              trajetória marcada pelo compromisso com a qualidade e inovação,
+              percebemos que a transição para uma empresa nos permitiria atender
+              nossos clientes de maneira mais abrangente e eficaz. Estamos
+              ansiosos para continuar crescendo, expandindo nossa equipe
+              talentosa e oferecendo soluções de software excepcionais que
+              impulsionem o sucesso de nossos clientes.
             </Text>
           </div>
 
-          <Button size="lg" className="flex text-base w-full md:w-fit">
-            <span>Veja mais</span>
-            <ArrowRight className="w-4 h-4" />
-          </Button>
+          <Link
+            prefetch={false}
+            href="/sobre"
+            className="flex justify-center lg:justify-normal w-full"
+          >
+            <Button size="lg" className="flex text-base">
+              <span>Veja mais</span>
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </Link>
         </div>
       </ContainerWrapper>
 
       {/* Services */}
       <ContainerWrapper>
-        <div>
-          <Title title="Com o que podemos te ajudar" />
-          <strong className="text-4xl font-semibold leading-snug block">
-            Nossos{' '}
-            <span className="text-primary bg-background-highlight-dark">
-              serviços
-            </span>
-          </strong>
-        </div>
+        <HeadingWrapper>
+          <HeadingAnnotation annotation="Com o que trabalhamos" />
+          <HeadingContentWrapper className="flex justify-between items-center">
+            <HeadingTitle>
+              Nossos <TextHighlight>serviços</TextHighlight>
+            </HeadingTitle>
+
+            <div className="max-w-md">
+              <span className="font-medium text-muted-foreground leading-normal">
+                Caso nao esteja ai o que necessita, fazemos pedidos customizados
+                tambem.
+              </span>
+            </div>
+          </HeadingContentWrapper>
+        </HeadingWrapper>
 
         <Services />
       </ContainerWrapper>
@@ -217,8 +246,38 @@ export default function Home() {
         </ContainerWrapper>
       </section>
 
+      {/* Budget */}
+      <ContainerWrapper className="grid grid-cols-2 pb-6">
+        <div>
+          <Image src={budgetIllustration} alt="ilustração do orçamento" />
+        </div>
+        <div>
+          <HeadingWrapper>
+            <HeadingContentWrapper>
+              <HeadingTitle>Para cada um caso, um sucesso</HeadingTitle>
+            </HeadingContentWrapper>
+          </HeadingWrapper>
+
+          <Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            voluptatibus iste aut fuga neque quis eaque numquam cumque
+            laudantium molestias? Eaque molestias consequatur unde reiciendis
+            aperiam beatae reprehenderit. Repellendus, recusandae.
+          </Text>
+
+          <div></div>
+
+          <Button size="lg" className="text-base">
+            Solicite um orçamento
+            <ArrowRight className="w-4 h-4" />
+          </Button>
+        </div>
+      </ContainerWrapper>
+
+      <SectionsDivider />
+
       {/* Frequently asked */}
-      <ContainerWrapper className="flex flex-col items-center max-w-4xl w-full">
+      <ContainerWrapper className="flex flex-col items-center max-w-4xl w-full pt-6">
         <HeadingWrapper>
           <HeadingContentWrapper className="text-center">
             <HeadingTitle>Ficou com dúvidas? Não se preocupe</HeadingTitle>

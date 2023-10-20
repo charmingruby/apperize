@@ -15,7 +15,7 @@ type HeadingAnnotationProps = {
   annotation: string
 }
 export function HeadingAnnotation({ annotation }: HeadingAnnotationProps) {
-  return <Title title={annotation} underline={false} />
+  return <Title title={annotation} underline={true} />
 }
 
 // ContentWrapper

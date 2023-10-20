@@ -14,7 +14,7 @@ import {
 } from '@/components/ui/heading'
 import { TextHighlight } from '@/components/text-highlight'
 import { EmailForm } from './components/email-form'
-import heroImg from '@/assets/contact-hero.svg'
+import heroImg from '@/assets/img/heros/contact.svg'
 import Image from 'next/image'
 import { MeansOfContact } from './components/means-of-contact'
 

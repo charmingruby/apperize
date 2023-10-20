@@ -1,4 +1,4 @@
-import exampleImage from '@/assets/gustavo-dias-profile.jpeg'
+import exampleImage from '@/assets/img/team/gustavo-dias-profile.jpeg'
 import { Button } from '@/components/ui/button'
 import { LogOut } from 'lucide-react'
 import Image from 'next/image'

@@ -1,4 +1,4 @@
-import exampleImage from '@/assets/gustavo-dias-profile.jpeg'
+import exampleImage from '@/assets/img/team/gustavo-dias-profile.jpeg'
 import Image from 'next/image'
 
 interface DepositionItemProps {

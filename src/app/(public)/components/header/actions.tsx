@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { UserButton, auth, clerkClient } from '@clerk/nextjs'
+import { User } from 'lucide-react'
 import Link from 'next/link'
 
 async function getUserDataById(userId: string) {
@@ -22,12 +23,15 @@ export async function Actions() {
       {!userId ? (
         <>
           <Link href="/login" prefetch={false}>
-            <Button variant="outline" size="sm">
-              Entrar
+            <Button variant="ghost" size="sm" className="text-primary">
+              <User className="h-4 w-4" />
+              <span className="text-foreground">Entrar</span>
             </Button>
           </Link>
 
-          <Button size="sm">Fazer pedido</Button>
+          <Button size="sm" variant="outline">
+            Fazer pedido
+          </Button>
         </>
       ) : (
         <div className="flex items-center space-x-4">

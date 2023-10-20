@@ -1,4 +1,4 @@
-import { Lightbulb, MessagesSquare, Code2, Activity } from 'lucide-react'
+import { Lightbulb, MessagesSquare, Code2, Headphones } from 'lucide-react'
 import { ValueItem } from './value-item'
 
 export function USP() {
@@ -7,29 +7,29 @@ export function USP() {
       <ValueItem
         icon={Lightbulb}
         title="Ideia"
-        description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium obcaecati quam quibusdam numquam fugit aspernatur? Saepe quod ex facilis molestias, exercitationem iure, hic quis commodi, rerum adipisci odit quasi."
-        position={0}
+        description="Envie uma mensagem dizendo seus problemas e necessidades, e retornaremos uma mensagem."
+        percentage={25}
       />
 
       <ValueItem
         icon={MessagesSquare}
         title="Conversa com equipe"
-        description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium obcaecati quam quibusdam numquam fugit aspernatur? Saepe quod ex facilis molestias, exercitationem iure, hic quis commodi, rerum adipisci odit quasi."
-        position={0.375}
+        description="Agendaremos uma reunião para alinhar ideias de ambos os lados e apresentarmos nossas opções de solução, juntamente do orçamento."
+        percentage={50}
       />
 
       <ValueItem
         icon={Code2}
         title="Desenvolvimento"
-        description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium obcaecati quam quibusdam numquam fugit aspernatur? Saepe quod ex facilis molestias, exercitationem iure, hic quis commodi, rerum adipisci odit quasi."
-        position={2}
+        description="Enquanto desenvolvemos o seu produto, certificamo-nos de fornecer atualizações frequentes e descritivas sobre o andamento do desenvolvimento."
+        percentage={75}
       />
 
       <ValueItem
-        icon={Activity}
-        title="Monitoramento"
-        description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium obcaecati quam quibusdam numquam fugit aspernatur? Saepe quod ex facilis molestias, exercitationem iure, hic quis commodi, rerum adipisci odit quasi."
-        position={3}
+        icon={Headphones}
+        title="Suporte"
+        description="Após a entrega da primeira versão, oferecemos suporte, tanto para corrigir bugs inesperados quanto para o desenvolvimento de novas funcionalidades."
+        percentage={100}
       />
     </div>
   )

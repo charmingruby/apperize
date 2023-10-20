@@ -5,7 +5,7 @@ import Image from 'next/image'
 /* Internal */
 import { Title } from '@/components/title'
 import { Text } from '@/components/ui/text'
-import founderImg from '@/assets/gustavo-dias-profile.jpeg'
+import founderImg from '@/assets/img/team/gustavo-dias-profile.jpeg'
 import { Missions } from './components/missions'
 import { Button } from '@/components/ui/button'
 import { ContainerWrapper } from '@/components/ui/container-wrapper'
@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/heading'
 import { TextHighlight } from '@/components/text-highlight'
 import { AdvantagesAnnotation } from './components/advantages-annotations'
-import heroImg from '@/assets/about-hero.png'
+import heroImg from '@/assets/img/heros/about.png'
 import { Differentials } from './components/differentials'
 
 export default function About() {

@@ -1,7 +1,7 @@
 import { SignIn } from '@clerk/nextjs'
 import { TrendingUp } from 'lucide-react'
 import Image from 'next/image'
-import loginImage from '@/assets/example-hero-image.jpg'
+import loginImage from '@/assets/img/heros/auth.jpg'
 import { PurpleFilter } from '@/components/purple-filter'
 import { Logo } from '@/app/(auth)/components/logo'
 
