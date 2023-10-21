@@ -22,7 +22,7 @@ import { DoubtsAccordion } from './components/doubts-accordion'
 import { Features } from './components/features'
 import { USP } from './components/usp'
 import { TextHighlight } from '@/components/text-highlight'
-import { DepositionItem } from './components/depositions-swiper/deposition-item'
+import { DepositionItem } from './components/deposition-item'
 import { Separator } from '@/components/ui/separator'
 import developersOffice from '@/assets/img/photos/developers-office.jpeg'
 import { RequestForm } from '@/components/request-form'
@@ -32,6 +32,7 @@ import Link from 'next/link'
 import { ServicesTypewriter } from './components/services-typewriter'
 import { staticSEO } from '@/components/seo/static'
 import budgetIllustration from '@/assets/img/illustrations/home-budget.svg'
+import { BudgetRequestTopic } from './components/budget-request-topic'
 
 export const metadata = staticSEO({
   rawTitle: 'Desenvolvimento sob demanda de Software',
@@ -189,7 +190,7 @@ export default function Home() {
       <ContainerWrapper>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Presentation */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col">
             <HeadingWrapper className="mb-6">
               <HeadingAnnotation annotation="Por que confiar na Apperize?" />
               <HeadingTitle>
@@ -224,7 +225,7 @@ export default function Home() {
         <ContainerWrapper className="py-20">
           {/* Heading */}
           <div className="w-1/2">
-            <Title title="Depoimentos" underline={false} />
+            <Title title="Depoimentos" />
             <strong className="text-5xl font-semibold leading-tight block text-foreground">
               O que nossos clientes dizem sobre nós:
             </strong>
@@ -248,29 +249,47 @@ export default function Home() {
 
       {/* Budget */}
       <ContainerWrapper className="grid grid-cols-2 pb-6">
+        {/* Illustration */}
         <div>
           <Image src={budgetIllustration} alt="ilustração do orçamento" />
         </div>
-        <div>
-          <HeadingWrapper>
+
+        {/* Content */}
+        <div className="flex flex-col justify-center">
+          <HeadingWrapper className="mb-6">
+            <HeadingAnnotation annotation="Solicitar orçamento" />
             <HeadingContentWrapper>
-              <HeadingTitle>Para cada um caso, um sucesso</HeadingTitle>
+              <HeadingTitle>
+                Para cada um <TextHighlight>caso</TextHighlight>, um{' '}
+                <TextHighlight>sucesso</TextHighlight>
+              </HeadingTitle>
             </HeadingContentWrapper>
           </HeadingWrapper>
 
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-            voluptatibus iste aut fuga neque quis eaque numquam cumque
-            laudantium molestias? Eaque molestias consequatur unde reiciendis
-            aperiam beatae reprehenderit. Repellendus, recusandae.
-          </Text>
+          <div className="mb-8 space-y-6">
+            <Text variant="lowOpacity">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+              voluptatibus iste aut fuga neque quis eaque numquam cumque
+              laudantium molestias? Eaque molestias consequatur unde reiciendis
+              aperiam beatae reprehenderit. Repellendus, recusandae.
+            </Text>
 
-          <div></div>
+            <div className="space-y-3">
+              <Separator />
+              <div className="space-y-2">
+                <BudgetRequestTopic topic="De acordo com o valor máximo estabelecido." />
+                <BudgetRequestTopic topic="Gestão eficaz de custos nos permite oferecer preços acessíveis e alta qualidade." />
+              </div>
+              <Separator />
+            </div>
+          </div>
 
-          <Button size="lg" className="text-base">
-            Solicite um orçamento
-            <ArrowRight className="w-4 h-4" />
-          </Button>
+          <Link href="/" prefetch={false} className="w-fit">
+            <Button size="lg" className="text-base">
+              Solicite um orçamento
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </Link>
         </div>
       </ContainerWrapper>
 

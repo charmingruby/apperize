@@ -20,7 +20,7 @@ export function DepositionItem() {
         </p>
 
         <div className="flex items-center gap-2">
-          <div className="p-0.5 border-2 border-primary rounded-full h-16 w-16">
+          <div className="p-0.5 border-2 border-primary rounded-full h-12 w-12">
             <Image
               src={exampleImage}
               alt="Example deposition image"
@@ -30,7 +30,9 @@ export function DepositionItem() {
 
           <div className="flex flex-col">
             {/* Name */}
-            <strong className="text-lg text-foreground/90">Gustavo Dias</strong>
+            <strong className="text-base text-foreground/90">
+              Gustavo Dias
+            </strong>
 
             {/* Role */}
             <small className="block text-sm text-muted-foreground">
