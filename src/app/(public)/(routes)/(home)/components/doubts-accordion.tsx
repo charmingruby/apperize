@@ -17,26 +17,6 @@ const doubts: Doubt[] = [
     title: 'O produto tem suporte?',
     description: 'Temos sim',
   },
-  {
-    value: 'Suporte',
-    title: 'O produto tem suporte?',
-    description: 'Temos sim',
-  },
-  {
-    value: 'Suporte',
-    title: 'O produto tem suporte?',
-    description: 'Temos sim',
-  },
-  {
-    value: 'Suporte',
-    title: 'O produto tem suporte?',
-    description: 'Temos sim',
-  },
-  {
-    value: 'Suporte',
-    title: 'O produto tem suporte?',
-    description: 'Temos sim',
-  },
 ]
 
 export function DoubtsAccordion() {

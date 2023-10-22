@@ -1,4 +1,6 @@
-import { Button } from '@/components/ui/button'
+/**
+ * External
+ */
 import {
   ArrowRight,
   ArrowUpRight,
@@ -7,6 +9,11 @@ import {
   TabletSmartphone,
 } from 'lucide-react'
 import Image from 'next/image'
+
+/**
+ * Internal
+ */
+import { Button } from '@/components/ui/button'
 import { Text } from '@/components/ui/text'
 import { Title } from '@/components/title'
 import { Services } from './components/services'
@@ -33,6 +40,8 @@ import { ServicesTypewriter } from './components/services-typewriter'
 import { staticSEO } from '@/components/seo/static'
 import budgetIllustration from '@/assets/img/illustrations/home-budget.svg'
 import { BudgetRequestTopic } from './components/budget-request-topic'
+import { RedirectLink } from '@/components/redirect-link'
+import { CreateRequestLink } from './components/create-request-link'
 
 export const metadata = staticSEO({
   rawTitle: 'Desenvolvimento sob demanda de Software',
@@ -64,14 +73,10 @@ export default function Home() {
           {/* Buttons group */}
           <div className="flex flex-col items-center md:flex-row gap-4 w-full md:w-fit">
             {/* Form link */}
-            <a href="#make-request" className="w-full md:w-fit">
-              <Button size="lg" className="text-base w-full md:w-fit">
-                Fazer pedido <ArrowRight className="w-4 h-4" />
-              </Button>
-            </a>
+            <CreateRequestLink />
 
             {/* Contact link */}
-            <Link href="/contato" prefetch={false} className="w-full md:w-fit">
+            <RedirectLink url="/contato">
               <Button
                 variant="ghost"
                 size="lg"
@@ -79,13 +84,13 @@ export default function Home() {
               >
                 Fale conosco
               </Button>
-            </Link>
+            </RedirectLink>
           </div>
         </div>
       </section>
 
       {/* Illustration */}
-      <ContainerWrapper className="flex justify-center pb-0 pt-8 md:pt-20">
+      <ContainerWrapper className="flex justify-center pb-0 pt-8 md:pt-12">
         <Image
           src={heroImg}
           alt="Página de Dashboard"
@@ -114,9 +119,7 @@ export default function Home() {
             </HeadingWrapper>
           </div>
           <div className="flex w-full md:justify-end items-end">
-            <Button className=" w-full md:w-fit text-base">
-              Fazer pedido <ArrowRight className="h-4 w-4" />
-            </Button>
+            <CreateRequestLink />
           </div>
         </div>
 
@@ -125,7 +128,7 @@ export default function Home() {
 
       {/* About */}
       <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center">
           <Image
             src={developersOffice}
             alt="Desenvolvedores programando"
@@ -152,16 +155,14 @@ export default function Home() {
             </Text>
           </div>
 
-          <Link
-            prefetch={false}
-            href="/sobre"
-            className="flex justify-center lg:justify-normal w-full"
-          >
-            <Button size="lg" className="flex text-base">
-              <span>Veja mais</span>
-              <ArrowRight className="w-4 h-4" />
-            </Button>
-          </Link>
+          <div className="flex justify-center lg:justify-normal w-full">
+            <RedirectLink url="/sobre">
+              <Button size="lg" className="flex text-base">
+                <span>Veja mais</span>
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </RedirectLink>
+          </div>
         </div>
       </ContainerWrapper>
 
@@ -203,17 +204,21 @@ export default function Home() {
 
             <div className="mb-8">
               <Text variant="lowOpacity">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                cum blanditiis ex quam reiciendis commodi velit quia, incidunt
-                esse enim, aliquid quisquam sequi. Obcaecati ad impedit
-                repudiandae debitis aliquam veritatis.
+                Nosso compromisso é entregar soluções de software altamente
+                personalizadas, perfeitamente adaptadas às particularidades do
+                seu negócio. Contando com nossa extensa experiência e uma equipe
+                altamente qualificada, estamos preparados para oferecer uma
+                ampla gama de funcionalidades para atender às suas demandas
+                exclusivas.
               </Text>
             </div>
 
-            <Button size="lg" className="flex text-base w-full md:w-fit">
-              <span>Veja mais</span>
-              <ArrowRight className="w-4 h-4" />
-            </Button>
+            <RedirectLink url="o-que-fazemos">
+              <Button size="lg" className="flex text-base w-full md:w-fit">
+                <span>Veja mais</span>
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </RedirectLink>
           </div>
 
           <Features />
@@ -268,10 +273,9 @@ export default function Home() {
 
           <div className="mb-8 space-y-6">
             <Text variant="lowOpacity">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-              voluptatibus iste aut fuga neque quis eaque numquam cumque
-              laudantium molestias? Eaque molestias consequatur unde reiciendis
-              aperiam beatae reprehenderit. Repellendus, recusandae.
+              Está pronto para colaborar conosco na criação do seu software?
+              Estamos empenhados em encontrar as opções mais vantajosas, visando
+              reduzir custos e elevar a satisfação do cliente ao máximo.
             </Text>
 
             <div className="space-y-3">
@@ -284,17 +288,11 @@ export default function Home() {
             </div>
           </div>
 
-          <Link href="/" prefetch={false} className="w-fit">
-            <Button size="lg" className="text-base">
-              Solicite um orçamento
-              <ArrowRight className="w-4 h-4" />
-            </Button>
-          </Link>
+          <CreateRequestLink label="Solicitar orçamento" />
         </div>
       </ContainerWrapper>
 
       <SectionsDivider />
-
       {/* Frequently asked */}
       <ContainerWrapper className="flex flex-col items-center max-w-4xl w-full pt-6">
         <HeadingWrapper>
@@ -308,38 +306,39 @@ export default function Home() {
 
         <DoubtsAccordion />
       </ContainerWrapper>
-
       {/* Contact */}
       <ContainerWrapper className="flex items-center justify-center mb-6 bg-background-highlight-main border border-background-highlight-dark rounded-xl py-10">
         <div className="max-w-3xl flex flex-col items-center justify-center text-center">
           <Headphones className="text-primary h-12 w-12 mb-4" />
           <h2 className="text-2xl font-semibold mb-6">Entre em contato</h2>
           <Text className="mb-8 leading-normal text-muted-foreground">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam ex
-            facere tempora praesentium minima autem obcaecati nobis voluptas?
-            Adipisci explicabo quam officiis quae, deserunt aperiam? Aperiam,
-            nisi quisquam! Expedita, incidunt!
+            Estamos aqui para ajudar. Entre em contato para suporte técnico
+            personalizado em nossos produtos e serviços.
           </Text>
 
           <div className="flex gap-4">
-            <Button variant="outline" size="lg" className="text-base">
-              Whatsapp
-              <ArrowUpRight className="h-4 w-4" />
-            </Button>
-            <Button className="text-base" size="lg">
-              Fale conosco
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+            <RedirectLink url="/">
+              <Button variant="outline" size="lg" className="text-base">
+                Whatsapp
+                <ArrowUpRight className="h-4 w-4" />
+              </Button>
+            </RedirectLink>
+
+            <RedirectLink url="/contato">
+              <Button className="text-base" size="lg">
+                Fale conosco
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </RedirectLink>
           </div>
         </div>
       </ContainerWrapper>
-
       <SectionsDivider />
 
-      {/* Form */}
+      {/* CTA */}
       <ContainerWrapper
         id="make-request"
-        className="grid grid-cols-2 gap-12 pt-6"
+        className="grid grid-cols-3 gap-12 pt-6"
       >
         <div className="flex flex-col justify-center">
           {/* Logo */}
@@ -359,7 +358,8 @@ export default function Home() {
 
           {/* Form or phone number */}
           <span className="mt-2 mb-8 text-base text-muted-foreground">
-            Preencha o formulário ou ligar para +55 32 99110-0990
+            Preencha o formulário
+            <span className="block">ou ligar para +55 32 99110-0990</span>
           </span>
 
           <div className="flex items-center gap-2">
@@ -379,7 +379,7 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <div>
+        <div className="col-span-2">
           <RequestForm />
         </div>
       </ContainerWrapper>
