@@ -71,7 +71,7 @@ export default function Home() {
             </p>
           </div>
           {/* Buttons group */}
-          <div className="flex flex-col items-center md:flex-row gap-4 w-full md:w-fit">
+          <div className="flex flex-col items-center md:flex-row gap-2 md:gap-4 w-full md:w-fit">
             {/* Form link */}
             <CreateRequestLink />
 
@@ -227,7 +227,7 @@ export default function Home() {
 
       {/* Depositions */}
       <section className="border-y border-background-highlight-dark bg-background-highlight-main">
-        <ContainerWrapper className="py-10">
+        <ContainerWrapper className="py-10 lg:py-10">
           {/* Heading */}
           <div className="lg:w-1/2">
             <Title title="Depoimentos" />
@@ -258,7 +258,7 @@ export default function Home() {
       </section>
 
       {/* Budget */}
-      <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 pb-0">
+      <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 pb-0 lg:pb-0">
         {/* Illustration */}
         <div className="hidden lg:block">
           <Image src={budgetIllustration} alt="ilustração do orçamento" />
@@ -299,7 +299,7 @@ export default function Home() {
 
       <SectionsDivider />
       {/* Frequently asked */}
-      <ContainerWrapper className="flex flex-col lg:items-center max-w-4xl w-full pt-0">
+      <ContainerWrapper className="flex flex-col lg:items-center max-w-4xl w-full pt-0 lg:pt-0">
         <HeadingWrapper>
           <HeadingContentWrapper className="lg:text-center">
             <HeadingTitle>Ficou com dúvidas? Não se preocupe</HeadingTitle>
@@ -321,7 +321,7 @@ export default function Home() {
             personalizado em nossos produtos e serviços.
           </Text>
 
-          <div className="flex flex-col lg:flex-row gap-4 w-full">
+          <div className="flex flex-col md:flex-row md:justify-center gap-4 w-full">
             <RedirectLink url="/">
               <Button
                 variant="outline"
@@ -347,7 +347,7 @@ export default function Home() {
       {/* CTA */}
       <ContainerWrapper
         id="make-request"
-        className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 pt-0"
+        className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12  pt-0 lg:pt-0"
       >
         <div className="flex flex-col justify-center">
           {/* Logo */}
