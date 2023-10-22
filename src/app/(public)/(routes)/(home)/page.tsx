@@ -157,7 +157,7 @@ export default function Home() {
 
           <div className="flex justify-center lg:justify-normal w-full">
             <RedirectLink url="/sobre">
-              <Button size="lg" className="flex text-base">
+              <Button size="lg" className="flex text-base w-full lg:w-fit">
                 <span>Veja mais</span>
                 <ArrowRight className="w-4 h-4" />
               </Button>
@@ -170,7 +170,7 @@ export default function Home() {
       <ContainerWrapper>
         <HeadingWrapper>
           <HeadingAnnotation annotation="Com o que trabalhamos" />
-          <HeadingContentWrapper className="flex justify-between items-center">
+          <HeadingContentWrapper className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
             <HeadingTitle>
               Nossos <TextHighlight>serviços</TextHighlight>
             </HeadingTitle>
@@ -227,22 +227,27 @@ export default function Home() {
 
       {/* Depositions */}
       <section className="border-y border-background-highlight-dark bg-background-highlight-main">
-        <ContainerWrapper className="py-20">
+        <ContainerWrapper className="py-10">
           {/* Heading */}
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <Title title="Depoimentos" />
-            <strong className="text-5xl font-semibold leading-tight block text-foreground">
+            <strong className="text-4xl lg:text-5xl font-semibold leading-tight block text-foreground">
               O que nossos clientes dizem sobre nós:
             </strong>
           </div>
 
           {/* Depositions */}
-          <div className="grid grid-cols-2 gap-16 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 w-full">
             <div className="mt-12 space-y-6">
               <DepositionItem />
               <Separator />
               <DepositionItem />
             </div>
+
+            <div className="block lg:hidden my-6">
+              <Separator />
+            </div>
+
             <div className="space-y-6">
               <DepositionItem />
               <Separator />
@@ -253,9 +258,9 @@ export default function Home() {
       </section>
 
       {/* Budget */}
-      <ContainerWrapper className="grid grid-cols-2 pb-6">
+      <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 pb-0">
         {/* Illustration */}
-        <div>
+        <div className="hidden lg:block">
           <Image src={budgetIllustration} alt="ilustração do orçamento" />
         </div>
 
@@ -280,7 +285,7 @@ export default function Home() {
 
             <div className="space-y-3">
               <Separator />
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <BudgetRequestTopic topic="De acordo com o valor máximo estabelecido." />
                 <BudgetRequestTopic topic="Gestão eficaz de custos nos permite oferecer preços acessíveis e alta qualidade." />
               </div>
@@ -294,9 +299,9 @@ export default function Home() {
 
       <SectionsDivider />
       {/* Frequently asked */}
-      <ContainerWrapper className="flex flex-col items-center max-w-4xl w-full pt-6">
+      <ContainerWrapper className="flex flex-col lg:items-center max-w-4xl w-full pt-0">
         <HeadingWrapper>
-          <HeadingContentWrapper className="text-center">
+          <HeadingContentWrapper className="lg:text-center">
             <HeadingTitle>Ficou com dúvidas? Não se preocupe</HeadingTitle>
             <HeadingDescription>
               Tudo que o que voce precisa de saber sobre o serviço e a cobrança
@@ -307,7 +312,7 @@ export default function Home() {
         <DoubtsAccordion />
       </ContainerWrapper>
       {/* Contact */}
-      <ContainerWrapper className="flex items-center justify-center mb-6 bg-background-highlight-main border border-background-highlight-dark rounded-xl py-10">
+      <ContainerWrapper className="flex items-center justify-center bg-background-highlight-main border border-background-highlight-dark rounded-xl py-10">
         <div className="max-w-3xl flex flex-col items-center justify-center text-center">
           <Headphones className="text-primary h-12 w-12 mb-4" />
           <h2 className="text-2xl font-semibold mb-6">Entre em contato</h2>
@@ -316,16 +321,20 @@ export default function Home() {
             personalizado em nossos produtos e serviços.
           </Text>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col lg:flex-row gap-4 w-full">
             <RedirectLink url="/">
-              <Button variant="outline" size="lg" className="text-base">
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-base w-full lg:w-fit"
+              >
                 Whatsapp
                 <ArrowUpRight className="h-4 w-4" />
               </Button>
             </RedirectLink>
 
             <RedirectLink url="/contato">
-              <Button className="text-base" size="lg">
+              <Button className="text-base w-full lg:w-fit" size="lg">
                 Fale conosco
                 <ArrowRight className="h-4 w-4" />
               </Button>
@@ -338,7 +347,7 @@ export default function Home() {
       {/* CTA */}
       <ContainerWrapper
         id="make-request"
-        className="grid grid-cols-3 gap-12 pt-6"
+        className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 pt-0"
       >
         <div className="flex flex-col justify-center">
           {/* Logo */}

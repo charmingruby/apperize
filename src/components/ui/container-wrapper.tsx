@@ -7,5 +7,7 @@ export function ContainerWrapper({
   className,
   ...props
 }: ContainerWrapperProps) {
-  return <div className={cn('container py-20', className)} {...props} />
+  return (
+    <div className={cn('container py-12 lg:py-20', className)} {...props} />
+  )
 }
