@@ -1,6 +1,6 @@
 import { RedirectLink } from '@/components/redirect-link'
-import { contactDomainEmail } from '@/site/contact'
-import { ArrowUpRight, LucideIcon, Mail } from 'lucide-react'
+import { contactDomainEmail, contactPhoneNumber } from '@/site/contact'
+import { ArrowUpRight, LucideIcon, Mail, MapPin, Phone } from 'lucide-react'
 
 interface ContactInfo {
   icon: LucideIcon
@@ -14,21 +14,20 @@ const contactList: ContactInfo[] = [
   {
     icon: Mail,
     name: 'Email',
-    description: 'Nos envie um email',
-    contact: contactDomainEmail,
-    url: '/',
-  },
-  {
-    icon: Mail,
-    name: 'Email',
-    description: 'Nos envie um email',
+    description: 'Nos contate pelo email',
     contact: contactDomainEmail,
   },
   {
-    icon: Mail,
-    name: 'Email',
-    description: 'Nos envie um email',
-    contact: contactDomainEmail,
+    icon: MapPin,
+    name: 'Localização',
+    description: 'Onde estamos, porém atendemos remotamente.',
+    contact: 'Juiz de Fora - MG, Brasil',
+  },
+  {
+    icon: Phone,
+    name: 'Telefone',
+    description: 'Ligue diretamente para nós.',
+    contact: contactPhoneNumber,
   },
 ]
 
@@ -41,7 +40,7 @@ export function ContactBoard() {
 
           return (
             <div
-              className={`flex flex-col w-full h-full items-center text-center p-4 ${
+              className={`flex flex-col w-full h-full items-center text-center py-8 px-4 ${
                 isTheMiddleItem ? 'border-y lg:border-x lg:border-y-0' : ''
               }`}
               key={name}
