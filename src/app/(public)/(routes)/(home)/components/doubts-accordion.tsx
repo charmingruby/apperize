@@ -28,7 +28,7 @@ export function DoubtsAccordion() {
     >
       {doubts.map(({ value, title, description }) => (
         <AccordionItem value={value} key={value}>
-          <AccordionTrigger className="font-medium text-lg">
+          <AccordionTrigger className="font-medium text-base">
             {title}
           </AccordionTrigger>
           <AccordionContent className="text-base text-muted-foreground">

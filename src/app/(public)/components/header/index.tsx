@@ -7,8 +7,10 @@ export async function Header() {
   return (
     <header className="border-b border-border flex items-center fixed w-full z-50 bg-background shadow-sm">
       <div className="container flex h-16 items-center justify-between">
-        <Logo />
-        <MainNav />
+        <div className="flex items-center gap-16">
+          <Logo />
+          <MainNav />
+        </div>
         <Actions />
 
         <div className="flex lg:hidden">

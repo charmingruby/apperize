@@ -9,7 +9,7 @@ export default authMiddleware({
     '/servicos',
     '/sobre',
     '/contato',
-    'o-que-fazemos',
+    '/o-que-fazemos',
     '/api/:path*',
   ],
 })

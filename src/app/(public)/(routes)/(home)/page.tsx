@@ -312,7 +312,7 @@ export default function Home() {
         <DoubtsAccordion />
       </ContainerWrapper>
       {/* Contact */}
-      <ContainerWrapper className="flex items-center justify-center bg-background-highlight-main border border-background-highlight-dark rounded-xl py-10">
+      <ContainerWrapper className="flex items-center justify-center bg-background-highlight-main border border-background-highlight-dark rounded-xl py-10 lg:py-10">
         <div className="max-w-3xl flex flex-col items-center justify-center text-center">
           <Headphones className="text-primary h-12 w-12 mb-4" />
           <h2 className="text-2xl font-semibold mb-6">Entre em contato</h2>

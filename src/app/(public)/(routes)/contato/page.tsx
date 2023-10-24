@@ -1,12 +1,13 @@
-'use client'
+/**
+ * External
+ */
+import { ArrowRight, Phone, Mail, MapPin, Cog } from 'lucide-react'
 
-import { Text } from '@/components/ui/text'
-import { Button } from '@/components/ui/button'
-import { ArrowRight, Globe2, Store } from 'lucide-react'
-import { ServiceModel } from './components/service-model'
+/**
+ * Internal
+ */
 import { ContainerWrapper } from '@/components/ui/container-wrapper'
 import {
-  HeadingAnnotation,
   HeadingContentWrapper,
   HeadingDescription,
   HeadingTitle,
@@ -14,95 +15,100 @@ import {
 } from '@/components/ui/heading'
 import { TextHighlight } from '@/components/text-highlight'
 import { EmailForm } from './components/email-form'
-import heroImg from '@/assets/img/heros/contact.svg'
-import Image from 'next/image'
-import { MeansOfContact } from './components/means-of-contact'
+import { ContactItem } from './components/contact-item'
+import { RedirectLink } from '@/components/redirect-link'
+import { Separator } from '@/components/ui/separator'
+import { Button } from '@/components/ui/button'
+import { ContactBoard } from './components/contact-board'
 
 export default function ContactPage() {
   return (
     <>
-      <section className="">
-        <ContainerWrapper className="lg:h-screen flex items-center justify-center md:pt-32">
-          <div className="grid grid-cols-2 gap-12 w-full">
-            <div>
-              <HeadingWrapper>
-                <HeadingAnnotation annotation="Respondemos rapidamente" />
-                <HeadingContentWrapper>
-                  <HeadingTitle>
-                    Entrar em <TextHighlight>contato</TextHighlight>
-                  </HeadingTitle>
-                  <HeadingDescription>
-                    Fique a vontade para tirar qualquer dúvida com nosso suporte
-                  </HeadingDescription>
-                </HeadingContentWrapper>
-              </HeadingWrapper>
-
-              <EmailForm />
-            </div>
-
-            <div className="flex items-center justify-center">
-              <Image src={heroImg} alt="Pessoas entrando em contato" />
-            </div>
-          </div>
-        </ContainerWrapper>
-      </section>
-
-      {/* Options */}
       <ContainerWrapper>
-        <HeadingWrapper className="text-center items-center">
-          <HeadingAnnotation annotation="Atentendimento" />
-          <HeadingTitle>Atendemos aonde quer que voce esteja</HeadingTitle>
+        <HeadingWrapper className="flex pt-6 items-center text-center">
+          <HeadingContentWrapper>
+            <HeadingTitle>
+              Fale <TextHighlight>Conosco</TextHighlight>
+            </HeadingTitle>
+            <HeadingDescription>
+              Nossa equipe está sempre aqui para falar com você
+            </HeadingDescription>
+          </HeadingContentWrapper>
         </HeadingWrapper>
 
-        <div className="flex flex-row w-full gap-12 mt-12">
-          {/* Local */}
-          <ServiceModel
-            description="Estamos aqui na sua comunidade, prontos para oferecer assistência pessoal e soluções próximas de você."
-            title="Localmente"
-            icon={Store}
-          />
+        <ContactBoard />
+      </ContainerWrapper>
 
-          <div className="flex items-center justify-center text-muted-foreground font-medium text-lg">
-            ou
+      <ContainerWrapper className="h-screen flex items-center">
+        <div className="grid grid-cols-2 w-full">
+          <div className="flex flex-col">
+            <HeadingWrapper className="flex pt-6">
+              <HeadingContentWrapper>
+                <HeadingTitle>
+                  Fale <TextHighlight>Conosco</TextHighlight>
+                </HeadingTitle>
+                <HeadingDescription>
+                  Nossa equipe está sempre aqui para falar com você
+                </HeadingDescription>
+              </HeadingContentWrapper>
+            </HeadingWrapper>
+
+            {/* Contact means */}
+            <div className="">
+              {/* Email */}
+              <ContactItem icon={Mail} content="gustavodiasa2121@gmail.com" />
+
+              {/* Location */}
+              <ContactItem icon={Phone} content="gustavodiasa2121@gmail.com" />
+
+              {/* Phone number */}
+              <ContactItem icon={MapPin} content="gustavodiasa2121@gmail.com" />
+            </div>
           </div>
 
-          {/* Remote */}
-          <ServiceModel
-            description="Nossa equipe está pronta para ajudar onde você estiver, com atendimento remoto conveniente e eficaz."
-            title="Remotamente"
-            icon={Globe2}
-          />
+          <div>
+            <EmailForm />
+          </div>
         </div>
       </ContainerWrapper>
 
-      <ContainerWrapper>
-        <HeadingWrapper>
-          <HeadingAnnotation annotation="Outras formas" />
-          <HeadingTitle>Opções de contato</HeadingTitle>
-        </HeadingWrapper>
-
-        <MeansOfContact />
-      </ContainerWrapper>
-
       {/* CTA */}
-      <section className="bg-primary-gradient">
-        <ContainerWrapper>
-          <div className="max-w-2xl mx-auto flex flex-col items-center text-center">
-            <h2 className="text-5xl font-semibold text-primary-foreground mb-8">
-              Quer estar a frente dos concorrentes?
-            </h2>
+      <section className="bg-background-highlight-main border-t">
+        <ContainerWrapper className="flex flex-col items-center text-center ">
+          <h2>Faça seu pedido personalizado</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+            odio, quaerat provident culpa ab.
+          </p>
 
-            <Text variant="primaryForeground">
-              Modernize-se agora com o nosso serviço de software de ponta. Não
-              fique para trás, abrace a inovação e leve o seu negócio para o
-              próximo nível. Descubra como podemos ajudar você a alcançar o
-              sucesso digital.
-            </Text>
-
-            <Button variant="secondary" className="gap-1 mt-6">
-              Fazer pedido
-              <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+          <RedirectLink url="/">
+            <Button>
+              <span>Fazer pedido</span>
+              <ArrowRight className="h-4 w-4" />
             </Button>
+          </RedirectLink>
+
+          <Separator />
+
+          <div className="flex items-center justify-between w-full pt-4">
+            <div className="flex items-center gap-1">
+              <Cog className="text-primary h-4 w-4" />
+              <small className="font-medium text-sm">
+                Suporte 100% humanizado
+              </small>
+            </div>
+            <div className="flex items-center gap-1">
+              <Cog className="text-primary h-4 w-4" />
+              <small className="font-medium text-sm">
+                Suporte 100% humanizado
+              </small>
+            </div>{' '}
+            <div className="flex items-center gap-1">
+              <Cog className="text-primary h-4 w-4" />
+              <small className="font-medium text-sm">
+                Suporte 100% humanizado
+              </small>
+            </div>
           </div>
         </ContainerWrapper>
       </section>
