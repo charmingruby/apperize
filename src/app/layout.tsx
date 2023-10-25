@@ -1,8 +1,7 @@
-import { ClerkAuthProvider } from '@/providers/clerk'
 import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Chakra_Petch as ChakraPetch, Inter } from 'next/font/google'
-import { TrpcProvider } from '@/providers/trpc'
+import { Providers } from '@/providers'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,18 +26,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkAuthProvider>
-      <TrpcProvider>
-        <html lang="en" className="scroll-smooth ">
-          <body
-            className={`${inter.variable} ${alt.variable} 
+    <Providers>
+      <html lang="en" className="scroll-smooth ">
+        <body
+          className={`${inter.variable} ${alt.variable} 
         font-sans bg-grainy text-foreground scrollbar-thin scrollbar-track-background-highlight-main scrollbar-thumb-background-highlight-dark
       `}
-          >
-            <main>{children}</main>
-          </body>
-        </html>
-      </TrpcProvider>
-    </ClerkAuthProvider>
+        >
+          <main>{children}</main>
+        </body>
+      </html>
+    </Providers>
   )
 }

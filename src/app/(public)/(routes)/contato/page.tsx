@@ -80,7 +80,7 @@ export default function ContactPage() {
             <Separator />
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-2 items-center justify-between w-full">
+          <div className="flex flex-col lg:flex-row gap-3 items-center justify-between w-full">
             <CTAAnnotation
               icon={PencilLine}
               content="Produtos personalizados"
