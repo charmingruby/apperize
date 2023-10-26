@@ -31,6 +31,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "eslint": "8.48.0",
+    "eslint-config-next": "^13.5.6",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.289.0",
     "next": "13.4.19",
@@ -50,6 +51,7 @@
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
+    "encoding": "^0.1.13",
     "prisma": "^5.3.1",
     "tailwind-scrollbar": "^3.0.5"
   }
