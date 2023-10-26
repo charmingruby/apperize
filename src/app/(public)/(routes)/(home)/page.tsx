@@ -42,7 +42,6 @@ import budgetIllustration from '@/assets/img/illustrations/home-budget.svg'
 import { BudgetRequestTopic } from './components/budget-request-topic'
 import { RedirectLink } from '@/components/redirect-link'
 import { CreateRequestLink } from './components/create-request-link'
-import { prisma } from '@/libs/prisma'
 
 export const metadata = staticSEO({
   rawTitle: 'Desenvolvimento sob demanda de Software',
@@ -50,16 +49,9 @@ export const metadata = staticSEO({
     'Transformamos ideias em realidade digital. Somos uma software house dedicada a criar soluções personalizadas e inovadoras para atender às necessidades únicas do seu negócio.',
 })
 
-async function getData() {
-  return await prisma.user.findFirst()
-}
-
 export default async function Home() {
-  const data = await getData()
-
   return (
     <>
-      <pre>{JSON.stringify(data)}</pre>
       {/* Hero */}
       <section className="container pt-20 md:pt-28 flex flex-col lg:justify-center">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
