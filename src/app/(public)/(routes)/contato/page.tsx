@@ -58,7 +58,7 @@ export default function ContactPage() {
 
       {/* CTA */}
       <section className="bg-background-highlight-main border-t">
-        <ContainerWrapper className="flex flex-col items-center text-center py-10 lg:py-10">
+        <ContainerWrapper className="flex flex-col items-center text-center pb-10 lg:pb-10">
           <div className="max-w-2xl">
             <h2 className="font-semibold text-4xl">
               Faça seu pedido <TextHighlight>personalizado</TextHighlight>
