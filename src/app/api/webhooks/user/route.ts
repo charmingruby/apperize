@@ -37,6 +37,8 @@ async function handler(request: Request) {
     'svix-signature': headersList.get('svix-signature'),
   }
 
+  console.log('Payload: ', payload)
+
   const wh = new Webhook(webhookSecret)
   let evt: Event | null = null
 
@@ -51,6 +53,8 @@ async function handler(request: Request) {
   }
 
   const eventType: EventType = evt.type
+
+  console.log('Event type: ' + eventType)
 
   if (eventType === 'user.created' || eventType === 'user.updated') {
     const { id, ...attributes } = evt.data

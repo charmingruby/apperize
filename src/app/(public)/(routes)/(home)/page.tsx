@@ -59,6 +59,7 @@ export default async function Home() {
 
   return (
     <>
+      <pre>{JSON.stringify(data)}</pre>
       {/* Hero */}
       <section className="container pt-20 md:pt-28 flex flex-col lg:justify-center">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
