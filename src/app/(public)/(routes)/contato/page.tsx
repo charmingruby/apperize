@@ -28,28 +28,30 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <ContainerWrapper className="pt-24  lg:h-screen flex items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-full">
-          <div className="flex flex-col justify-center h-full">
-            <HeadingWrapper className="flex mb-8 lg:mb-8">
-              <HeadingContentWrapper>
-                <HeadingTitle>
-                  Fale <TextHighlight>Conosco</TextHighlight>
-                </HeadingTitle>
-                <HeadingDescription>
-                  Nossa equipe está sempre aqui para falar com você
-                </HeadingDescription>
-              </HeadingContentWrapper>
-            </HeadingWrapper>
+      <section className="">
+        <ContainerWrapper className="pt-24 lg:h-screen flex items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full h-full">
+            <div className="hidden lg:flex items-center justify-center w-full">
+              <Image src={heroImg} alt="Imagem de uma Start Up" />
+            </div>
 
-            <EmailForm />
-          </div>
+            <div className="flex flex-col justify-center h-full">
+              <HeadingWrapper className="flex mb-8 lg:mb-8">
+                <HeadingContentWrapper>
+                  <HeadingTitle>
+                    Fale <TextHighlight>Conosco</TextHighlight>
+                  </HeadingTitle>
+                  <HeadingDescription>
+                    Nossa equipe está sempre aqui para falar com você
+                  </HeadingDescription>
+                </HeadingContentWrapper>
+              </HeadingWrapper>
 
-          <div className="hidden lg:flex items-center justify-center w-full">
-            <Image src={heroImg} alt="Imagem de uma Start Up" />
+              <EmailForm />
+            </div>
           </div>
-        </div>
-      </ContainerWrapper>
+        </ContainerWrapper>
+      </section>
 
       {/* Contact board */}
       <ContainerWrapper className="lg:pt-10">
@@ -63,7 +65,7 @@ export default function ContactPage() {
             <h2 className="font-semibold text-4xl">
               Faça seu pedido <TextHighlight>personalizado</TextHighlight>
             </h2>
-            <Text className="text-muted-foreground mt-4 mb-8">
+            <Text className="mt-4 mb-8">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
               odio, quaerat provident culpa ab.
             </Text>

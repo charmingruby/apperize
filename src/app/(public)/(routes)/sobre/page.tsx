@@ -1,3 +1,12 @@
+/**
+ * External
+ */
+import Image from 'next/image'
+import { ArrowDown, ArrowRight, Code2 } from 'lucide-react'
+
+/**
+ * Internal
+ */
 import { Button } from '@/components/ui/button'
 import { ContainerWrapper } from '@/components/ui/container-wrapper'
 import {
@@ -8,149 +17,165 @@ import {
   HeadingWrapper,
 } from '@/components/ui/heading'
 import { Text } from '@/components/ui/text'
-import { Linkedin } from 'lucide-react'
+import gustavoDiasImage from '@/assets/img/team/gustavo-dias-profile.jpeg'
+import felipeBignotoImage from '@/assets/img/team/felipe-bignoto-profile.jpeg'
+import { TeamMember } from './components/team-member'
+import exampleImage from '@/assets/img/photos/developers-office.jpeg'
+import { Title } from '@/components/title'
+import { TextHighlight } from '@/components/text-highlight'
+import heroImage from '@/assets/img/heros/about.svg'
+import { RedirectLink } from '@/components/redirect-link'
 
 export default function About() {
   return (
     <>
-      {/* --- */}
       {/* Hero */}
-      <ContainerWrapper>
-        <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
-          <h1 className="text-transparent bg-clip-text bg-primary-gradient font-bold text-4xl">
-            Conheça a Apperize, onde as necessidade encontram os melhores
-            desenvolvedores.
-          </h1>
+      <ContainerWrapper className="flex items-center min-h-screen">
+        <div className="grid grid-cols-2">
+          <div>
+            <Image src={heroImage} alt="" />
+          </div>
 
-          <strong className="text-font-semibold text-xl">
-            Nossa missão é modernizar sua empresa de forma acessível.
-          </strong>
+          <div className="flex flex-col justify-center">
+            {/* Badge */}
+            <div className="flex items-center gap-2">
+              <div className="border border-border shadow-md rounded-md bg-background-highlight-dark text-primary w-fit p-2">
+                <Code2 className="h-8 w-8" />
+              </div>
 
-          <Text size="md" variant="lowOpacity">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam in
-            enim laboriosam reiciendis possimus sint blanditiis fugit, pariatur
-            tempore, nemo numquam amet deleniti. Quo, nihil ratione nulla eum
-            pariatur atque?
+              <div className="flex flex-col text-lg">
+                <span className="leading-tight">Somos uma</span>
+                <strong className="leading-tight">Software House</strong>
+              </div>
+            </div>
+
+            <div className="mt-12">
+              <h1 className="font-bold m-0 text-5xl/snug">
+                Solucionamos problemas com{' '}
+                <TextHighlight>Tecnologia</TextHighlight>
+              </h1>
+            </div>
+
+            <Text size="md" variant="lowOpacity" className="mt-8">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+              in enim laboriosam reiciendis possimus sint blanditiis fugit,
+              pariatur tempore, nemo numquam amet deleniti. Quo, nihil ratione
+              nulla eum pariatur atque?
+            </Text>
+
+            <div className="mt-16">
+              <RedirectLink url="/">
+                <div className="flex items-center gap-4">
+                  <div>
+                    <ArrowDown className="h-6 w-6 text-primary" />
+                  </div>
+
+                  <span className="font-medium">Leia mais</span>
+                </div>
+              </RedirectLink>
+            </div>
+          </div>
+        </div>
+      </ContainerWrapper>
+
+      {/* Description */}
+      <ContainerWrapper className="py-10 lg:py-10 bg-background-highlight-main rounded-xl shadow-sm border border-background-highlight-dark">
+        <div className="max-w-2xl mx-auto">
+          <Text className="text-center text-xl">
+            Somos uma software house dedicada a{' '}
+            <span className="font-semibold">
+              criar soluções acessíveis que resolvem problemas da vida real
+            </span>
+            . Nossa missão é tornar a tecnologia mais inclusiva, desenvolvendo
+            softwares inovadores que atendam às necessidades da população de
+            forma acessível e eficaz.
           </Text>
         </div>
       </ContainerWrapper>
 
-      {/* 2 positive topics */}
+      {/* Vision */}
       <ContainerWrapper className="grid grid-cols-2 gap-12">
-        {/* Dedicated team */}
         <div>
-          <div>image</div>
-          <div>
-            <strong>title</strong>
-            <small>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
-              doloribus, doloremque eum harum eos quidem sed nisi aspernatur in
-              cupiditate est ad! Culpa neque porro aperiam, natus exercitationem
-              error vitae.
-            </small>
-          </div>
+          <Image src={exampleImage} alt="" />
         </div>
 
-        {/* Wherever you are */}
         <div>
-          <div>image</div>
-          <div>
-            <strong>title</strong>
-            <small>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
-              doloribus, doloremque eum harum eos quidem sed nisi aspernatur in
-              cupiditate est ad! Culpa neque porro aperiam, natus exercitationem
-              error vitae.
-            </small>
-          </div>
+          <HeadingWrapper>
+            <HeadingAnnotation annotation="Nossa visão" />
+            <HeadingTitle> </HeadingTitle>
+          </HeadingWrapper>
         </div>
       </ContainerWrapper>
 
-      {/* 2 values */}
-      <section>
-        <ContainerWrapper>
-          <HeadingWrapper>
-            <HeadingAnnotation annotation="Nossos valores" />
+      {/* Mission */}
 
+      {/* Differential */}
+
+      {/* Why choose == values */}
+
+      {/* Team */}
+      <ContainerWrapper className="grid grid-cols-2 gap-12">
+        <div className="max-w-lg">
+          <HeadingWrapper>
+            <HeadingAnnotation annotation="Nosso time" />
             <HeadingContentWrapper>
-              <HeadingTitle>O que representamos</HeadingTitle>
+              <HeadingTitle>Conheça nossa equipe</HeadingTitle>
               <HeadingDescription>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
-                earum illum sunt, delectus dignissimos quo expedita nesciunt
-                cupiditate doloribus? Velit cum eveniet adipisci necessitatibus
-                alias voluptatibus accusantium nostrum totam error!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Excepturi laudantium a ipsam exercitationem totam perferendis
+                suscipit! Nesciunt perferendis optio aliquid corporis vitae
+                quod. Perspiciatis quasi laudantium placeat cum id debitis!
               </HeadingDescription>
             </HeadingContentWrapper>
           </HeadingWrapper>
 
-          <div className="grid grid-cols-2 gap-12">
-            {/* Value 1 */}
-            <div>
-              <div>image</div>
-              <div>
-                <strong>value one</strong>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                  adipisci itaque quasi neque impedit cumque molestias pariatur
-                  repellendus, est officia quo possimus perspiciatis debitis eum
-                  minima quidem enim sed quas.
-                </p>
-              </div>
-            </div>
-            {/* Value 2 */}
-            <div>
-              <div>image</div>
-              <div>
-                <strong>value one</strong>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                  adipisci itaque quasi neque impedit cumque molestias pariatur
-                  repellendus, est officia quo possimus perspiciatis debitis eum
-                  minima quidem enim sed quas.
-                </p>
-              </div>
-            </div>
-          </div>
-        </ContainerWrapper>
-      </section>
-
-      {/* Team */}
-      <ContainerWrapper>
-        <HeadingWrapper>
-          <HeadingTitle>Nossos time</HeadingTitle>
-        </HeadingWrapper>
-
-        <div>
-          {/* Person */}
-          <div>
-            <div>image</div>
-            <div>
-              <strong>name</strong>
-              <small>role</small>
-            </div>
-            <div>
-              <div>
-                <Linkedin />
-              </div>
-            </div>
+          <div className="flex gap-4">
+            <Button variant="outline">Sobre nos</Button>
+            <Button>Posiçoes abertas</Button>
           </div>
         </div>
+
+        <div className="grid grid-cols-2 gap-8">
+          <TeamMember
+            avatar={gustavoDiasImage}
+            name="Gustavo Dias"
+            role="Fundador & CEO"
+            description="Desenvolvedor Full Stack React, Node e Elixir."
+            linkedinUrl="/"
+            githubUrl="/"
+          />
+          <TeamMember
+            avatar={felipeBignotoImage}
+            name="Felipe Bignoto"
+            role="Desenvolvedor"
+            description="Desenvolvedor Front End React."
+            linkedinUrl="/"
+            githubUrl="/"
+          />
+        </div>
       </ContainerWrapper>
+
+      {/* Positions */}
+      <ContainerWrapper></ContainerWrapper>
 
       {/* CTA */}
       <section className="bg-background-highlight-main border-t border-background-highlight-dark">
         <ContainerWrapper>
-          <h2>Quer trabalhar conosco?</h2>
-          <Text>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
-            praesentium reiciendis illum voluptatibus libero amet alias nobis
-            itaque, fugiat, eum molestias sit temporibus officiis vero possimus?
-            Sed minima laboriosam facere!
-          </Text>
-          <Button>Contate-nos</Button>
+          <div className="max-w-2xl mx-auto flex flex-col text-center items-center">
+            <h2 className="text-4xl font-semibold">Quer trabalhar conosco?</h2>
+            <Text className="mt-4 mb-8">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
+              praesentium reiciendis illum voluptatibus libero amet alias nobis
+              itaque, fugiat, eum molestias sit temporibus officiis vero
+              possimus? Sed minima laboriosam facere!
+            </Text>
+            <Button size="lg" className="text-base">
+              Contate-nos
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
         </ContainerWrapper>
       </section>
-      {/* --- */}
     </>
   )
 }

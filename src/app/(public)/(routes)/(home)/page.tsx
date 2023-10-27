@@ -38,8 +38,6 @@ import heroImg from '@/assets/img/heros/home.png'
 import Link from 'next/link'
 import { ServicesTypewriter } from './components/services-typewriter'
 import { staticSEO } from '@/components/seo/static'
-import budgetIllustration from '@/assets/img/illustrations/home-budget.svg'
-import { BudgetRequestTopic } from './components/budget-request-topic'
 import { RedirectLink } from '@/components/redirect-link'
 import { CreateRequestLink } from './components/create-request-link'
 
@@ -64,7 +62,7 @@ export default async function Home() {
             </h1>
 
             {/* Description */}
-            <p className="text-muted-foreground text-center leading-relaxed text-lg mb-6 max-w-2xl">
+            <p className="text-center leading-relaxed text-lg mb-6 max-w-2xl">
               Transformamos ideias em realidade digital. Somos uma software
               house dedicada a criar soluções personalizadas e inovadoras para
               atender às necessidades únicas do seu negócio.
@@ -88,7 +86,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
       {/* Illustration */}
       <ContainerWrapper className="flex justify-center pb-0 pt-8 md:pt-12">
         <Image
@@ -108,7 +105,7 @@ export default async function Home() {
               <HeadingAnnotation annotation="Plataforma feita para o cliente" />
               <HeadingContentWrapper>
                 <HeadingTitle>Desenvolvemos juntos de você</HeadingTitle>
-                <HeadingDescription>
+                <HeadingDescription className="text-foreground">
                   Queremos que você se sinta confortável ao fazer um pedido.
                   Para isso, mantemos você sempre atualizado sobre o
                   desenvolvimento do seu produto. Isso garante que suas
@@ -124,46 +121,6 @@ export default async function Home() {
         </div>
 
         <USP />
-      </ContainerWrapper>
-
-      {/* About */}
-      <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div className="hidden lg:flex items-center">
-          <Image
-            src={developersOffice}
-            alt="Desenvolvedores programando"
-            className="rounded-xl"
-          />
-        </div>
-
-        <div className="flex flex-col justify-center lg:justify-normal text-center lg:text-left">
-          <HeadingWrapper className="mb-6">
-            <HeadingTitle>Quem somos?</HeadingTitle>
-          </HeadingWrapper>
-
-          <div className="mb-8">
-            <Text variant="lowOpacity" size="md" className="leading-loose">
-              Somos uma software house em ascensão que tomou a decisão
-              estratégica de evoluir para uma empresa estabelecida devido à
-              crescente demanda por nossos serviços como freelancers. Com uma
-              trajetória marcada pelo compromisso com a qualidade e inovação,
-              percebemos que a transição para uma empresa nos permitiria atender
-              nossos clientes de maneira mais abrangente e eficaz. Estamos
-              ansiosos para continuar crescendo, expandindo nossa equipe
-              talentosa e oferecendo soluções de software excepcionais que
-              impulsionem o sucesso de nossos clientes.
-            </Text>
-          </div>
-
-          <div className="flex justify-center lg:justify-normal w-full">
-            <RedirectLink url="/sobre">
-              <Button size="lg" className="flex text-base w-full lg:w-fit">
-                <span>Veja mais</span>
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </RedirectLink>
-          </div>
-        </div>
       </ContainerWrapper>
 
       {/* Services */}
@@ -203,7 +160,7 @@ export default async function Home() {
             </HeadingWrapper>
 
             <div className="mb-8">
-              <Text variant="lowOpacity">
+              <Text>
                 Nosso compromisso é entregar soluções de software altamente
                 personalizadas, perfeitamente adaptadas às particularidades do
                 seu negócio. Contando com nossa extensa experiência e uma equipe
@@ -257,43 +214,43 @@ export default async function Home() {
         </ContainerWrapper>
       </section>
 
-      {/* Budget */}
-      <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 pb-0 lg:pb-0">
-        {/* Illustration */}
-        <div className="hidden lg:block">
-          <Image src={budgetIllustration} alt="ilustração do orçamento" />
+      {/* About */}
+      <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:pb-0">
+        <div className="hidden lg:flex items-center">
+          <Image
+            src={developersOffice}
+            alt="Desenvolvedores programando"
+            className="rounded-xl"
+          />
         </div>
 
-        {/* Content */}
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center lg:justify-normal text-center lg:text-left">
           <HeadingWrapper className="mb-6">
-            <HeadingAnnotation annotation="Solicitar orçamento" />
-            <HeadingContentWrapper>
-              <HeadingTitle>
-                Para cada um <TextHighlight>caso</TextHighlight>, um{' '}
-                <TextHighlight>sucesso</TextHighlight>
-              </HeadingTitle>
-            </HeadingContentWrapper>
+            <HeadingTitle>Quem somos?</HeadingTitle>
           </HeadingWrapper>
 
-          <div className="mb-8 space-y-6">
-            <Text variant="lowOpacity">
-              Está pronto para colaborar conosco na criação do seu software?
-              Estamos empenhados em encontrar as opções mais vantajosas, visando
-              reduzir custos e elevar a satisfação do cliente ao máximo.
+          <div className="mb-8">
+            <Text variant="lowOpacity" size="md" className="leading-loose">
+              Somos uma software house em ascensão que tomou a decisão
+              estratégica de evoluir para uma empresa estabelecida devido à
+              crescente demanda por nossos serviços como freelancers. Com uma
+              trajetória marcada pelo compromisso com a qualidade e inovação,
+              percebemos que a transição para uma empresa nos permitiria atender
+              nossos clientes de maneira mais abrangente e eficaz. Estamos
+              ansiosos para continuar crescendo, expandindo nossa equipe
+              talentosa e oferecendo soluções de software excepcionais que
+              impulsionem o sucesso de nossos clientes.
             </Text>
-
-            <div className="space-y-3">
-              <Separator />
-              <div className="space-y-3">
-                <BudgetRequestTopic topic="De acordo com o valor máximo estabelecido." />
-                <BudgetRequestTopic topic="Gestão eficaz de custos nos permite oferecer preços acessíveis e alta qualidade." />
-              </div>
-              <Separator />
-            </div>
           </div>
 
-          <CreateRequestLink label="Solicitar orçamento" />
+          <div className="flex justify-center lg:justify-normal w-full">
+            <RedirectLink url="/sobre">
+              <Button size="lg" className="flex text-base w-full lg:w-fit">
+                <span>Veja mais</span>
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </RedirectLink>
+          </div>
         </div>
       </ContainerWrapper>
 
@@ -311,12 +268,13 @@ export default async function Home() {
 
         <DoubtsAccordion />
       </ContainerWrapper>
+
       {/* Contact */}
       <ContainerWrapper className="flex items-center justify-center bg-background-highlight-main border border-background-highlight-dark rounded-xl py-10 lg:py-10">
-        <div className="max-w-3xl flex flex-col items-center justify-center text-center">
+        <div className="max-w-xl flex flex-col items-center justify-center text-center">
           <Headphones className="text-primary h-12 w-12 mb-4" />
           <h2 className="text-2xl font-semibold mb-6">Entre em contato</h2>
-          <Text className="mb-8 leading-normal text-muted-foreground">
+          <Text className="mb-8 leading-normal" variant="lowOpacity" size="md">
             Estamos aqui para ajudar. Entre em contato para suporte técnico
             personalizado em nossos produtos e serviços.
           </Text>

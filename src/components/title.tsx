@@ -5,7 +5,7 @@ interface TitleProps {
 
 export function Title({ title, underline = true }: TitleProps) {
   return (
-    <div className="w-fit space-y-4 mb-6 ">
+    <div className="w-fit space-y-4 mb-4 ">
       <span className="text-primary tracking-widest font-semibold block leading-snug">
         {title}
       </span>
