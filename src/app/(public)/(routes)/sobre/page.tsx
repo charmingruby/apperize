@@ -2,7 +2,14 @@
  * External
  */
 import Image from 'next/image'
-import { ArrowDown, ArrowRight, Code2 } from 'lucide-react'
+import {
+  ArrowDown,
+  ArrowRight,
+  Clock,
+  Code2,
+  MapPin,
+  MessagesSquare,
+} from 'lucide-react'
 
 /**
  * Internal
@@ -21,10 +28,10 @@ import gustavoDiasImage from '@/assets/img/team/gustavo-dias-profile.jpeg'
 import felipeBignotoImage from '@/assets/img/team/felipe-bignoto-profile.jpeg'
 import { TeamMember } from './components/team-member'
 import exampleImage from '@/assets/img/photos/developers-office.jpeg'
-import { Title } from '@/components/title'
 import { TextHighlight } from '@/components/text-highlight'
 import heroImage from '@/assets/img/heros/about.svg'
 import { RedirectLink } from '@/components/redirect-link'
+import { ValueItem } from './components/value-item'
 
 export default function About() {
   return (
@@ -99,19 +106,93 @@ export default function About() {
           <Image src={exampleImage} alt="" />
         </div>
 
-        <div>
+        <div className="flex flex-col justify-center">
           <HeadingWrapper>
-            <HeadingAnnotation annotation="Nossa visão" />
-            <HeadingTitle> </HeadingTitle>
+            <HeadingAnnotation annotation="Visão" />
+            <HeadingTitle>Nossa visão</HeadingTitle>
           </HeadingWrapper>
+
+          <Text>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
+            deleniti obcaecati quibusdam minima praesentium animi necessitatibus
+            recusandae explicabo, quo exercitationem cupiditate perferendis!
+            Ipsa quasi aperiam labore tempora sequi odit delectus.
+          </Text>
         </div>
       </ContainerWrapper>
 
       {/* Mission */}
+      <ContainerWrapper className="grid grid-cols-2 gap-12">
+        <div className="flex flex-col justify-center">
+          <HeadingWrapper>
+            <HeadingAnnotation annotation="Missão" />
+            <HeadingTitle>Nossa missão</HeadingTitle>
+          </HeadingWrapper>
 
-      {/* Differential */}
+          <Text>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
+            deleniti obcaecati quibusdam minima praesentium animi necessitatibus
+            recusandae explicabo, quo exercitationem cupiditate perferendis!
+            Ipsa quasi aperiam labore tempora sequi odit delectus.
+          </Text>
+        </div>
 
-      {/* Why choose == values */}
+        <div>
+          <Image src={exampleImage} alt="" />
+        </div>
+      </ContainerWrapper>
+
+      {/* Values */}
+      <ContainerWrapper>
+        <HeadingWrapper className="text-center items-center max-w-3xl mx-auto">
+          <HeadingAnnotation annotation="Nossos valores" />
+          <HeadingContentWrapper>
+            <HeadingTitle>
+              Somos uma equipe ambiciosa e inteligente com uma missão
+              compartilhada
+            </HeadingTitle>
+            <HeadingDescription>
+              Nossos valores compartilhados nos mantêm conectados e nos guiam
+              como uma equipe.
+            </HeadingDescription>
+          </HeadingContentWrapper>
+        </HeadingWrapper>
+
+        <div className="grid grid-cols-3 gap-8">
+          <ValueItem
+            icon={MessagesSquare}
+            title="Conectar com clientes"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
+          />
+          <ValueItem
+            icon={MessagesSquare}
+            title="Conectar com clientes"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
+          />
+          <ValueItem
+            icon={MessagesSquare}
+            title="Conectar com clientes"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
+          />
+          <ValueItem
+            icon={MessagesSquare}
+            title="Conectar com clientes"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
+          />
+          <ValueItem
+            icon={MessagesSquare}
+            title="Conectar com clientes"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
+          />
+          <ValueItem
+            icon={MessagesSquare}
+            title="Conectar com clientes"
+            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
+          />
+        </div>
+      </ContainerWrapper>
+
+      {/* Depositions */}
 
       {/* Team */}
       <ContainerWrapper className="grid grid-cols-2 gap-12">
@@ -156,7 +237,47 @@ export default function About() {
       </ContainerWrapper>
 
       {/* Positions */}
-      <ContainerWrapper></ContainerWrapper>
+      <ContainerWrapper>
+        <HeadingWrapper className="text-center items-center max-w-3xl mx-auto">
+          <HeadingAnnotation annotation="Venha trabalhar conosco" />
+          <HeadingContentWrapper>
+            <HeadingTitle>Posições abertas para a equipe</HeadingTitle>
+            <HeadingDescription>
+              Nossa equipe está contratando e nossos membros têm aprendido muito
+              conosco. Junte-se a nós!
+            </HeadingDescription>
+          </HeadingContentWrapper>
+        </HeadingWrapper>
+
+        <div>
+          <div className="flex justify-between">
+            <div className="flex flex-col">
+              <span className="text-primary">Desenvolvimento de Software</span>
+              <strong>Desenvolvedor Front End</strong>
+              <p>
+                Estamos procurando um Desenvolvedor React para nossa equipe.
+              </p>
+
+              <div className="flex items-center">
+                <div className="flex items-center">
+                  <MapPin />
+                  Remoto
+                </div>
+
+                <div className="flex items-center">
+                  <Clock />
+                  Horário flexível
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center">
+              <span>Entrar em contato</span>
+              <ArrowRight />
+            </div>
+          </div>
+        </div>
+      </ContainerWrapper>
 
       {/* CTA */}
       <section className="bg-background-highlight-main border-t border-background-highlight-dark">

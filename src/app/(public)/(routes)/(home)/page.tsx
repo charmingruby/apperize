@@ -86,6 +86,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
       {/* Illustration */}
       <ContainerWrapper className="flex justify-center pb-0 pt-8 md:pt-12">
         <Image
