@@ -1,10 +1,4 @@
-import { ElementType } from 'react'
-
-interface ValueItemProps {
-  icon: ElementType
-  title: string
-  description: string
-}
+import { ValueItemProps } from './value-list'
 
 export function ValueItem({ icon: Icon, title, description }: ValueItemProps) {
   return (
@@ -15,7 +9,7 @@ export function ValueItem({ icon: Icon, title, description }: ValueItemProps) {
 
       <div className="flex flex-col gap-2">
         <strong className="text-xl">{title}</strong>
-        <p className="text-muted-foreground">{description}</p>
+        <p className="text-muted-foreground leading-relaxed">{description}</p>
       </div>
     </div>
   )

@@ -225,22 +225,19 @@ export default async function Home() {
           />
         </div>
 
-        <div className="flex flex-col justify-center lg:justify-normal text-center lg:text-left">
+        <div className="flex flex-col justify-center text-center h-full lg:text-left">
           <HeadingWrapper className="mb-6">
             <HeadingTitle>Quem somos?</HeadingTitle>
           </HeadingWrapper>
 
           <div className="mb-8">
-            <Text variant="lowOpacity" size="md" className="leading-loose">
-              Somos uma software house em ascensão que tomou a decisão
-              estratégica de evoluir para uma empresa estabelecida devido à
-              crescente demanda por nossos serviços como freelancers. Com uma
-              trajetória marcada pelo compromisso com a qualidade e inovação,
-              percebemos que a transição para uma empresa nos permitiria atender
-              nossos clientes de maneira mais abrangente e eficaz. Estamos
-              ansiosos para continuar crescendo, expandindo nossa equipe
-              talentosa e oferecendo soluções de software excepcionais que
-              impulsionem o sucesso de nossos clientes.
+            <Text className="leading-loose">
+              Uma software house em ascensão que evoluiu para uma empresa
+              estabelecida devido à crescente demanda por nossos serviços como
+              freelancers, com compromisso com qualidade, inovação e expansão.
+              Estamos focados em oferecer soluções de software excepcionais para
+              impulsionar o sucesso de nossos clientes, ansiosos para crescer
+              ainda mais e fortalecer nossa equipe talentosa.
             </Text>
           </div>
 

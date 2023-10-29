@@ -1,3 +1,13 @@
-export function PurpleFilter() {
-  return <div className="absolute bg-primary w-full h-full opacity-50 z-20" />
+import { cn } from '@/libs/shadcn'
+
+interface PurpleFilterProps {
+  className?: string
+}
+
+export function PurpleFilter({ className }: PurpleFilterProps) {
+  return (
+    <div
+      className={cn('absolute bg-primary w-full opacity-50 z-20', className)}
+    />
+  )
 }

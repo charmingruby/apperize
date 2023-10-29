@@ -2,14 +2,7 @@
  * External
  */
 import Image from 'next/image'
-import {
-  ArrowDown,
-  ArrowRight,
-  Clock,
-  Code2,
-  MapPin,
-  MessagesSquare,
-} from 'lucide-react'
+import { ArrowDown, ArrowRight, ArrowUpRight, Code2 } from 'lucide-react'
 
 /**
  * Internal
@@ -31,7 +24,8 @@ import exampleImage from '@/assets/img/photos/developers-office.jpeg'
 import { TextHighlight } from '@/components/text-highlight'
 import heroImage from '@/assets/img/heros/about.svg'
 import { RedirectLink } from '@/components/redirect-link'
-import { ValueItem } from './components/value-item'
+import { PurpleFilter } from '@/components/purple-filter'
+import { ValueItemList } from './components/value-list'
 
 export default function About() {
   return (
@@ -40,7 +34,12 @@ export default function About() {
       <ContainerWrapper className="flex items-center min-h-screen">
         <div className="grid grid-cols-2">
           <div>
-            <Image src={heroImage} alt="" />
+            <Image
+              src={heroImage}
+              alt="Time de uma Start Up trabalhando em conjunto"
+              priority
+              quality={100}
+            />
           </div>
 
           <div className="flex flex-col justify-center">
@@ -63,15 +62,16 @@ export default function About() {
               </h1>
             </div>
 
-            <Text size="md" variant="lowOpacity" className="mt-8">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
-              in enim laboriosam reiciendis possimus sint blanditiis fugit,
-              pariatur tempore, nemo numquam amet deleniti. Quo, nihil ratione
-              nulla eum pariatur atque?
+            <Text className="mt-8">
+              Como uma startup em ascensão, nossa plataforma oferece soluções
+              tecnológicas personalizadas e inovadoras para vencer desafios e
+              impulsionar seu sucesso. Com uma paixão por inovação e uma
+              abordagem ágil, estamos prontos para liderar a revolução
+              tecnológica ao seu lado.
             </Text>
 
             <div className="mt-16">
-              <RedirectLink url="/">
+              <RedirectLink url="#description">
                 <div className="flex items-center gap-4">
                   <div>
                     <ArrowDown className="h-6 w-6 text-primary" />
@@ -86,7 +86,10 @@ export default function About() {
       </ContainerWrapper>
 
       {/* Description */}
-      <ContainerWrapper className="py-10 lg:py-10 bg-background-highlight-main rounded-xl shadow-sm border border-background-highlight-dark">
+      <ContainerWrapper
+        id="description"
+        className=" bg-background-highlight-main rounded-xl shadow-sm border border-background-highlight-dark"
+      >
         <div className="max-w-2xl mx-auto">
           <Text className="text-center text-xl">
             Somos uma software house dedicada a{' '}
@@ -102,50 +105,86 @@ export default function About() {
 
       {/* Vision */}
       <ContainerWrapper className="grid grid-cols-2 gap-12">
-        <div>
-          <Image src={exampleImage} alt="" />
+        <div className="relative rounded-xl">
+          <PurpleFilter className="rounded-xl aspect-video" />
+          <Image
+            src={exampleImage}
+            alt=""
+            className="aspect-video rounded-xl"
+          />
         </div>
 
-        <div className="flex flex-col justify-center">
-          <HeadingWrapper>
-            <HeadingAnnotation annotation="Visão" />
-            <HeadingTitle>Nossa visão</HeadingTitle>
-          </HeadingWrapper>
+        <div className="flex flex-col justify-center gap-8">
+          <div>
+            <HeadingWrapper className="mb-4">
+              <HeadingAnnotation annotation="Visão" />
+              <HeadingTitle>Nossa visão</HeadingTitle>
+            </HeadingWrapper>
 
-          <Text>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
-            deleniti obcaecati quibusdam minima praesentium animi necessitatibus
-            recusandae explicabo, quo exercitationem cupiditate perferendis!
-            Ipsa quasi aperiam labore tempora sequi odit delectus.
-          </Text>
+            <Text>
+              Nossa visão é ser líderes na transformação digital, capacitando
+              empresas a abraçar a inovação de maneira acessível, impulsionando
+              o crescimento e a competitividade. Queremos ser o parceiro
+              estratégico que as empresas confiam para alcançar o sucesso no
+              mundo digital.
+            </Text>
+          </div>
+
+          <RedirectLink url="#vision">
+            <button className="flex items-center gap-4">
+              <div>
+                <ArrowDown className="h-6 w-6 text-primary" />
+              </div>
+
+              <span className="font-medium">Missão</span>
+            </button>{' '}
+          </RedirectLink>
         </div>
       </ContainerWrapper>
 
       {/* Mission */}
-      <ContainerWrapper className="grid grid-cols-2 gap-12">
-        <div className="flex flex-col justify-center">
-          <HeadingWrapper>
-            <HeadingAnnotation annotation="Missão" />
-            <HeadingTitle>Nossa missão</HeadingTitle>
-          </HeadingWrapper>
+      <ContainerWrapper className="grid grid-cols-2 gap-12" id="vision">
+        <div className="flex flex-col justify-center gap-8">
+          <div>
+            <HeadingWrapper className="mb-4">
+              <HeadingAnnotation annotation="Missão" />
+              <HeadingTitle>Nossa missão</HeadingTitle>
+            </HeadingWrapper>
 
-          <Text>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
-            deleniti obcaecati quibusdam minima praesentium animi necessitatibus
-            recusandae explicabo, quo exercitationem cupiditate perferendis!
-            Ipsa quasi aperiam labore tempora sequi odit delectus.
-          </Text>
+            <Text>
+              Nossa missão é criar soluções de software personalizadas que
+              atendam às necessidades específicas das empresas, promovendo a
+              inclusão digital e fortalecendo a eficiência e a competitividade.
+              Buscamos ser o parceiro que capacita empresas de todos os tamanhos
+              a alcançarem crescimento e sucesso no ambiente digital.
+            </Text>
+          </div>
+
+          <RedirectLink url="#team">
+            <button className="flex items-center gap-4">
+              <div>
+                <ArrowDown className="h-6 w-6 text-primary" />
+              </div>
+
+              <span className="font-medium">Equipe</span>
+            </button>{' '}
+          </RedirectLink>
         </div>
 
-        <div>
-          <Image src={exampleImage} alt="" />
+        <div className="relative rounded-xl">
+          <PurpleFilter className="rounded-xl aspect-video" />
+          <Image
+            src={exampleImage}
+            alt=""
+            className="aspect-video rounded-xl"
+          />
         </div>
       </ContainerWrapper>
 
       {/* Values */}
-      <ContainerWrapper>
+      <ContainerWrapper id="team">
         <HeadingWrapper className="text-center items-center max-w-3xl mx-auto">
-          <HeadingAnnotation annotation="Nossos valores" />
+          <HeadingAnnotation annotation="Valores" />
           <HeadingContentWrapper>
             <HeadingTitle>
               Somos uma equipe ambiciosa e inteligente com uma missão
@@ -158,38 +197,7 @@ export default function About() {
           </HeadingContentWrapper>
         </HeadingWrapper>
 
-        <div className="grid grid-cols-3 gap-8">
-          <ValueItem
-            icon={MessagesSquare}
-            title="Conectar com clientes"
-            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
-          />
-          <ValueItem
-            icon={MessagesSquare}
-            title="Conectar com clientes"
-            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
-          />
-          <ValueItem
-            icon={MessagesSquare}
-            title="Conectar com clientes"
-            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
-          />
-          <ValueItem
-            icon={MessagesSquare}
-            title="Conectar com clientes"
-            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
-          />
-          <ValueItem
-            icon={MessagesSquare}
-            title="Conectar com clientes"
-            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
-          />
-          <ValueItem
-            icon={MessagesSquare}
-            title="Conectar com clientes"
-            description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime iusto voluptatum harum aliquam ipsum illo porro unde, saepe sit temporibus dicta, enim accusantium sequi ipsam, quod minima exercitationem et culpa."
-          />
-        </div>
+        <ValueItemList />
       </ContainerWrapper>
 
       {/* Depositions */}
@@ -197,22 +205,25 @@ export default function About() {
       {/* Team */}
       <ContainerWrapper className="grid grid-cols-2 gap-12">
         <div className="max-w-lg">
-          <HeadingWrapper>
-            <HeadingAnnotation annotation="Nosso time" />
-            <HeadingContentWrapper>
-              <HeadingTitle>Conheça nossa equipe</HeadingTitle>
-              <HeadingDescription>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Excepturi laudantium a ipsam exercitationem totam perferendis
-                suscipit! Nesciunt perferendis optio aliquid corporis vitae
-                quod. Perspiciatis quasi laudantium placeat cum id debitis!
-              </HeadingDescription>
-            </HeadingContentWrapper>
+          <HeadingWrapper className="mb-0">
+            <HeadingAnnotation annotation="Equipe" />
+            <HeadingTitle>Conheça nossa equipe</HeadingTitle>
           </HeadingWrapper>
 
+          <Text className="mt-4 mb-8">
+            Nossa equipe, embora ainda compacta, é repleta de paixão e
+            habilidades. Com a assinatura de desenvolvimento da nossa startup,
+            sua equipe terá acesso direto à nossa expertise. Vamos começar essa
+            jornada juntos.
+          </Text>
+
           <div className="flex gap-4">
-            <Button variant="outline">Sobre nos</Button>
-            <Button>Posiçoes abertas</Button>
+            <Button variant="outline" size="lg" className="text-base">
+              O que fazemos
+            </Button>
+            <Button size="lg" className="text-base">
+              Trabalhe conosco <ArrowRight className="h-4 w-4" />
+            </Button>
           </div>
         </div>
 
@@ -236,64 +247,29 @@ export default function About() {
         </div>
       </ContainerWrapper>
 
-      {/* Positions */}
-      <ContainerWrapper>
-        <HeadingWrapper className="text-center items-center max-w-3xl mx-auto">
-          <HeadingAnnotation annotation="Venha trabalhar conosco" />
-          <HeadingContentWrapper>
-            <HeadingTitle>Posições abertas para a equipe</HeadingTitle>
-            <HeadingDescription>
-              Nossa equipe está contratando e nossos membros têm aprendido muito
-              conosco. Junte-se a nós!
-            </HeadingDescription>
-          </HeadingContentWrapper>
-        </HeadingWrapper>
-
-        <div>
-          <div className="flex justify-between">
-            <div className="flex flex-col">
-              <span className="text-primary">Desenvolvimento de Software</span>
-              <strong>Desenvolvedor Front End</strong>
-              <p>
-                Estamos procurando um Desenvolvedor React para nossa equipe.
-              </p>
-
-              <div className="flex items-center">
-                <div className="flex items-center">
-                  <MapPin />
-                  Remoto
-                </div>
-
-                <div className="flex items-center">
-                  <Clock />
-                  Horário flexível
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-center">
-              <span>Entrar em contato</span>
-              <ArrowRight />
-            </div>
-          </div>
-        </div>
-      </ContainerWrapper>
-
       {/* CTA */}
       <section className="bg-background-highlight-main border-t border-background-highlight-dark">
         <ContainerWrapper>
           <div className="max-w-2xl mx-auto flex flex-col text-center items-center">
-            <h2 className="text-4xl font-semibold">Quer trabalhar conosco?</h2>
+            <h2 className="text-4xl font-semibold">Conecte-se conosco</h2>
             <Text className="mt-4 mb-8">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
-              praesentium reiciendis illum voluptatibus libero amet alias nobis
-              itaque, fugiat, eum molestias sit temporibus officiis vero
-              possimus? Sed minima laboriosam facere!
+              Estamos ansiosos para ouvir sobre suas ideias, projetos e
+              desafios. Entre em contato com nossa equipe para iniciar uma
+              conversa que pode levar sua startup tecnológica a novos patamares.
+              Juntos, vamos moldar o futuro da inovação.
             </Text>
-            <Button size="lg" className="text-base">
-              Contate-nos
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+
+            <div className="flex items-center gap-4">
+              <Button size="lg" variant="outline" className="text-base">
+                WhatsApp
+                <ArrowUpRight className="h-4 w-4" />
+              </Button>
+
+              <Button size="lg" className="text-base">
+                Contate-nos
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
           </div>
         </ContainerWrapper>
       </section>
