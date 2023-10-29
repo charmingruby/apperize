@@ -1,7 +1,7 @@
-import { Logo } from '@/app/(public)/components/header/logo'
-import { Menu } from 'lucide-react'
+import { Logo } from '@/app/(public)/components/navigation/header/logo'
 import { MainNav } from './main-nav'
 import { Actions } from './actions'
+import { MenuButton } from './menu-button'
 
 export function Header() {
   return (
@@ -13,9 +13,7 @@ export function Header() {
         </div>
         <Actions />
 
-        <div className="flex lg:hidden">
-          <Menu />
-        </div>
+        <MenuButton />
       </div>
     </header>
   )

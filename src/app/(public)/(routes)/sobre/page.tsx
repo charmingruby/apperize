@@ -2,7 +2,7 @@
  * External
  */
 import Image from 'next/image'
-import { ArrowDown, ArrowRight, ArrowUpRight, Code2 } from 'lucide-react'
+import { ArrowRight, ArrowUpRight } from 'lucide-react'
 
 /**
  * Internal
@@ -26,14 +26,16 @@ import heroImage from '@/assets/img/heros/about.svg'
 import { RedirectLink } from '@/components/redirect-link'
 import { PurpleFilter } from '@/components/purple-filter'
 import { ValueItemList } from './components/value-list'
+import { ActionAreaBadge } from './components/action-area-badge'
+import { NextSectionButton } from './components/next-section-button'
 
 export default function About() {
   return (
     <>
       {/* Hero */}
       <ContainerWrapper className="flex items-center min-h-screen">
-        <div className="grid grid-cols-2">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="order-last lg:order-first">
             <Image
               src={heroImage}
               alt="Time de uma Start Up trabalhando em conjunto"
@@ -42,21 +44,11 @@ export default function About() {
             />
           </div>
 
-          <div className="flex flex-col justify-center">
-            {/* Badge */}
-            <div className="flex items-center gap-2">
-              <div className="border border-border shadow-md rounded-md bg-background-highlight-dark text-primary w-fit p-2">
-                <Code2 className="h-8 w-8" />
-              </div>
-
-              <div className="flex flex-col text-lg">
-                <span className="leading-tight">Somos uma</span>
-                <strong className="leading-tight">Software House</strong>
-              </div>
-            </div>
+          <div className="flex flex-col justify-center pt-12">
+            <ActionAreaBadge />
 
             <div className="mt-12">
-              <h1 className="font-bold m-0 text-5xl/snug">
+              <h1 className="font-bold m-0 text-4xl lg:text-5xl/snug">
                 Solucionamos problemas com{' '}
                 <TextHighlight>Tecnologia</TextHighlight>
               </h1>
@@ -70,17 +62,7 @@ export default function About() {
               tecnológica ao seu lado.
             </Text>
 
-            <div className="mt-16">
-              <RedirectLink url="#description">
-                <div className="flex items-center gap-4">
-                  <div>
-                    <ArrowDown className="h-6 w-6 text-primary" />
-                  </div>
-
-                  <span className="font-medium">Leia mais</span>
-                </div>
-              </RedirectLink>
-            </div>
+            <NextSectionButton label="Leia mais" nextSectionId="#description" />
           </div>
         </div>
       </ContainerWrapper>
@@ -104,8 +86,8 @@ export default function About() {
       </ContainerWrapper>
 
       {/* Vision */}
-      <ContainerWrapper className="grid grid-cols-2 gap-12">
-        <div className="relative rounded-xl">
+      <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="relative rounded-xl order-last lg:order-first">
           <PurpleFilter className="rounded-xl aspect-video" />
           <Image
             src={exampleImage}
@@ -130,20 +112,15 @@ export default function About() {
             </Text>
           </div>
 
-          <RedirectLink url="#vision">
-            <button className="flex items-center gap-4">
-              <div>
-                <ArrowDown className="h-6 w-6 text-primary" />
-              </div>
-
-              <span className="font-medium">Missão</span>
-            </button>{' '}
-          </RedirectLink>
+          <NextSectionButton label="Missão" nextSectionId="#vision" />
         </div>
       </ContainerWrapper>
 
       {/* Mission */}
-      <ContainerWrapper className="grid grid-cols-2 gap-12" id="vision">
+      <ContainerWrapper
+        className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+        id="vision"
+      >
         <div className="flex flex-col justify-center gap-8">
           <div>
             <HeadingWrapper className="mb-4">
@@ -160,15 +137,7 @@ export default function About() {
             </Text>
           </div>
 
-          <RedirectLink url="#team">
-            <button className="flex items-center gap-4">
-              <div>
-                <ArrowDown className="h-6 w-6 text-primary" />
-              </div>
-
-              <span className="font-medium">Equipe</span>
-            </button>{' '}
-          </RedirectLink>
+          <NextSectionButton label="Equipe" nextSectionId="#team" />
         </div>
 
         <div className="relative rounded-xl">
@@ -203,7 +172,7 @@ export default function About() {
       {/* Depositions */}
 
       {/* Team */}
-      <ContainerWrapper className="grid grid-cols-2 gap-12">
+      <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="max-w-lg">
           <HeadingWrapper className="mb-0">
             <HeadingAnnotation annotation="Equipe" />
@@ -217,17 +186,22 @@ export default function About() {
             jornada juntos.
           </Text>
 
-          <div className="flex gap-4">
-            <Button variant="outline" size="lg" className="text-base">
-              O que fazemos
-            </Button>
-            <Button size="lg" className="text-base">
-              Trabalhe conosco <ArrowRight className="h-4 w-4" />
-            </Button>
+          <div className="flex flex-col md:flex-row gap-4">
+            <RedirectLink url="/o-que-fazemos">
+              <Button variant="outline" size="lg" className="text-base">
+                O que fazemos
+              </Button>
+            </RedirectLink>
+
+            <RedirectLink url="/contato">
+              <Button size="lg" className="text-base">
+                Trabalhe conosco <ArrowRight className="h-4 w-4" />
+              </Button>
+            </RedirectLink>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <TeamMember
             avatar={gustavoDiasImage}
             name="Gustavo Dias"
@@ -259,16 +233,20 @@ export default function About() {
               Juntos, vamos moldar o futuro da inovação.
             </Text>
 
-            <div className="flex items-center gap-4">
-              <Button size="lg" variant="outline" className="text-base">
-                WhatsApp
-                <ArrowUpRight className="h-4 w-4" />
-              </Button>
+            <div className="flex flex-col lg:flex-row lg:justify-center gap-4 w-full">
+              <RedirectLink url="/">
+                <Button size="lg" variant="outline" className="text-base">
+                  WhatsApp
+                  <ArrowUpRight className="h-4 w-4" />
+                </Button>
+              </RedirectLink>
 
-              <Button size="lg" className="text-base">
-                Contate-nos
-                <ArrowRight className="h-4 w-4" />
-              </Button>
+              <RedirectLink url="/contato">
+                <Button size="lg" className="text-base">
+                  Contate-nos
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </RedirectLink>
             </div>
           </div>
         </ContainerWrapper>
