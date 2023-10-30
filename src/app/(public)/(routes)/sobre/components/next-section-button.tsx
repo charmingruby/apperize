@@ -11,7 +11,7 @@ export function NextSectionButton({
   nextSectionId,
 }: NextSectionButtonProps) {
   return (
-    <div className="mt-12 lg:mt-16">
+    <div className="mt-0 lg:mt-16">
       <RedirectLink url={nextSectionId}>
         <div className="flex items-center gap-4">
           <div>

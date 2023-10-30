@@ -169,11 +169,9 @@ export default function About() {
         <ValueItemList />
       </ContainerWrapper>
 
-      {/* Depositions */}
-
       {/* Team */}
       <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div className="max-w-lg">
+        <div className="lg:max-w-lg w-full">
           <HeadingWrapper className="mb-0">
             <HeadingAnnotation annotation="Equipe" />
             <HeadingTitle>Conheça nossa equipe</HeadingTitle>
@@ -186,15 +184,15 @@ export default function About() {
             jornada juntos.
           </Text>
 
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-4 w-full">
             <RedirectLink url="/o-que-fazemos">
-              <Button variant="outline" size="lg" className="text-base">
+              <Button variant="outline" size="lg" className="text-base w-full">
                 O que fazemos
               </Button>
             </RedirectLink>
 
             <RedirectLink url="/contato">
-              <Button size="lg" className="text-base">
+              <Button size="lg" className="text-base w-full">
                 Trabalhe conosco <ArrowRight className="h-4 w-4" />
               </Button>
             </RedirectLink>
@@ -233,16 +231,20 @@ export default function About() {
               Juntos, vamos moldar o futuro da inovação.
             </Text>
 
-            <div className="flex flex-col lg:flex-row lg:justify-center gap-4 w-full">
+            <div className="flex flex-col items-center md:flex-row md:justify-center gap-4 w-full">
               <RedirectLink url="/">
-                <Button size="lg" variant="outline" className="text-base">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-base w-full"
+                >
                   WhatsApp
                   <ArrowUpRight className="h-4 w-4" />
                 </Button>
               </RedirectLink>
 
               <RedirectLink url="/contato">
-                <Button size="lg" className="text-base">
+                <Button size="lg" className="text-base w-full">
                   Contate-nos
                   <ArrowRight className="h-4 w-4" />
                 </Button>
