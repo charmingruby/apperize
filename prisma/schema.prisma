@@ -17,3 +17,9 @@ model User {
 
   @@map("users")
 }
+
+model Request {
+  id String @id @default(uuid())
+
+  @@map("requests")
+}

@@ -1,3 +1,3 @@
-export default function MakeRequest() {
+export default function MakeRequestPage() {
   return <>oi</>
 }

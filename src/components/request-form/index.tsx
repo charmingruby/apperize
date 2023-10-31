@@ -26,10 +26,11 @@ export function RequestForm() {
           </CardTitle>
         </div>
       </CardHeader>
+
       <CardContent className="pt-6">
         <form className="space-y-4">
           {/* Name and email */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Name */}
             <InputRoot>
               <Label>Qual seu nome?</Label>
@@ -44,7 +45,7 @@ export function RequestForm() {
           </div>
 
           {/* Role and enterprise name */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Enterprise */}
             <InputRoot>
               <Label>Qual o nome da empresa?</Label>
@@ -84,8 +85,10 @@ export function RequestForm() {
             <Textarea placeholder="Conte os problemas que enfrenta" />
           </InputRoot>
 
-          <div className="flex justify-end">
-            <Button>Enviar pedido</Button>
+          <div className="flex w-full lg:justify-end">
+            <Button size="lg" className="w-full lg:w-fit text-base">
+              Enviar pedido
+            </Button>
           </div>
         </form>
       </CardContent>

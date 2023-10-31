@@ -10,8 +10,8 @@ export function Drawer() {
   return (
     <div
       className={`
-    ${isOpen ? 'opacity-1' : 'opacity-0'}
-    z-40 fixed h-screen w-full bg-background-highlight-dark transition-opacity`}
+    ${isOpen ? 'opacity-1 z-40 ' : 'opacity-0 -z-50'}
+    fixed h-screen w-full bg-background-highlight-dark transition-opacity`}
     >
       <ContainerWrapper className="pt-24">oi</ContainerWrapper>
     </div>
