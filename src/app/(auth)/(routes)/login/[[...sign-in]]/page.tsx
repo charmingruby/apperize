@@ -15,7 +15,7 @@ export default function Page() {
 
       <section className="hidden lg:flex">
         <div className=" relative w-full h-full">
-          <PurpleFilter />
+          <PurpleFilter className="w-full h-full" />
           <div className="absolute w-full h-full flex flex-col items-center justify-center z-30">
             <div className="max-w-lg flex gap-6">
               <div className="bg-background-highlight-dark p-2 h-fit rounded-full shadow-lg">
