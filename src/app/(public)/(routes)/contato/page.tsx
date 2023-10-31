@@ -71,7 +71,7 @@ export default function ContactPage() {
             </Text>
 
             <RedirectLink url="/">
-              <Button size="lg">
+              <Button size="lg" className="w-full lg:w-fit">
                 <span className="text-base">Fazer pedido</span>
                 <ArrowRight className="h-4 w-4" />
               </Button>

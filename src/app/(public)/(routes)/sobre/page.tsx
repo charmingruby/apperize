@@ -54,7 +54,7 @@ export default function About() {
               </h1>
             </div>
 
-            <Text className="mt-8">
+            <Text className="my-8">
               Como uma startup em ascensão, nossa plataforma oferece soluções
               tecnológicas personalizadas e inovadoras para vencer desafios e
               impulsionar seu sucesso. Com uma paixão por inovação e uma

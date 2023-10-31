@@ -1,39 +1,20 @@
-import { Text } from '@/components/ui/text'
 import Image from 'next/image'
 import { CustomerGroupProps } from './customer-group-list'
 import { PurpleFilter } from '@/components/purple-filter'
 
-export function CustomerGroup({
-  imageOnLeft = false,
-  coverImageUrl,
-  name,
-  description,
-  benefits,
-}: CustomerGroupProps) {
+export function CustomerGroup({ coverImageUrl, name }: CustomerGroupProps) {
   return (
-    <div className="grid grid-cols-2 gap-12">
-      <div
-        className={`${imageOnLeft ? 'lg:order-last' : 'lg:order-first'}
-      relative
-      `}
-      >
+    <div className="gap-12 w-full">
+      <div className="relative w-full">
         <PurpleFilter className="rounded-xl aspect-video" />
         <Image
           src={coverImageUrl}
           alt={`Imagem de um grupo de ${name}`}
-          className="aspect-video rounded-xl"
+          className="aspect-video rounded-xl w-full"
         />
-      </div>
-
-      <div className="flex flex-col justify-center">
-        <strong>{name}</strong>
-        <Text>{description}</Text>
-
-        <div className="grid grid-cols-2">
-          {benefits.map((value) => (
-            <div key={value}>{value}</div>
-          ))}
-        </div>
+        <strong className="absolute bottom-4 left-4 text-xl text-white z-30">
+          {name}
+        </strong>
       </div>
     </div>
   )

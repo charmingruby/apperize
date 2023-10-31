@@ -18,17 +18,28 @@ export default function WhatWeDoPage() {
 
       {/* Main feature and benefit */}
 
+      {/* How it works */}
+
+      {/* What we do */}
+
       {/* Popular features */}
 
       {/* Customer types */}
       <ContainerWrapper>
-        <HeadingWrapper>
-          <HeadingAnnotation annotation="" />
-          <HeadingContentWrapper>
-            <HeadingTitle></HeadingTitle>
-            <HeadingDescription></HeadingDescription>
-          </HeadingContentWrapper>
-        </HeadingWrapper>
+        <div className="max-w-2xl">
+          <HeadingWrapper>
+            <HeadingAnnotation annotation="Quem ajudamos?" />
+            <HeadingContentWrapper>
+              <HeadingTitle>Setores de nossos clientes</HeadingTitle>
+              <HeadingDescription>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                quas sapiente asperiores numquam quidem labore. Aliquid, veniam.
+                Dicta, sequi sint accusantium blanditiis at doloremque id a
+                aliquam? Hic, non accusantium!
+              </HeadingDescription>
+            </HeadingContentWrapper>
+          </HeadingWrapper>
+        </div>
 
         <CustomerGroupList />
       </ContainerWrapper>

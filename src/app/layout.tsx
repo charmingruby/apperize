@@ -27,13 +27,13 @@ export default function RootLayout({
 }) {
   return (
     <Providers>
-      <html lang="en" className="scroll-smooth ">
+      <html lang="pt-BR" className="scroll-smooth ">
         <body
           className={`${inter.variable} ${alt.variable} 
-        font-sans bg-grainy text-foreground scrollbar-thin scrollbar-track-background-highlight-main scrollbar-thumb-background-highlight-dark
+        font-sans text-foreground scrollbar-thin scrollbar-track-background-highlight-main scrollbar-thumb-background-highlight-dark
       `}
         >
-          <main>{children}</main>
+          <main className="relative">{children}</main>
         </body>
       </html>
     </Providers>
