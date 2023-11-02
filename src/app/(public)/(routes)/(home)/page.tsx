@@ -1,13 +1,7 @@
 /**
  * External
  */
-import {
-  ArrowRight,
-  ArrowUpRight,
-  Headphones,
-  HelpCircle,
-  TabletSmartphone,
-} from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Headphones } from 'lucide-react'
 import Image from 'next/image'
 
 /**
@@ -32,14 +26,13 @@ import { TextHighlight } from '@/components/text-highlight'
 import { DepositionItem } from './components/deposition-item'
 import { Separator } from '@/components/ui/separator'
 import developersOffice from '@/assets/img/photos/developers-office.jpeg'
-import { RequestForm } from '@/components/request-form'
 import { SectionsDivider } from '@/components/sections-divider'
 import heroImg from '@/assets/img/heros/home.png'
-import Link from 'next/link'
 import { ServicesTypewriter } from './components/services-typewriter'
 import { staticSEO } from '@/components/seo/static'
 import { RedirectLink } from '@/components/redirect-link'
 import { CreateRequestLink } from './components/create-request-link'
+import { CTAWithRequestForm } from '@/components/cta-with-request-form'
 
 export const metadata = staticSEO({
   rawTitle: 'Desenvolvimento sob demanda de Software',
@@ -300,54 +293,7 @@ export default async function Home() {
       </ContainerWrapper>
       <SectionsDivider />
 
-      {/* CTA */}
-      <ContainerWrapper
-        id="make-request"
-        className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12  pt-0 lg:pt-0"
-      >
-        <div className="flex flex-col justify-center">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <TabletSmartphone className="text-primary h-9 w-9" />
-
-            <strong className="text-4xl font-semibold font-alt tracking-wider">
-              <span className="text-primary">App</span>
-              erize
-            </strong>
-          </div>
-
-          {/* Slogan */}
-          <HeadingTitle className="mt-12 text-4xl max-w-md">
-            Resolva os problemas de maneira digital
-          </HeadingTitle>
-
-          {/* Form or phone number */}
-          <span className="mt-2 mb-8 text-base text-muted-foreground">
-            Preencha o formulário
-            <span className="block">ou ligar para +55 32 99110-0990</span>
-          </span>
-
-          <div className="flex items-center gap-2">
-            <div className="bg-background-highlight-dark rounded-full p-1.5">
-              <HelpCircle className="w-6 h-6 text-primary" />
-            </div>
-
-            <span className="font-medium">
-              Alguma duvida?{' '}
-              <Link
-                prefetch={false}
-                href="/"
-                className="text-muted-foreground hover:text-primary hover:underline transition-all"
-              >
-                Entre em contato
-              </Link>
-            </span>
-          </div>
-        </div>
-        <div className="col-span-2">
-          <RequestForm />
-        </div>
-      </ContainerWrapper>
+      <CTAWithRequestForm />
     </>
   )
 }

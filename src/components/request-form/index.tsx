@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from '../ui/select'
 import { products } from './products'
-import { MessageSquare } from 'lucide-react'
+import { MessageSquare, Send } from 'lucide-react'
 
 export function RequestForm() {
   return (
@@ -87,7 +87,7 @@ export function RequestForm() {
 
           <div className="flex w-full lg:justify-end">
             <Button size="lg" className="w-full lg:w-fit text-base">
-              Enviar pedido
+              <span>Enviar pedido</span> <Send className="h-4 w-4" />
             </Button>
           </div>
         </form>

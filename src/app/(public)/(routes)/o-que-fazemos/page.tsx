@@ -10,23 +10,33 @@ import {
   HeadingTitle,
   HeadingWrapper,
 } from '@/components/ui/heading'
+import { CTAWithRequestForm } from '@/components/cta-with-request-form'
 
 export default function WhatWeDoPage() {
   return (
     <>
       {/* Hero */}
+      <ContainerWrapper></ContainerWrapper>
 
       {/* Main feature and benefit */}
 
-      {/* How it works */}
-
       {/* What we do */}
+      {/* Websites */}
+      <section className="bg-background-highlight-main border-t border-background-highlight-dark">
+        <ContainerWrapper></ContainerWrapper>
+      </section>
+      {/* API */}
+      <section className="bg-background-highlight-main border-b border-background-highlight-dark">
+        <ContainerWrapper></ContainerWrapper>
+      </section>
 
       {/* Popular features */}
 
+      {/* How it works */}
+
       {/* Customer types */}
       <ContainerWrapper>
-        <div className="max-w-2xl">
+        <div className="w-1/2">
           <HeadingWrapper>
             <HeadingAnnotation annotation="Quem ajudamos?" />
             <HeadingContentWrapper>
@@ -49,9 +59,7 @@ export default function WhatWeDoPage() {
       {/* The big reason to buy your product */}
 
       {/* CTA */}
-      <section>
-        <ContainerWrapper></ContainerWrapper>
-      </section>
+      <CTAWithRequestForm />
     </>
   )
 }

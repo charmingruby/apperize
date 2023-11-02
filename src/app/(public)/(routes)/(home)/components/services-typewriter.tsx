@@ -5,7 +5,7 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter'
 const itemsList: string[] = [
   'Software',
   'Sistemas',
-  'Applicativos',
+  'Aplicativos',
   'Landing Pages',
 ]
 

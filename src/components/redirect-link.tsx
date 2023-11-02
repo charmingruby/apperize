@@ -13,7 +13,7 @@ export function RedirectLink({ url, children, onClick }: RedirectLinkProps) {
       prefetch={false}
       href={url}
       onClick={onClick}
-      className="group outline-none w-full md:w-fit"
+      className="group outline-none w-full lg:w-fit"
     >
       {children}
     </Link>

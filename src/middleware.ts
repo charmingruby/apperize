@@ -10,6 +10,7 @@ export default authMiddleware({
     '/sobre',
     '/contato',
     '/o-que-fazemos',
+    '/fazer-pedido',
     '/api/:path*',
   ],
 })

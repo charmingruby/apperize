@@ -10,7 +10,7 @@ export function DrawerNavList() {
   const { isSignedIn } = useUser()
 
   return (
-    <ContainerWrapper className="flex flex-col pt-20 pb-8 ">
+    <ContainerWrapper className="flex flex-col pt-20 pb-0 lg:pb-0 divide-y">
       {isSignedIn && (
         <DrawerNavItem icon={LayoutDashboard} label="Dashboard" url="" />
       )}

@@ -21,6 +21,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
+import { Send } from 'lucide-react'
 
 const formSchema = z.object({
   fullName: z.string(),
@@ -126,6 +127,7 @@ export function EmailForm() {
 
         <Button className="lg:w-fit w-full lg:self-end text-base" size="lg">
           Enviar mensagem
+          <Send className="h-4 w-4" />
         </Button>
       </form>
     </Form>
