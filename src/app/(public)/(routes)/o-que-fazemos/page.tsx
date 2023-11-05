@@ -20,19 +20,24 @@ export default function WhatWeDoPage() {
 
       {/* Main feature and benefit */}
 
-      {/* What we do */}
-      {/* Websites */}
-      <section className="bg-background-highlight-main border-t border-background-highlight-dark">
-        <ContainerWrapper></ContainerWrapper>
-      </section>
-      {/* API */}
-      <section className="bg-background-highlight-main border-b border-background-highlight-dark">
+      {/* Services */}
+      <ContainerWrapper>
+        <div>
+          <HeadingWrapper>
+            <HeadingAnnotation annotation="Serviços que fazemos" />
+            <HeadingContentWrapper>
+              <HeadingTitle></HeadingTitle>
+            </HeadingContentWrapper>
+          </HeadingWrapper>
+        </div>
+      </ContainerWrapper>
+
+      {/* How it works */}
+      <section className="">
         <ContainerWrapper></ContainerWrapper>
       </section>
 
       {/* Popular features */}
-
-      {/* How it works */}
 
       {/* Customer types */}
       <ContainerWrapper>

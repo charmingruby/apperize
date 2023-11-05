@@ -13,6 +13,7 @@ export default authMiddleware({
     '/fazer-pedido',
     '/api/:path*',
   ],
+  authorizedParties: ['https://pagespeed.web.dev'],
 })
 
 export const config = {
