@@ -21,6 +21,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        scroll: {
+          thumb: '#DADDE7',
+          track: '#F3F4F7',
+        },
         border: 'hsl(var(--border))',
         input: '#D1D5DC',
         ring: 'hsl(var(--ring))',

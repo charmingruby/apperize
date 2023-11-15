@@ -2,7 +2,7 @@ import { HelpCircle, TabletSmartphone } from 'lucide-react'
 import { ContainerWrapper } from './ui/container-wrapper'
 import { HeadingTitle } from './ui/heading'
 import Link from 'next/link'
-import { RequestForm } from './request-form'
+import { MinimalRequestForm } from './minimal-request-form'
 
 export function CTAWithRequestForm() {
   return (
@@ -51,7 +51,7 @@ export function CTAWithRequestForm() {
       </div>
 
       <div className="col-span-2">
-        <RequestForm />
+        <MinimalRequestForm />
       </div>
     </ContainerWrapper>
   )

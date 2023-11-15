@@ -1,5 +1,4 @@
 import { DrawerNavList } from './drawer-nav-list'
-import { Profile } from './profile'
 import { DrawerRoot } from './root'
 
 export function Drawer() {
@@ -7,8 +6,6 @@ export function Drawer() {
     <DrawerRoot>
       <div className="flex flex-col h-full">
         <DrawerNavList />
-
-        <Profile />
       </div>
     </DrawerRoot>
   )

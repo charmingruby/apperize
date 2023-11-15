@@ -30,7 +30,7 @@ export default function RootLayout({
       <html lang="pt-BR" className="scroll-smooth ">
         <body
           className={`${inter.variable} ${alt.variable} 
-        font-sans text-foreground scrollbar-thin scrollbar-track-background-highlight-main scrollbar-thumb-background-highlight-dark
+        font-sans text-foreground scrollbar-thin scrollbar-track-scroll-track scrollbar-thumb-scroll-thumb
       `}
         >
           <main className="relative">{children}</main>
