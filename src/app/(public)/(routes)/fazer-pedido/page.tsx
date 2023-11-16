@@ -1,11 +1,11 @@
-import { RequestForm } from '@/app/(public)/(routes)/(home)/components'
+import { MinimalRequestForm } from '@/components/minimal-request-form'
 import { ContainerWrapper } from '@/components/ui/container-wrapper'
 
 export default function MakeRequestPage() {
   return (
     <>
       <ContainerWrapper>
-        <RequestForm />
+        <MinimalRequestForm />
       </ContainerWrapper>
     </>
   )

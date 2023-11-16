@@ -6,14 +6,14 @@ import { MenuButton } from './menu-button'
 export function Header() {
   return (
     <header className=" border-b border-border flex items-center fixed w-full z-50 bg-background shadow-sm">
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-16">
-          <Logo />
-          <MainNav />
-        </div>
-        <Actions />
+      <div className="container gap-16 flex h-16 items-center justify-between">
+        <Logo />
 
-        <MenuButton />
+        <div className="flex items-center gap-6">
+          <MainNav />
+          <Actions />
+          <MenuButton />
+        </div>
       </div>
     </header>
   )
