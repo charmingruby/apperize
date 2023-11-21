@@ -19,8 +19,10 @@ export default function WhatWeDoPage() {
       <ContainerWrapper></ContainerWrapper>
 
       {/* Main feature and benefit */}
+      <ContainerWrapper></ContainerWrapper>
 
       {/* Services */}
+      {/* Web */}
       <ContainerWrapper>
         <div>
           <HeadingWrapper>
@@ -32,12 +34,18 @@ export default function WhatWeDoPage() {
         </div>
       </ContainerWrapper>
 
+      {/* APIs */}
+      <section className="bg-background-highlight-main border-y border-background-highlight-dark">
+        <ContainerWrapper></ContainerWrapper>
+      </section>
+
       {/* How it works */}
       <section className="">
         <ContainerWrapper></ContainerWrapper>
       </section>
 
       {/* Popular features */}
+      <ContainerWrapper></ContainerWrapper>
 
       {/* Customer types */}
       <ContainerWrapper>
@@ -60,8 +68,10 @@ export default function WhatWeDoPage() {
       </ContainerWrapper>
 
       {/* Highlights a unique resource, how makes the life better */}
+      <ContainerWrapper></ContainerWrapper>
 
       {/* The big reason to buy your product */}
+      <ContainerWrapper></ContainerWrapper>
 
       {/* CTA */}
       <CTAWithRequestForm />

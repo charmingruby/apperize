@@ -13,9 +13,9 @@ export function NextSectionButton({
   return (
     <div className="mt-0 lg:mt-16">
       <RedirectLink url={nextSectionId}>
-        <div className="flex items-center gap-4">
-          <div>
-            <ArrowDown className="h-6 w-6 text-primary" />
+        <div className="flex items-center gap-2 hover:bg-gray-50 transition-colors w-fit px-4 py-2">
+          <div className="bg-background-highlight-dark p-1 rounded-full border-4 border-background-highlight-main">
+            <ArrowDown className="h-5 w-5 text-primary" />
           </div>
 
           <span className="font-medium">{label}</span>
