@@ -148,7 +148,7 @@ export default function Home() {
               <HeadingAnnotation annotation="Por que confiar na apperize?" />
               <HeadingTitle>
                 Diferenciais que você encontra na{' '}
-                <span className="text-primary bg-background-highlight-dark  ">
+                <span className="text-primary bg-background-alt-dark  ">
                   apperize
                 </span>
               </HeadingTitle>
@@ -198,7 +198,7 @@ export default function Home() {
       </ContainerWrapper>
 
       {/* Evaluations */}
-      <section className="border-y border-background-highlight-dark bg-background-highlight-main">
+      <section className="border-y border-background-alt-dark bg-background-alt">
         <ContainerWrapper className="py-10 lg:py-10">
           {/* Heading */}
           <div className="lg:w-1/2">
@@ -283,7 +283,7 @@ export default function Home() {
       </ContainerWrapper>
 
       {/* Contact */}
-      <ContainerWrapper className="flex items-center justify-center bg-background-highlight-main border border-background-highlight-dark rounded-xl py-10 lg:py-10">
+      <ContainerWrapper className="flex items-center justify-center bg-background-alt border border-background-alt-dark rounded-xl py-10 lg:py-10">
         <div className="max-w-xl flex flex-col items-center justify-center text-center">
           <Headphones className="text-primary h-12 w-12 mb-4" />
           <h2 className="text-2xl font-semibold mb-6">Entre em contato</h2>

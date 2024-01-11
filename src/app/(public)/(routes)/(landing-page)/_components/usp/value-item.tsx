@@ -24,7 +24,7 @@ export function ValueItem({
   return (
     <Card className="flex flex-col">
       <CardHeader>
-        <div className="bg-background-highlight-dark border-4 border-background-highlight-main w-fit p-2 rounded-full mb-2">
+        <div className="bg-background-alt-dark border-4 border-background-alt w-fit p-2 rounded-full mb-2">
           <Icon className="text-primary" />
         </div>
         <CardTitle>{title}</CardTitle>

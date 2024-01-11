@@ -33,7 +33,7 @@ export function CTAWithRequestForm() {
         </span>
 
         <div className="flex items-center gap-2">
-          <div className="bg-background-highlight-dark rounded-full p-1.5">
+          <div className="bg-background-alt-dark rounded-full p-1.5">
             <HelpCircle className="w-6 h-6 text-primary" />
           </div>
 

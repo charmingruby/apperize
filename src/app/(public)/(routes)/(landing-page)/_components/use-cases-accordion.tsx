@@ -26,13 +26,13 @@ export function UseCasesAccordion() {
     <Accordion
       type="single"
       collapsible
-      className="w-full border rounded-lg shadow-sm divide-y-2 divider-border"
+      className="w-full border border-border rounded-lg shadow-sm divide-y-2 divider-border"
     >
       {useCases.map(({ icon: Icon, description, title }) => (
         <AccordionItem value={title} key={title}>
           <AccordionTrigger className="font-medium text-base text-start">
             <div className="flex items-center gap-2">
-              <Icon className="h-5 w-5" />
+              <Icon className="h-5 w-5 text-primary" />
               {title}
             </div>
           </AccordionTrigger>

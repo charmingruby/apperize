@@ -10,8 +10,8 @@ export function DrawerNavItem({ icon: Icon, label, url }: NavItem) {
 
   return (
     <RedirectLink url={url} onClick={toggleMenu}>
-      <div className="flex items-center gap-2 text-primary py-4 px-4 group-hover:bg-background-highlight-main transition-colors rounded-lg">
-        <Icon className="w-6 h-6" />
+      <div className="flex items-center gap-2 py-4 px-4 group-hover:bg-background-alt transition-colors rounded-lg">
+        <Icon className="w-6 h-6  text-primary " />
         <span className="text-lg mt-0.5 font-medium">{label}</span>
       </div>
     </RedirectLink>

@@ -21,10 +21,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        scroll: {
-          thumb: '#DADDE7',
-          track: '#F3F4F7',
-        },
         border: 'hsl(var(--border))',
         input: '#D1D5DC',
         ring: 'hsl(var(--ring))',
@@ -33,6 +29,10 @@ module.exports = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+        },
+        'background-alt': {
+          DEFAULT: 'hsl(var(--background-alt-main))',
+          dark: 'hsl(var(--background-alt-dark))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
@@ -58,7 +58,6 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        'background-highlight': { main: '#F6F7F9', dark: '#E7E9EF' },
         status: {
           pending: {
             main: '#7B51B2',

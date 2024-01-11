@@ -12,9 +12,14 @@ export function Header() {
 
         <div className="flex items-center gap-6">
           <MainNav />
-          <Separator orientation="vertical" className="h-8" />
-          <Actions />
-          <MenuButton />
+          <div className="flex items-center gap-4 lg:gap-8">
+            <Separator orientation="vertical" className="h-8 hidden lg:flex" />
+
+            <div className="flex items-center gap-4">
+              <Actions />
+              <MenuButton />
+            </div>
+          </div>
         </div>
       </div>
     </header>

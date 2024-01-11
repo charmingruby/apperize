@@ -17,7 +17,7 @@ export function MinimalRequestForm() {
   }
 
   return (
-    <Card className="bg-background-highlight-main border-t-4 border-t-primary">
+    <Card className="bg-background-alt border-t-4 border-t-primary">
       <CardContent className="pt-6">
         <form className="space-y-4">
           {/* Name and email */}

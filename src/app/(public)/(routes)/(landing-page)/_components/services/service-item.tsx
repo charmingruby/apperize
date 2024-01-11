@@ -39,7 +39,7 @@ export function ServiceItem({
       {/* Link */}
       <a
         href="/"
-        className="hover:bg-primary/90 flex outline-none bg-primary w-full mt-auto p-4 justify-center font-medium rounded-b-md items-center gap-1 text-primary-foreground hover:text-background-highlight-dark hover:font-medium transition-all"
+        className="hover:bg-primary/90 flex outline-none bg-primary w-full mt-auto p-4 justify-center font-medium rounded-b-md items-center gap-1 text-primary-foreground hover:text-background-alt-dark hover:font-medium transition-all"
       >
         Solicitar {nameInSingular}
         <ArrowRight className="w-4 h-4" />

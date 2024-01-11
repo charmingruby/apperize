@@ -6,7 +6,7 @@ type TextHighlightProps = ComponentProps<'span'>
 export function TextHighlight({ className, ...props }: TextHighlightProps) {
   return (
     <span
-      className={cn('bg-background-highlight-dark text-primary', className)}
+      className={cn('bg-background-alt-dark text-primary', className)}
       {...props}
     />
   )

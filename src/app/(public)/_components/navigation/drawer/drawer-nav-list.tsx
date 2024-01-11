@@ -7,7 +7,7 @@ import { ListOrdered } from 'lucide-react'
 
 export function DrawerNavList() {
   return (
-    <ContainerWrapper className="flex flex-col pt-20 pb-0 lg:pb-0 divide-y">
+    <ContainerWrapper className="flex flex-col pt-20 pb-0 lg:pb-0 divide-y divide-border">
       {navItemsList.map(({ icon: Icon, label, url }) => (
         <DrawerNavItem key={label} icon={Icon} label={label} url={url} />
       ))}

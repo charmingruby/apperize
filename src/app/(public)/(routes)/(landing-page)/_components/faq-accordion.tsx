@@ -24,7 +24,7 @@ export function FAQsAccordion() {
     <Accordion
       type="single"
       collapsible
-      className="w-full border rounded-lg shadow-sm divide-y-2 divider-border"
+      className="w-full border border-border rounded-lg shadow-sm divide-y-2 divider-border"
     >
       {doubts.map(({ value, title, description }) => (
         <AccordionItem value={value} key={value}>

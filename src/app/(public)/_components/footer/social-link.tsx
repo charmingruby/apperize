@@ -11,7 +11,7 @@ export function SocialLink({ url, icon: Icon }: SocialLinkProps) {
     <Link
       href={url}
       prefetch={false}
-      className="group p-2 hover:bg-background-highlight-dark rounded-md transition-colors"
+      className="group p-2 hover:bg-background-alt-dark rounded-md transition-colors"
     >
       <Icon
         className="text-muted-foreground h-6 w-6 group-hover:text-primary transition-colors"
