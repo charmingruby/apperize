@@ -16,7 +16,7 @@ export function CTAWithRequestForm() {
           <TabletSmartphone className="text-primary h-9 w-9" />
 
           <strong className="text-4xl font-semibold font-alt tracking-wider">
-            <span className="text-primary">App</span>
+            <span className="text-primary">app</span>
             erize
           </strong>
         </div>

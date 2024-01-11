@@ -66,13 +66,13 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <TabletSmartphone className="text-primary" />
             <div className="font-alt font-semibold text-2xl">
-              <span className="text-primary">App</span>
+              <span className="text-primary">app</span>
               <span>erize</span>
             </div>
           </div>
           {/* Copyright */}
           <div className="flex items-center text-muted-foreground text-sm">
-            © 2023 Apperize | Todos direitos reservados
+            © 2023 apperize | Todos direitos reservados
           </div>
           {/* Social medias */}
           <div className="flex items-center lg:justify-end gap-4">

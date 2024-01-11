@@ -20,8 +20,8 @@ export const navItemsList: NavItem[] = [
   },
   {
     icon: Rocket,
-    url: '/o-que-fazemos',
-    label: 'O que fazemos?',
+    url: '/servicos',
+    label: 'Serviços',
   },
   {
     icon: MessageSquare,

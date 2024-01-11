@@ -1,6 +1,5 @@
 import { cn } from '@/libs/shadcn'
 import { ComponentProps } from 'react'
-import { Title } from '../title'
 
 // Wrapper
 type HeadingWrapperProps = ComponentProps<'div'>
@@ -15,7 +14,13 @@ type HeadingAnnotationProps = {
   annotation: string
 }
 export function HeadingAnnotation({ annotation }: HeadingAnnotationProps) {
-  return <Title title={annotation} underline={false} />
+  return (
+    <div className="w-fit space-y-4 mb-4 ">
+      <span className="text-primary text-sm tracking-widest font-medium block leading-snug">
+        {annotation.toUpperCase()}
+      </span>
+    </div>
+  )
 }
 
 // ContentWrapper

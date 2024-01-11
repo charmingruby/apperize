@@ -5,13 +5,13 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
-interface Doubt {
+interface FAQ {
   value: string
   title: string
   description: string
 }
 
-const doubts: Doubt[] = [
+const doubts: FAQ[] = [
   {
     value: 'Suporte',
     title: 'O produto tem suporte?',
@@ -19,7 +19,7 @@ const doubts: Doubt[] = [
   },
 ]
 
-export function DoubtsAccordion() {
+export function FAQsAccordion() {
   return (
     <Accordion
       type="single"

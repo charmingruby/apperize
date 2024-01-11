@@ -6,7 +6,7 @@ interface StaticSEOProps {
   hasPrefix?: boolean
 }
 
-const prefix = 'Apperize |'
+const prefix = 'apperize |'
 
 export function staticSEO({
   rawTitle,

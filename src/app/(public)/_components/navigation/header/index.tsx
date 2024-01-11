@@ -1,7 +1,8 @@
-import { Logo } from '@/app/(public)/components/navigation/header/logo'
+import { Logo } from '@/app/(public)/_components/navigation/header/logo'
 import { MainNav } from './main-nav'
 import { Actions } from './actions'
 import { MenuButton } from './menu-button'
+import { Separator } from '@/components/ui/separator'
 
 export function Header() {
   return (
@@ -11,6 +12,7 @@ export function Header() {
 
         <div className="flex items-center gap-6">
           <MainNav />
+          <Separator orientation="vertical" className="h-8" />
           <Actions />
           <MenuButton />
         </div>

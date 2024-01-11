@@ -10,7 +10,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Text } from '@/components/ui/text'
 import { Title } from '@/components/title'
-import { Services } from './components/services'
+import { Services } from './_components/services'
 import {
   HeadingAnnotation,
   HeadingContentWrapper,
@@ -19,20 +19,21 @@ import {
   HeadingWrapper,
 } from '@/components/ui/heading'
 import { ContainerWrapper } from '@/components/ui/container-wrapper'
-import { DoubtsAccordion } from './components/doubts-accordion'
-import { Features } from './components/features'
-import { USP } from './components/usp'
+import { FAQsAccordion } from './_components/faq-accordion'
+import { Features } from './_components/features'
+import { USP } from './_components/usp'
 import { TextHighlight } from '@/components/text-highlight'
-import { DepositionItem } from './components/deposition-item'
+import { DepositionItem } from './_components/deposition-item'
 import { Separator } from '@/components/ui/separator'
 import developersOffice from '@/assets/img/photos/developers-office.jpeg'
 import { SectionsDivider } from '@/components/sections-divider'
 import heroImg from '@/assets/img/heros/home.png'
-import { ServicesTypewriter } from './components/services-typewriter'
+import { ServicesTypewriter } from './_components/services-typewriter'
 import { staticSEO } from '@/components/seo/static'
 import { RedirectLink } from '@/components/redirect-link'
-import { CreateRequestLink } from './components/create-request-link'
+import { CreateRequestLink } from './_components/create-request-link'
 import { CTAWithRequestForm } from '@/components/cta-with-request-form'
+import { UseCasesAccordion } from './_components/use-cases-accordion'
 
 export const metadata = staticSEO({
   rawTitle: 'Desenvolvimento sob demanda de Software',
@@ -40,7 +41,7 @@ export const metadata = staticSEO({
     'Transformamos ideias em realidade digital. Somos uma software house dedicada a criar soluções personalizadas e inovadoras para atender às necessidades únicas do seu negócio.',
 })
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
       {/* Hero */}
@@ -48,14 +49,14 @@ export default async function Home() {
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           <div className="flex flex-col items-center mb-4">
             {/* Heading */}
-            <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl my-8 text-center flex flex-col gap-3">
+            <h1 className="font-bold text-4xl sm:text-5xl my-8 text-center flex flex-col gap-3">
               Desenvolvimento
               <span className="block">sob demanda de</span>
               <ServicesTypewriter />
             </h1>
 
             {/* Description */}
-            <p className="text-center leading-relaxed text-lg mb-6 max-w-2xl">
+            <p className="text-center text-muted-foreground leading-relaxed text-lg mb-6 max-w-2xl">
               Transformamos ideias em realidade digital. Somos uma software
               house dedicada a criar soluções personalizadas e inovadoras para
               atender às necessidades únicas do seu negócio.
@@ -99,7 +100,7 @@ export default async function Home() {
               <HeadingAnnotation annotation="Plataforma feita para o cliente" />
               <HeadingContentWrapper>
                 <HeadingTitle>Desenvolvemos juntos de você</HeadingTitle>
-                <HeadingDescription className="text-foreground">
+                <HeadingDescription>
                   Queremos que você se sinta confortável ao fazer um pedido.
                   Para isso, mantemos você sempre atualizado sobre o
                   desenvolvimento do seu produto. Isso garante que suas
@@ -144,17 +145,17 @@ export default async function Home() {
           {/* Presentation */}
           <div className="flex flex-col">
             <HeadingWrapper className="mb-6">
-              <HeadingAnnotation annotation="Por que confiar na Apperize?" />
+              <HeadingAnnotation annotation="Por que confiar na apperize?" />
               <HeadingTitle>
                 Diferenciais que você encontra na{' '}
                 <span className="text-primary bg-background-highlight-dark  ">
-                  Apperize
+                  apperize
                 </span>
               </HeadingTitle>
             </HeadingWrapper>
 
             <div className="mb-8">
-              <Text>
+              <Text className="text-muted-foreground">
                 Nosso compromisso é entregar soluções de software altamente
                 personalizadas, perfeitamente adaptadas às particularidades do
                 seu negócio. Contando com nossa extensa experiência e uma equipe
@@ -176,7 +177,27 @@ export default async function Home() {
         </div>
       </ContainerWrapper>
 
-      {/* Depositions */}
+      {/* Use Cases */}
+      <ContainerWrapper>
+        <HeadingWrapper className="text-center flex flex-col items-center">
+          <HeadingAnnotation annotation="Casos de uso" />
+          <HeadingTitle>Design moldado para o que voce precisa</HeadingTitle>
+        </HeadingWrapper>
+
+        <div className="grid grid-cols-3">
+          <div className="col-span-2">image</div>
+          <div>
+            <UseCasesAccordion />
+          </div>
+        </div>
+      </ContainerWrapper>
+
+      {/* Recents works */}
+      <ContainerWrapper>
+        <h1>todo: recent works</h1>
+      </ContainerWrapper>
+
+      {/* Evaluations */}
       <section className="border-y border-background-highlight-dark bg-background-highlight-main">
         <ContainerWrapper className="py-10 lg:py-10">
           {/* Heading */}
@@ -224,7 +245,7 @@ export default async function Home() {
           </HeadingWrapper>
 
           <div className="mb-8">
-            <Text className="leading-loose">
+            <Text className="text-muted-foreground">
               Uma software house em ascensão que evoluiu para uma empresa
               estabelecida devido à crescente demanda por nossos serviços como
               freelancers, com compromisso com qualidade, inovação e expansão.
@@ -246,7 +267,8 @@ export default async function Home() {
       </ContainerWrapper>
 
       <SectionsDivider />
-      {/* Frequently asked */}
+      {/* FAQ */}
+      {/* TODO: change cta with the contact cta */}
       <ContainerWrapper className="flex flex-col lg:items-center max-w-4xl w-full pt-0 lg:pt-0">
         <HeadingWrapper>
           <HeadingContentWrapper className="lg:text-center">
@@ -257,7 +279,7 @@ export default async function Home() {
           </HeadingContentWrapper>
         </HeadingWrapper>
 
-        <DoubtsAccordion />
+        <FAQsAccordion />
       </ContainerWrapper>
 
       {/* Contact */}
