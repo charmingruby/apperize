@@ -31,7 +31,7 @@ export default function RootLayout({
       <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
         <body
           className={`${inter.variable} ${alt.variable} 
-        font-sans text-foreground bg-background scrollbar-thin scrollbar-track-background/0 scrollbar-thumb-background/50
+        font-sans text-foreground bg-background scrollbar scrollbar-track-background-alt scrollbar-thumb-background-alt-dark 
       `}
         >
           <ThemeProvider
