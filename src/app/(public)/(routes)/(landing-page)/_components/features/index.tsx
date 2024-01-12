@@ -9,17 +9,7 @@ export interface Feature {
 
 export function Features() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <FeatureItem
-        icon={Check}
-        title="Entregas Rápidas"
-        description="Nossa estratégia MVP se destaca pela rápida implementação, acelerando o desenvolvimento de projetos e produtos para que os clientes vejam resultados tangíveis em um curto período."
-      />
-      <FeatureItem
-        icon={Check}
-        title="Entregas Rápidas"
-        description="Nossa estratégia MVP se destaca pela rápida implementação, acelerando o desenvolvimento de projetos e produtos para que os clientes vejam resultados tangíveis em um curto período."
-      />
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <FeatureItem
         icon={Check}
         title="Entregas Rápidas"

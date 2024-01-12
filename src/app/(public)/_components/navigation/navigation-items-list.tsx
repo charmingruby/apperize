@@ -1,4 +1,4 @@
-import { BadgeInfo, Home, MessageSquare, Rocket } from 'lucide-react'
+import { BadgeInfo, Home, MessageSquare } from 'lucide-react'
 import { ElementType } from 'react'
 
 export interface NavItem {
@@ -16,16 +16,22 @@ export const navItemsList: NavItem[] = [
   {
     icon: BadgeInfo,
     url: '/sobre',
-    label: 'Sobre',
-  },
-  {
-    icon: Rocket,
-    url: '/servicos',
-    label: 'Serviços',
+    label: 'O que fazemos',
   },
   {
     icon: MessageSquare,
     url: '/contato',
-    label: 'Contato',
+    label: 'Trabalhos',
+  },
+  {
+    icon: MessageSquare,
+    url: '/contato',
+    label: 'Casos de uso',
+  },
+
+  {
+    icon: MessageSquare,
+    url: '/contato',
+    label: 'Depoimentos',
   },
 ]

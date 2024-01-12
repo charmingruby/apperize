@@ -17,7 +17,7 @@ export function ServicesTypewriter() {
   })
 
   return (
-    <h1 className="text-transparent bg-clip-text bg-primary-gradient text-center font-extrabold leading-tight tracking-tight text-2xl md:text-3xl lg:text-4xl xl:text-5xl pb-2">
+    <h1 className="text-transparent bg-clip-text bg-primary-gradient text-center font-extrabold leading-tight tracking-tight text-3xl lg:text-4xl xl:text-5xl pb-2">
       {items}
       <Cursor cursorColor="#7C3AED" cursorStyle="_" />
     </h1>

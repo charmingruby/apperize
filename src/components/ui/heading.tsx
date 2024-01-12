@@ -29,7 +29,7 @@ export function HeadingContentWrapper({
   className,
   ...props
 }: HeadingContentWrapperProps) {
-  return <div className={cn('space-y-4', className)} {...props} />
+  return <div className={cn('space-y-6', className)} {...props} />
 }
 
 // Title

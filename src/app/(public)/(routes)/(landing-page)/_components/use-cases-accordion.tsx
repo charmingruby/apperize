@@ -56,7 +56,7 @@ export function UseCasesAccordion() {
     <Accordion
       type="single"
       collapsible
-      className="w-full border border-border rounded-lg shadow-sm divide-y-2 divider-border"
+      className="w-full border border-border rounded-lg shadow-sm divide-y-2 divide-border"
     >
       {useCases.map(({ icon: Icon, description, title }) => (
         <AccordionItem value={title} key={title}>

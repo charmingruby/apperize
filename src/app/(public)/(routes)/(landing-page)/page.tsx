@@ -1,12 +1,7 @@
 /**
  * External
  */
-import {
-  ArrowRight,
-  ArrowUpRight,
-  ChevronRight,
-  Headphones,
-} from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Headphones } from 'lucide-react'
 import Image from 'next/image'
 
 /**
@@ -14,7 +9,6 @@ import Image from 'next/image'
  */
 import { Button } from '@/components/ui/button'
 import { Text } from '@/components/ui/text'
-import { Title } from '@/components/title'
 import { Services } from './_components/services'
 import {
   HeadingAnnotation,
@@ -61,7 +55,7 @@ export default function Home() {
             <div className="flex flex-col items-center gap-6 lg:gap-12">
               {/* Heading */}
               <div className="space-y-2">
-                <h1 className="m-0 whitespace-pre-wrap text-center font-extrabold leading-tight tracking-tight text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+                <h1 className="m-0 whitespace-pre-wrap text-center font-extrabold leading-tight tracking-tight text-3xl lg:text-4xl xl:text-5xl">
                   Desenvolvimento sob demanda de
                 </h1>
                 <ServicesTypewriter />
@@ -126,8 +120,12 @@ export default function Home() {
                 </HeadingContentWrapper>
               </HeadingWrapper>
             </div>
-            <div className="flex w-full md:justify-end items-end">
-              <CreateRequestLink />
+            <div className="flex w-full lg:justify-end lg:items-end">
+              <Button className="w-full lg:w-fit" asChild>
+                <a href="#make-request" className="outline-none">
+                  Fazer pedido <ArrowRight className="w-4 h-4" />
+                </a>
+              </Button>
             </div>
           </div>
 
@@ -173,23 +171,29 @@ export default function Home() {
 
         {/* Features */}
         <ContainerWrapper>
-          <div className="flex flex-col">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Presentation */}
-            <div className="flex flex-col lg:text-center lg:items-center">
-              <HeadingWrapper className="flex flex-col lg:items-center">
+            <div className="flex flex-col justify-center">
+              <HeadingWrapper className="flex flex-col">
                 <HeadingAnnotation annotation="Por que confiar na apperize?" />
                 <HeadingContentWrapper>
                   <HeadingTitle>
                     Diferenciais que você encontra na{' '}
                     <TextHighlight> apperize</TextHighlight>
                   </HeadingTitle>
-                  <HeadingDescription className="lg:max-w-2xl lg:mx-auto">
+                  <HeadingDescription>
                     Nosso compromisso é entregar soluções de software altamente
                     personalizadas, perfeitamente adaptadas às particularidades
                     do seu negócio.
                   </HeadingDescription>
                 </HeadingContentWrapper>
               </HeadingWrapper>
+
+              <Button asChild>
+                <Link href="/" className="w-full lg:w-fit">
+                  Fazer pedido <ArrowRight className="w-5 h-5" />
+                </Link>
+              </Button>
             </div>
 
             <Features />
@@ -236,12 +240,10 @@ export default function Home() {
         <section className="border-y border-background-alt-dark bg-background-alt">
           <ContainerWrapper className="py-10 lg:py-10">
             {/* Heading */}
-            <div className="lg:w-1/2">
-              <Title title="Depoimentos" />
-              <strong className="text-4xl lg:text-5xl font-semibold leading-tight block text-foreground">
-                O que nossos clientes dizem sobre nós:
-              </strong>
-            </div>
+            <HeadingWrapper className="lg:w-1/2 mb-0">
+              <HeadingAnnotation annotation="Depoimentos" />
+              <HeadingTitle>O que nossos clientes dizem sobre nós</HeadingTitle>
+            </HeadingWrapper>
 
             {/* Depositions */}
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 w-full">
