@@ -9,10 +9,10 @@ export function CreateRequestLink({ label }: CreateRequestLinkProps) {
   const text = label || 'Fazer pedido'
 
   return (
-    <a href="#make-request" className="w-full md:w-fit outline-none">
-      <Button size="lg" className="text-base w-full md:w-fit">
+    <Button className="text-base w-fit" asChild>
+      <a href="#make-request" className="outline-none">
         {text} <ArrowRight className="w-4 h-4" />
-      </Button>
-    </a>
+      </a>
+    </Button>
   )
 }
