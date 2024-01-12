@@ -9,8 +9,8 @@ export function DrawerRoot({ children }: PropsWithChildren) {
   return (
     <div
       className={`
-      ${isOpen ? 'opacity-1 z-40 ' : 'opacity-0 -z-50'}
-      fixed h-screen w-full bg-background transition-opacity`}
+      ${isOpen ? 'translate-x-[0%] z-[100]' : '-z-50 -translate-x-[100%]'}
+      fixed h-screen bg-background w-4/5 transition-all border-r border-border`}
     >
       {children}
     </div>

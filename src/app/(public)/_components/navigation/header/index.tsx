@@ -8,16 +8,19 @@ export function Header() {
   return (
     <header className=" border-b border-border flex items-center fixed w-full z-50 bg-background shadow-sm">
       <div className="container gap-16 flex h-16 items-center justify-between">
-        <Logo />
+        <div className="flex items-center gap-4 lg:gap-8">
+          <MenuButton />
+          <Logo />
+
+          <Separator orientation="vertical" className="h-8 hidden lg:flex" />
+
+          <MainNav />
+        </div>
 
         <div className="flex items-center gap-6">
-          <MainNav />
           <div className="flex items-center gap-4 lg:gap-8">
-            <Separator orientation="vertical" className="h-8 hidden lg:flex" />
-
             <div className="flex items-center gap-4">
               <Actions />
-              <MenuButton />
             </div>
           </div>
         </div>

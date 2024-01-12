@@ -1,13 +1,12 @@
 'use client'
 
-import { ContainerWrapper } from '@/components/ui/container-wrapper'
 import { navItemsList } from '../navigation-items-list'
 import { DrawerNavItem } from './drawer-nav-item'
 import { ListOrdered } from 'lucide-react'
 
 export function DrawerNavList() {
   return (
-    <ContainerWrapper className="flex flex-col pt-20 pb-0 lg:pb-0 divide-y divide-border">
+    <div className="flex flex-col divide-y divide-border">
       {navItemsList.map(({ icon: Icon, label, url }) => (
         <DrawerNavItem key={label} icon={Icon} label={label} url={url} />
       ))}
@@ -18,6 +17,6 @@ export function DrawerNavList() {
         label="Fazer pedido"
         url={'/fazer-pedido'}
       />
-    </ContainerWrapper>
+    </div>
   )
 }
