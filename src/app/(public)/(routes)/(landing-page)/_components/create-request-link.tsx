@@ -9,7 +9,7 @@ export function CreateRequestLink({ label }: CreateRequestLinkProps) {
   const text = label || 'Fazer pedido'
 
   return (
-    <Button className="text-base w-fit" asChild>
+    <Button className="w-fit" asChild>
       <a href="#make-request" className="outline-none">
         {text} <ArrowRight className="w-4 h-4" />
       </a>

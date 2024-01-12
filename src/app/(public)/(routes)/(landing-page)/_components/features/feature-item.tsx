@@ -8,7 +8,7 @@ export function FeatureItem({ title, description, icon: Icon }: Feature) {
       </div>
 
       <div className="flex flex-col">
-        <strong className="font-semibold text-primary text-lg">{title}</strong>
+        <strong className="font-semibold text-primary text-xl">{title}</strong>
         <span className="text-base text-muted-foreground mt-2">
           {description}
         </span>

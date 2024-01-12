@@ -19,6 +19,36 @@ const useCases: UseCase[] = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse est dignissimos exercitationem quibusdam reprehenderit, officiis, asperiores magnam, doloremque aliquam dolorem minus. Ipsum ipsam cum, itaque nisi consectetur quaerat libero illo?',
   },
+  {
+    icon: Gavel,
+    title: 'Advocacia',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse est dignissimos exercitationem quibusdam reprehenderit, officiis, asperiores magnam, doloremque aliquam dolorem minus. Ipsum ipsam cum, itaque nisi consectetur quaerat libero illo?',
+  },
+  {
+    icon: Gavel,
+    title: 'Advocacia',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse est dignissimos exercitationem quibusdam reprehenderit, officiis, asperiores magnam, doloremque aliquam dolorem minus. Ipsum ipsam cum, itaque nisi consectetur quaerat libero illo?',
+  },
+  {
+    icon: Gavel,
+    title: 'Advocacia',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse est dignissimos exercitationem quibusdam reprehenderit, officiis, asperiores magnam, doloremque aliquam dolorem minus. Ipsum ipsam cum, itaque nisi consectetur quaerat libero illo?',
+  },
+  {
+    icon: Gavel,
+    title: 'Advocacia',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse est dignissimos exercitationem quibusdam reprehenderit, officiis, asperiores magnam, doloremque aliquam dolorem minus. Ipsum ipsam cum, itaque nisi consectetur quaerat libero illo?',
+  },
+  {
+    icon: Gavel,
+    title: 'Advocacia',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse est dignissimos exercitationem quibusdam reprehenderit, officiis, asperiores magnam, doloremque aliquam dolorem minus. Ipsum ipsam cum, itaque nisi consectetur quaerat libero illo?',
+  },
 ]
 
 export function UseCasesAccordion() {

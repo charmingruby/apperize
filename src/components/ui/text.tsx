@@ -10,7 +10,7 @@ const textVariants = cva('leading-relaxed', {
       primaryForeground: 'text-primary-foreground',
     },
     size: {
-      default: 'text-lg',
+      default: 'text-sm md:text-lg',
       md: 'text-base',
       sm: 'text-sm',
     },

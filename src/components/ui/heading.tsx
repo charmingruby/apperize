@@ -5,7 +5,7 @@ import { ComponentProps } from 'react'
 type HeadingWrapperProps = ComponentProps<'div'>
 export function HeadingWrapper({ className, ...props }: HeadingWrapperProps) {
   return (
-    <div className={cn('mb-12 flex flex-col w-full', className)} {...props} />
+    <div className={cn('mb-8 flex flex-col w-full', className)} {...props} />
   )
 }
 
@@ -16,7 +16,7 @@ type HeadingAnnotationProps = {
 export function HeadingAnnotation({ annotation }: HeadingAnnotationProps) {
   return (
     <div className="w-fit space-y-4 mb-4 ">
-      <span className="text-primary text-sm tracking-widest font-medium block leading-snug">
+      <span className="text-primary text-xs lg:text-sm tracking-widest font-semibold font-alt block leading-snug">
         {annotation.toUpperCase()}
       </span>
     </div>
@@ -35,7 +35,12 @@ export function HeadingContentWrapper({
 // Title
 type HeadingTitleProps = ComponentProps<'h2'>
 export function HeadingTitle({ className, ...props }: HeadingTitleProps) {
-  return <h2 className={cn('text-4xl font-semibold', className)} {...props} />
+  return (
+    <h2
+      className={cn('text-2xl font-bold lg:text-3xl', className)}
+      {...props}
+    />
+  )
 }
 
 // Description
@@ -46,7 +51,10 @@ export function HeadingDescription({
 }: HeadingDescriptionProps) {
   return (
     <div
-      className={cn('text-muted-foreground leading-relaxed', className)}
+      className={cn(
+        'text-muted-foreground text-sm lg:text-base leading-relaxed',
+        className,
+      )}
       {...props}
     />
   )

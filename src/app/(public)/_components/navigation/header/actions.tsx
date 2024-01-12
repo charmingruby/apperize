@@ -12,7 +12,7 @@ export function Actions() {
 
       <Link href="/fazer-pedido" prefetch={false}>
         <Button variant="default" className="gap-2">
-          <span className="hidden lg:flex text-base">Fazer pedido</span>
+          <span className="hidden lg:flex">Fazer pedido</span>
           <MailPlus className="h-5 w-5" />
         </Button>
       </Link>
