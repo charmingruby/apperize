@@ -27,7 +27,7 @@ export const features: Feature[] = [
   },
   {
     icon: User,
-    title: 'falta esse 1',
+    title: 'falta esse 1.2',
     description:
       'Nossos produtos são cuidadosamente projetados com um foco absoluto na experiência do usuário, visando proporcionar interações suaves e gratificantes.',
   },
