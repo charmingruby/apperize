@@ -1,8 +1,8 @@
 import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Chakra_Petch as ChakraPetch, Inter } from 'next/font/google'
-import { Providers } from '@/providers'
 import { ThemeProvider } from '@/components/theme/theme-provider'
+import { MenuContextProvider } from '@/contexts/menu-context'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,8 +27,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <Providers>
-      <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
+    <MenuContextProvider>
+      <html
+        lang="pt-BR"
+        className="antialiased scroll-smooth"
+        suppressHydrationWarning
+      >
         <body
           className={`${inter.variable} ${alt.variable} 
         font-sans text-foreground bg-background scrollbar scrollbar-track-background-alt scrollbar-thumb-background-alt-dark 
@@ -44,6 +48,6 @@ export default function RootLayout({
           </ThemeProvider>
         </body>
       </html>
-    </Providers>
+    </MenuContextProvider>
   )
 }

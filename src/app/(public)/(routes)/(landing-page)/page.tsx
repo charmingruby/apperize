@@ -30,12 +30,12 @@ import { ServicesTypewriter } from './_components/services-typewriter'
 import { staticSEO } from '@/components/seo/static'
 import { CreateRequestLink } from './_components/create-request-link'
 import { CTAWithRequestForm } from '@/components/cta-with-request-form'
-import { UseCasesAccordion } from './_components/use-cases-accordion'
 import { RedirectLink } from '@/components/redirect-link'
 import { HeroPattern } from './_components/hero-pattern'
 import serviceImg from '@/assets/img/services/brand.png'
-import useCasesImg from '@/assets/img/photos/use-cases.jpg'
 import Link from 'next/link'
+import { UseCases } from './_components/use-cases'
+import { RecentWorks } from './_components/recent-works'
 
 export const metadata = staticSEO({
   rawTitle: 'Desenvolvimento sob demanda de Software',
@@ -209,31 +209,31 @@ export default function Home() {
                 Design moldado para o que voce precisa
               </HeadingTitle>
               <HeadingDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                eligendi, laudantium minima illo adipisci libero perspiciatis
-                quam fugit iure odit nesciunt, quos laborum. Dolorum, id. Ea
-                perspiciatis accusantium quia vel.
+                Criamos produtos independente da área de atuação
               </HeadingDescription>
             </HeadingContentWrapper>
           </HeadingWrapper>
 
-          <div className="grid grid-cols-2 gap-12">
-            <div className="relative">
-              <Image
-                src={useCasesImg}
-                alt="imagem de casos de uso"
-                className="absolute h-full"
-              />
-            </div>
-            <div>
-              <UseCasesAccordion />
-            </div>
+          <div>
+            <UseCases />
           </div>
         </ContainerWrapper>
 
         {/* Recents works */}
         <ContainerWrapper>
-          <h1>todo: recent works</h1>
+          <HeadingWrapper>
+            <HeadingAnnotation annotation="Desenvolvidos recentemente" />
+            <HeadingContentWrapper>
+              <HeadingTitle>Trabalhos recentes</HeadingTitle>
+              <HeadingDescription>
+                Aqui listamos os projetos mais recentes entregues.
+              </HeadingDescription>
+            </HeadingContentWrapper>
+          </HeadingWrapper>
+
+          <div>
+            <RecentWorks />
+          </div>
         </ContainerWrapper>
 
         {/* Evaluations */}
@@ -267,7 +267,6 @@ export default function Home() {
         </section>
 
         {/* FAQ */}
-        {/* TODO: change cta with the contact cta */}
         <ContainerWrapper className="flex flex-col lg:items-center max-w-4xl w-full">
           <HeadingWrapper>
             <HeadingContentWrapper className="lg:text-center">

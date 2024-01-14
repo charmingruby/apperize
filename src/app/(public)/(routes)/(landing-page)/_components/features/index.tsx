@@ -1,11 +1,5 @@
-import { Check, HeartHandshake, LucideIcon, User } from 'lucide-react'
+import { Check, HeartHandshake, User } from 'lucide-react'
 import { FeatureItem } from './feature-item'
-
-export interface Feature {
-  icon: LucideIcon
-  title: string
-  description: string
-}
 
 export function Features() {
   return (

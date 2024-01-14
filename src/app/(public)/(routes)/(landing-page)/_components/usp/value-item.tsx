@@ -6,14 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { ElementType } from 'react'
-
-interface ValueItemProps {
-  icon: ElementType
-  title: string
-  description: string
-  percentage: number
-}
+import { ValueItemProps } from '@/contents/usps'
 
 export function ValueItem({
   icon: Icon,

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { RedirectLink } from './redirect-link'
 import whatsappImg from '@/assets/img/socials/whatsapp-logo.png'
-import { whatsAppLink } from '@/site/contact'
+import { whatsAppLink } from '@/contents/site/contact'
 
 export function WhatsAppWidget() {
   return (

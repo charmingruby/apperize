@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { Feature } from './index'
+import { Feature } from '@/contents/features'
 
 export function FeatureItem({ title, description, icon: Icon }: Feature) {
   return (

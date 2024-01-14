@@ -5,7 +5,7 @@ import { ComponentProps } from 'react'
 type HeadingWrapperProps = ComponentProps<'div'>
 export function HeadingWrapper({ className, ...props }: HeadingWrapperProps) {
   return (
-    <div className={cn('mb-8 flex flex-col w-full', className)} {...props} />
+    <div className={cn('mb-10 flex flex-col w-full', className)} {...props} />
   )
 }
 
@@ -29,7 +29,7 @@ export function HeadingContentWrapper({
   className,
   ...props
 }: HeadingContentWrapperProps) {
-  return <div className={cn('space-y-6', className)} {...props} />
+  return <div className={cn('space-y-4', className)} {...props} />
 }
 
 // Title
