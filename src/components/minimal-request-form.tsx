@@ -8,6 +8,13 @@ import { Button } from './ui/button'
 import { Send } from 'lucide-react'
 import { ChangeEvent, useState } from 'react'
 import { formatPhone } from '@/utils/format-phone'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from './ui/select'
 
 export function MinimalRequestForm() {
   const [phoneNumber, setPhoneNumber] = useState<string>('')
@@ -47,20 +54,21 @@ export function MinimalRequestForm() {
             </InputRoot>
           </div>
 
-          {/* Role and enterprise name */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            {/* Enterprise */}
-            <InputRoot>
-              <Label>Qual o nome da empresa?</Label>
-              <Input placeholder="Nome da Empresa" />
-            </InputRoot>
+          {/* Needing */}
+          <InputRoot>
+            <Label>Qual produto precisa?</Label>
 
-            {/* Role */}
-            <InputRoot>
-              <Label>Qual seu cargo?</Label>
-              <Input placeholder="Cargo" />
-            </InputRoot>
-          </div>
+            <Select>
+              <SelectTrigger className="border-border">
+                <SelectValue placeholder="Theme" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="light">Light</SelectItem>
+                <SelectItem value="dark">Dark</SelectItem>
+                <SelectItem value="system">System</SelectItem>
+              </SelectContent>
+            </Select>
+          </InputRoot>
 
           {/* Message */}
           <InputRoot>

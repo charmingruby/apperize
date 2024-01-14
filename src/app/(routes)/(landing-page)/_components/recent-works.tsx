@@ -1,39 +1,37 @@
-import serviceImg from '@/assets/img/services/brand.png'
+import { recentWorks } from '@/contents/recent-works'
+import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function RecentWorks() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-      <div className="flex flex-col gap-2">
-        <div className="border border-border rounded shadow-sm h-64 relative">
-          <Image
-            src={serviceImg}
-            alt=""
-            className="rounded absolute h-full w-full"
-          />
+      {recentWorks.map(({ description, image, demoUrl }) => (
+        <div key={description} className="flex flex-col gap-2">
+          <div className="border border-border rounded shadow-sm h-48 relative">
+            <Image
+              src={image}
+              alt=""
+              className="rounded absolute h-full w-full object-cover"
+            />
+          </div>
+          {demoUrl ? (
+            <Link
+              prefetch={false}
+              href={demoUrl}
+              className="flex items-center gap-1 hover:underline decoration-wavy decoration-primary"
+            >
+              <span className="font-medium font-alt text-lg">
+                {description}
+              </span>
+
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          ) : (
+            <span className="font-medium font-alt text-lg">{description}</span>
+          )}
         </div>
-        <span className="font-medium font-alt text-lg">texto descritivo</span>
-      </div>
-      <div className="flex flex-col gap-2">
-        <div className="border border-border rounded shadow-sm h-64 relative">
-          <Image
-            src={serviceImg}
-            alt=""
-            className="rounded absolute h-full w-full"
-          />
-        </div>
-        <span className="font-medium font-alt text-lg">texto descritivo</span>
-      </div>
-      <div className="flex flex-col gap-2">
-        <div className="border border-border rounded shadow-sm h-64 relative">
-          <Image
-            src={serviceImg}
-            alt=""
-            className="rounded absolute h-full w-full"
-          />
-        </div>
-        <span className="font-medium font-alt text-lg">texto descritivo</span>
-      </div>
+      ))}
     </div>
   )
 }

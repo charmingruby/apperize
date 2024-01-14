@@ -2,7 +2,7 @@ import { useCases } from '@/contents/use-cases'
 
 export function UseCases() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {useCases.map(({ color, description, icon: Icon, title }) => {
         const bgColor = color + '.2)'
         const iconColor = color + '1)'

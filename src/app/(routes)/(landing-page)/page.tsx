@@ -104,9 +104,9 @@ export default function Home() {
 
         {/* USP */}
         <ContainerWrapper>
-          <div className="mb-12 grid grid-cols-1 lg:grid-cols-4 gap-8 w-full">
+          <div className="mb-8 lg:mb-10 grid grid-cols-1 lg:grid-cols-4 gap-8 w-full">
             <div className="lg:col-span-3">
-              <HeadingWrapper className="mb-0">
+              <HeadingWrapper className="mb-0 lg:mb-0">
                 <HeadingAnnotation annotation="Plataforma feita para o cliente" />
                 <HeadingContentWrapper>
                   <HeadingTitle>Desenvolvemos juntos de você</HeadingTitle>
