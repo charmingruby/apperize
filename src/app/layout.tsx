@@ -3,6 +3,11 @@ import type { Metadata } from 'next'
 import { Chakra_Petch as ChakraPetch, Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme/theme-provider'
 import { MenuContextProvider } from '@/contexts/menu-context'
+import { Footer } from '@/components/_layouts/footer'
+import { Drawer } from '@/components/_layouts/navigation/drawer'
+import { Header } from '@/components/_layouts/navigation/header'
+import { Overlay } from '@/components/_layouts/navigation/overlay'
+import { WhatsAppWidget } from '@/components/whatsapp-widget'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -44,7 +49,14 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <main className="relative">{children}</main>
+            <main className="relative">
+              <Overlay />
+              <Header />
+              <Drawer />
+              <WhatsAppWidget />
+              {children}
+              <Footer />
+            </main>
           </ThemeProvider>
         </body>
       </html>

@@ -1,13 +1,6 @@
 import exampleImage from '@/assets/img/team/gustavo-dias-profile.jpeg'
 import Image from 'next/image'
 
-interface DepositionItemProps {
-  deposition: string
-  avatarUrl: string
-  role: string
-  name: string
-}
-
 export function DepositionItem() {
   return (
     <div className=" flex flex-col gap-8 w-full">

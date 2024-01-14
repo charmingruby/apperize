@@ -1,8 +1,8 @@
-import { Logo } from '@/app/(public)/_components/navigation/header/logo'
 import { MainNav } from './main-nav'
 import { Actions } from './actions'
 import { MenuButton } from './menu-button'
 import { Separator } from '@/components/ui/separator'
+import { Logo } from './logo'
 
 export function Header() {
   return (
