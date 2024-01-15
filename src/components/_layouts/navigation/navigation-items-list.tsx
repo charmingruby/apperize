@@ -1,37 +1,29 @@
-import { BadgeInfo, Home, MessageSquare } from 'lucide-react'
-import { ElementType } from 'react'
-
 export interface NavItem {
-  icon: ElementType
   label: string
   url: string
 }
 
 export const navItemsList: NavItem[] = [
   {
-    icon: Home,
-    url: '/',
+    url: '#inicio',
     label: 'Início',
   },
   {
-    icon: BadgeInfo,
-    url: '/sobre',
+    url: '#sobre',
+    label: 'Sobre',
+  },
+  {
+    url: '#o-que-fazemos',
     label: 'O que fazemos',
-  },
-  {
-    icon: MessageSquare,
-    url: '/contato',
-    label: 'Trabalhos',
-  },
-  {
-    icon: MessageSquare,
-    url: '/contato',
-    label: 'Casos de uso',
   },
 
   {
-    icon: MessageSquare,
-    url: '/contato',
+    url: '#casos-de-sucesso',
+    label: 'Casos de sucesso',
+  },
+
+  {
+    url: '#depoimentos',
     label: 'Depoimentos',
   },
 ]

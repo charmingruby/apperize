@@ -1,7 +1,13 @@
 /**
  * External
  */
-import { ArrowRight, ArrowUpRight, Headphones } from 'lucide-react'
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Headphones,
+  HelpCircle,
+  TabletSmartphone,
+} from 'lucide-react'
 import Image from 'next/image'
 
 /**
@@ -25,17 +31,18 @@ import { TextHighlight } from '@/components/text-highlight'
 import { DepositionItem } from './_components/deposition-item'
 import { Separator } from '@/components/ui/separator'
 import { SectionsDivider } from '@/components/sections-divider'
-import heroImg from '@/assets/img/heros/home.png'
+import heroImg from '@/assets/img/home.png'
 import { ServicesTypewriter } from './_components/services-typewriter'
 import { staticSEO } from '@/components/seo/static'
 import { CreateRequestLink } from './_components/create-request-link'
-import { CTAWithRequestForm } from '@/components/cta-with-request-form'
 import { RedirectLink } from '@/components/redirect-link'
 import { HeroPattern } from './_components/hero-pattern'
 import serviceImg from '@/assets/img/services/brand.png'
 import Link from 'next/link'
 import { UseCases } from './_components/use-cases'
 import { RecentWorks } from './_components/recent-works'
+import { RequestForm } from '@/components/request-form'
+import { whatsAppLink } from '@/contents/site/contact'
 
 export const metadata = staticSEO({
   rawTitle: 'Desenvolvimento sob demanda de Software',
@@ -46,9 +53,8 @@ export const metadata = staticSEO({
 export default function Home() {
   return (
     <>
-      <div className="relative h-full w-full ">
+      <div className="relative h-full w-full" id="inicio">
         <HeroPattern />
-
         {/* Hero */}
         <section className="container pt-20 md:pt-28 flex flex-col lg:justify-center ">
           <div className="max-w-4xl mx-auto flex flex-col gap-6 items-center pt-12 lg:pt-16 xl:pt-24">
@@ -81,7 +87,7 @@ export default function Home() {
 
               {/* Contact link */}
               <div className="flex flex-1  justify-start">
-                <RedirectLink url="/contato">
+                <RedirectLink url={whatsAppLink}>
                   <Button variant="ghost" className="text-muted-foreground ">
                     Fale conosco
                   </Button>
@@ -90,7 +96,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* Illustration */}
         <ContainerWrapper className="flex justify-center pb-0 pt-12">
           <Image
@@ -101,9 +106,8 @@ export default function Home() {
             priority
           />
         </ContainerWrapper>
-
         {/* USP */}
-        <ContainerWrapper>
+        <ContainerWrapper id="sobre">
           <div className="mb-8 lg:mb-10 grid grid-cols-1 lg:grid-cols-4 gap-8 w-full">
             <div className="lg:col-span-3">
               <HeadingWrapper className="mb-0 lg:mb-0">
@@ -122,7 +126,7 @@ export default function Home() {
             </div>
             <div className="flex w-full lg:justify-end lg:items-end">
               <Button className="w-full lg:w-fit" asChild>
-                <a href="#make-request" className="outline-none">
+                <a href="#contato" className="outline-none">
                   Fazer pedido <ArrowRight className="w-4 h-4" />
                 </a>
               </Button>
@@ -131,9 +135,11 @@ export default function Home() {
 
           <USP />
         </ContainerWrapper>
-
         {/* Services */}
-        <ContainerWrapper className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <ContainerWrapper
+          id="o-que-fazemos"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+        >
           <div className="border border-border rounded relative w-full h-64 lg:h-auto order-last lg:order-first">
             <Image
               src={serviceImg}
@@ -161,14 +167,13 @@ export default function Home() {
             <Services />
 
             <Button className="mt-6 w-full lg:w-fit" asChild>
-              <Link prefetch={false} href="/">
+              <Link prefetch={false} href="#contato">
                 Fazer pedido
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
           </div>
         </ContainerWrapper>
-
         {/* Features */}
         <ContainerWrapper>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -190,7 +195,7 @@ export default function Home() {
               </HeadingWrapper>
 
               <Button asChild>
-                <Link href="/" className="w-full lg:w-fit">
+                <Link href="#contato" className="w-full lg:w-fit">
                   Fazer pedido <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
@@ -199,9 +204,8 @@ export default function Home() {
             <Features />
           </div>
         </ContainerWrapper>
-
         {/* Use Cases */}
-        <ContainerWrapper>
+        <ContainerWrapper id="casos-de-sucesso">
           <HeadingWrapper className="lg:text-center flex flex-col lg:items-center">
             <HeadingAnnotation annotation="Casos de uso" />
             <HeadingContentWrapper>
@@ -218,7 +222,6 @@ export default function Home() {
             <UseCases />
           </div>
         </ContainerWrapper>
-
         {/* Recents works */}
         <ContainerWrapper>
           <HeadingWrapper>
@@ -235,10 +238,12 @@ export default function Home() {
             <RecentWorks />
           </div>
         </ContainerWrapper>
-
         {/* Evaluations */}
         <section className="border-y border-background-alt-dark bg-background-alt">
-          <ContainerWrapper className="py-10 lg:py-10">
+          <ContainerWrapper
+            id="depoimentos"
+            className="py-10 lg:py-10 scroll-mt-16"
+          >
             {/* Heading */}
             <HeadingWrapper className="lg:w-1/2 mb-0">
               <HeadingAnnotation annotation="Depoimentos" />
@@ -265,7 +270,6 @@ export default function Home() {
             </div>
           </ContainerWrapper>
         </section>
-
         {/* FAQ */}
         <ContainerWrapper className="flex flex-col lg:items-center max-w-4xl w-full">
           <HeadingWrapper>
@@ -280,7 +284,6 @@ export default function Home() {
 
           <FAQsAccordion />
         </ContainerWrapper>
-
         {/* Contact */}
         <ContainerWrapper className="flex items-center justify-center bg-background-alt border border-background-alt-dark rounded-xl py-10 lg:py-10">
           <div className="max-w-xl flex flex-col items-center justify-center text-center">
@@ -317,8 +320,55 @@ export default function Home() {
           </div>
         </ContainerWrapper>
         <SectionsDivider />
+        {/* CTA */}
+        <ContainerWrapper
+          id="contato"
+          className="scroll-mt-24 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12  pt-0 lg:pt-0"
+        >
+          <div className="flex flex-col justify-center">
+            {/* Logo */}
+            <div className="flex items-center gap-2">
+              <TabletSmartphone className="text-primary h-9 w-9" />
 
-        <CTAWithRequestForm />
+              <strong className="text-4xl font-semibold font-alt tracking-wider">
+                <span className="text-primary">app</span>
+                erize
+              </strong>
+            </div>
+
+            {/* Slogan */}
+            <HeadingTitle className="mt-12 text-4xl max-w-md">
+              Resolva os problemas de maneira digital
+            </HeadingTitle>
+
+            {/* Form or phone number */}
+            <span className="mt-2 mb-8 text-base text-muted-foreground">
+              Preencha o formulário
+              <span className="block">ou ligar para +55 32 99110-0990</span>
+            </span>
+
+            <div className="flex items-center gap-2">
+              <div className="bg-background-alt-dark rounded-full p-1.5">
+                <HelpCircle className="w-6 h-6 text-primary" />
+              </div>
+
+              <span className="font-medium">
+                Alguma duvida?{' '}
+                <Link
+                  prefetch={false}
+                  href="/"
+                  className="text-muted-foreground hover:text-primary hover:underline transition-all"
+                >
+                  Entre em contato
+                </Link>
+              </span>
+            </div>
+          </div>
+
+          <div className="col-span-2">
+            <RequestForm />
+          </div>
+        </ContainerWrapper>{' '}
       </div>
     </>
   )

@@ -8,6 +8,8 @@ import { Drawer } from '@/components/_layouts/navigation/drawer'
 import { Header } from '@/components/_layouts/navigation/header'
 import { Overlay } from '@/components/_layouts/navigation/overlay'
 import { WhatsAppWidget } from '@/components/whatsapp-widget'
+import { Toaster } from 'sonner'
+import { ScrollingProgress } from '@/components/scrolling-progress'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -49,9 +51,18 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <Toaster
+              richColors
+              toastOptions={{
+                style: {
+                  fontSize: '18px',
+                },
+              }}
+            />
             <main className="relative">
               <Overlay />
               <Header />
+              <ScrollingProgress />
               <Drawer />
               <WhatsAppWidget />
               {children}

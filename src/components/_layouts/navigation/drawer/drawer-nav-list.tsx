@@ -2,21 +2,15 @@
 
 import { navItemsList } from '../navigation-items-list'
 import { DrawerNavItem } from './drawer-nav-item'
-import { ListOrdered } from 'lucide-react'
 
 export function DrawerNavList() {
   return (
     <div className="flex flex-col divide-y divide-border">
-      {navItemsList.map(({ icon: Icon, label, url }) => (
-        <DrawerNavItem key={label} icon={Icon} label={label} url={url} />
+      {navItemsList.map(({ label, url }) => (
+        <DrawerNavItem key={label} label={label} url={url} />
       ))}
 
-      <DrawerNavItem
-        key="fazer-pedido"
-        icon={ListOrdered}
-        label="Fazer pedido"
-        url={'/fazer-pedido'}
-      />
+      <DrawerNavItem key="fazer-pedido" label="Fazer pedido" url={'#contato'} />
     </div>
   )
 }

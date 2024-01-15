@@ -10,7 +10,7 @@ export function Actions() {
         <ToggleTheme />
       </div>
 
-      <Link href="/fazer-pedido" prefetch={false}>
+      <Link href="#contato" prefetch={false}>
         <Button variant="default" className="gap-2">
           <span className="hidden lg:flex">Fazer pedido</span>
           <MailPlus className="h-5 w-5" />

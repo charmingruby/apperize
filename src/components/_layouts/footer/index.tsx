@@ -1,14 +1,8 @@
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  TabletSmartphone,
-} from 'lucide-react'
-import { SocialLink } from './social-link'
+import { Mail, MapPin, TabletSmartphone } from 'lucide-react'
 
 export function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="border-t border-border bg-background">
       {/* Top */}
@@ -72,14 +66,9 @@ export function Footer() {
           </div>
           {/* Copyright */}
           <div className="flex items-center text-muted-foreground text-sm">
-            © 2023 apperize | Todos direitos reservados
+            © {currentYear} apperize | Todos direitos reservados
           </div>
           {/* Social medias */}
-          <div className="flex items-center lg:justify-end gap-4">
-            <SocialLink url="/" icon={Instagram} />
-            <SocialLink url="/" icon={Facebook} />
-            <SocialLink url="/" icon={Linkedin} />
-          </div>
         </div>
       </div>
     </footer>

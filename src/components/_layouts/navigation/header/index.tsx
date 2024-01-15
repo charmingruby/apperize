@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header className=" border-b border-border flex items-center fixed w-full z-50 bg-background shadow-sm">
       <div className="container gap-8 flex h-16 items-center justify-between">
-        <div className="flex items-center gap-4 lg:gap-8">
+        <div className="flex items-center gap-4 lg:gap-3 xl:gap-6">
           <MenuButton />
           <Logo />
 

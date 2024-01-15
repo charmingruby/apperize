@@ -10,7 +10,7 @@ export function CreateRequestLink({ label }: CreateRequestLinkProps) {
 
   return (
     <Button className="w-fit" asChild>
-      <a href="#make-request" className="outline-none">
+      <a href="#contato" className="outline-none">
         {text} <ArrowRight className="w-4 h-4" />
       </a>
     </Button>
