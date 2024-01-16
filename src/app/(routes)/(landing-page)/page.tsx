@@ -156,10 +156,9 @@ export default function Home() {
                   Nossos <TextHighlight>serviços</TextHighlight>
                 </HeadingTitle>
                 <HeadingDescription>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt laborum minus, aspernatur et hic optio, cumque ipsa
-                  ex quos sapiente perferendis nam totam possimus fuga quaerat,
-                  ut suscipit molestias culpa.
+                  Desenvolvemos sites, landing pages e blogs personalizados para
+                  as suas necessidades e com qualidade excepcional. Venha
+                  transformar seu negócio no mundo digital.
                 </HeadingDescription>
               </HeadingContentWrapper>
             </HeadingWrapper>
