@@ -12,28 +12,28 @@ export const useCases: UseCase[] = [
     icon: Gavel,
     title: 'Advocacia',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse est dignissimos exercitationem quibusdam reprehenderit, officiis, asperiores magnam, doloremque aliquam dolorem minus. Ipsum ipsam cum, itaque nisi consectetur quaerat libero illo?',
+      'Desenvolvemos soluções digitais proporcionando presença online impactante, sistema de blog e funcionalidades que impulsionam a interatividade .',
     color: 'rgba(241, 166, 106,',
   },
   {
     icon: Book,
     title: 'Educação',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse est dignissimos exercitationem quibusdam reprehenderit, officiis, asperiores magnam, doloremque aliquam dolorem minus. Ipsum ipsam cum, itaque nisi consectetur quaerat libero illo?',
+      'Atuamos no setor educacional, desenvolvendo websites exclusivos para instituições de ensino. Destacamos seus cursos de forma cativante, evidenciando seus diferenciais.',
     color: 'rgba(47, 82, 224,',
   },
   {
     icon: Stethoscope,
     title: 'Saúde',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse est dignissimos exercitationem quibusdam reprehenderit, officiis, asperiores magnam, doloremque aliquam dolorem minus. Ipsum ipsam cum, itaque nisi consectetur quaerat libero illo?',
+      'Criamos sites de saúde com seções de Relatos, Cursos, FAQs e contatos, oferecendo uma experiência completa para pacientes e interessados.',
     color: 'rgba(51, 170, 51,',
   },
   {
     icon: ShoppingBag,
     title: 'Comercial',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse est dignissimos exercitationem quibusdam reprehenderit, officiis, asperiores magnam, doloremque aliquam dolorem minus. Ipsum ipsam cum, itaque nisi consectetur quaerat libero illo?',
+      'Atuamos na área comercial, construindo websites que potencializam a presença online de empresas. Destacamos seus produtos, serviços e diferenciais.',
     color: 'rgba(255, 94, 91,',
   },
 ]
