@@ -25,6 +25,7 @@ import {
   FormMessage,
 } from './ui/form'
 import { toast } from 'sonner'
+import { sendEmail } from '@/utils/send-email'
 
 const formSchema = z.object({
   name: z
@@ -44,7 +45,7 @@ const formSchema = z.object({
     .max(255, 'Mensagem deve ter no máximo 255 caracteres.'),
 })
 
-type FormData = z.infer<typeof formSchema>
+export type FormData = z.infer<typeof formSchema>
 
 export function RequestForm() {
   const form = useForm<FormData>({
@@ -61,10 +62,11 @@ export function RequestForm() {
   const handleRequestCreation = (data: FormData) => {
     try {
       toast.success('Email enviado com sucesso.')
+      sendEmail(data)
     } catch (err) {
       toast.success('Error ao enviar email.')
     }
-    console.log(data)
+    // console.log(data)
   }
 
   return (
