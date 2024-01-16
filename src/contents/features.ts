@@ -1,4 +1,4 @@
-import { Check, HeartHandshake, LucideIcon, User } from 'lucide-react'
+import { Check, HeartHandshake, LucideIcon, Ruler, User } from 'lucide-react'
 
 export interface Feature {
   icon: LucideIcon
@@ -26,9 +26,9 @@ export const features: Feature[] = [
       'Nossos produtos são cuidadosamente projetados com um foco absoluto na experiência do usuário, visando proporcionar interações suaves e gratificantes.',
   },
   {
-    icon: User,
-    title: 'falta esse',
+    icon: Ruler,
+    title: 'Feito Sob Medida',
     description:
-      'Nossos produtos são cuidadosamente projetados com um foco absoluto na experiência do usuário, visando proporcionar interações suaves e gratificantes.',
+      'Compreendemos suas necessidades para oferecer a você o melhor produto possível, totalmente adaptado às suas expectativas e demandas.',
   },
 ]
