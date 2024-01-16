@@ -17,7 +17,7 @@ export const faqs: Faqs[] = [
   {
     question: 'Quem são seus clientes?',
     response:
-      'Atendemos empresas que buscam ingressar ou transformar sua presença no mundo digital, bem como indivíduos interessados em criar um blog ou site pessoal. Nossa dedicação é personalizar soluções para atender às diversas necessidades de cada cliente, proporcionando uma experiência digital única e impactante.',
+      'Atendemos empresas que buscam ingressar ou transformar sua presença no mundo digital, bem como indivíduos interessados em criar sites que retenham o público alvo destinado. Nossa dedicação é personalizar soluções para atender às diversas necessidades de cada cliente, proporcionando uma experiência digital única e impactante.',
   },
   {
     question: 'Como é o processo de desenvolvimento de um projeto na Apperize?',

@@ -26,7 +26,7 @@ export const useCases: UseCase[] = [
     icon: Stethoscope,
     title: 'Saúde',
     description:
-      'Criamos sites de saúde com seções de Relatos, Cursos, FAQs e contatos, oferecendo uma experiência completa para pacientes e interessados.',
+      'Criamos sites de saúde que oferecem uma experiência completa para pacientes e interessados nos serviços.',
     color: 'rgba(51, 170, 51,',
   },
   {

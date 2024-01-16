@@ -4,35 +4,22 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-
-interface FAQ {
-  value: string
-  title: string
-  description: string
-}
-
-const doubts: FAQ[] = [
-  {
-    value: 'Suporte',
-    title: 'O produto tem suporte?',
-    description: 'Temos sim',
-  },
-]
+import { faqs } from '@/contents/faqs'
 
 export function FAQsAccordion() {
   return (
     <Accordion
       type="single"
       collapsible
-      className="w-full border border-border rounded-lg shadow-sm divide-y-2 divider-border"
+      className="w-full border border-border rounded-lg shadow-sm divide-y-2 divide-border"
     >
-      {doubts.map(({ value, title, description }) => (
-        <AccordionItem value={value} key={value}>
+      {faqs.map(({ question, response }) => (
+        <AccordionItem value={question} key={question}>
           <AccordionTrigger className="font-medium text-base">
-            {title}
+            {question}
           </AccordionTrigger>
           <AccordionContent className="text-base text-muted-foreground">
-            {description}
+            {response}
           </AccordionContent>
         </AccordionItem>
       ))}
