@@ -15,7 +15,7 @@ export function FAQsAccordion() {
     >
       {faqs.map(({ question, response }) => (
         <AccordionItem value={question} key={question}>
-          <AccordionTrigger className="font-medium text-base">
+          <AccordionTrigger className="text-start font-medium text-base">
             {question}
           </AccordionTrigger>
           <AccordionContent className="text-base text-muted-foreground">
