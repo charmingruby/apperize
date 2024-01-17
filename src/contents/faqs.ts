@@ -22,7 +22,7 @@ export const faqs: Faqs[] = [
   {
     question: 'Como é o processo de desenvolvimento de um projeto na Apperize?',
     response:
-      'Para essa pergunta vamos usar as palavras de um dos nossos clientes: “RELATO”',
+      'Na Apperize, o desenvolvimento de projetos começa com o cliente compartilhando sua visão de negócios. Agendamos uma reunião para alinhar detalhes e compreender completamente suas necessidades. Com informações claras, iniciamos o desenvolvimento, mantendo comunicação constante com o cliente. Após a entrega do projeto, nosso compromisso persiste, oferecendo suporte contínuo para correções e treinamentos, garantindo a duradoura qualidade da solução e a satisfação do cliente.',
   },
   {
     question: 'Quais são as funcionalidades dos seus produtos?',
