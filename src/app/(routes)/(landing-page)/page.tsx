@@ -309,7 +309,7 @@ export default function Home() {
                 </Button>
               </RedirectLink>
 
-              <RedirectLink url="/contato">
+              <RedirectLink url="#contato">
                 <Button className="text-base w-full lg:w-fit" size="lg">
                   Fale conosco
                   <ArrowRight className="h-4 w-4" />
