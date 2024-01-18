@@ -2,7 +2,7 @@ import { StaticImageData } from 'next/image'
 import customer1 from '@/assets/img/depositions/romulo.jpeg'
 import customer2 from '@/assets/img/depositions/anelise.jpeg'
 import customer3 from '@/assets/img/depositions/paulo.jpeg'
-import customer4 from '@/assets/img/depositions/larissa.jpeg'
+import customer4 from '@/assets/img/depositions/foto dentista.jpeg'
 
 export interface Deposition {
   deposition: string
@@ -37,8 +37,8 @@ export const depositions: Deposition[] = [
   {
     avatarUrl: customer4,
     deposition:
-      'O projeto ainda está em andamento, mas todas minhas expectativas estão sendo atendidas, estou extremamente ansiosa para começar o meu próprio negócio, e graça a Apperize tudo está sendo possível!',
-    name: 'Larissa Moreira',
-    establishment: 'Coaly Ateliê',
+      'Bom dia Gustavo. Super obrigado pelo nosso site! Ficou maravilhoso! Toda diretoria adorou o resultado e confesso que superou nossas expectativas.Gratidão e parabéns pelo seu trabalho!👏👏👏',
+    name: 'Alysson Oriá',
+    establishment: 'Instituto Líder',
   },
 ]
