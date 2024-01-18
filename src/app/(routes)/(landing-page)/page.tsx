@@ -28,8 +28,6 @@ import { ContainerWrapper } from '@/components/ui/container-wrapper'
 import { Features } from './_components/features'
 import { USP } from './_components/usp'
 import { TextHighlight } from '@/components/text-highlight'
-import { DepositionItem } from './_components/deposition-item'
-import { Separator } from '@/components/ui/separator'
 import { SectionsDivider } from '@/components/sections-divider'
 import heroImg from '@/assets/img/home.png'
 import { ServicesTypewriter } from './_components/services-typewriter'
@@ -43,6 +41,7 @@ import { UseCases } from './_components/use-cases'
 import { RecentWorks } from './_components/recent-works'
 import { RequestForm } from '@/components/request-form'
 import { whatsAppLink } from '@/contents/site/contact'
+import { Depositions } from './_components/depositions'
 
 export const metadata = staticSEO({
   rawTitle: 'Desenvolvimento sob demanda de Software',
@@ -250,22 +249,8 @@ export default function Home() {
             </HeadingWrapper>
 
             {/* Depositions */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 w-full">
-              <div className="mt-12 space-y-6">
-                <DepositionItem />
-                <Separator />
-                <DepositionItem />
-              </div>
-
-              <div className="block lg:hidden my-6">
-                <Separator />
-              </div>
-
-              <div className="space-y-6">
-                <DepositionItem />
-                <Separator />
-                <DepositionItem />
-              </div>
+            <div>
+              <Depositions />
             </div>
           </ContainerWrapper>
         </section>

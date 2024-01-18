@@ -13,7 +13,7 @@ export const recentWorks: RecentWork[] = [
   {
     image: consulmagnoassisImg,
     description: 'Escritório de Advocacia',
-    demoUrl: '/',
+    demoUrl: 'https://www.consulmagnoeassis.com.br/',
   },
   {
     image: ymirImg,
@@ -22,6 +22,6 @@ export const recentWorks: RecentWork[] = [
   {
     image: liderImg,
     description: 'Instituição de Odontologia',
-    demoUrl: '/',
+    demoUrl: 'https://liderinstituto.com.br/',
   },
 ]
