@@ -37,7 +37,7 @@ export const depositions: Deposition[] = [
   {
     avatarUrl: customer4,
     deposition:
-      'Bom dia Gustavo. Super obrigado pelo nosso site! Ficou maravilhoso! Toda diretoria adorou o resultado e confesso que superou nossas expectativas.Gratidão e parabéns pelo seu trabalho!👏👏👏',
+      'Super obrigado pelo nosso site! Ficou maravilhoso! Toda diretoria adorou o resultado e confesso que superou nossas expectativas.Gratidão e parabéns pelo seu trabalho!👏👏👏',
     name: 'Alysson Oriá',
     establishment: 'Instituto Líder',
   },
