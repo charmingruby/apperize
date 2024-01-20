@@ -9,6 +9,7 @@ import {
   TabletSmartphone,
 } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 /**
  * Internal
@@ -36,12 +37,12 @@ import { CreateRequestLink } from './_components/create-request-link'
 import { RedirectLink } from '@/components/redirect-link'
 import { HeroPattern } from './_components/hero-pattern'
 import serviceImg from '@/assets/img/services/brand.png'
-import Link from 'next/link'
 import { UseCases } from './_components/use-cases'
 import { RecentWorks } from './_components/recent-works'
 import { RequestForm } from '@/components/request-form'
 import { whatsAppLink } from '@/contents/site/contact'
 import { Depositions } from './_components/depositions'
+import { MissionVisionValue } from './_components/mission-vision-value'
 
 export const metadata = staticSEO({
   rawTitle: 'Desenvolvimento sob demanda de Software',
@@ -104,6 +105,10 @@ export default function Home() {
             quality={100}
             priority
           />
+        </ContainerWrapper>
+        {/* Mission Vision Value */}
+        <ContainerWrapper>
+          <MissionVisionValue />
         </ContainerWrapper>
         {/* USP */}
         <ContainerWrapper id="sobre">
