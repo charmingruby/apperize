@@ -11,18 +11,18 @@ export const missionVisionValue: MissionVisionValue[] = [
     icon: Target,
     label: 'Missão',
     content:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, ut doloremque ducimus assumenda cumque corrupti ab nostrum accusamus quo culpa suscipit, veniam hic fugiat sunt saepe excepturi totam. Ex, error!',
+      'Oferecer um serviço de qualidade ao entender as necessidades do cliente e transformar o sonho em realidade digital.',
   },
   {
     icon: Eye,
     label: 'Visão',
     content:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, ut doloremque ducimus assumenda cumque corrupti ab nostrum accusamus quo culpa suscipit, veniam hic fugiat sunt saepe excepturi totam. Ex, error!',
+      'Ser referência na área de desenvolvimento na região dentro de cinco anos.',
   },
   {
     icon: Gem,
     label: 'Valor',
     content:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, ut doloremque ducimus assumenda cumque corrupti ab nostrum accusamus quo culpa suscipit, veniam hic fugiat sunt saepe excepturi totam. Ex, error!',
+      'Criatividade, Responsabilidade, Respeito, Modernidade e Inovação.',
   },
 ]
