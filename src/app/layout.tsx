@@ -40,6 +40,10 @@ export default function RootLayout({
         className="antialiased scroll-smooth"
         suppressHydrationWarning
       >
+        <meta
+          name="google-site-verification"
+          content="qn2-_wqqglyhYrpltRhNgUaUlzn9tWrUA6t4ybWh5Dw"
+        />
         <body
           className={`${inter.variable} ${alt.variable} 
         font-sans text-foreground bg-background scrollbar scrollbar-track-background-alt scrollbar-thumb-background-alt-dark 
